@@ -304,7 +304,7 @@
 #define MUS_EVOLVED                 371 // MUS_FANFA5           // Also used in egg hatching, trades and upon catching.
 #define MUS_OBTAIN_TMHM             372 // MUS_ME_WAZA
 #define MUS_LILYCOVE_MUSEUM         373 // MUS_BIJYUTU          // Also used in the Battle Frontier's Ranking Hall.
-#define MUS_ROUTE122                374 // MUS_DOORO_X4         // Also used in Route 123 and Birch's intro speech.
+#define MUS_SLTS                    374 // MUS_DOORO_X4         // Also used in Route 123 and Birch's intro speech. Smells Like Teen Spirit
 #define MUS_OCEANIC_MUSEUM          375 // MUS_FUNE_KAN
 #define MUS_EVOLUTION_INTRO         376 // MUS_ME_SHINKA        // Also used in egg hatching.
 #define MUS_EVOLUTION               377 // MUS_SHINKA           // Also used in egg hatching and trades.

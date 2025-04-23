@@ -375,7 +375,7 @@ gSongTable::
 	song mus_evolved, 2, 2
 	song mus_obtain_tmhm, 2, 2
 	song mus_lilycove_museum, 0, 0
-	song mus_route122, 0, 0
+	song mus_slts, 0, 0
 	song mus_oceanic_museum, 0, 0
 	song mus_evolution_intro, 2, 2
 	song mus_evolution, 0, 0
