@@ -1156,3 +1156,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/dexnav.inc"
 
 	.include "data/maps/TwigtonCity/scripts.inc"
+
+	.include "data/maps/TwigtonCity_PlayersHouse2F/scripts.inc"

@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Pallettown",
       "border_filepath": "data/layouts/TwigtonCity/border.bin",
       "blockdata_filepath": "data/layouts/TwigtonCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIGTON_CITY_PLAYERS_HOUSE2F",
+      "name": "TwigtonCity_PlayersHouse2F_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding1",
+      "border_filepath": "data/layouts/TwigtonCity_PlayersHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwigtonCity_PlayersHouse2F/map.bin"
     }
   ]
 }
