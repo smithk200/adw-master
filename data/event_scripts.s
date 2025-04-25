@@ -1158,3 +1158,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TwigtonCity/scripts.inc"
 
 	.include "data/maps/TwigtonCity_PlayersHouse2F/scripts.inc"
+
+	.include "data/maps/TwigtonCity_PlayersHouse1F/scripts.inc"
+
+	.include "data/maps/TwigtonCity_RivalsHouse1F/scripts.inc"

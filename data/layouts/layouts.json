@@ -4430,6 +4430,26 @@
       "secondary_tileset": "gTileset_Genericbuilding1",
       "border_filepath": "data/layouts/TwigtonCity_PlayersHouse2F/border.bin",
       "blockdata_filepath": "data/layouts/TwigtonCity_PlayersHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIGTON_CITY_PLAYERS_HOUSE1F",
+      "name": "TwigtonCity_PlayersHouse1F_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding1",
+      "border_filepath": "data/layouts/TwigtonCity_PlayersHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwigtonCity_PlayersHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIGTON_CITY_RIVALS_HOUSE1F",
+      "name": "TwigtonCity_RivalsHouse1F_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding1",
+      "border_filepath": "data/layouts/TwigtonCity_RivalsHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/TwigtonCity_RivalsHouse1F/map.bin"
     }
   ]
 }
