@@ -1,5 +1,10 @@
 TwigtonCity_PlayersHouse2F_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, TwigtonCity_PlayersHouse2F_OnLoad
 	.byte 0
+
+TwigtonCity_PlayersHouse2F_OnLoad::
+	setflag FLAG_SYS_B_DASH
+	end
 
 TwigtonCity_PlayersHouse2F_EventScriptPlayedWithSwitch2::
 	msgbox TwigtonCityPlayersHouse2F_PlayedWithSwitch_2_Text, MSGBOX_AUTOCLOSE
@@ -10,6 +15,33 @@ TwigtonCity_PlayersHouse2F_EventScriptMatureContent::
 	msgbox TwigtonCityPlayersHouse2F_WarningMatureContent_Text, MSGBOX_DEFAULT
 	release
 	end
+
+TwigtonCity_PlayersHouse2F_EventScript_JumpOutWindow::
+	goto_if_unset FLAG_TALKED_TO_MOM_BEGINNING_OF_GAME, TwigtonCity_PlayersHouse2F_EventScript_End
+	msgbox TwigtonCity_PlayersHouse2F_JumpOutWindowChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, TwigtonCity_PlayersHouse2F_JumpOutWindow_No
+	warp MAP_TWIGTON_CITY, 15, 4
+	release
+	end
+
+TwigtonCity_PlayersHouse2F_EventScript_End::
+	release
+	end
+
+TwigtonCity_PlayersHouse2F_JumpOutWindow_No::
+	msgbox TwigtonCityPlayersHouse2F_Text_NoOnesForcingYou, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_PlayersHouse2F_JumpOutWindowChoice:
+	.string "Do you want to jump out the window and\n"
+	.string "start on your Pokémon journey?$"
+
+TwigtonCityPlayersHouse2F_Text_NoOnesForcingYou:
+	.string "No one's forcing you to jump\n"
+	.string "out the window...\p"
+	.string "But your mother refuses to let\n"
+	.string "you leave the house!$"
 
 TwigtonCityPlayersHouse2F_PlayedWithSwitch_2_Text:
 	.string "{PLAYER} played with the Switch 2.\n"
