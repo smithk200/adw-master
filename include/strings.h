@@ -287,6 +287,9 @@ extern const u8 gText_Birch_WhatsYourName[];
 extern const u8 gText_Birch_SoItsPlayer[];
 extern const u8 gText_Birch_YourePlayer[];
 extern const u8 gText_Birch_AreYouReady[];
+extern const u8 gText_Birch_ThisIsMyDaughter[];
+extern const u8 gText_Birch_SoItsRival[];
+extern const u8 gText_Birch_YourRival[];
 
 extern const u8 gText_BirchInTrouble[];
 extern const u8 gText_ConfirmStarterChoice[];

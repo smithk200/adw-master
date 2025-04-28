@@ -2045,8 +2045,8 @@ static void DecompressGlyph_Normal(u16 glyphId, bool32 isJapanese)
     }
     else
     {
-        glyphs = gFontNormalLatinGlyphs + (0x20 * glyphId);
-        gCurGlyph.width = gFontNormalLatinGlyphWidths[glyphId];
+        glyphs = gFontShortLatinGlyphs + (0x20 * glyphId);
+        gCurGlyph.width = gFontShortLatinGlyphWidths[glyphId];
 
         if (gCurGlyph.width <= 8)
         {

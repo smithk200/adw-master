@@ -20,7 +20,12 @@ TwigtonCity_PlayersHouse2F_EventScript_JumpOutWindow::
 	goto_if_unset FLAG_TALKED_TO_MOM_BEGINNING_OF_GAME, TwigtonCity_PlayersHouse2F_EventScript_End
 	msgbox TwigtonCity_PlayersHouse2F_JumpOutWindowChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, TwigtonCity_PlayersHouse2F_JumpOutWindow_No
-	warp MAP_TWIGTON_CITY, 15, 4
+	warp MAP_TWIGTON_CITY, 33, 26
+	release
+	end
+
+TwigtonCity_MomsRoom2F_EventScriptPlayerBookshelf::
+	msgbox TwigtonCityPlayersHouse2F_Text_BooksOnShelf, MSGBOX_DEFAULT
 	release
 	end
 
@@ -57,3 +62,10 @@ TwigtonCityPlayersHouse2F_WarningMatureContent_Text:
 	.string "about and obsesses over deeply.\p"
 	.string "If you have any questions, please\n"
 	.string "contact IAmAwesome2 on Discord.$"
+
+TwigtonCityPlayersHouse2F_Text_BooksOnShelf:
+	.string "Books on shelf:\p"
+	.string "The entire Michael Vey series,\n"
+	.string "the Scythe series by Neal Shusterman,\p"
+	.string "How to Jump From A Window Safely,\n"
+	.string "Coding in C, and many, many more.$"

@@ -48,8 +48,26 @@ gText_Birch_YourePlayer::
 	.string "So your name is {PLAYER}!"
 	.string "$"
 
+gText_Birch_ThisIsMyDaughter::
+	.string "This is my daughter.\p"
+	.string "I named her Brittany when\n"
+	.string "my daughter was born.\p"
+	.string "Now I'm giving you an opportunity\n"
+	.string "to give her a different name,\l"
+	.string "if you wish.\p" 
+	.string "$"
+	
+gText_Birch_SoItsRival::
+	.string "So it's {RIVAL}?$"
+
+gText_Birch_YourRival::
+	.string "Splendid.\p"
+	.string "So her name is {RIVAL}!\p"
+	.string "Don't want to forget that, now!\p"
+	.string "$"
+
 gText_Birch_AreYouReady::
-	.string "All right.\p"
+	.string "All right, {PLAYER}.\p"
 	.string "Please see me at my Pokémon Lab\n"
 	.string "as soon as you possibly can.\p"
 	.string "Don't be late!$"

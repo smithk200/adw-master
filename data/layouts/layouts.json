@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_Genericbuilding1",
       "border_filepath": "data/layouts/TwigtonCity_RivalsHouse1F/border.bin",
       "blockdata_filepath": "data/layouts/TwigtonCity_RivalsHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIGTON_CITY_MOMS_ROOM2F",
+      "name": "TwigtonCityMomsRoom2F_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding1",
+      "border_filepath": "data/layouts/TwigtonCityMomsRoom2F/border.bin",
+      "blockdata_filepath": "data/layouts/TwigtonCityMomsRoom2F/map.bin"
     }
   ]
 }
