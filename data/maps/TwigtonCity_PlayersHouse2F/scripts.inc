@@ -49,7 +49,7 @@ TwigtonCityPlayersHouse2F_Text_NoOnesForcingYou:
 	.string "you leave the house!$"
 
 TwigtonCityPlayersHouse2F_PlayedWithSwitch_2_Text:
-	.string "{PLAYER} played with the Switch 2.\n"
+	.string "{RIVAL} played with the Switch 2.\n"
 	.string "Get off your ass and get out of here!$"
 
 TwigtonCityPlayersHouse2F_WarningMatureContent_Text:

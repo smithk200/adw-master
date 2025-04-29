@@ -267,6 +267,13 @@ static void MainMenu_FormatSavegamePokedex(void);
 static void MainMenu_FormatSavegameTime(void);
 static void MainMenu_FormatSavegameBadges(void);
 static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8, u8, u8, u8, u8, u8);
+static void PrintNameChoiceOptions(u8);
+static void Task_OakSpeech26(u8);
+static void Task_OakSpeech27(u8);
+static void Task_OakSpeech28(u8);
+static void Task_OakSpeech29(u8);
+static void GetDefaultName(u8);
+static void Task_NewGameBirchSpeech_SoItsrivalName(u8);
 
 // .rodata
 
@@ -444,6 +451,15 @@ static const struct WindowTemplate sNewGameBirchSpeechTextWindows[] =
         .paletteNum = 15,
         .baseBlock = 0x85
     },
+    {
+        .bg = 0,
+        .tilemapLeft = 3,
+        .tilemapTop = 2,
+        .width = 10,
+        .height = 10,
+        .paletteNum = 15,
+        .baseBlock = 1
+    },
     DUMMY_WIN_TEMPLATE
 };
 
@@ -507,6 +523,13 @@ static const struct MenuAction sMenuActions_RivalName[] = {
     {COMPOUND_STRING("Britney"), {NULL}},
     {COMPOUND_STRING("Jeanette"), {NULL}},
     {COMPOUND_STRING("Eleanor"), {NULL}}
+};
+
+static const u8 *const sRivalNameChoices[] = {
+    COMPOUND_STRING("Brittany"),
+    COMPOUND_STRING("Britney"),
+    COMPOUND_STRING("Jeanette"),
+    COMPOUND_STRING("Eleanor"),
 };
 
 static const u8 *const sMalePresetNames[] = {
@@ -1525,9 +1548,130 @@ static void Task_NewGameBirchSpeech_WaitToShowRivalNameMenu(u8 taskId)
     if (!RunTextPrintersAndIsPrinter0Active())
     {
         NewGameBirchSpeech_ShowRivalNameMenu();
-        gTasks[taskId].func = Task_NewGameBirchSpeech_ChooseRivalName;
+        gTasks[taskId].func = PrintNameChoiceOptions;
     }
 }
+
+static void PrintNameChoiceOptions(u8 taskId)
+{
+    s16 * data = gTasks[taskId].data;
+    const u8 *const * textPtrs;
+    u8 i;
+    u8 name2 = Menu_GetCursorPos();
+    //u8 defaultName = NewGameBirchSpeech_SetrivalName(1);
+    
+
+    data[13] = AddWindow(&sNewGameBirchSpeechTextWindows[3]);
+    PutWindowTilemap(data[13]);
+    DrawStdFrameWithCustomTileAndPalette(data[13], 1, STD_WINDOW_BASE_TILE_NUM, 14);
+    FillWindowPixelBuffer(gTasks[taskId].data[13], 0x11);
+    AddTextPrinterParameterized(data[13], FONT_NORMAL, gOtherText_NewName, 8, 1, 0, NULL);
+    textPtrs = sRivalNameChoices;
+    for (i = 0; i < 4; i++)
+    {
+        AddTextPrinterParameterized(data[13], FONT_NORMAL, textPtrs[i], 8, 16 * (i + 1) + 1, 0, NULL);
+    }
+    CopyWindowToVram(data[13], COPYWIN_FULL);
+    //if (name2 != gTasks[taskId].defaultName)
+    //{
+        //gTasks[taskId].defaultName= name2;
+   // }
+   InitMenuNormal(data[13], FONT_NORMAL, 0, 1, 16, 5, 0);
+    gTasks[taskId].func = Task_OakSpeech29;
+}
+
+static void GetDefaultName(u8 rivalNameChoice)
+{
+    const u8 * src;
+    u8 * dest;
+    u8 i;
+    src = sRivalNameChoices[rivalNameChoice];
+    dest = gSaveBlock2Ptr->rivalName;
+    for (i = 0; i < PLAYER_NAME_LENGTH && src[i] != EOS; i++)
+        dest[i] = src[i];
+    for (; i < PLAYER_NAME_LENGTH + 1; i++)
+        dest[i] = EOS;
+}
+
+static void Task_OakSpeech29(u8 taskId)
+{
+    s16 * data = gTasks[taskId].data;
+    s8 input = Menu_ProcessInput();
+    switch (input)
+    {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+        PlaySE(SE_SELECT);
+        ClearStdWindowAndFrameToTransparent(data[13], TRUE);
+        RemoveWindow(data[13]);
+        GetDefaultName(input - 1);
+        data[15] = 1;
+        gTasks[taskId].func = Task_OakSpeech26;
+        break;
+    case 0:
+        PlaySE(SE_SELECT);
+        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, 0);
+        gTasks[taskId].func = Task_NewGameBirchSpeech_StartRivalNamingScreen;
+        break;
+    case -1:
+        break;
+    }
+}
+
+static void Task_OakSpeech26(u8 taskId)
+{
+    s16 * data = gTasks[taskId].data;
+
+    if (!gPaletteFade.active)
+    {
+        if (data[15] == 1)
+        {
+            StringExpandPlaceholders(gStringVar4, gText_Birch_SoItsRival);
+            gTasks[taskId].func = Task_NewGameBirchSpeech_SoItsrivalName;
+            data[15] = 0;
+            data[3] = 25;
+        }
+        else if (!IsTextPrinterActive(0))
+        {
+            if (data[3] != 0)
+                data[3]--;
+            else
+            {
+                CreateYesNoMenuParameterized(2, 1, 0xF3, 0xDF, 2, 15);
+                gTasks[taskId].func = Task_OakSpeech27;
+            }
+        }
+    }
+}
+
+static void Task_OakSpeech27(u8 taskId)
+{
+    s8 input = Menu_ProcessInputNoWrapClearOnChoose();
+    switch (input)
+    {
+    case 0:
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = Task_NewGameBirchSpeech_SlidePlatformAway2Rival;
+        break;
+    case 1:
+    case -1:
+        PlaySE(SE_SELECT);
+        gTasks[taskId].func = Task_OakSpeech28;
+        break;
+    }
+}
+
+static void Task_OakSpeech28(u8 taskId)
+{
+    PrintNameChoiceOptions(taskId);
+    NewGameBirchSpeech_ClearWindow(0);
+    AddTextPrinterForMessage(TRUE);
+    StringExpandPlaceholders(gStringVar4, gText_Birch_ThisIsMyDaughter);
+    gTasks[taskId].func = Task_OakSpeech29;
+}
+
 
 static void Task_NewGameBirchSpeech_ChooseRivalName(u8 taskId)
 {
@@ -1733,10 +1877,11 @@ static void Task_NewGameBirchSpeech_ProcessNameYesNoMenuRival(u8 taskId)
         case MENU_B_PRESSED:
         case 1:
             PlaySE(SE_SELECT);
-            BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_StartRivalNamingScreen;
+            //BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+            gTasks[taskId].func = Task_NewGameBirchSpeech_RivalIntro;
     }
 }
+
 
 static void Task_NewGameBirchSpeech_SlidePlatformAway2(u8 taskId)
 {
@@ -1932,14 +2077,14 @@ static void Task_NewGameBirchSpeech_WhatsrivalName(u8 taskId)
 static void Task_NewGameBirchSpeech_WaitForWhatsrivalNameToPrint(u8 taskId)
 {
     if (!RunTextPrintersAndIsPrinter0Active())
-        gTasks[taskId].func = Task_NewGameBirchSpeech_WaitPressBeforeNameChoiceRival;
+        gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowRivalNameMenu;
 }
 
 static void Task_NewGameBirchSpeech_WaitPressBeforeNameChoiceRival(u8 taskId)
 {
     if ((JOY_NEW(A_BUTTON)) || (JOY_NEW(B_BUTTON)))
     {
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
+        //BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_NewGameBirchSpeech_WaitToShowRivalNameMenu;
     }
 }
