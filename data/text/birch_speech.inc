@@ -56,6 +56,9 @@ gText_Birch_ThisIsMyDaughter::
 	.string "to give her a different name,\l"
 	.string "if you wish.\p" 
 	.string "$"
+
+gOtherText_NewName::
+	.string "New Name$"
 	
 gText_Birch_SoItsRival::
 	.string "So it's {RIVAL}?$"

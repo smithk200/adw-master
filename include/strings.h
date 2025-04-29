@@ -290,6 +290,7 @@ extern const u8 gText_Birch_AreYouReady[];
 extern const u8 gText_Birch_ThisIsMyDaughter[];
 extern const u8 gText_Birch_SoItsRival[];
 extern const u8 gText_Birch_YourRival[];
+extern const u8 gOtherText_NewName[];
 
 extern const u8 gText_BirchInTrouble[];
 extern const u8 gText_ConfirmStarterChoice[];
