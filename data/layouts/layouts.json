@@ -4414,8 +4414,8 @@
     {
       "id": "LAYOUT_TWIGTON_CITY",
       "name": "TwigtonCity_Layout",
-      "width": 60,
-      "height": 60,
+      "width": 40,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Pallettown",
       "border_filepath": "data/layouts/TwigtonCity/border.bin",

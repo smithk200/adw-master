@@ -44,9 +44,8 @@ gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}?$"
 
 gText_Birch_YourePlayer::
-	.string "Excellent.\p"
-	.string "So your name is {PLAYER}!"
-	.string "$"
+	.string "Excellent.\n"
+	.string "So your name is {PLAYER}!$"
 
 gText_Birch_ThisIsMyDaughter::
 	.string "This is my daughter.\p"

@@ -20,7 +20,7 @@ TwigtonCity_PlayersHouse2F_EventScript_JumpOutWindow::
 	goto_if_unset FLAG_TALKED_TO_MOM_BEGINNING_OF_GAME, TwigtonCity_PlayersHouse2F_EventScript_End
 	msgbox TwigtonCity_PlayersHouse2F_JumpOutWindowChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, TwigtonCity_PlayersHouse2F_JumpOutWindow_No
-	warp MAP_TWIGTON_CITY, 33, 26
+	warp MAP_TWIGTON_CITY, 20, 13
 	release
 	end
 
@@ -49,7 +49,7 @@ TwigtonCityPlayersHouse2F_Text_NoOnesForcingYou:
 	.string "you leave the house!$"
 
 TwigtonCityPlayersHouse2F_PlayedWithSwitch_2_Text:
-	.string "{RIVAL} played with the Switch 2.\n"
+	.string "{PLAYER} played with the Switch 2.\n"
 	.string "Get off your ass and get out of here!$"
 
 TwigtonCityPlayersHouse2F_WarningMatureContent_Text:
