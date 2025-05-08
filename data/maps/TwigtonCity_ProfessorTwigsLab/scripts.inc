@@ -32,7 +32,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall::
 	faceplayer
 	goto_if_set FLAG_RECIEVED_STARTER, TwigtonCity_ProfessorTwigsLab_EventScript_Twig
 	setvar PLAYER_STARTER_NUM, 0
-	setvar PLAYER_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar PLAYER_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SCORBUNNY
 	setvar RIVAL_STARTER_ID, LOCALID_SCORBUNNY_BALL
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
@@ -46,7 +46,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_SquirtleBall::
 	goto_if_set FLAG_RECIEVED_STARTER, TwigtonCity_ProfessorTwigsLab_EventScript_Twig
 	setvar PLAYER_STARTER_NUM, 1
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar RIVAL_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_ID, LOCALID_GRASSHOLE_BALL
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls

@@ -2424,6 +2424,13 @@ gCryTable::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
+.if CLOVER_POKEMON == TRUE
+.if P_FAMILY_GRASSHOLE == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
+.endif
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4852,4 +4859,11 @@ gCryTable_Reverse::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry_reverse Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
+.if CLOVER_POKEMON == TRUE
+.if P_FAMILY_GRASSHOLE == TRUE
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.endif
 .endif @ P_CRIES_ENABLED

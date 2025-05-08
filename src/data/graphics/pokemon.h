@@ -26732,6 +26732,26 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_PECHARUNT
 
-    const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
-    const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
-    const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
+const u32 gMonFrontPic_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Rectreem[] = INCBIN_U32("graphics/pokemon/rectreem/anim_front.4bpp.lz");
+
+const u32 gMonBackPic_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/back.4bpp.lz");
+const u32 gMonBackPic_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/back.4bpp.lz");
+const u32 gMonBackPic_Rectreem[] = INCBIN_U32("graphics/pokemon/rectreem/back.4bpp.lz");
+
+const u32 gMonPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
+const u32 gMonPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
+const u32 gMonPalette_Rectreem[] = INCBIN_U32("graphics/pokemon/rectreem/normal.gbapal.lz");
+
+const u32 gMonShinyPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
+const u32 gMonShinyPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
+const u32 gMonShinyPalette_Rectreem[] = INCBIN_U32("graphics/pokemon/rectreem/normal.gbapal.lz");
+
+const u8 gMonIcon_Grasshole[] = INCBIN_U8("graphics/pokemon/grasshole/icon.4bpp");
+const u8 gMonIcon_Analgae[] = INCBIN_U8("graphics/pokemon/analgae/icon.4bpp");
+const u8 gMonIcon_Rectreem[] = INCBIN_U8("graphics/pokemon/rectreem/icon.4bpp");
+
+const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
+const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
+const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
