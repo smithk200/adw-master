@@ -1164,3 +1164,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TwigtonCity_RivalsHouse1F/scripts.inc"
 
 	.include "data/maps/TwigtonCityMomsRoom2F/scripts.inc"
+
+	.include "data/maps/TwigtonCity_ProfessorTwigsLab/scripts.inc"

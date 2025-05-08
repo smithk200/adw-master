@@ -1563,7 +1563,8 @@ static void PrintNameChoiceOptions(u8 taskId)
     
 
     data[13] = AddWindow(&sNewGameBirchSpeechTextWindows[3]);
-    DrawMainMenuWindowBorder(&sNewGameBirchSpeechTextWindows[3], MAIN_MENU_BORDER_TILE);
+    //DrawMainMenuWindowBorder(&sNewGameBirchSpeechTextWindows[3], MAIN_MENU_BORDER_TILE);
+    NewGameBirchSpeech_ShowRivalNameMenu();
     //PutWindowTilemap(data[13]);
     DrawStdFrameWithCustomTileAndPalette(data[13], 1, STD_WINDOW_BASE_TILE_NUM, 14);
     //FillWindowPixelBuffer(gTasks[taskId].data[13], 0x11);
@@ -2079,15 +2080,7 @@ static void Task_NewGameBirchSpeech_WaitForRivalFadeIn(u8 taskId)
 
 static void Task_NewGameBirchSpeech_RivalIntro(u8 taskId)
 {
-    NewGameBirchSpeech_ClearWindow(0);
-    StringExpandPlaceholders(gStringVar4, gText_Birch_ThisIsMyDaughter);
-    AddTextPrinterForMessage(TRUE);
-    gTasks[taskId].func = Task_NewGameBirchSpeech_WhatsrivalName;
-}
-
-static void Task_NewGameBirchSpeech_WhatsrivalName(u8 taskId)
-{
-    NewGameBirchSpeech_ClearWindow(0);
+    //NewGameBirchSpeech_ClearWindow(0);
     StringExpandPlaceholders(gStringVar4, gText_Birch_ThisIsMyDaughter);
     AddTextPrinterForMessage(TRUE);
     gTasks[taskId].func = Task_NewGameBirchSpeech_WaitForWhatsrivalNameToPrint;

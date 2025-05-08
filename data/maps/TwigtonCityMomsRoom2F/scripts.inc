@@ -129,7 +129,7 @@ TwigtonCity_MomsRoom2F_TextMomsJournal:
 	.string "He yells at me.\p"
 	.string "Doesn't he realize that I am doing\n"
 	.string "what's best for him?\p"
-	.string "I have done everything, I could, LORD\p"
+	.string "I have done everything I could, LORD.\p"
 	.string "Please, LORD, I need the strength to be\n"
 	.string "a better mom.\p"
 	.string "And, LORD...\p"

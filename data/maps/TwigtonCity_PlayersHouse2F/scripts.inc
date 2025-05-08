@@ -20,7 +20,7 @@ TwigtonCity_PlayersHouse2F_EventScript_JumpOutWindow::
 	goto_if_unset FLAG_TALKED_TO_MOM_BEGINNING_OF_GAME, TwigtonCity_PlayersHouse2F_EventScript_End
 	msgbox TwigtonCity_PlayersHouse2F_JumpOutWindowChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, TwigtonCity_PlayersHouse2F_JumpOutWindow_No
-	warp MAP_TWIGTON_CITY, 20, 13
+	warp MAP_TWIGTON_CITY, 23, 11
 	release
 	end
 
