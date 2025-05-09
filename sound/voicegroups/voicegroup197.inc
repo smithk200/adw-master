@@ -48,10 +48,10 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_keysplit voicegroup006, KeySplitTable2 @pizz. strings
 	voice_keysplit voicegroup006, KeySplitTable1 @orchestra strings
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_timpani, 255, 255, 0, 99 @timpani
-	voice_keysplit voicegroup006, KeySplitTable2 @string ens. 1
-	voice_keysplit voicegroup006, KeySplitTable2 @string ens. 2
-	voice_keysplit voicegroup006, KeySplitTable2 @synth strings 1
-	voice_keysplit voicegroup006, KeySplitTable2 @synth strings 2
+	voice_keysplit voicegroup199, KeySplitTable2 @string ens. 1
+	voice_keysplit voicegroup199, KeySplitTable2 @string ens. 2
+	voice_keysplit voicegroup199, KeySplitTable2 @synth strings 1
+	voice_keysplit voicegroup199, KeySplitTable2 @synth strings 2
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @aahs
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @oohs
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @synth voice

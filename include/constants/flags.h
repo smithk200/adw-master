@@ -45,8 +45,8 @@
 
 #define FLAG_TALKED_TO_MOM_BEGINNING_OF_GAME    0x20 // Unused Flag
 #define FLAG_RECIEVED_STARTER    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_HIDE_TWIG_IN_HIS_CITY   0x22 // Unused Flag
+#define FLAG_HIDE_TWIG_IN_HIS_LAB    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

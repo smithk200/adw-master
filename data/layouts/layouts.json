@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_TWIGTON_CITY",
       "name": "TwigtonCity_Layout",
       "width": 40,
-      "height": 37,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Pallettown",
       "border_filepath": "data/layouts/TwigtonCity/border.bin",
@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/TwigtonCity_ProfessorTwigsLab/border.bin",
       "blockdata_filepath": "data/layouts/TwigtonCity_ProfessorTwigsLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1",
+      "name": "Route1_Layout",
+      "width": 20,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Pallettown",
+      "border_filepath": "data/layouts/Route1/border.bin",
+      "blockdata_filepath": "data/layouts/Route1/map.bin"
     }
   ]
 }

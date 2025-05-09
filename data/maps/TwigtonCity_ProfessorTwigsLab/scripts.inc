@@ -3,7 +3,7 @@ TwigtonCity_ProfessorTwigsLab_MapScripts::
 	.byte 0
 
 TwigtonCity_ProfessorTwigsLab_OnLoad::
-	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 2
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 1, TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon
 	end
 
 .equ PLAYER_STARTER_NUM,      VAR_TEMP_1
@@ -21,9 +21,30 @@ TwigtonCity_ProfessorTwigsLab_OnLoad::
 
 @VAR_TWIGTON_CITY_MAP_STATE
 
+TwigtonCity_ProfessorTwigsLab_Trigger_Left::
+	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
+	release
+	end
+
+TwigtonCity_ProfessorTwigsLab_Trigger_Middle::
+	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
+	release
+	end
+
+TwigtonCity_ProfessorTwigsLab_Trigger_Right::
+	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
+	release
+	end
+
 TwigtonCity_ProfessorTwigsLab_EventScript_Twig::
 	lock
 	faceplayer
+	release
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon::
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 2
 	release
 	end
 
@@ -156,6 +177,12 @@ TwigtonCity_ProfessorTwigsLab_EventScript_RivalTakesStarter::
 	release
 	end
 
+TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon::
+	message TwigtonCity_ProfessorTwigsLab_Text_YouCantLeaveWithoutAStarter
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_YouCantLeaveWithoutAStarter
+	release
+	end
+
 TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToScorbunny::
 	walk_right
 	step_end
@@ -168,6 +195,17 @@ TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToGrasshole::
 	walk_right
 	step_end
 
+TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_YouCantLeaveWithoutAStarter::
+	walk_up
+	step_end
 
 TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls:
 	.string "Those are Poké Balls!\p"
@@ -206,3 +244,7 @@ TwigtonCity_ProfessorTwigsLab_Text_RivalIllTakeThisOneThen:
 Text_GiveNicknameToThisMon::
 	.string "Do you want to give a nickname to\n"
 	.string "this {STR_VAR_1}?$"
+
+TwigtonCity_ProfessorTwigsLab_Text_YouCantLeaveWithoutAStarter::
+	.string "Professor Twig: You can't leave without\n"
+	.string "a Pokémon! It's the law!$"

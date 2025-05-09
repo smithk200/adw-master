@@ -103,7 +103,7 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
         ),
         .frontAnimId = ANIM_V_STRETCH,
         .backPic = gMonBackPic_Analgae,
-        .backPicSize = MON_COORDS_SIZE(64, 64),,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
         .backPicYOffset = 3,
         .backAnimId = BACK_ANIM_H_SLIDE,
         .palette = gMonPalette_Analgae,
@@ -160,7 +160,7 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
         .frontAnimId = ANIM_ROTATE_UP_SLAM_DOWN,
         .backPic = gMonBackPic_Rectreem,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 3
+        .backPicYOffset = 3,
         .backAnimId = BACK_ANIM_H_SHAKE,
         .palette = gMonPalette_Rectreem,
         .shinyPalette = gMonShinyPalette_Rectreem,
