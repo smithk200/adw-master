@@ -1,9 +1,21 @@
 TwigtonCity_ProfessorTwigsLab_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, TwigtonCity_ProfessorTwigsLab_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, TwigtonCity_ProfessorTwigsLab_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, TwigtonCity_ProfessorTwigsLab_OnFrame
 	.byte 0
 
 TwigtonCity_ProfessorTwigsLab_OnLoad::
-	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 1, TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon
+	end
+
+TwigtonCity_ProfessorTwigsLab_OnWarp::
+	map_script_2 VAR_TWIGTON_CITY_MAP_STATE_LAB, 1, TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene
+	.2byte 0
+
+TwigtonCity_ProfessorTwigsLab_OnFrame::
+	map_script_2 VAR_TWIGTON_CITY_MAP_STATE_LAB, 1, TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon
+	.2byte 0
+
+TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	end
 
 .equ PLAYER_STARTER_NUM,      VAR_TEMP_1
@@ -43,9 +55,14 @@ TwigtonCity_ProfessorTwigsLab_EventScript_Twig::
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon::
+	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon
+	clearflag FLAG_DONT_TRANSITION_MUSIC
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_TestText
+	delay 20
+	closemessage
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 2
-	release
+	releaseall
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall::
@@ -57,7 +74,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall::
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SCORBUNNY
 	setvar RIVAL_STARTER_ID, LOCALID_SCORBUNNY_BALL
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
-	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
 	end
 
@@ -70,7 +87,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_SquirtleBall::
 	setvar RIVAL_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_ID, LOCALID_GRASSHOLE_BALL
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
-	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
 	end
 
@@ -83,7 +100,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ScorbunnyBall::
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB , 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
-	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
 	end
 
@@ -201,6 +218,7 @@ TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon::
 	walk_up
 	walk_up
 	walk_up
+	walk_up
 	step_end
 
 TwigtonCity_ProfessorTwigsLab_Movement_YouCantLeaveWithoutAStarter::
@@ -241,10 +259,13 @@ TwigtonCity_ProfessorTwigsLab_Text_RivalIllTakeThisOneThen:
 	.string "Fine...\p"
 	.string "I'll take this one.$"
 
-Text_GiveNicknameToThisMon::
+Text_GiveNicknameToThisMon:
 	.string "Do you want to give a nickname to\n"
 	.string "this {STR_VAR_1}?$"
 
-TwigtonCity_ProfessorTwigsLab_Text_YouCantLeaveWithoutAStarter::
+TwigtonCity_ProfessorTwigsLab_Text_YouCantLeaveWithoutAStarter:
 	.string "Professor Twig: You can't leave without\n"
 	.string "a Pokémon! It's the law!$"
+
+TwigtonCity_ProfessorTwigsLab_Text_TestText:
+	.string "Setting Twigton City Lab State to 2.$"

@@ -68,7 +68,7 @@ TwigtonCity_EventScript_TwigTrigger::
 	call_if_eq VAR_TEMP_1, 0, TwigtonCity_EventScript_TwigEnterLeft
 	call_if_eq VAR_TEMP_1, 1, TwigtonCity_EventScript_TwigEnterRight
 	delay 30
-	msgbox TwigtonCity_Text_WhatAreYouDoing
+	msgbox TwigtonCity_Text_ComeWithMeToGetAPokemon
 	closemessage
 	delay 30
 	call_if_eq VAR_TEMP_1, 0, TwigtonCity_EventScript_TwigLeadPlayerToLabLeft
@@ -76,11 +76,11 @@ TwigtonCity_EventScript_TwigTrigger::
 	opendoor 16, 13
 	waitdooranim
 	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigEnterLab
-	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_Movement_PlayerEnterLab
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_Movement_TwigEnterLab @can prob use the same one
 	waitmovement 0
 	closedoor 16, 13
 	waitdooranim
-	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 1
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 1 @Sets to 1
 	clearflag FLAG_HIDE_TWIG_IN_HIS_LAB
 	setvar VAR_TWIGTON_CITY_MAP_STATE, 1
 	setflag FLAG_HIDE_TWIG_IN_HIS_CITY
@@ -101,16 +101,19 @@ TwigtonCity_EventScript_TwigEnterRight::
 	return
 
 TwigtonCity_EventScript_TwigLeadPlayerToLabLeft::
-	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigEnterLeft
+	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigLeadPlayerToLabLeft
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_Movement_PlayerFollowsTwigToHisLabLeft
 	waitmovement 0
 	return
 
 TwigtonCity_EventScript_TwigLeadPlayerToLabRight::
-	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigEnterRight
+	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigLeadPlayerToLabRight
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight
 	waitmovement 0
 	return
 
 TwigtonCity_Movement_TwigEnterLeft::
+	walk_right
 	walk_up
 	walk_up
 	walk_up
@@ -120,30 +123,155 @@ TwigtonCity_Movement_TwigEnterLeft::
 	step_end
 
 TwigtonCity_Movement_TwigEnterRight::
+	walk_right
+	walk_right
 	walk_up
 	walk_up
 	walk_up
 	walk_up
 	walk_up
+	step_end
+
+TwigtonCity_Movement_TwigLeadPlayerToLabLeft::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+TwigtonCity_Movement_PlayerFollowsTwigToHisLabLeft::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+TwigtonCity_Movement_TwigLeadPlayerToLabRight::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_up
+	step_end
+
+TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight::
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
 	walk_up
 	step_end
 
 TwigtonCity_Movement_TwigEnterLab::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	step_end
-
-TwigtonCity_Movement_PlayerEnterLab::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_up
+	set_invisible
 	step_end
 
 TwigtonCity_TextMomsHouse:
@@ -172,8 +300,12 @@ TwigtonCity_TextMomsHouse_DoNotEnter:
 	.string "open this door.$"
 
 TwigtonCity_Text_WhatAreYouDoing:
-	.string "Twig: What are you doing?\p"
+	.string "Prof. Twig: What are you doing?\p"
 	.string "If you don't have a Pokémon, you'll\n"
 	.string "have to come to my lab to get one!\p"
 	.string "That's a law we have in my\n"
 	.string "precious Trigton City!$"
+
+TwigtonCity_Text_ComeWithMeToGetAPokemon:
+	.string "Prof. Twig: Come with me to get\n"
+	.string "your Pokémon!$"

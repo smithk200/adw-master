@@ -3,6 +3,7 @@ TwigtonCity_PlayersHouse2F_MapScripts::
 	.byte 0
 
 TwigtonCity_PlayersHouse2F_OnLoad::
+	setrespawn HEAL_LOCATION_TWIGTON_CITY_PLAYERS_HOUSE2F
 	setflag FLAG_SYS_B_DASH
 	end
 
