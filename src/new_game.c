@@ -47,6 +47,7 @@
 #include "constants/map_groups.h"
 #include "constants/items.h"
 #include "difficulty.h"
+#include "constants/heal_locations.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 
@@ -211,7 +212,7 @@ void NewGameInitData(void)
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
-    //SetLastHealLocationWarp(HEAL_LOCATION_TWIGTON_CITY_PLAYERS_HOUSE2F);
+    SetLastHealLocationWarp(HEAL_LOCATION_TWIGTON_CITY_PLAYERS_HOUSE2F);
 }
 
 static void ResetMiniGamesRecords(void)

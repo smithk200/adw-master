@@ -28,7 +28,7 @@ Optional (but still recommended) fields for trainers:
     - Starting Status (see include/constants/battle.h for values)
 
 Pokemon are then specified using the Showdown Export format.
-If a field is not specified, it will use it's default value.
+If a field is not specified, it will use its default value.
 
 Required fields for Pokemon:
     - Species (Either as SPECIES_ABRA or Abra)
@@ -5954,7 +5954,7 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BILLY ===
-Name: BILLY
+Name: Billy
 Class: Youngster
 Pic: Youngster
 Gender: Male
@@ -5962,13 +5962,10 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Zigzagoon
+Rattata
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Seedot
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOSH ===
 Name: JOSH
@@ -10381,22 +10378,16 @@ Level: 28
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_SOPHIA ===
-Name: SOPHIA
-Class: Pkmn Ranger
-Pic: Pokemon Ranger F
+Name: Sophia
+Class: Lass
+Pic: Lass
 Gender: Female
-Music: Cool
-Items: Full Restore
+Music: Female
 Double Battle: No
-AI: Basic Trainer
+AI:  Check Bad Move
 
-Swablu
-Level: 38
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Roselia
-Level: 38
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Magikarp
+Level: 5
 
 === TRAINER_CATHERINE_2 ===
 Name: CATHERINE

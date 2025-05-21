@@ -35,16 +35,19 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene::
 
 TwigtonCity_ProfessorTwigsLab_Trigger_Left::
 	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
 	release
 	end
 
 TwigtonCity_ProfessorTwigsLab_Trigger_Middle::
 	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
 	release
 	end
 
 TwigtonCity_ProfessorTwigsLab_Trigger_Right::
 	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
 	release
 	end
 
@@ -58,7 +61,10 @@ TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon
 	clearflag FLAG_DONT_TRANSITION_MUSIC
-	msgbox TwigtonCity_ProfessorTwigsLab_Text_TestText
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon
+	delay 20
+	closemessage
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon2
 	delay 20
 	closemessage
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 2
@@ -269,3 +275,18 @@ TwigtonCity_ProfessorTwigsLab_Text_YouCantLeaveWithoutAStarter:
 
 TwigtonCity_ProfessorTwigsLab_Text_TestText:
 	.string "Setting Twigton City Lab State to 2.$"
+
+TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon:
+	.string "See these here Poké Balls!\n"
+	.string "They contain Pokémon!\p"
+	.string "That's pretty obvious, isn't it?\n"
+	.string "Poké Balls can ONLY store Pokémon.\l"
+	.string "Did you know that?$"
+
+TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon2:
+	.string "I found these Pokémon in garabge cans.\n"
+	.string "Show them the love they deserve, then!\p"
+	.string "All right, now, you can choose your\n"
+	.string "Pokémon. Make the best choice!\p"
+	.string "I'm even going to tell you who these\n"
+	.string "Pokémon are!$"

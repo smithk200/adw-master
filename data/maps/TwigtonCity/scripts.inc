@@ -40,6 +40,16 @@ TwigtonCity_EventScriptMomsHouse_DoNotEnter::
 	release
 	end
 
+TwigtonCity_TriggerWhatAreYouDoing_Left_Test::
+	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCityitsnottimetogetyourpokemonyet
+	end
+
+TwigtonCityitsnottimetogetyourpokemonyet::
+	lock
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	release
+	end
+
 TwigtonCity_TriggerWhatAreYouDoing_Left::
 	lockall
 	setvar VAR_TEMP_1, 0
