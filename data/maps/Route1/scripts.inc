@@ -24,6 +24,21 @@ Route1_EventScript_BoyInGrass::
 	release
 	end
 
+Route1_EventScript_AmongUs::
+	lock
+	faceplayer
+	msgbox Route1_Text_SomethingAboutThisSeemsSus, MSGBOX_DEFAULT
+	release
+	end
+
+Route1_EventScript_Potion::
+	finditem ITEM_POTION
+	end
+
+Route1_EventScript_Pokeball::
+	finditem ITEM_POKE_BALL
+	end
+
 Route1_EventScript_Billy::
 	trainerbattle_single TRAINER_BILLY, Route1_Text_BillyIntro, Route1_Text_BillyDefeat
 	msgbox Route1_Text_BillyPostBattle, MSGBOX_AUTOCLOSE
@@ -63,6 +78,9 @@ Route1_Text_BoyInGrass:
 	.string "I like wandering in the grass!\n"
 	.string "It's so fun, I could do it forever!\p"
 	.string "La-dee-dee, la-dee-dum...$"
+
+Route1_Text_SomethingAboutThisSeemsSus:
+	.string "Something about this seems very sus...$"
 
 Route1_Sign_Text_Twigton:
 	.string "Route 1\n"

@@ -92,7 +92,6 @@ TwigtonCity_EventScript_TwigTrigger::
 	waitdooranim
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 1 @Sets to 1
 	clearflag FLAG_HIDE_TWIG_IN_HIS_LAB
-	setvar VAR_TWIGTON_CITY_MAP_STATE, 1
 	setflag FLAG_HIDE_TWIG_IN_HIS_CITY
 	setflag FLAG_DONT_TRANSITION_MUSIC
 	warp MAP_TWIGTON_CITY_PROFESSOR_TWIGS_LAB, 6, 12
@@ -134,12 +133,13 @@ TwigtonCity_Movement_TwigEnterLeft::
 
 TwigtonCity_Movement_TwigEnterRight::
 	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	face_up
 	step_end
 
 TwigtonCity_Movement_TwigLeadPlayerToLabLeft::
@@ -170,6 +170,8 @@ TwigtonCity_Movement_TwigLeadPlayerToLabLeft::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -179,7 +181,6 @@ TwigtonCity_Movement_TwigLeadPlayerToLabLeft::
 	step_end
 
 TwigtonCity_Movement_PlayerFollowsTwigToHisLabLeft::
-	walk_down
 	walk_down
 	walk_down
 	walk_down
@@ -245,7 +246,7 @@ TwigtonCity_Movement_TwigLeadPlayerToLabRight::
 	walk_down
 	walk_right
 	walk_right
-	walk_up
+	walk_right
 	step_end
 
 TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight::
@@ -266,7 +267,6 @@ TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight::
 	walk_right
 	walk_right
 	walk_right
-	walk_right
 	walk_down
 	walk_down
 	walk_down
@@ -275,8 +275,6 @@ TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight::
 	walk_down
 	walk_down
 	walk_down
-	walk_right
-	walk_up
 	step_end
 
 TwigtonCity_Movement_TwigEnterLab::

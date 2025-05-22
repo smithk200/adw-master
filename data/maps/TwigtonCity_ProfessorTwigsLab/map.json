@@ -93,29 +93,56 @@
     {
       "type": "trigger",
       "x": 5,
-      "y": 8,
+      "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "TwigtonCity_ProfessorTwigsLab_Trigger_Left"
+      "var": "VAR_TWIGTON_CITY_MAP_STATE_LAB",
+      "var_value": "2",
+      "script": "TwigtonCity_ProfessorTwigsLab_Trigger_CantLeaveLab"
     },
     {
       "type": "trigger",
       "x": 6,
-      "y": 8,
+      "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "TwigtonCity_ProfessorTwigsLab_Trigger_Middle"
+      "var": "VAR_TWIGTON_CITY_MAP_STATE_LAB",
+      "var_value": "2",
+      "script": "TwigtonCity_ProfessorTwigsLab_Trigger_CantLeaveLab"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TWIGTON_CITY_MAP_STATE_LAB",
+      "var_value": "2",
+      "script": "TwigtonCity_ProfessorTwigsLab_Trigger_CantLeaveLab"
     },
     {
       "type": "trigger",
       "x": 7,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "TwigtonCity_ProfessorTwigsLab_Trigger_Right"
+      "var": "VAR_TWIGTON_CITY_MAP_STATE_LAB",
+      "var_value": "3",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TWIGTON_CITY_MAP_STATE_LAB",
+      "var_value": "3",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TWIGTON_CITY_MAP_STATE_LAB",
+      "var_value": "3",
+      "script": "NULL"
     }
   ],
   "bg_events": [

@@ -33,9 +33,9 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene::
 
 @VAR_TWIGTON_CITY_MAP_STATE
 
-TwigtonCity_ProfessorTwigsLab_Trigger_Left::
-	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
-	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon
+TwigtonCity_ProfessorTwigsLab_Trigger_CantLeaveLab::
+	message TwigtonCity_ProfessorTwigsLab_Text_YouCantLeaveWithoutAStarter
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_YouCantLeaveWithoutAStarter
 	release
 	end
 
@@ -145,6 +145,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ChoseStarter::
 	hidemonpic
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThisMonIsBattleReady
 	setflag FLAG_SYS_POKEMON_GET
+	setvar VAR_TWIGTON_CITY_MAP_STATE, 1
 	givemon PLAYER_STARTER_SPECIES, 5
 	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
 	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
