@@ -308,8 +308,8 @@ TwigtonCity_TextSmellsLikeTeenSpirit:
 	.string "and all over the city.$"
 
 TwigtonCity_TextReligiousFundamentalist:
-	.string "Professor Twig is blessed to have the money\n"
-	.string "to build a large city.\p"
+	.string "Professor Twig is blessed to have\n"
+	.string "the money to build a large city.\p"
 	.string "May God work through him!$"
 
 TwigtonCity_TextMomsHouse_DoNotEnter:

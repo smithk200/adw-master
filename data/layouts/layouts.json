@@ -4480,6 +4480,26 @@
       "secondary_tileset": "gTileset_Pallettown",
       "border_filepath": "data/layouts/Route1/border.bin",
       "blockdata_filepath": "data/layouts/Route1/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1HAMMERSOCK_CONNECTION",
+      "name": "Route1Hammersock_Connection_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding2",
+      "border_filepath": "data/layouts/Route1Hammersock_Connection/border.bin",
+      "blockdata_filepath": "data/layouts/Route1Hammersock_Connection/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIGTON_CITY_OLD_LADYS_HOUSE",
+      "name": "TwigtonCity_OldLadysHouse_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/TwigtonCity_OldLadysHouse/border.bin",
+      "blockdata_filepath": "data/layouts/TwigtonCity_OldLadysHouse/map.bin"
     }
   ]
 }
