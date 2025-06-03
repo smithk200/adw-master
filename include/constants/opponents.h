@@ -4,9 +4,9 @@
 #include "constants/battle_partner.h"
 
 #define TRAINER_NONE                          0
-#define TRAINER_SAWYER_1                      1
-#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
-#define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
+#define TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE            1
+#define TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE          2
+#define TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY          3
 #define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
 #define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_1       6

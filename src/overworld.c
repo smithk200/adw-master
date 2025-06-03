@@ -375,6 +375,17 @@ void DoWhiteOut(void)
     WarpIntoMap();
 }
 
+void DoWhiteOutRivalBattle(void)
+{
+    RunScriptImmediately(EventScript_WhiteOut);
+    if (B_WHITEOUT_MONEY == GEN_3)
+        SetMoney(&gSaveBlock1Ptr->money, GetMoney(&gSaveBlock1Ptr->money) / 2);
+    HealPlayerParty();
+    Overworld_ResetStateAfterWhiteOut();
+    SetWarpDestination(MAP_GROUP(TWIGTON_CITY_PROFESSOR_TWIGS_LAB), MAP_NUM(TWIGTON_CITY_PROFESSOR_TWIGS_LAB), WARP_ID_NONE, 6, 8);
+    WarpIntoMap();
+}
+
 void Overworld_ResetStateAfterFly(void)
 {
     ResetInitialPlayerAvatarState();
@@ -1633,6 +1644,31 @@ void CB2_WhiteOut(void)
         StopMapMusic();
         ResetSafariZoneFlag_();
         DoWhiteOut();
+        ResetInitialPlayerAvatarState();
+        ScriptContext_Init();
+        UnlockPlayerFieldControls();
+        if (IsFRLGWhiteout())
+            gFieldCallback = FieldCB_RushInjuredPokemonToCenter;
+        else
+            gFieldCallback = FieldCB_WarpExitFadeFromBlack;
+        state = 0;
+        DoMapLoadLoop(&state);
+        SetFieldVBlankCallback();
+        SetMainCallback1(CB1_Overworld);
+        SetMainCallback2(CB2_Overworld);
+    }
+}
+
+void CB2_WhiteOutRivalBattle(void)
+{
+    u8 state;
+
+    if (++gMain.state >= 120)
+    {
+        FieldClearVBlankHBlankCallbacks();
+        StopMapMusic();
+        ResetSafariZoneFlag_();
+        DoWhiteOutRivalBattle();
         ResetInitialPlayerAvatarState();
         ScriptContext_Init();
         UnlockPlayerFieldControls();

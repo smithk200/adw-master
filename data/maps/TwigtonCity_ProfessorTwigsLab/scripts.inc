@@ -207,6 +207,11 @@ TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon::
 	release
 	end
 
+TwigtonCity_ProfessorTwigsLab_EventScript_Brittany::
+	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_BrittanyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
 TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToScorbunny::
 	walk_right
 	step_end
@@ -291,3 +296,13 @@ TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon2:
 	.string "Pokémon. Make the best choice!\p"
 	.string "I'm even going to tell you who these\n"
 	.string "Pokémon are!$"
+
+TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro:
+	.string "I will battle you.$"
+TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat:
+	.string "Darn, I lost!$"
+TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory:
+	.string "Oh yeah!\n"
+	.string "Am I great or what?$"
+TwigtonCity_ProfessorTwigsLab_Text_BrittanyPostBattle:
+	.string "weeeeeeeee$"

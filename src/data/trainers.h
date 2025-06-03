@@ -26,17 +26,19 @@
         },
     },
 #line 84
-    [DIFFICULTY_NORMAL][TRAINER_SAWYER_1] =
+    [DIFFICULTY_NORMAL][TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE] =
     {
 #line 85
-        .trainerName = _("SAWYER"),
+        .trainerName = _("Brittany"),
 #line 86
-        .trainerClass = TRAINER_CLASS_HIKER,
+        .trainerClass = TRAINER_CLASS_RIVAL,
 #line 87
-        .trainerPic = TRAINER_PIC_HIKER,
+        .trainerPic = TRAINER_PIC_BRITTANY,
         .encounterMusic_gender =
+#line 88
+F_TRAINER_FEMALE | 
 #line 89
-            TRAINER_ENCOUNTER_MUSIC_HIKER,
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 90
         .doubleBattle = FALSE,
 #line 91
@@ -46,76 +48,80 @@
         {
             {
 #line 93
-            .species = SPECIES_GEODUDE,
+            .species = SPECIES_SCORBUNNY,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 95
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
 #line 94
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
         },
     },
 #line 97
-    [DIFFICULTY_NORMAL][TRAINER_GRUNT_AQUA_HIDEOUT_1] =
+    [DIFFICULTY_NORMAL][TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE] =
     {
 #line 98
-        .trainerName = _("GRUNT"),
+        .trainerName = _("Brittany"),
 #line 99
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .trainerClass = TRAINER_CLASS_RIVAL,
 #line 100
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
+        .trainerPic = TRAINER_PIC_BRITTANY,
         .encounterMusic_gender =
+#line 101
+F_TRAINER_FEMALE | 
 #line 102
-            TRAINER_ENCOUNTER_MUSIC_AQUA,
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 103
         .doubleBattle = FALSE,
 #line 104
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
             {
 #line 106
-            .species = SPECIES_POOCHYENA,
+            .species = SPECIES_GRASSHOLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 108
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
 #line 107
-            .lvl = 32,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
         },
     },
 #line 110
-    [DIFFICULTY_NORMAL][TRAINER_GRUNT_AQUA_HIDEOUT_2] =
+    [DIFFICULTY_NORMAL][TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY] =
     {
 #line 111
-        .trainerName = _("GRUNT"),
+        .trainerName = _("Brittany"),
 #line 112
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
+        .trainerClass = TRAINER_CLASS_RIVAL,
 #line 113
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_M,
+        .trainerPic = TRAINER_PIC_BRITTANY,
         .encounterMusic_gender =
+#line 114
+F_TRAINER_FEMALE | 
 #line 115
             TRAINER_ENCOUNTER_MUSIC_AQUA,
 #line 116
         .doubleBattle = FALSE,
 #line 117
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
         .partySize = 2,
         .party = (const struct TrainerMon[])
         {
             {
 #line 119
-            .species = SPECIES_ZUBAT,
+            .species = SPECIES_SQUIRTLE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 121
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
 #line 120
-            .lvl = 31,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
