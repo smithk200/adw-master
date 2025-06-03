@@ -40,6 +40,13 @@ TwigtonCity_EventScriptMomsHouse_DoNotEnter::
 	release
 	end
 
+TwigtonCity_EventScriptReligiousFundamentalist::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextReligiousFundamentalist, MSGBOX_DEFAULT
+	release
+	end
+
 TwigtonCity_TriggerWhatAreYouDoing_Left_Test::
 	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCityitsnottimetogetyourpokemonyet
 	end
@@ -299,6 +306,11 @@ TwigtonCity_TextSmellsLikeTeenSpirit:
 	.string "“Smells Like Teen Spirit” by Nirvana.\p"
 	.string "He blasts it all the time in his casinos\n"
 	.string "and all over the city.$"
+
+TwigtonCity_TextReligiousFundamentalist:
+	.string "Professor Twig is blessed to have the money\n"
+	.string "to build a large city.\p"
+	.string "May God work through him!$"
 
 TwigtonCity_TextMomsHouse_DoNotEnter:
 	.string "You start to put your fist on the door\n"

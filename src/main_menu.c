@@ -2309,7 +2309,7 @@ static void AddBirchSpeechObjects(u8 taskId)
     gSprites[brendanSpriteId].invisible = TRUE;
     gSprites[brendanSpriteId].oam.priority = 0;
     gTasks[taskId].tBrendanSpriteId = brendanSpriteId;
-    brotherSpriteId = CreateTrainerSprite(FacilityClassToPicIndex(FACILITY_CLASS_LEAF), 120, 60, 0, NULL);
+    brotherSpriteId = CreateTrainerSprite(TRAINER_PIC_BRITTANY, 120, 60, 0, NULL);
     gSprites[brotherSpriteId].callback = SpriteCB_Null;
     gSprites[brotherSpriteId].invisible = TRUE;
     gSprites[brotherSpriteId].oam.priority = 0;
@@ -2513,7 +2513,7 @@ static void NewGameBirchSpeech_ShowGenderMenu(void)
 
 static void NewGameBirchSpeech_ShowRivalNameMenu(void)
 {
-    DrawMainMenuWindowBorder(&sNewGameBirchSpeechTextWindows[3], MAIN_MENU_BORDER_TILE);
+    DrawMainMenuWindowBorder(&sNewGameBirchSpeechTextWindows[3], 0xF3);
     FillWindowPixelBuffer(1, PIXEL_FILL(1));
     PrintMenuTable(1, ARRAY_COUNT(sMenuActions_RivalName), sMenuActions_RivalName);
     InitMenuInUpperLeftCornerNormal(1, ARRAY_COUNT(sMenuActions_RivalName), 0);
