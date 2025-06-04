@@ -34,8 +34,8 @@ TwigtonCity_OldLadysHouse_EventScript_HealPokemonSpeedy::
 	end
 
 TwigtonCity_OldLadysHouse_TextYouDontHaveAStarterPokemon:
-	.string "You don't have a Pokémon yet.\n"
-	.string "Talk to me when you have\l"
+	.string "You don't have a Pokémon yet.\p"
+	.string "Talk to me when you have\n"
 	.string "your own Pokémon.$"
 
 TwigtonCity_OldLadysHouse_TextIAmAHealingLady:

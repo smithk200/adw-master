@@ -9,7 +9,8 @@ Route1Hammersock_Connection_OnFrame::
 	.2byte 0
 
 Route1Hammersock_Connection_PhilipJFryIntro::
-	clearflag FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK
+	goto_if_set FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_PhilipJFryExit
+	addobject LOCALID_FRY
 	applymovement LOCALID_FRY, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 30
@@ -17,9 +18,15 @@ Route1Hammersock_Connection_PhilipJFryIntro::
 	waitmovement 0
 	delay 30
 	trainerbattle_single TRAINER_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_TextPhilipJFryIntro, Route1Hammersock_Connection_TextPhilipJFryDefeat
-	msgbox Route1Hammersock_Connection_TextPhilipJFryPostBattle, MSGBOX_DEFAULT
+	setflag FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK
+	releaseall
+	end
+
+Route1Hammersock_Connection_PhilipJFryExit::
 	setvar VAR_ROUTE_1_HAMMERSOCK_CONNECTION_STATE, 1
+	msgbox Route1Hammersock_Connection_TextPhilipJFryPostBattle, MSGBOX_DEFAULT
 	setflag FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK
+	releaseall
 	end
 
 Route1Hammersock_Connection_Movement_PhilipJFry:
