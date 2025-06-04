@@ -407,7 +407,7 @@
 #define MUS_VS_WILD                 474 // MUS_BATTLE27
 #define MUS_VS_AQUA_MAGMA           475 // MUS_BATTLE31
 #define MUS_VS_TRAINER              476 // MUS_BATTLE20
-#define MUS_VS_GYM_LEADER           477 // MUS_BATTLE32
+#define MUS_SANDSTORM               477 // MUS_BATTLE32
 #define MUS_VS_CHAMPION             478 // MUS_BATTLE33
 #define MUS_VS_REGI                 479 // MUS_BATTLE36
 #define MUS_VS_KYOGRE_GROUDON       480 // MUS_BATTLE34
@@ -490,7 +490,6 @@
 #define MUS_RG_TRAINER_TOWER        556 // MUS_RG_T_TOWER
 #define MUS_RG_SLOW_PALLET          557 // MUS_RG_SLOWMASARA
 #define MUS_RG_TEACHY_TV_MENU       558 // MUS_RG_TVNOIZE
-#define END_MUS                     MUS_RG_TEACHY_TV_MENU
 
 // These PH_* constants are phoneme sounds used by the "bard" NPC (see src/bard_music.c and src/mauville_old_man.c).
 // Each comes in a triplet of PH_*_BLEND, PH_*_HELD, and PH_*_SOLO, and the name of each triplet incorporates the English phonetic sound it represents.
@@ -545,6 +544,10 @@
 #define PH_NURSE_BLEND              607
 #define PH_NURSE_HELD               608
 #define PH_NURSE_SOLO               609
+
+#define MUS_VS_FRY                  610
+#define MUS_STICK_FIGURES           611
+#define END_MUS                     MUS_STICK_FIGURES
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

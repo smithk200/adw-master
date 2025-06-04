@@ -24,23 +24,23 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Route1Hammersock_Connection_PhilipJFryIntro",
+      "flag": "FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK"
     }
   ],
   "warp_events": [
     {
       "x": 7,
-      "y": 1,
+      "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE1HAMMERSOCK_CONNECTION",
+      "dest_map": "MAP_ROUTE1",
       "dest_warp_id": "0"
     },
     {
       "x": 7,
-      "y": 10,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE1HAMMERSOCK_CONNECTION",
+      "dest_map": "MAP_ROUTE1",
       "dest_warp_id": "0"
     }
   ],
