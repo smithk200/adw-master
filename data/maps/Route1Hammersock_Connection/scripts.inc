@@ -2,16 +2,50 @@
 
 Route1Hammersock_Connection_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route1Hammersock_Connection_OnFrame
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, Route1Hammersock_Connection_OnWarp
 	.byte 0
 
 Route1Hammersock_Connection_OnFrame::
+	map_script_2 VAR_TEMP_1, 0, Route1Hammersock_Connection_EventScript_EnterRoom
 	.2byte 0
 
-Route1Hammersock_Connection_PhilipJFryIntro::
+Route1Hammersock_Connection_OnWarp:
+	map_script_2 VAR_TEMP_1, 0, Route1Hammersock_Connection_EventScript_PlayerTurnNorth
+	.2byte 0
+
+Route1Hammersock_Connection_EventScript_PlayerTurnNorth::
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	end
+
+Route1Hammersock_Connection_EventScript_EnterRoom::
+	goto_if_set FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_PhilipJFryIsNotThere
 	goto_if_set FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_PhilipJFryExit
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	delay 30
 	addobject LOCALID_FRY
-	trainerbattle_single TRAINER_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_TextPhilipJFryIntro, Route1Hammersock_Connection_TextPhilipJFryDefeat
+	applymovement LOCALID_FRY, Route1Hammersock_Connection_Movement_PhilipJFry
+	waitmovement 0
+	setvar VAR_TEMP_1, 1
+	goto Route1Hammersock_Connection_EventScript_PhilipJFryIntro
+	releaseall
+	end
+
+Route1Hammersock_Connection_EventScript_PhilipJFryIntro::
+	goto_if_set FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_PhilipJFryExit
+	msgbox Route1Hammersock_Connection_TextPhilipJFryIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_TextPhilipJFryDefeat
 	setflag FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK
+	setvar VAR_ROUTE_1_HAMMERSOCK_CONNECTION_STATE, 1
+	msgbox Route1Hammersock_Connection_TextPhilipJFryPostBattle, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Route1Hammersock_Connection_PlayerGetsPushedAsideByFry
+	applymovement LOCALID_FRY, Route1Hammersock_Connection_FryPushesPlayerAside
+	waitmovement 0
+	setflag FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK
+	removeobject LOCALID_FRY
+	msgbox Route1Hammersock_Connection_TextFryDroppedTheMasterBall, MSGBOX_DEFAULT
+	giveitem ITEM_MASTER_BALL
 	releaseall
 	end
 
@@ -30,7 +64,6 @@ Route1Hammersock_Connection_PhilipJFryExit::
 	end
 
 Route1Hammersock_Connection_PhilipJFryIsNotThere::
-	releaseall
 	end
 
 Route1Hammersock_Connection_Movement_PhilipJFry:
