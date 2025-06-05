@@ -5,32 +5,49 @@ Route1Hammersock_Connection_MapScripts::
 	.byte 0
 
 Route1Hammersock_Connection_OnFrame::
-	map_script_2 VAR_ROUTE_1_HAMMERSOCK_CONNECTION_STATE, 0, Route1Hammersock_Connection_PhilipJFryIntro
 	.2byte 0
 
 Route1Hammersock_Connection_PhilipJFryIntro::
 	goto_if_set FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_PhilipJFryExit
 	addobject LOCALID_FRY
-	applymovement LOCALID_FRY, Common_Movement_ExclamationMark
-	waitmovement 0
-	delay 30
-	applymovement LOCALID_FRY, Route1Hammersock_Connection_Movement_PhilipJFry
-	waitmovement 0
-	delay 30
 	trainerbattle_single TRAINER_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_TextPhilipJFryIntro, Route1Hammersock_Connection_TextPhilipJFryDefeat
 	setflag FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK
 	releaseall
 	end
 
 Route1Hammersock_Connection_PhilipJFryExit::
+	goto_if_set FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK, Route1Hammersock_Connection_PhilipJFryIsNotThere
 	setvar VAR_ROUTE_1_HAMMERSOCK_CONNECTION_STATE, 1
 	msgbox Route1Hammersock_Connection_TextPhilipJFryPostBattle, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Route1Hammersock_Connection_PlayerGetsPushedAsideByFry
+	applymovement LOCALID_FRY, Route1Hammersock_Connection_FryPushesPlayerAside
+	waitmovement 0
 	setflag FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK
+	removeobject LOCALID_FRY
+	msgbox Route1Hammersock_Connection_TextFryDroppedTheMasterBall, MSGBOX_DEFAULT
+	giveitem ITEM_MASTER_BALL
+	releaseall
+	end
+
+Route1Hammersock_Connection_PhilipJFryIsNotThere::
 	releaseall
 	end
 
 Route1Hammersock_Connection_Movement_PhilipJFry:
 	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+Route1Hammersock_Connection_PlayerGetsPushedAsideByFry::
+	slide_left
+	step_end
+
+Route1Hammersock_Connection_FryPushesPlayerAside::
 	walk_down
 	walk_down
 	walk_down
@@ -60,3 +77,6 @@ Route1Hammersock_Connection_TextPhilipJFryPostBattle::
 	.string "professor of the Straightlar region,\l"
 	.string "Professor Rodney Twig!\p"
 	.string "See ya!$"
+
+Route1Hammersock_Connection_TextFryDroppedTheMasterBall::
+	.string "Fry dropped a Master Ball on the floor.$"
