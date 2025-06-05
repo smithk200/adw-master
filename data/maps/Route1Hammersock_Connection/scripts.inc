@@ -60,6 +60,9 @@ Route1Hammersock_Connection_PhilipJFryExit::
 	removeobject LOCALID_FRY
 	msgbox Route1Hammersock_Connection_TextFryDroppedTheMasterBall, MSGBOX_DEFAULT
 	giveitem ITEM_MASTER_BALL
+	setflag FLAG_GRASSHOLE_BALL
+	setflag FLAG_SQUIRTLE_BALL
+	setflag FLAG_SCORBUNNY_BALL
 	releaseall
 	end
 
@@ -81,11 +84,6 @@ Route1Hammersock_Connection_PlayerGetsPushedAsideByFry::
 	step_end
 
 Route1Hammersock_Connection_FryPushesPlayerAside::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	walk_down
 	step_end
 

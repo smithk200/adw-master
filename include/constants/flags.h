@@ -49,9 +49,9 @@
 #define FLAG_HIDE_TWIG_IN_HIS_LAB    0x23 // Unused Flag
 #define FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK    0x24 // Unused Flag
 #define FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_GRASSHOLE_BALL    0x26 // Unused Flag
+#define FLAG_SQUIRTLE_BALL    0x27 // Unused Flag
+#define FLAG_SCORBUNNY_BALL    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

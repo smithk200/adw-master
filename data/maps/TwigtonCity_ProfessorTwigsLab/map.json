@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall",
-      "flag": "0"
+      "flag": "FLAG_GRASSHOLE_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwigtonCity_ProfessorTwigsLab_EventScript_ScorbunnyBall",
-      "flag": "0"
+      "flag": "FLAG_SCORBUNNY_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -64,7 +64,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "TwigtonCity_ProfessorTwigsLab_EventScript_SquirtleBall",
-      "flag": "0"
+      "flag": "FLAG_SQUIRTLE_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ANABEL",

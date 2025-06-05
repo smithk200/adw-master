@@ -22,11 +22,10 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene::
 .equ PLAYER_STARTER_SPECIES,  VAR_TEMP_2
 .equ RIVAL_STARTER_SPECIES,   VAR_TEMP_3
 .equ RIVAL_STARTER_ID,        VAR_TEMP_4
-.equ LOCALID_PROF_OAK,        4
-.equ LOCALID_GRASSHOLE_BALL,  5
-.equ LOCALID_SQUIRTLE_BALL,   6
-.equ LOCALID_SCORBUNNY_BALL, 7
-.equ LOCALID_RIVAL,           8
+.equ LOCALID_GRASSHOLE_BALL,  2
+.equ LOCALID_SQUIRTLE_BALL,   4
+.equ LOCALID_SCORBUNNY_BALL, 3
+.equ LOCALID_RIVAL,           5
 .equ LOCALID_POKEDEX_1,       9
 .equ LOCALID_POKEDEX_2,       10
 
@@ -79,6 +78,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall::
 	setvar PLAYER_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SCORBUNNY
 	setvar RIVAL_STARTER_ID, LOCALID_SCORBUNNY_BALL
+	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
@@ -92,6 +92,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_SquirtleBall::
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
 	setvar RIVAL_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_ID, LOCALID_GRASSHOLE_BALL
+	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
@@ -105,6 +106,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ScorbunnyBall::
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SCORBUNNY
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
+	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB , 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
@@ -143,9 +145,11 @@ TwigtonCity_ProfessorTwigsLab_EventScript_DeclinedStarter::
 
 TwigtonCity_ProfessorTwigsLab_EventScript_ChoseStarter::
 	hidemonpic
+	removeobject VAR_LAST_TALKED
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThisMonIsBattleReady
 	setflag FLAG_SYS_POKEMON_GET
 	setvar VAR_TWIGTON_CITY_MAP_STATE, 1
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 3
 	givemon PLAYER_STARTER_SPECIES, 5
 	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
 	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
@@ -232,6 +236,11 @@ TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle::
 	setflag 0x503
 	setflag FLAG_RECIEVED_STARTER_POKEMON
 	releaseall
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall::
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_TwigsLastMon
+	release
 	end
 
 TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToScorbunny::
@@ -328,3 +337,6 @@ TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory:
 	.string "Am I great or what?$"
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyPostBattle:
 	.string "weeeeeeeee$"
+
+TwigtonCity_ProfessorTwigsLab_Text_TwigsLastMon:
+    .string "That's Prof. Twig's last Pokémon.$"
