@@ -65,7 +65,7 @@ TwigtonCity_TriggerWhatAreYouDoing_Left::
 
 TwigtonCity_TriggerWhatAreYouDoing_Right::
 	lockall
-	setvar VAR_TEMP_1, 0
+	setvar VAR_TEMP_1, 1
 	goto TwigtonCity_EventScript_TwigTrigger
 	end
 
@@ -146,6 +146,7 @@ TwigtonCity_Movement_TwigEnterRight::
 	walk_up
 	walk_up
 	walk_right
+	walk_up
 	face_up
 	step_end
 
@@ -235,6 +236,10 @@ TwigtonCity_Movement_TwigLeadPlayerToLabRight::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -250,7 +255,9 @@ TwigtonCity_Movement_TwigLeadPlayerToLabRight::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -274,6 +281,10 @@ TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight::
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_down
 	walk_down
 	walk_down
@@ -281,7 +292,12 @@ TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 TwigtonCity_Movement_TwigEnterLab::
