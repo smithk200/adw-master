@@ -12,6 +12,7 @@ TwigtonCity_ProfessorTwigsLab_OnWarp::
 
 TwigtonCity_ProfessorTwigsLab_OnFrame::
 	map_script_2 VAR_TWIGTON_CITY_MAP_STATE_LAB, 1, TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon
+	map_script_2 VAR_TWIGTON_CITY_MAP_STATE_LAB, 4, TwigtonCity_ProfessorTwigsLab_EventScript_TwigWishesYouFarewell
 	.2byte 0
 
 TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene::
@@ -59,6 +60,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_Twig::
 TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon
+	waitmovement 0
 	clearflag FLAG_DONT_TRANSITION_MUSIC
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon
 	delay 20
@@ -71,42 +73,39 @@ TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon::
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall::
+	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	lock
 	faceplayer
-	goto_if_set FLAG_RECIEVED_STARTER, TwigtonCity_ProfessorTwigsLab_EventScript_Twig
 	setvar PLAYER_STARTER_NUM, 0
 	setvar PLAYER_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SCORBUNNY
 	setvar RIVAL_STARTER_ID, LOCALID_SCORBUNNY_BALL
-	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_SquirtleBall::
+	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	lock
 	faceplayer
-	goto_if_set FLAG_RECIEVED_STARTER, TwigtonCity_ProfessorTwigsLab_EventScript_Twig
 	setvar PLAYER_STARTER_NUM, 1
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
 	setvar RIVAL_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_ID, LOCALID_GRASSHOLE_BALL
-	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_ScorbunnyBall::
+	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	lock
 	faceplayer
-	goto_if_set FLAG_RECIEVED_STARTER, TwigtonCity_ProfessorTwigsLab_EventScript_Twig
 	setvar PLAYER_STARTER_NUM, 2
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SCORBUNNY
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
-	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB , 2, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls, MSGBOX_DEFAULT
 	release
@@ -211,22 +210,200 @@ TwigtonCity_ProfessorTwigsLab_EventScript_YouNeedToChooseAMon::
 	release
 	end
 
-TwigtonCity_ProfessorTwigsLab_EventScript_Brittany::
-	goto_if_eq PLAYER_STARTER_NUM, 0, TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattlePlayerChoseGrass
-	goto_if_eq PLAYER_STARTER_NUM, 1, TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattlePlayerChoseWater
-	goto_if_eq PLAYER_STARTER_NUM, 2, TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattlePlayerChoseFire
+TwigtonCity_ProfessorTwigsLab_EventScript_BrittanyL::
+	lockall
+	setvar VAR_TEMP_2, 1
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_Brittany
 	end
 
-TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattlePlayerChoseGrass:
-	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
-	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
+TwigtonCity_ProfessorTwigsLab_EventScript_BrittanyM::
+	lockall
+	setvar VAR_TEMP_2, 2
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_Brittany
+	end
 
-TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattlePlayerChoseWater::
+TwigtonCity_ProfessorTwigsLab_EventScript_BrittanyR::
+	lockall
+	setvar VAR_TEMP_2, 3
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_Brittany
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_Brittany::
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_TwigTellsBrittanyToBattle
+	closemessage
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_BrittanyReluctantlyAccepts
+	closemessage
+	goto_if_eq VAR_STARTER_MON, 0, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunny
+	goto_if_eq VAR_STARTER_MON, 1, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrasshole
+	goto_if_eq VAR_STARTER_MON, 2, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtle
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtle::
+	goto_if_eq VAR_TEMP_2, 1, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleLeft
+	goto_if_eq VAR_TEMP_2, 2, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleMid
+	goto_if_eq VAR_TEMP_2, 3, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleRight
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleLeft::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleMid::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleMid
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleRight::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle
+	end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleLeft::
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleMid::
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleRight::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunny::
+	goto_if_eq VAR_TEMP_2, 1, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyLeft
+	goto_if_eq VAR_TEMP_2, 2, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyMid
+	goto_if_eq VAR_TEMP_2, 3, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyRight
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyLeft::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyMid::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyMid
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyRight::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny
+	end
+
+TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyLeft::
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyMid::
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyRight::
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrasshole::
+	goto_if_eq VAR_TEMP_2, 1, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeLeft
+	goto_if_eq VAR_TEMP_2, 2, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeMid
+	goto_if_eq VAR_TEMP_2, 3, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeRight
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeLeft::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeMid::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeMid
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeRight::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole
+	end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeLeft::
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeMid::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeRight::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole::
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
 	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
 
-TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattlePlayerChoseFire::
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle::
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
 	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny::
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
+	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
 
 TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle::
@@ -235,8 +412,46 @@ TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle::
 	setflag 0x502
 	setflag 0x503
 	setflag FLAG_RECIEVED_STARTER_POKEMON
-	releaseall
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_TestText
+	closemessage
 	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_TwigWishesYouFarewell::
+	special HealPlayerParty
+	msgbox TwigtonCity_ProfessorTwigsLab_RivalIsOuttaHere
+	closemessage
+	call_if_eq VAR_TEMP_2, 1, TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleLeft
+	call_if_eq VAR_TEMP_2, 2, TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleMid
+	call_if_eq VAR_TEMP_2, 3, TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleRight
+	msgbox TwigtonCity_ProfessorTwigsLab_TwigMakesSpeechAfterBrittanyLeaves
+	closemessage
+	msgbox TwigtonCity_ProfessorTwigsLab_TwigIsSoLazyHeDoorDashesHisFoodAndMakesYouGetItForHim
+	closemessage
+	setflag FLAG_RECIEVED_STARTER_POKEMON
+	setflag FLAG_HIDE_BRITTANY_IN_TWIGS_LAB
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 5
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleLeft::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalExitAfterBattleLeft
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWatchRivalExitAfterBattle
+	waitmovement LOCALID_RIVAL
+	removeobject LOCALID_RIVAL
+	return
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleMid::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalExitAfterBattleMid
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWatchRivalExitAfterBattle
+	waitmovement LOCALID_RIVAL
+	removeobject LOCALID_RIVAL
+	return
+
+TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleRight::
+	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalExitAfterBattleRight
+	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWatchRivalExitAfterBattle
+	waitmovement LOCALID_RIVAL
+	removeobject LOCALID_RIVAL
+	return
 
 TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall::
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_TwigsLastMon
@@ -244,15 +459,33 @@ TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall::
 	end
 
 TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToScorbunny::
-	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
 	step_end
 
 TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToSquirtle::
-	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
 	step_end
 
 TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToGrasshole::
-	walk_right
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_in_place_faster_up
 	step_end
 
 TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon::
@@ -266,6 +499,41 @@ TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon::
 
 TwigtonCity_ProfessorTwigsLab_Movement_YouCantLeaveWithoutAStarter::
 	walk_up
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalExitAfterBattleLeft::
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	delay_8
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalExitAfterBattleRight::
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	delay_8
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_RivalExitAfterBattleMid::
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	delay_8
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_PlayerWatchRivalExitAfterBattle::
+	walk_in_place_down
 	step_end
 
 TwigtonCity_ProfessorTwigsLab_Text_ThoseArePokeBalls:
@@ -310,9 +578,6 @@ TwigtonCity_ProfessorTwigsLab_Text_YouCantLeaveWithoutAStarter:
 	.string "Professor Twig: You can't leave without\n"
 	.string "a Pokémon! It's the law!$"
 
-TwigtonCity_ProfessorTwigsLab_Text_TestText:
-	.string "Setting Twigton City Lab State to 2.$"
-
 TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon:
 	.string "See these here Poké Balls!\n"
 	.string "They contain Pokémon!\p"
@@ -329,14 +594,61 @@ TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon2:
 	.string "Pokémon are!$"
 
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro:
-	.string "I will battle you.$"
+	.string "I guess I'll battle you now.$"
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat:
-	.string "Darn, I lost!$"
+	.string "I lost? Why should I care?$"
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory:
 	.string "Oh yeah!\n"
 	.string "Am I great or what?$"
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyPostBattle:
 	.string "weeeeeeeee$"
 
+TwigtonCity_ProfessorTwigsLab_Text_TwigTellsBrittanyToBattle:
+	.string "Prof. Twig: Now, Brittany, why don't\n"
+	.string "you battle {PLAYER} so their Pokémon\l"
+	.string "can gain more experience and level up?$"
+
+TwigtonCity_ProfessorTwigsLab_Text_BrittanyReluctantlyAccepts:
+	.string "{RIVAL}: Ugh, fine...\p"
+	.string "Though I would rather talk to my\n"
+	.string "friends than battle this weirdo.$"
+
+TwigtonCity_ProfessorTwigsLab_RivalIsOuttaHere:
+	.string "{RIVAL}: I am SO outta here. Pokémon\n"
+	.string "battling is something nerds like my dad do.\p"
+	.string "I didn't even want to be here anyway!$"
+
+TwigtonCity_ProfessorTwigsLab_TwigMakesSpeechAfterBrittanyLeaves:
+	.string "Prof. Twig: Well, that's {RIVAL} for you.\p"
+	.string "Always wanting to be on her phone\n"
+	.string "or shopping or something like that.\p"
+	.string "I wish she would have more time for\n"
+	.string "her dad and not be on her phone...\p"
+	.string "Anyway, {PLAYER}, you now have your\n"
+	.string "own Pokémon, so you're not violating\l"
+	.string "the law anymore.$"
+
+TwigtonCity_ProfessorTwigsLab_TwigIsSoLazyHeDoorDashesHisFoodAndMakesYouGetItForHim::
+	.string "Before you go, though, I have\n"
+	.string "a favor to ask you.\p"
+	.string "I placed an order on DoorDash\n"
+	.string "at the Poké Mart in Hammersock,\l"
+	.string "which is north of here.\p"
+	.string "Apparently DoorDash can't deliver\n"
+	.string "my food to Twigton City, because \l"
+	.string "they don't believe it's “real” or\l"
+	.string "some shit like that.\p"
+	.string "Stupid corporate motherfuckers!\p"
+	.string "Anyways, good luck out there!\p"
+	.string "Make sure my food's hot and fresh!$"
+
 TwigtonCity_ProfessorTwigsLab_Text_TwigsLastMon:
     .string "That's Prof. Twig's last Pokémon.$"
+
+TwigtonCity_ProfessorTwigsLab_Text_TestText:
+	.string "TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle\p"
+	.string "was reached.$"
+
+TwigtonCity_ProfessorTwigsLab_Text_TestText2:
+	.string "ProfessorTwigsLab_EventScript_TwigWishesYouFarewell\p"
+	.string "was reached.$"

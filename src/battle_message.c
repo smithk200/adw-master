@@ -2449,6 +2449,7 @@ static void GetBattlerNick(u32 battler, u8 *dst)
 static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text, u8 multiplayerId, u8 battler)
 {
     const u8 *toCpy = NULL;
+    u32 opponentTrainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
 
     if (gBattleTypeFlags & BATTLE_TYPE_SECRET_BASE)
     {
@@ -2489,6 +2490,10 @@ static const u8 *BattleStringGetOpponentNameByTrainerId(u16 trainerId, u8 *text,
     {
         GetEreaderTrainerName(text);
         toCpy = text;
+    }
+    else if (opponentTrainerClass == TRAINER_CLASS_FR_RIVAL)
+    {
+        toCpy = gSaveBlock2Ptr->rivalName;
     }
     else
     {
