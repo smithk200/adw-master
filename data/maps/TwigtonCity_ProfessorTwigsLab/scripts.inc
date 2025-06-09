@@ -56,11 +56,20 @@ TwigtonCity_ProfessorTwigsLab_Trigger_Right::
 TwigtonCity_ProfessorTwigsLab_EventScript_Twig::
 	lock
 	faceplayer
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 5, TwigtonCity_ProfessorTwigsLab_EventScript_GetMyDoorDashedFood
+	release
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_GetMyDoorDashedFood::
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_GetMyDoorDashedFood
+	closemessage
 	release
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon::
 	lockall
+	clearflag FLAG_HIDE_TWIG_IN_HIS_LAB
+	clearflag FLAG_HIDE_BRITTANY_IN_TWIGS_LAB
 	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_ProfessorTwigsLab_Movement_PlayerWalksForwardToGetStarterMon
 	waitmovement 0
 	clearflag FLAG_DONT_TRANSITION_MUSIC
@@ -653,3 +662,6 @@ TwigtonCity_ProfessorTwigsLab_Text_TestText:
 TwigtonCity_ProfessorTwigsLab_Text_TestText2:
 	.string "ProfessorTwigsLab_EventScript_TwigWishesYouFarewell\p"
 	.string "was reached.$"
+
+TwigtonCity_ProfessorTwigsLab_Text_GetMyDoorDashedFood:
+	.string "Get my Doordash order from Hammersock!$"
