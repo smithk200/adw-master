@@ -8,6 +8,7 @@ TwigtonCity_ProfessorTwigsLab_OnLoad::
 
 TwigtonCity_ProfessorTwigsLab_OnWarp::
 	map_script_2 VAR_TWIGTON_CITY_MAP_STATE_LAB, 1, TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene
+	map_script_2 VAR_TWIGTON_CITY_MAP_STATE_LAB, 4, TwigtonCity_ProfessorTwigsLab_CheckToSeeIfWeLost
 	.2byte 0
 
 TwigtonCity_ProfessorTwigsLab_OnFrame::
@@ -23,6 +24,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene::
 .equ PLAYER_STARTER_SPECIES,  VAR_TEMP_2
 .equ RIVAL_STARTER_SPECIES,   VAR_TEMP_3
 .equ RIVAL_STARTER_ID,        VAR_TEMP_4
+.equ LOCALID_PROF_TWIG,  1
 .equ LOCALID_GRASSHOLE_BALL,  2
 .equ LOCALID_SQUIRTLE_BALL,   4
 .equ LOCALID_SCORBUNNY_BALL, 3
@@ -229,8 +231,12 @@ TwigtonCity_ProfessorTwigsLab_EventScript_BrittanyR::
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_Brittany::
+	applymovement LOCALID_PROF_TWIG, Common_Movement_ExclamationMark
+	waitmovement 0
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_TwigTellsBrittanyToBattle
 	closemessage
+	applymovement LOCALID_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_BrittanyReluctantlyAccepts
 	closemessage
 	goto_if_eq VAR_STARTER_MON, 0, TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunny
@@ -247,23 +253,17 @@ TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtle::
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleLeft::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleMid::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleMid
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleSquirtleRight::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleSquirtleRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle
 	end
@@ -298,23 +298,17 @@ TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunny::
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyLeft::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyMid::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyMid
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleScorbunnyRight::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_ApproachForBattleScorbunnyRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny
 	end
@@ -346,23 +340,17 @@ TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrasshole::
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeLeft::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeLeft
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeMid::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeMid
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalApproachForBattleGrassholeRight::
 	applymovement LOCALID_RIVAL, TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeRight
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	waitmovement 0
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole
 	end
@@ -393,16 +381,19 @@ TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeRight::
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole::
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle::
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny::
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
 	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
 
@@ -456,6 +447,16 @@ TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleRight::
 TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall::
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_TwigsLastMon
 	release
+	end
+
+TwigtonCity_ProfessorTwigsLab_CheckToSeeIfWeLost::
+	goto_if_set FLAG_LOST_FIRST_BATTLE, TwigtonCityProfessorTwigsLab_SetBrittanyPositionAfterLosingRivalBattle
+	end
+
+TwigtonCityProfessorTwigsLab_SetBrittanyPositionAfterLosingRivalBattle::
+	setobjectxy LOCALID_RIVAL, 6, 7
+	setvar VAR_TEMP_2, 2
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
 	end
 
 TwigtonCity_ProfessorTwigsLab_Movement_RivalWalksToScorbunny::
@@ -567,7 +568,7 @@ TwigtonCity_ProfessorTwigsLab_Text_RivalReceivedMonFromTwig::
     .string "from Professor Twig!$"
 
 TwigtonCity_ProfessorTwigsLab_Text_RivalIllTakeThisOneThen:
-	.string "Fine...\p"
+	.string "Fine…\p"
 	.string "I'll take this one.$"
 
 Text_GiveNicknameToThisMon:
@@ -609,7 +610,7 @@ TwigtonCity_ProfessorTwigsLab_Text_TwigTellsBrittanyToBattle:
 	.string "can gain more experience and level up?$"
 
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyReluctantlyAccepts:
-	.string "{RIVAL}: Ugh, fine...\p"
+	.string "{RIVAL}: Ugh, fine…\p"
 	.string "Though I would rather talk to my\n"
 	.string "friends than battle this weirdo.$"
 
@@ -623,7 +624,7 @@ TwigtonCity_ProfessorTwigsLab_TwigMakesSpeechAfterBrittanyLeaves:
 	.string "Always wanting to be on her phone\n"
 	.string "or shopping or something like that.\p"
 	.string "I wish she would have more time for\n"
-	.string "her dad and not be on her phone...\p"
+	.string "her dad and not be on her phone…\p"
 	.string "Anyway, {PLAYER}, you now have your\n"
 	.string "own Pokémon, so you're not violating\l"
 	.string "the law anymore.$"

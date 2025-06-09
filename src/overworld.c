@@ -383,6 +383,7 @@ void DoWhiteOutRivalBattle(void)
     HealPlayerParty();
     Overworld_ResetStateAfterWhiteOut();
     SetWarpDestination(MAP_GROUP(TWIGTON_CITY_PROFESSOR_TWIGS_LAB), MAP_NUM(TWIGTON_CITY_PROFESSOR_TWIGS_LAB), WARP_ID_NONE, 6, 8);
+    FlagSet(FLAG_LOST_FIRST_BATTLE);
     WarpIntoMap();
 }
 

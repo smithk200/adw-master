@@ -47,6 +47,69 @@ TwigtonCity_EventScriptReligiousFundamentalist::
 	release
 	end
 
+TwigtonCity_EventScriptLiberalLibrarian::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextLiberalLibrarian, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptLittleBoy1::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextDoYouLikeMyPicture, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, TwigtonCity_EventScriptLittleBoy1YouSaidNo
+	msgbox TwigtonCity_TextYouLikeMyPicture, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptLittleBoy1YouSaidNo::
+	msgbox TwigtonCity_TextLittleBoy1YouSaidNo, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptWoman1::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextTheresAHealingWomanInThisCity, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptWoman2::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextWoman2, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptMan1::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextMan1, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptWoman3::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextWoman3, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptMan2::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextMan2, MSGBOX_DEFAULT
+	release
+	end
+
+TwigtonCity_EventScriptMan3::
+	lock
+	faceplayer
+	msgbox TwigtonCity_TextMan3, MSGBOX_DEFAULT
+	release
+	end
+
 TwigtonCity_TriggerWhatAreYouDoing_Left_Test::
 	goto_if_unset FLAG_SYS_POKEMON_GET, TwigtonCityitsnottimetogetyourpokemonyet
 	end
@@ -327,6 +390,70 @@ TwigtonCity_TextReligiousFundamentalist:
 	.string "Professor Twig is blessed to have\n"
 	.string "the money to build a large city.\p"
 	.string "May God work through him!$"
+
+TwigtonCity_TextLiberalLibrarian:
+	.string "I think that the children of the\n"
+	.string "Straightlar region should be taught\l"
+	.string "about LGBTQ history because it is\l"
+	.string "so underrepresented in today's\l"
+	.string "day and age.\p"
+	.string "Am I asking for too much?$"
+
+TwigtonCity_TextDoYouLikeMyPicture:
+	.string "Do you like my picture?\n"
+	.string "I worked really hard on it!$"
+
+TwigtonCity_TextLittleBoy1YouSaidNo:
+	.string "You don't like it? Waah!$"
+
+TwigtonCity_TextYouLikeMyPicture:
+	.string "Yay! You like my picture!\n"
+	.string "It's funny, isn't it?$"
+
+TwigtonCity_TextTheresAHealingWomanInThisCity:
+	.string "You finally escaped your\n"
+	.string "parents' house?\p"
+	.string "Thank goodness. They shouldn't have\n"
+	.string "kept you in there for that long.\p"
+	.string "They didn't let you have a computer?\n"
+	.string "Sad.\p"
+	.string "If you need to heal your Pokémon, there\n"
+	.string "is a woman in the blue house in the\l"
+	.string "northwest corner of town.$"
+
+TwigtonCity_TextWoman2::
+	.string "Did you know?\p"
+	.string "Professor Twig's wife died a\n"
+	.string "few years back.\p"
+	.string "Cancer, I think it was.\p"
+	.string "I feel so bad for him!$"
+
+TwigtonCity_TextMan1::
+	.string "Back in my day, we had these people\n"
+	.string "called “hippies”.\p"
+	.string "They were into New Age music\n"
+	.string "and did LSD.\p"
+	.string "Those were some awful times!$"
+
+TwigtonCity_TextWoman3::
+	.string "I love the aroma of flowers\n"
+	.string "on a nice spring day.\p"
+	.string "Don't you, too?$"
+
+TwigtonCity_TextMan2:
+	.string "Did you know?\p"
+	.string "Dave Ramsey is a man with\n"
+	.string "solid financial advice.\p"
+	.string "If you follow his tips,\n"
+	.string "you can pay for college\l"
+	.string "and stay out of debt!\p"
+	.string "Isn't he wonderful?$"
+
+TwigtonCity_TextMan3::
+	.string "Oh, hey!\p"
+	.string "I'm a Twig Casino employee.\p"
+	.string "The benefits are shit but at least\n"
+	.string "I get weekends off!$"
 
 TwigtonCity_TextMomsHouse_DoNotEnter:
 	.string "You start to put your fist on the door\n"
