@@ -2408,4 +2408,11 @@ const struct Ability gAbilitiesInfo[ABILITIES_COUNT] =
         .cantBeSwapped = TRUE,
         .cantBeTraced = TRUE,
     },
+
+    [ABILITY_MANHATING] =
+    {
+        .name = _("Manhating"),
+        .description = COMPOUND_STRING("Deals more damage to males."),
+        .aiRating = 1,
+    },
 };

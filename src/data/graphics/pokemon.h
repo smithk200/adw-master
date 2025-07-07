@@ -26752,6 +26752,21 @@ const u8 gMonIcon_Grasshole[] = INCBIN_U8("graphics/pokemon/grasshole/icon.4bpp"
 const u8 gMonIcon_Analgae[] = INCBIN_U8("graphics/pokemon/analgae/icon.4bpp");
 const u8 gMonIcon_Rectreem[] = INCBIN_U8("graphics/pokemon/rectreem/icon.4bpp");
 
+const u32 gMonFrontPic_Fishnism[] = INCBIN_U32("graphics/pokemon/fishnism/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Sjwhale[] = INCBIN_U32("graphics/pokemon/sjwhale/anim_front.4bpp.lz");
+
+const u32 gMonBackPic_Fishnism[] = INCBIN_U32("graphics/pokemon/fishnism/back.4bpp.lz");
+const u32 gMonBackPic_Sjwhale[] = INCBIN_U32("graphics/pokemon/sjwhale/back.4bpp.lz");
+
+const u32 gMonPalette_Fishnism[] = INCBIN_U32("graphics/pokemon/fishnism/normal.gbapal.lz");
+const u32 gMonPalette_Sjwhale[] = INCBIN_U32("graphics/pokemon/sjwhale/normal.gbapal.lz");
+
+const u32 gMonShinyPalette_Fishnism[] = INCBIN_U32("graphics/pokemon/fishnism/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Sjwhale[] = INCBIN_U32("graphics/pokemon/sjwhale/shiny.gbapal.lz");
+
+const u8 gMonIcon_Fishnism[] = INCBIN_U8("graphics/pokemon/fishnism/icon.4bpp");
+const u8 gMonIcon_Sjwhale[] = INCBIN_U8("graphics/pokemon/sjwhale/icon.4bpp");
+
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
 const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

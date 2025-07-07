@@ -1640,7 +1640,9 @@
 #define SPECIES_GRASSHOLE            1524
 #define SPECIES_ANALGAE            1525
 #define SPECIES_RECTREEM            1526
-#define SPECIES_LAST                SPECIES_RECTREEM
+#define SPECIES_FISHNISM           1527
+#define SPECIES_SJWHALE            1528
+#define SPECIES_LAST                SPECIES_SJWHALE
 
 #define SPECIES_EGG                                     (SPECIES_LAST + 1)
 

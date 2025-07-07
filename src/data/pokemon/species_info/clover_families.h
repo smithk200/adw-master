@@ -170,7 +170,129 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
         .levelUpLearnset = sRectreemLevelUpLearnset,
         .teachableLearnset = sRectreemTeachableLearnset,
     },
+#endif //P_FAMILY_GRASSHOLE
+
+#if P_FAMILY_FISHNISM
+    [SPECIES_FISHNISM] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 55,
+        .baseDefense   = 75,
+        .baseSpeed     = 85,
+        .baseSpAttack  = 40,
+        .baseSpDefense = 80,
+        .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
+        .catchRate = 60,
+        .expYield = 172,
+        .evYield_Speed  = 1,
+        .genderRatio = PERCENT_FEMALE(87.5),
+        .eggCycles = 20,
+        .friendship = 45,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = {ABILITY_MANHATING, ABILITY_THICK_FAT, ABILITY_GLUTTONY},
+        .bodyColor = BODY_COLOR_PINK,
+        .speciesName = _("Fishnism"),
+        .cryId = CRY_FISHNISM,
+        //.natDexNum = NATIONAL_DEX_FISHNISM,
+        .categoryName = _("Feminist"),
+        .height = 6,
+        .weight = 120,
+        .description = COMPOUND_STRING(
+            "When it curls up in a ball, it can make any\n"
+            "attack bounce off harmlessly. Its hide has\n"
+            "turned tough and solid as a result of\n"
+            "living in the desert."),
+        .pokemonScale = 365,
+        .pokemonOffset = 18,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Fishnism,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 4,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 10),
+            ANIMCMD_FRAME(1, 10),
+            ANIMCMD_FRAME(0, 10),
+            ANIMCMD_FRAME(1, 10),
+            ANIMCMD_FRAME(0, 10),
+        ),
+        .frontAnimId = ANIM_SWING_CONCAVE_FAST_SHORT,
+        .backPic = gMonBackPic_Fishnism,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        .palette = gMonPalette_Fishnism,
+        .shinyPalette = gMonShinyPalette_Fishnism,
+        .iconSprite = gMonIcon_Fishnism,
+        .iconPalIndex = 0,
+        SHADOW(0, 1, SHADOW_SIZE_M)
+        FOOTPRINT(Fishnism)
+        .levelUpLearnset = sFishnismLevelUpLearnset,
+        .teachableLearnset = sFishnismTeachableLearnset,
+        .evolutions = EVOLUTION({EVO_LEVEL, 35, SPECIES_SJWHALE}),
+    },
+
+    [SPECIES_SJWHALE] =
+    {
+        .baseHP        = 115,
+        .baseAttack    = 65,
+        .baseDefense   = 95,
+        .baseSpeed     = 90,
+        .baseSpAttack  = 50,
+        .baseSpDefense = 100,
+        .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
+        .catchRate = 120,
+        .expYield = 128,
+        .evYield_Speed  = 2,
+        .genderRatio = PERCENT_FEMALE(87.5),
+        .eggCycles = 20,
+        .friendship = 45,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = {ABILITY_MANHATING, ABILITY_THICK_FAT, ABILITY_GLUTTONY},
+        .bodyColor = BODY_COLOR_BLUE,
+        .speciesName = _("Sjwhale"),
+        .cryId = CRY_SJWHALE,
+        //.natDexNum = NATIONAL_DEX_SJWHALE,
+        .categoryName = _("Landwhale"),
+        .height = 10,
+        .weight = 295,
+        .description = COMPOUND_STRING(
+            "It curls up in a ball to protect itself from\n"
+            "enemy attacks. It also curls up to prevent\n"
+            "heatstroke during the daytime when\n"
+            "temperatures rise sharply."),
+        .pokemonScale = 341,
+        .pokemonOffset = 11,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Sjwhale,
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
+        .frontPicYOffset = 4,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 10),
+            ANIMCMD_FRAME(1, 10),
+            ANIMCMD_FRAME(0, 10),
+            ANIMCMD_FRAME(1, 10),
+            ANIMCMD_FRAME(0, 10),
+        ),
+        .frontAnimId = P_GBA_STYLE_SPECIES_GFX ? ANIM_V_STRETCH : ANIM_H_SHAKE,
+        .backPic = gMonBackPic_Sjwhale,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 3,
+        .backAnimId = BACK_ANIM_H_SLIDE,
+        .palette = gMonPalette_Sjwhale,
+        .shinyPalette = gMonShinyPalette_Sjwhale,
+        .iconSprite = gMonIcon_Sjwhale,
+        .iconPalIndex = 0,
+        SHADOW(4, 4, SHADOW_SIZE_L)
+        FOOTPRINT(Sjwhale)
+        .levelUpLearnset = sSjwhaleLevelUpLearnset,
+        .teachableLearnset = sSjwhaleTeachableLearnset,
+    },
+#endif //P_FAMILY_FISHNISM
+
 #ifdef __INTELLISENSE__
 };
 #endif
-#endif //P_FAMILY_GRASSHOLE

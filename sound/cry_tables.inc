@@ -2430,6 +2430,10 @@ gCryTable::
 	cry Cry_Bulbasaur
 	cry Cry_Bulbasaur
 .endif
+.if P_FAMILY_FISHNISM == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
 .endif
 .endif @ P_CRIES_ENABLED
 
@@ -4862,6 +4866,10 @@ gCryTable_Reverse::
 .if CLOVER_POKEMON == TRUE
 .if P_FAMILY_GRASSHOLE == TRUE
 	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.if P_FAMILY_FISHNISM == TRUE
 	cry_reverse Cry_Bulbasaur
 	cry_reverse Cry_Bulbasaur
 .endif

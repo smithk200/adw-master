@@ -2431,6 +2431,10 @@ enum {
     CRY_ANALGAE,
     CRY_RECTREEM,
 #endif
+#if P_FAMILY_FISHNISM
+    CRY_FISHNISM,
+    CRY_SJWHALE,
+#endif
     CRY_COUNT,
 };
 

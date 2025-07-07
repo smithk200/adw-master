@@ -10,7 +10,7 @@ Route1Hammersock_Connection_OnFrame::
 	.2byte 0
 
 Route1Hammersock_Connection_OnWarp:
-	map_script_2 VAR_TEMP_1, 0, Route1Hammersock_Connection_EventScript_PlayerTurnNorth
+	map_script_2 VAR_ROUTE_1_HAMMERSOCK_CONNECTION_STATE, 0, Route1Hammersock_Connection_EventScript_PlayerTurnNorth
 	.2byte 0
 
 Route1Hammersock_Connection_EventScript_PlayerTurnNorth::

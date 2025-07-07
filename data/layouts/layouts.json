@@ -4500,6 +4500,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/TwigtonCity_OldLadysHouse/border.bin",
       "blockdata_filepath": "data/layouts/TwigtonCity_OldLadysHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMMERSOCK",
+      "name": "Hammersock_Layout",
+      "width": 41,
+      "height": 26,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Celadoncity",
+      "border_filepath": "data/layouts/Hammersock/border.bin",
+      "blockdata_filepath": "data/layouts/Hammersock/map.bin"
+    },
+    {
+      "id": "LAYOUT_CELADON_CITY",
+      "name": "CeladonCity_Layout",
+      "width": 60,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Celadoncity",
+      "border_filepath": "data/layouts/CeladonCity/border.bin",
+      "blockdata_filepath": "data/layouts/CeladonCity/map.bin"
     }
   ]
 }

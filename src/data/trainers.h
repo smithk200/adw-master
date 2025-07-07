@@ -26015,7 +26015,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 10389
-            .species = SPECIES_MAGIKARP,
+            .species = SPECIES_FISHNISM,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 10391
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),

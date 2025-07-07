@@ -1172,3 +1172,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route1Hammersock_Connection/scripts.inc"
 
 	.include "data/maps/TwigtonCity_OldLadysHouse/scripts.inc"
+
+	.include "data/maps/Hammersock/scripts.inc"
+
+	.include "data/maps/CeladonCity/scripts.inc"
