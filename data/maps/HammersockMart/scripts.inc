@@ -20,9 +20,6 @@ HammersockMart_EventScript_Doordash::
 	msgbox HammersockMart_Text_ConformTheOrder
 	closemessage
 	message HammersockMart_Text_Text_PlayerConfirmedOrder
-	waitmessage
-	playfanfare MUS_OBTAIN_ITEM
-	waitfanfare
 	closemessage
 	giveitem ITEM_TWIGS_FOOD
 	setvar VAR_HAMMERSOCK_MART_STATE, 1
@@ -30,6 +27,16 @@ HammersockMart_EventScript_Doordash::
 	waitfanfare
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 6
 	releaseall
+	end
+
+Hammersock_Mart_EventScript_Clerk::
+	lock
+	faceplayer
+	message gText_HowMayIServeYou
+	waitmessage
+	pokemart 0
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
 	end
 
 Hammersock_Mart_EventScript_FatMan::
