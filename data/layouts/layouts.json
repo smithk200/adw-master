@@ -625,9 +625,9 @@
       "id": "LAYOUT_MART",
       "name": "Mart_Layout",
       "width": 11,
-      "height": 8,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Shop",
+      "secondary_tileset": "gTileset_Mart",
       "border_filepath": "data/layouts/Mart/border.bin",
       "blockdata_filepath": "data/layouts/Mart/map.bin"
     },
@@ -4504,8 +4504,8 @@
     {
       "id": "LAYOUT_HAMMERSOCK",
       "name": "Hammersock_Layout",
-      "width": 41,
-      "height": 26,
+      "width": 51,
+      "height": 31,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Celadoncity",
       "border_filepath": "data/layouts/Hammersock/border.bin",
@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_Celadoncity",
       "border_filepath": "data/layouts/CeladonCity/border.bin",
       "blockdata_filepath": "data/layouts/CeladonCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMMERSOCK_MART",
+      "name": "HammersockMart_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/HammersockMart/border.bin",
+      "blockdata_filepath": "data/layouts/HammersockMart/map.bin"
     }
   ]
 }

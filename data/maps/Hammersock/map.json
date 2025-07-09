@@ -2,7 +2,7 @@
   "id": "MAP_HAMMERSOCK",
   "name": "Hammersock",
   "layout": "LAYOUT_HAMMERSOCK",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HAMMERSOCK",
   "region_map_section": "MAPSEC_OLDALE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -18,15 +18,22 @@
   ],
   "warp_events": [
     {
-      "x": 20,
-      "y": 22,
+      "x": 23,
+      "y": 26,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1HAMMERSOCK_CONNECTION",
       "dest_warp_id": "1"
     },
     {
+      "x": 24,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_HAMMERSOCK_MART",
+      "dest_warp_id": "0"
+    },
+    {
       "x": 20,
-      "y": 17,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_HAMMERSOCK",
       "dest_warp_id": "0"

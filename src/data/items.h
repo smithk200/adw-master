@@ -14099,4 +14099,18 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+    [ITEM_TWIGS_FOOD] =
+    {
+        .name = _("Twig's Food"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Prof. Twig's food\n"
+            "that he asked you\n"
+            "to DoorDash for him."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TwigsFood,
+        .iconPalette = gItemIconPalette_TwigsFood,
+    },
 };

@@ -1176,3 +1176,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Hammersock/scripts.inc"
 
 	.include "data/maps/CeladonCity/scripts.inc"
+
+	.include "data/maps/HammersockMart/scripts.inc"
+
+	.include "data/maps/Mart/scripts.inc"

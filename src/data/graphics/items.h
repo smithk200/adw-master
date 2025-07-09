@@ -2094,6 +2094,9 @@ const u32 gItemIconPalette_JubilifeMuffin[] = INCBIN_U32("graphics/items/icon_pa
 const u32 gItemIcon_PokeshiDoll[] = INCBIN_U32("graphics/items/icons/pokeshi_doll.4bpp.lz");
 const u32 gItemIconPalette_PokeshiDoll[] = INCBIN_U32("graphics/items/icon_palettes/pokeshi_doll.gbapal.lz");
 
+const u32 gItemIcon_TwigsFood[] = INCBIN_U32("graphics/items/icons/twigs_food.4bpp.lz");
+const u32 gItemIconPalette_TwigsFood[] = INCBIN_U32("graphics/items/icon_palettes/twigs_food.gbapal.lz");
+
 const u32 gItemIcon_SwapSnack[] = INCBIN_U32("graphics/items/icons/swap_snack.4bpp.lz");
 const u32 gItemIconPalette_SwapSnack[] = INCBIN_U32("graphics/items/icon_palettes/swap_snack.gbapal.lz");
 

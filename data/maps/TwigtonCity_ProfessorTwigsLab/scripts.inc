@@ -57,11 +57,18 @@ TwigtonCity_ProfessorTwigsLab_EventScript_Twig::
 	lock
 	faceplayer
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 5, TwigtonCity_ProfessorTwigsLab_EventScript_GetMyDoorDashedFood
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 6, TwigtonCity_ProfessorTwigsLab_EventScript_YouGotMyFood
 	release
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_GetMyDoorDashedFood::
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_GetMyDoorDashedFood
+	closemessage
+	release
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_YouGotMyFood::
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_YouGotMyFood
 	closemessage
 	release
 	end
@@ -625,7 +632,8 @@ TwigtonCity_ProfessorTwigsLab_Text_BrittanyReluctantlyAccepts:
 
 TwigtonCity_ProfessorTwigsLab_RivalIsOuttaHere:
 	.string "{RIVAL}: I am SO outta here. Pokémon\n"
-	.string "battling is something nerds like my dad do.\p"
+	.string "battling is something nerds\l"
+	.string "like my dad do.\p"
 	.string "I didn't even want to be here anyway!$"
 
 TwigtonCity_ProfessorTwigsLab_TwigMakesSpeechAfterBrittanyLeaves:
@@ -665,3 +673,6 @@ TwigtonCity_ProfessorTwigsLab_Text_TestText2:
 
 TwigtonCity_ProfessorTwigsLab_Text_GetMyDoorDashedFood:
 	.string "Get my Doordash order from Hammersock!$"
+
+TwigtonCity_ProfessorTwigsLab_Text_YouGotMyFood:
+	.string "You got my food!$"

@@ -3880,7 +3880,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_ROUTE119) \
     X(MUS_CYCLING) \
     X(MUS_POKE_MART) \
-    X(MUS_LITTLEROOT) \
+    X(MUS_HAMMERSOCK) \
     X(MUS_MT_CHIMNEY) \
     X(MUS_ENCOUNTER_FEMALE) \
     X(MUS_LILYCOVE) \

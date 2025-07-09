@@ -406,7 +406,7 @@ gSongTable::
 	song mus_route119, 0, 0
 	song mus_cycling, 0, 0
 	song mus_poke_mart, 0, 0
-	song mus_littleroot, 0, 0
+	song Hammersock, 0, 0
 	song mus_mt_chimney, 0, 0
 	song mus_encounter_female, 0, 0
 	song mus_lilycove, 0, 0
