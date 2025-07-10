@@ -23,8 +23,6 @@ HammersockMart_EventScript_Doordash::
 	closemessage
 	giveitem ITEM_TWIGS_FOOD
 	setvar VAR_HAMMERSOCK_MART_STATE, 1
-	playfanfare MUS_OBTAIN_ITEM
-	waitfanfare
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 6
 	releaseall
 	end

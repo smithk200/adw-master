@@ -117,7 +117,8 @@
     "OldaleTown_PokemonCenter_2F",
     "OldaleTown_Mart",
     "Route1Hammersock_Connection",
-    "HammersockMart"
+    "HammersockMart",
+    "HammersockPokemonCenter"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",
@@ -596,7 +597,9 @@
     "NavelRock_Bottom",
     "TrainerHill_Elevator",
     "CeladonCity",
-    "Mart"
+    "Mart",
+    "PokecenterFloor1",
+    "PokecenterFloor2"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

@@ -4530,6 +4530,36 @@
       "secondary_tileset": "gTileset_Mart",
       "border_filepath": "data/layouts/HammersockMart/border.bin",
       "blockdata_filepath": "data/layouts/HammersockMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMMERSOCK_POKEMON_CENTER",
+      "name": "HammersockPokemonCenter_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/HammersockPokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/HammersockPokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKECENTER_FLOOR1",
+      "name": "PokecenterFloor1_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Pokemoncenter",
+      "border_filepath": "data/layouts/PokecenterFloor1/border.bin",
+      "blockdata_filepath": "data/layouts/PokecenterFloor1/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKECENTER_FLOOR2",
+      "name": "PokecenterFloor2_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/PokecenterFloor2/border.bin",
+      "blockdata_filepath": "data/layouts/PokecenterFloor2/map.bin"
     }
   ]
 }

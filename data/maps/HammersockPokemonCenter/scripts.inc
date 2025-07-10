@@ -1,0 +1,24 @@
+HammersockPokemonCenter_MapScripts::
+	.byte 0
+
+Hammersock_PokemonCenter_1F_EventScript_Nurse::
+	lock
+	faceplayer
+	call Common_EventScript_PkmnCenterNurse
+	release
+	end
+
+Hammersock_PokemonCenter_EventScriptBlackBelt::
+	lock
+	faceplayer
+	msgbox Hammersock_PokemonCenter_Text_WirelessBattleFunctionality, MSGBOX_DEFAULT
+	release
+	end
+
+Hammersock_PokemonCenter_Text_WirelessBattleFunctionality::
+	.string "This is a ROM hack, so expect\n"
+	.string "there to not be any Wireless Adapter\l"
+	.string "compatibility or whatever.\p"
+	.string "If you REALLY want to partake in\n"
+	.string "Pokémon battles in this game,\l"
+	.string "use your imagination!$"

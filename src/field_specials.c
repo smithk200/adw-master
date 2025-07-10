@@ -2043,7 +2043,7 @@ bool8 UsedPokemonCenterWarp(void)
 {
     static const u16 sPokemonCenters[] =
     {
-        MAP_OLDALE_TOWN_POKEMON_CENTER_1F,
+        MAP_HAMMERSOCK_POKEMON_CENTER,
         MAP_DEWFORD_TOWN_POKEMON_CENTER_1F,
         MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F,
         MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F,

@@ -1,5 +1,10 @@
 Hammersock_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Hammersock_OnTransition
 	.byte 0
+
+Hammersock_OnTransition::
+	setflag FLAG_VISITED_HAMMERSOCK
+	end
 
 Hammersock_Event_Script_Gym_Sign::
 	lock
@@ -8,10 +13,16 @@ Hammersock_Event_Script_Gym_Sign::
 	release
 	end
 
+Hammersock_Event_Script_Gym_Sign_Raihan::
+	lock
+	msgbox Hammersock_Text_Gym_Sign_Raihan, MSGBOX_DEFAULT
+	release
+	end
+
 Hammersock_Text_Gym_Sign::
 	.string "Hammersock Pokémon Gym$"
 
-Hammersock_Event_Script_Gym_Sign_Raihan::
-		.string "Hammersock Pokémon Gym\n"
-		.string "Leader: Raihan\p"
-		.string "The master of Dragon-types!$"
+Hammersock_Text_Gym_Sign_Raihan::
+	.string "Hammersock Pokémon Gym\n"
+	.string "Leader: Raihan\p"
+	.string "The master of Dragon-types!$"

@@ -56,8 +56,9 @@ TwigtonCity_ProfessorTwigsLab_Trigger_Right::
 TwigtonCity_ProfessorTwigsLab_EventScript_Twig::
 	lock
 	faceplayer
-	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 5, TwigtonCity_ProfessorTwigsLab_EventScript_GetMyDoorDashedFood
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 7, TwigtonCity_ProfessorTwigsLab_EventScript_CheckOutMyCasinos
 	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 6, TwigtonCity_ProfessorTwigsLab_EventScript_YouGotMyFood
+	goto_if_eq VAR_TWIGTON_CITY_MAP_STATE_LAB, 5, TwigtonCity_ProfessorTwigsLab_EventScript_GetMyDoorDashedFood
 	release
 	end
 
@@ -69,6 +70,23 @@ TwigtonCity_ProfessorTwigsLab_EventScript_GetMyDoorDashedFood::
 
 TwigtonCity_ProfessorTwigsLab_EventScript_YouGotMyFood::
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_YouGotMyFood
+	closemessage
+	removeitem ITEM_TWIGS_FOOD
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_Pokedex
+	waitmessage
+	closemessage
+	setflag FLAG_SYS_POKEDEX_GET
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_Pokeballs
+	closemessage
+	giveitem ITEM_POKE_BALL, 5
+	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 7
+	release
+	end
+
+TwigtonCity_ProfessorTwigsLab_EventScript_CheckOutMyCasinos::
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_CheckOutMyCasinos
 	closemessage
 	release
 	end
@@ -675,4 +693,24 @@ TwigtonCity_ProfessorTwigsLab_Text_GetMyDoorDashedFood:
 	.string "Get my Doordash order from Hammersock!$"
 
 TwigtonCity_ProfessorTwigsLab_Text_YouGotMyFood:
-	.string "You got my food!$"
+	.string "You got my food!\p"
+	.string "I was really craving some\n"
+	.string "Taco Bell, there's nothing\l"
+	.string "like the Bell!\p"
+	.string "Ah, now, where was I?\p"
+	.string "Ah, yes, it's time to give you\n"
+	.string "the Pokédex.$"
+
+TwigtonCity_ProfessorTwigsLab_Text_Pokedex:
+	.string "It automatically records data on every\n"
+	.string "Pokémon that you catch.$"
+
+TwigtonCity_ProfessorTwigsLab_Text_Pokeballs:
+	.string "And here are five Poké Balls.\n"
+	.string "Sorry that you didn't have them earlier.\p"
+	.string "Now go catch em' all!$"
+
+TwigtonCity_ProfessorTwigsLab_Text_CheckOutMyCasinos:
+	.string "You should check out my casinos.\p"
+	.string "They're perfectly legal\n"
+	.string "for anyone over 18.$"
