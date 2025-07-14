@@ -65,6 +65,7 @@ struct TrainerMon
     u16 heldItem;
     u16 ability;
     u8 lvl;
+    u8 lvlmodifier; //for dynamic trainers
     u8 ball;
     u8 friendship;
     u8 nature:5;
@@ -90,6 +91,7 @@ struct Trainer
     /*0x11*/ u8 encounterMusic_gender; // last bit is gender
     /*0x12*/ u8 trainerPic;
     /*0x13*/ u8 trainerName[TRAINER_NAME_LENGTH + 1];
+    /*0x14*/ bool8 isDynamic;
     /*0x1E*/ bool8 doubleBattle:1;
              bool8 padding:1;
              u8 startingStatus:6;    // this trainer starts a battle with a given status. see include/constants/battle.h for values

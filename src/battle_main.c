@@ -1860,6 +1860,14 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     u32 personalityValue;
     s32 i;
     u8 monsCount;
+    u8 highest = 0;
+    u8 level = 0;
+    for (i = 0; i < CalculatePlayerPartyCount(); i++) 
+    {
+        level = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+        if (level > highest) 
+            highest = level; //a crude way of implementing a dynamic level system, but it works. The variable "highest" is the variable that stores the dynamic level data.
+    } 
     if (battleTypeFlags & BATTLE_TYPE_TRAINER && !(battleTypeFlags & (BATTLE_TYPE_FRONTIER
                                                                         | BATTLE_TYPE_EREADER_TRAINER
                                                                         | BATTLE_TYPE_TRAINER_HILL)))
@@ -1912,7 +1920,19 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 otIdType = OT_ID_PRESET;
                 fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
-            CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            if (gTrainers[TRAINER_BATTLE_PARAM.opponentA]->isDynamic)
+                {
+                    highest = (highest + partyData[monIndex].lvlmodifier);
+                    if (highest > 100)
+                        highest = 100; //making sure the level doesn't go above 100
+                    if (highest < 1)
+                        highest = 1; //making sure the level doesn't go below 1
+                    CreateMon(&party[i], partyData[monIndex].species, highest, 0, TRUE, personalityValue, otIdType, fixedOtId);
+                }
+            else
+            {
+                CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            }
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[monIndex].heldItem);
 
             CustomTrainerPartyAssignMoves(&party[i], &partyData[monIndex]);

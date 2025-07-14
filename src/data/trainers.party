@@ -26,6 +26,7 @@ Optional (but still recommended) fields for trainers:
     - Mugshot (enable Mugshots during battle transition
                set to one of Purple, Green, Pink, Blue or Yellow)
     - Starting Status (see include/constants/battle.h for values)
+    - Is Dynamic: Determines if the trainer uses a dynamic leveling system, which in this case defaults to the player's highest-leveled mon.
 
 Pokemon are then specified using the Showdown Export format.
 If a field is not specified, it will use its default value.
@@ -41,6 +42,7 @@ Required fields for Pokemon:
 
 Optional fields for Pokemon:
     - Level (Number between 1 and 100, defaults to 100)
+    - Modifier (How many levels above or below the player's highest mon for dynamic trainers)
     - Ability (Ability Name or ABILITY_ABILITY_NAME)
     - IVs (0 HP / 1 Atk / 2 Def / 3 SpA / 4 SpD / 5 Spe, defaults to all 31)
           (Order does not matter)
