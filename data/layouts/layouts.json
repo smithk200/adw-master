@@ -4505,7 +4505,7 @@
       "id": "LAYOUT_HAMMERSOCK",
       "name": "Hammersock_Layout",
       "width": 51,
-      "height": 31,
+      "height": 33,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Celadoncity",
       "border_filepath": "data/layouts/Hammersock/border.bin",
@@ -4560,6 +4560,26 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PokecenterFloor2/border.bin",
       "blockdata_filepath": "data/layouts/PokecenterFloor2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMMERSOCK_TRAINERS_CLUB",
+      "name": "HammersockTrainersClub_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Fanclubdaycare",
+      "border_filepath": "data/layouts/HammersockTrainersClub/border.bin",
+      "blockdata_filepath": "data/layouts/HammersockTrainersClub/map.bin"
+    },
+    {
+      "id": "LAYOUT_POKEMON_FAN_CLUB",
+      "name": "PokemonFanClub_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Fanclubdaycare",
+      "border_filepath": "data/layouts/PokemonFanClub/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonFanClub/map.bin"
     }
   ]
 }

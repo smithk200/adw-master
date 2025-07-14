@@ -1186,3 +1186,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PokecenterFloor1/scripts.inc"
 
 	.include "data/maps/PokecenterFloor2/scripts.inc"
+
+	.include "data/maps/HammersockTrainersClub/scripts.inc"
+
+	.include "data/maps/PokemonFanClub/scripts.inc"

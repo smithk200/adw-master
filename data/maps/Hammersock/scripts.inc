@@ -6,6 +6,12 @@ Hammersock_OnTransition::
 	setflag FLAG_VISITED_HAMMERSOCK
 	end
 
+Hammersock_Event_Script_CitySign::
+	lock
+	msgbox Hammersock_Text_CitySign, MSGBOX_DEFAULT
+	release
+	end
+
 Hammersock_Event_Script_Gym_Sign::
 	lock
 	goto_if_set FLAG_BADGE07_GET, Hammersock_Event_Script_Gym_Sign_Raihan
@@ -18,6 +24,11 @@ Hammersock_Event_Script_Gym_Sign_Raihan::
 	msgbox Hammersock_Text_Gym_Sign_Raihan, MSGBOX_DEFAULT
 	release
 	end
+
+Hammersock_Text_CitySign::
+	.string "Hammersock\p"
+	.string "An ancient city, full of\n"
+	.string "lore and stuff.$"
 
 Hammersock_Text_Gym_Sign::
 	.string "Hammersock Pokémon Gym$"
