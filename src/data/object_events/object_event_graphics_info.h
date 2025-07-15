@@ -5175,7 +5175,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRNurse = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_16x32,
     .subspriteTables = sOamTables_16x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_Nurse,
     .images = sPicTable_FRNurse,
     .affineAnims = gDummySpriteAffineAnimTable,
 };

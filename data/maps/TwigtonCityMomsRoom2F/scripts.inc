@@ -123,7 +123,7 @@ TwigtonCity_MomsRoom2F_TextMomsJournal:
 	.string "Dear Diary:\p"
 	.string "Today I caught my son trying\n"
 	.string "to sneak out of the house again.\p"
-	.string "Afterward, I calmy reminded him that\n"
+	.string "Afterward, I calmly reminded him that\n"
 	.string "he's not supposed to sneak out of\l"
 	.string "the house, and you know what he does?\p"
 	.string "He yells at me.\p"

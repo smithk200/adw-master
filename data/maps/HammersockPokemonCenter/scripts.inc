@@ -1,9 +1,12 @@
+.set LOCALID_NURSE, 1
+
 HammersockPokemonCenter_MapScripts::
 	.byte 0
 
 Hammersock_PokemonCenter_1F_EventScript_Nurse::
 	lock
 	faceplayer
+	setvar VAR_0x800B, LOCALID_NURSE
 	call Common_EventScript_PkmnCenterNurse
 	release
 	end

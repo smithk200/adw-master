@@ -1920,7 +1920,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 otIdType = OT_ID_PRESET;
                 fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
-            if (gTrainers[TRAINER_BATTLE_PARAM.opponentA]->isDynamic)
+            if (trainer->isDynamic == TRUE)
                 {
                     highest = (highest + partyData[monIndex].lvlmodifier);
                     if (highest > 100)
