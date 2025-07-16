@@ -14,33 +14,58 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 48,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
+      "x": 49,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
   ],
   "warp_events": [
     {
       "x": 23,
-      "y": 28,
+      "y": 36,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1HAMMERSOCK_CONNECTION",
       "dest_warp_id": "1"
     },
     {
       "x": 24,
-      "y": 21,
+      "y": 28,
       "elevation": 0,
       "dest_map": "MAP_HAMMERSOCK_MART",
       "dest_warp_id": "0"
     },
     {
       "x": 20,
-      "y": 12,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_HAMMERSOCK_POKEMON_CENTER",
       "dest_warp_id": "0"
     },
     {
-      "x": 22,
-      "y": 5,
+      "x": 33,
+      "y": 27,
       "elevation": 0,
       "dest_map": "MAP_HAMMERSOCK_TRAINERS_CLUB",
       "dest_warp_id": "0"
@@ -53,7 +78,7 @@
     {
       "type": "sign",
       "x": 30,
-      "y": 12,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Hammersock_Event_Script_Gym_Sign"
@@ -61,10 +86,18 @@
     {
       "type": "sign",
       "x": 23,
-      "y": 24,
+      "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Hammersock_Event_Script_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hammersock_Event_Script_TrainerClub_Sign"
     }
   ]
 }

@@ -355,7 +355,12 @@
 #define TRAINER_CLASS_RS_PROTAG      0x41
 #define TRAINER_CLASS_FR_RIVAL       0x42
 #define TRAINER_CLASS_PHILIP         0x43
-#define TRAINER_CLASS_COUNT          0x44
+#define TRAINER_CLASS_SCIENTIST      0x44
+#define TRAINER_CLASS_GAMBLER        0x45
+#define TRAINER_CLASS_SUPER_NERD     0x46
+#define TRAINER_CLASS_FURRY          0x47
+#define TRAINER_CLASS_CUE_BALL       0x48
+#define TRAINER_CLASS_COUNT          0x49
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

@@ -4505,7 +4505,7 @@
       "id": "LAYOUT_HAMMERSOCK",
       "name": "Hammersock_Layout",
       "width": 51,
-      "height": 33,
+      "height": 41,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Celadoncity",
       "border_filepath": "data/layouts/Hammersock/border.bin",
@@ -4580,6 +4580,16 @@
       "secondary_tileset": "gTileset_Fanclubdaycare",
       "border_filepath": "data/layouts/PokemonFanClub/border.bin",
       "blockdata_filepath": "data/layouts/PokemonFanClub/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY",
+      "name": "SaffronCity_Layout",
+      "width": 66,
+      "height": 55,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Saffroncity",
+      "border_filepath": "data/layouts/SaffronCity/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity/map.bin"
     }
   ]
 }

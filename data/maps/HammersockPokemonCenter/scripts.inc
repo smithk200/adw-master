@@ -3,6 +3,14 @@
 HammersockPokemonCenter_MapScripts::
 	.byte 0
 
+Hammersock_PokemonCenter_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Hammersock_PokemonCenter_1F_OnTransition
+	.byte 0
+
+Hammersock_PokemonCenter_1F_OnTransition:
+	setrespawn HEAL_LOCATION_OLDALE_TOWN
+	end
+
 Hammersock_PokemonCenter_1F_EventScript_Nurse::
 	lock
 	faceplayer

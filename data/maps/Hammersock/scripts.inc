@@ -19,6 +19,12 @@ Hammersock_Event_Script_Gym_Sign::
 	release
 	end
 
+Hammersock_Event_Script_TrainerClub_Sign::
+	lock
+	msgbox Hammersock_Text_TrainerClub_Sign, MSGBOX_DEFAULT
+	release
+	end
+
 Hammersock_Event_Script_Gym_Sign_Raihan::
 	lock
 	msgbox Hammersock_Text_Gym_Sign_Raihan, MSGBOX_DEFAULT
@@ -37,3 +43,8 @@ Hammersock_Text_Gym_Sign_Raihan::
 	.string "Hammersock Pokémon Gym\n"
 	.string "Leader: Raihan\p"
 	.string "The master of Dragon-types!$"
+
+Hammersock_Text_TrainerClub_Sign::
+	.string "Hammersock Trainers' Club\p"
+	.string "A place for dedicated Trainers to\n"
+	.string "grind it out!$"

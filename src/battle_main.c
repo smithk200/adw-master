@@ -330,7 +330,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_SCHOOL_KID] = { _("School Kid") },
     [TRAINER_CLASS_SR_AND_JR] = { _("Sr. and Jr."), 4 },
     [TRAINER_CLASS_WINSTRATE] = { _("Winstrate"), 10 },
-    [TRAINER_CLASS_POKEFAN] = { _("Furry"), 20 },
+    [TRAINER_CLASS_POKEFAN] = { _("Pokéfan"), 20 },
     [TRAINER_CLASS_YOUNGSTER] = { _("Youngster"), 4 },
     [TRAINER_CLASS_CHAMPION] = { _("Champion"), 50 },
     [TRAINER_CLASS_FISHERMAN] = { _("Fisherman"), 10, B_TRAINER_CLASS_POKE_BALLS >= GEN_8 ? BALL_DIVE : BALL_LURE },
@@ -362,6 +362,11 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_RS_PROTAG] = { _("{PKMN} Trainer") },
     [TRAINER_CLASS_FR_RIVAL] = { _("Rival"), 15 },
     [TRAINER_CLASS_PHILIP] = { _("Philip"), 25 },
+    [TRAINER_CLASS_SCIENTIST] = { _("Scientist"), 12 },
+    [TRAINER_CLASS_GAMBLER] = { _("Gambler"), 23 },
+    [TRAINER_CLASS_SUPER_NERD] = { _("Super Nerd"), 12 },
+    [TRAINER_CLASS_FURRY] = { _("Furry"), 4 },
+    [TRAINER_CLASS_CUE_BALL] = { _("Cue Ball"), 9 },
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =
