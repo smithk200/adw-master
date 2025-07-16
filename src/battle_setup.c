@@ -51,6 +51,7 @@
 #include "constants/trainer_hill.h"
 #include "constants/weather.h"
 #include "wild_encounter.h"
+#include "constants/layouts.h"
 
 enum {
     TRANSITION_TYPE_NORMAL,
@@ -1162,6 +1163,8 @@ void BattleSetup_StartTrainerBattle(void)
 {
     if (gNoOfApproachingTrainers == 2)
         gBattleTypeFlags = (BATTLE_TYPE_DOUBLE | BATTLE_TYPE_TWO_OPPONENTS | BATTLE_TYPE_TRAINER);
+    else if (gMapHeader.mapLayoutId == LAYOUT_HAMMERSOCK_TRAINERS_CLUB)
+        gBattleTypeFlags = (BATTLE_TYPE_SINGLE_NO_MONEY | BATTLE_TYPE_TRAINER);
     else
         gBattleTypeFlags = (BATTLE_TYPE_TRAINER);
 

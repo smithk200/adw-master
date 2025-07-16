@@ -5537,6 +5537,13 @@ BattleScript_LocalTrainerBattleWon::
 	jumpifbattletype BATTLE_TYPE_TWO_OPPONENTS, BattleScript_LocalTwoTrainersDefeated
 	printstring STRINGID_PLAYERDEFEATEDTRAINER1
 	goto BattleScript_LocalBattleWonLoseTexts
+BattleScript_LocalTrainerBattleWonNoMoney::
+	jumpifbattletype BATTLE_TYPE_TWO_OPPONENTS, BattleScript_LocalTwoTrainersDefeated
+	printstring STRINGID_PLAYERDEFEATEDTRAINER1
+	trainerslidein BS_OPPONENT1
+	waitstate
+	printstring STRINGID_TRAINER1LOSETEXT
+	end2
 BattleScript_LocalTwoTrainersDefeated::
 	printstring STRINGID_TWOENEMIESDEFEATED
 BattleScript_LocalBattleWonLoseTexts::

@@ -66,6 +66,7 @@
 #include "constants/pokemon.h"
 #include "config/battle.h"
 #include "data/battle_move_effects.h"
+#include "constants/layouts.h"
 
 // table to avoid ugly powing on gba (courtesy of doesnt)
 // this returns (i^2.5)/4
@@ -8704,6 +8705,10 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     if (trainerId == TRAINER_SECRET_BASE)
     {
         moneyReward = 20 * gBattleResources->secretBase->party.levels[0] * gBattleStruct->moneyMultiplier;
+    }
+    else if (gMapHeader.mapLayoutId == LAYOUT_HAMMERSOCK_TRAINERS_CLUB)
+    {
+        moneyReward = 0;
     }
     else
     {
