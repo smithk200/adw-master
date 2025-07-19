@@ -95,7 +95,8 @@
     "Underwater_Route125",
     "TwigtonCity",
     "Route1",
-    "Hammersock"
+    "Hammersock",
+    "Route2"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -119,7 +120,8 @@
     "Route1Hammersock_Connection",
     "HammersockMart",
     "HammersockPokemonCenter",
-    "HammersockTrainersClub"
+    "HammersockTrainersClub",
+    "HammersockRoute2Connection"
   ],
   "gMapGroup_IndoorDewford": [
     "DewfordTown_House1",

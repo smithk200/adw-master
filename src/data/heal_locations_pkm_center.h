@@ -147,6 +147,12 @@ static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT
         .x = 2,
         .y = 5,
     },
+    [HEAL_LOCATION_HAMMERSOCK - 1] =
+    {
+        .group = MAP_GROUP(HAMMERSOCK_POKEMON_CENTER),
+        .map = MAP_NUM(HAMMERSOCK_POKEMON_CENTER),
+        DEFAULT_POKEMON_CENTER_COORDS,
+    },
 };
 
 #undef DEFAULT_POKEMON_CENTER_COORDS
@@ -180,4 +186,5 @@ static const u8 sHealNpcLocalId[HEAL_LOCATION_COUNT - 1] =
     [HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR - 1] = 0, // no heal npc
     [HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST - 1] = 1,
     [HEAL_LOCATION_TWIGTON_CITY_PLAYERS_HOUSE2F - 1] = 1,
+    [HEAL_LOCATION_HAMMERSOCK - 1] = 1,
 };

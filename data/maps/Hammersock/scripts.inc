@@ -1,6 +1,11 @@
 Hammersock_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Hammersock_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, Hammersock_OnLoad
 	.byte 0
+
+Hammersock_OnLoad::
+	setrespawn HEAL_LOCATION_HAMMERSOCK
+	end
 
 Hammersock_OnTransition::
 	setflag FLAG_VISITED_HAMMERSOCK

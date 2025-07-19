@@ -4590,6 +4590,26 @@
       "secondary_tileset": "gTileset_Saffroncity",
       "border_filepath": "data/layouts/SaffronCity/border.bin",
       "blockdata_filepath": "data/layouts/SaffronCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2",
+      "name": "Route2_Layout",
+      "width": 40,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Viridiancity",
+      "border_filepath": "data/layouts/Route2/border.bin",
+      "blockdata_filepath": "data/layouts/Route2/map.bin"
+    },
+    {
+      "id": "LAYOUT_HAMMERSOCK_ROUTE2CONNECTION",
+      "name": "HammersockRoute2Connection_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding2",
+      "border_filepath": "data/layouts/HammersockRoute2Connection/border.bin",
+      "blockdata_filepath": "data/layouts/HammersockRoute2Connection/map.bin"
     }
   ]
 }
