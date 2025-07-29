@@ -11871,6 +11871,9 @@ bool32 IsGen6ExpShareEnabled(void)
     if (I_EXP_SHARE_FLAG <= TEMP_FLAGS_END)
         return FALSE;
 
+    if (gSaveBlock2Ptr->optionsEXPShare == TRUE)
+        return TRUE;
+
     return FlagGet(I_EXP_SHARE_FLAG);
 }
 

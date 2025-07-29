@@ -101,6 +101,7 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
+    gSaveBlock2Ptr->optionsEXPShare = TRUE; //FlagSet(I_EXP_SHARE_FLAG);
 }
 
 static void ClearPokedexFlags(void)
