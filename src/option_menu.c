@@ -189,9 +189,6 @@ static void ReadAllCurrentSettings(u8 taskId)
         gTasks[taskId].tSound = gSaveBlock2Ptr->optionsSound;
         gTasks[taskId].tButtonMode = gSaveBlock2Ptr->optionsButtonMode;
         gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
-        //gTasks[taskId].tEXPShare = FlagGet(I_EXP_SHARE_FLAG);
-        //gSaveBlock2Ptr->regionMapZoom ? HELPBAR_MAP_ZOOMED_IN : HELPBAR_MAP_ZOOMED_OUT;
-        //gSaveBlock2Ptr->optionsEXPShare ? HELPBAR_MAP_ZOOMED_IN : HELPBAR_MAP_ZOOMED_OUT;
         gTasks[taskId].tEXPShare = gSaveBlock2Ptr->optionsEXPShare;
 }
 
@@ -218,6 +215,7 @@ static void DrawOptionsPg2(u8 taskId)
 
 void CB2_InitOptionMenu(void)
 {
+    u8 taskId;
     switch (gMain.state)
     {
     default:
@@ -292,7 +290,6 @@ void CB2_InitOptionMenu(void)
         break;
     case 10:
     {
-        u8 taskId;
         switch(sCurrPage)
         {
         case 0:
@@ -466,7 +463,7 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
     }
     else if (JOY_NEW(A_BUTTON))
     {
-        if (gTasks[taskId].tMenuSelection == MENUITEM_CANCEL_PG2);
+        if (gTasks[taskId].tMenuSelection == MENUITEM_CANCEL_PG2)
             gTasks[taskId].func = Task_OptionMenuSave;
     }
     else if (JOY_NEW(B_BUTTON))
@@ -660,7 +657,7 @@ static void ExpShare_DrawChoices(u8 selection)
     styles[0] = 0;
     styles[1] = 0;
     styles[selection] = 1;
-
+    
     DrawOptionMenuChoice(gText_BattleSceneOff, 104, YPOS_EXP_SHARE, styles[0]);
     DrawOptionMenuChoice(gText_BattleSceneOn, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOn, 198), YPOS_EXP_SHARE, styles[1]);
 }
