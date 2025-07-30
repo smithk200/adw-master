@@ -315,7 +315,6 @@ void CB2_InitOptionMenu(void)
 
 static u8 Process_ChangePage(u8 CurrentPage)
 {
-    DrawTextOption();
     if (JOY_NEW(R_BUTTON))
    {
        if (CurrentPage < PAGE_COUNT - 1)
@@ -335,19 +334,20 @@ static u8 Process_ChangePage(u8 CurrentPage)
 
 static void Task_ChangePage(u8 taskId)
 {
-   PutWindowTilemap(1);
-   DrawOptionMenuTexts();
+    PutWindowTilemap(1);
+    DrawTextOption();
+    DrawOptionMenuTexts();
    switch(sCurrPage)
-   {
-   case 0:
-       DrawOptionsPg1(taskId);
-       gTasks[taskId].func = Task_OptionMenuFadeIn;
-       break;
-   case 1:
-       DrawOptionsPg2(taskId);
-       gTasks[taskId].func = Task_OptionMenuFadeIn_Pg2;
-       break;
-   }
+    {
+    case 0:
+        DrawOptionsPg1(taskId);
+        gTasks[taskId].func = Task_OptionMenuFadeIn;
+        break;
+    case 1:
+        DrawOptionsPg2(taskId);
+        gTasks[taskId].func = Task_OptionMenuFadeIn_Pg2;
+        break;
+    }
 }
 
 static void Task_OptionMenuFadeIn(u8 taskId)
@@ -483,7 +483,7 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
     }
     else if (JOY_NEW(DPAD_DOWN))
     {
-        if (gTasks[taskId].tMenuSelection < MENUITEM_CANCEL)
+        if (gTasks[taskId].tMenuSelection < MENUITEM_CANCEL_PG2)
             gTasks[taskId].tMenuSelection++;
         else
             gTasks[taskId].tMenuSelection = 0;
@@ -529,11 +529,11 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
             StringAppend(pageDots, gText_Space);            
     }
     xMid = (8 + widthOptions + 5);
-    FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
-    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, pageDots, xMid, 1, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, gText_PageNav, GetStringRightAlignXOffset(FONT_NORMAL, gText_PageNav, 198), 1, TEXT_SKIP_DRAW, NULL);
-    CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
+    FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(1));
+    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, pageDots, xMid, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_PageNav, GetStringRightAlignXOffset(FONT_NORMAL, gText_PageNav, 198), 1, TEXT_SKIP_DRAW, NULL);
+    CopyWindowToVram(WIN_HEADER, COPYWIN_FULL);
  }
 
 static void Task_OptionMenuSave(u8 taskId)
@@ -829,8 +829,24 @@ static u8 ExpShare_ProcessInput(u8 selection)
 
 static void DrawHeaderText(void)
 {
+    u32 i, widthOptions, xMid;
+    u8 pageDots[9] = _("");  // Array size should be at least (2 * PAGE_COUNT) -1
+    widthOptions = GetStringWidth(FONT_NORMAL, gText_Option, 0);
+
+    for (i = 0; i < PAGE_COUNT; i++)
+    {
+        if (i == sCurrPage)
+            StringAppend(pageDots, gText_LargeDot);
+        else
+            StringAppend(pageDots, gText_SmallDot);
+        if (i < PAGE_COUNT - 1)
+            StringAppend(pageDots, gText_Space);            
+    }
+    xMid = (8 + widthOptions + 5);
     FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(1));
+    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, pageDots, xMid, 1, TEXT_SKIP_DRAW, NULL);
     AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_PageNav, GetStringRightAlignXOffset(FONT_NORMAL, gText_PageNav, 198), 1, TEXT_SKIP_DRAW, NULL);
     CopyWindowToVram(WIN_HEADER, COPYWIN_FULL);
 }
 

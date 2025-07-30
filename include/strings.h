@@ -267,8 +267,6 @@ extern const u8 gText_SmallDot[];
 extern const u8 gText_LargeDot[];
 extern const u8 gText_PageNav[];
 extern const u8 gText_EXPShare[];
-extern const u8 gText_SmallDot[];
-extern const u8 gText_LargeDot[];
 extern const u8 gText_TextSpeed[];
 extern const u8 gText_BattleScene[];
 extern const u8 gText_BattleStyle[];
