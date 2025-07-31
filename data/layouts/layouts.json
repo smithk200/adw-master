@@ -4595,7 +4595,7 @@
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
       "width": 34,
-      "height": 20,
+      "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Viridiancity",
       "border_filepath": "data/layouts/Route2/border.bin",
