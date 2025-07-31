@@ -5530,7 +5530,10 @@ static void HandleEndTurn_BattleLost(void)
     }
     else
     {
-        gBattlescriptCurrInstr = BattleScript_LocalBattleLost;
+        if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && !(gBattleTypeFlags & BATTLE_TYPE_LINK) && (gBattleTypeFlags & BATTLE_TYPE_SINGLE_NO_MONEY))
+            gBattlescriptCurrInstr = BattleScript_LocalBattleLostNoMoney;
+        else
+            gBattlescriptCurrInstr = BattleScript_LocalBattleLost;
     }
 
     gBattleMainFunc = HandleEndTurn_FinishBattle;

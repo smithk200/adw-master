@@ -4594,7 +4594,7 @@
     {
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
-      "width": 40,
+      "width": 34,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Viridiancity",
@@ -4610,6 +4610,16 @@
       "secondary_tileset": "gTileset_Genericbuilding2",
       "border_filepath": "data/layouts/HammersockRoute2Connection/border.bin",
       "blockdata_filepath": "data/layouts/HammersockRoute2Connection/map.bin"
+    },
+    {
+      "id": "LAYOUT_GFYWOODS",
+      "name": "GFYWoods_Layout",
+      "width": 64,
+      "height": 79,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Viridianforest",
+      "border_filepath": "data/layouts/GFYWoods/border.bin",
+      "blockdata_filepath": "data/layouts/GFYWoods/map.bin"
     }
   ]
 }
