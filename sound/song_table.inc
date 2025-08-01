@@ -351,7 +351,7 @@ gSongTable::
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
 	song dummy_song_header, 0, 0
-	song mus_littleroot_test, 0, 0
+	song GoodEggGalaxy, 0, 0
 	song mus_gsc_route38, 0, 0
 	song mus_caught, 0, 0
 	song mus_victory_wild, 0, 0
@@ -382,7 +382,7 @@ gSongTable::
 	song mus_move_deleted, 2, 2
 	song mus_encounter_girl, 0, 0
 	song mus_encounter_male, 0, 0
-	song mus_abandoned_ship, 0, 0
+	song Contra, 0, 0
 	song mus_fortree, 0, 0
 	song mus_birch_lab, 0, 0
 	song mus_b_tower_rs, 0, 0

@@ -11,6 +11,10 @@ DirectSoundWaveData_trumpet_high::
 	.incbin "sound/direct_sound_samples/trumpet_high.bin"
 
 	.align 2
+DirectSoundWaveData_ride_cymbal::
+	.incbin "sound/direct_sound_samples/ride_cymbal.bin"
+
+	.align 2
 DirectSoundWaveData_soprano_sax::
 	.incbin "sound/direct_sound_samples/soprano_sax.bin"
 
