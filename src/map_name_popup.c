@@ -32,6 +32,7 @@ enum MapPopUp_Themes
     MAPPOPUP_THEME_BRICK,
     MAPPOPUP_THEME_UNDERWATER,
     MAPPOPUP_THEME_STONE2,
+    MAPPOPUP_THEME_FR,
 };
 
 enum MapPopUp_Themes_BW
@@ -56,6 +57,7 @@ static const u8 sMapPopUp_Table[][960] =
     [MAPPOPUP_THEME_BRICK]      = INCBIN_U8("graphics/map_popup/brick.4bpp"),
     [MAPPOPUP_THEME_UNDERWATER] = INCBIN_U8("graphics/map_popup/underwater.4bpp"),
     [MAPPOPUP_THEME_STONE2]     = INCBIN_U8("graphics/map_popup/stone2.4bpp"),
+    [MAPPOPUP_THEME_FR]     = INCBIN_U8("graphics/map_popup/fr_popup.4bpp"),
 };
 
 static const u8 sMapPopUp_OutlineTable[][960] =
@@ -66,6 +68,7 @@ static const u8 sMapPopUp_OutlineTable[][960] =
     [MAPPOPUP_THEME_BRICK]      = INCBIN_U8("graphics/map_popup/brick_outline.4bpp"),
     [MAPPOPUP_THEME_UNDERWATER] = INCBIN_U8("graphics/map_popup/underwater_outline.4bpp"),
     [MAPPOPUP_THEME_STONE2]     = INCBIN_U8("graphics/map_popup/stone2_outline.4bpp"),
+    [MAPPOPUP_THEME_FR]     = INCBIN_U8("graphics/map_popup/firered_popup_test.4bpp"),
 };
 
 static const u16 sMapPopUp_PaletteTable[][16] =
@@ -76,18 +79,19 @@ static const u16 sMapPopUp_PaletteTable[][16] =
     [MAPPOPUP_THEME_BRICK]      = INCBIN_U16("graphics/map_popup/brick_outline.gbapal"),
     [MAPPOPUP_THEME_UNDERWATER] = INCBIN_U16("graphics/map_popup/underwater_outline.gbapal"),
     [MAPPOPUP_THEME_STONE2]     = INCBIN_U16("graphics/map_popup/stone2_outline.gbapal"),
+    [MAPPOPUP_THEME_FR]     = INCBIN_U16("graphics/map_popup/firered_popup_test.gbapal"),
 };
 
 static const u16 sMapPopUp_Palette_Underwater[16] = INCBIN_U16("graphics/map_popup/underwater.gbapal");
 
 static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping[] =
 {
-    [MAPSEC_LITTLEROOT_TOWN] = MAPPOPUP_THEME_WOOD,
-    [MAPSEC_OLDALE_TOWN] = MAPPOPUP_THEME_WOOD,
-    [MAPSEC_DEWFORD_TOWN] = MAPPOPUP_THEME_WOOD,
-    [MAPSEC_LAVARIDGE_TOWN] = MAPPOPUP_THEME_WOOD,
-    [MAPSEC_FALLARBOR_TOWN] = MAPPOPUP_THEME_WOOD,
-    [MAPSEC_VERDANTURF_TOWN] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_LITTLEROOT_TOWN] = MAPPOPUP_THEME_FR,
+    [MAPSEC_OLDALE_TOWN] = MAPPOPUP_THEME_FR,
+    [MAPSEC_DEWFORD_TOWN] = MAPPOPUP_THEME_FR,
+    [MAPSEC_LAVARIDGE_TOWN] = MAPPOPUP_THEME_FR,
+    [MAPSEC_FALLARBOR_TOWN] = MAPPOPUP_THEME_FR,
+    [MAPSEC_VERDANTURF_TOWN] = MAPPOPUP_THEME_FR,
     [MAPSEC_PACIFIDLOG_TOWN] = MAPPOPUP_THEME_WOOD,
     [MAPSEC_PETALBURG_CITY] = MAPPOPUP_THEME_BRICK,
     [MAPSEC_SLATEPORT_CITY] = MAPPOPUP_THEME_MARBLE,
@@ -583,22 +587,45 @@ static void ShowMapNamePopUpWindow(void)
 static void DrawMapNamePopUpFrame(u8 bg, u8 x, u8 y, u8 deltaX, u8 deltaY, u8 unused)
 {
     s32 i;
+    u16 regionMapSectionId = gMapHeader.regionMapSectionId;
 
     // Draw top edge
-    for (i = 0; i < 1 + TILE_TOP_EDGE_END - TILE_TOP_EDGE_START; i++)
-        FillBgTilemapBufferRect(bg, TILE_TOP_EDGE_START + i, i - 1 + x, y - 1, 1, 1, 14);
+    if (regionMapSectionId == MAPSEC_VIRIDIAN_FOREST)
+    {
+        {
+            for (i = 0; i < 1 + TILE_TOP_EDGE_END - TILE_TOP_EDGE_START; i++)
+            FillBgTilemapBufferRect(bg, TILE_TOP_EDGE_START + i, i - 1 + x, y - 1, 1, 1, 14);
+        }
+    }
+    else
+    {
+        for (i = 0; i < 1 + TILE_TOP_EDGE_END - TILE_TOP_EDGE_START; i++)
+            FillBgTilemapBufferRect(bg, TILE_TOP_EDGE_START + i, i - 1 + x, y - 1, 1, 1, 14);
+    }
 
     // Draw sides
-    FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_TOP,       x - 1,     y, 1, 1, 14);
-    FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_TOP, deltaX + x,     y, 1, 1, 14);
-    FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_MID,       x - 1, y + 1, 1, 1, 14);
-    FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_MID, deltaX + x, y + 1, 1, 1, 14);
-    FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_BOT,       x - 1, y + 2, 1, 1, 14);
-    FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_BOT, deltaX + x, y + 2, 1, 1, 14);
+    if (regionMapSectionId == MAPSEC_VIRIDIAN_FOREST)
+    {
+        FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_TOP,       x - 1,     y, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_TOP, deltaX + x,     y, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_MID,       x - 1, y + 1, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_MID, deltaX + x, y + 1, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_BOT,       x - 1, y + 2, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_BOT, deltaX + x, y + 2, 1, 1, 14);
+    }
+    else
+    {
+        FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_TOP,       x - 1,     y, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_TOP, deltaX + x,     y, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_MID,       x - 1, y + 1, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_MID, deltaX + x, y + 1, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_BOT,       x - 1, y + 2, 1, 1, 14);
+        FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_BOT, deltaX + x, y + 2, 1, 1, 14);
+    }
 
     // Draw bottom edge
-    for (i = 0; i < 1 + TILE_BOT_EDGE_END - TILE_BOT_EDGE_START; i++)
-        FillBgTilemapBufferRect(bg, TILE_BOT_EDGE_START + i, i - 1 + x, y + deltaY, 1, 1, 14);
+        for (i = 0; i < 1 + TILE_BOT_EDGE_END - TILE_BOT_EDGE_START; i++)
+            FillBgTilemapBufferRect(bg, TILE_BOT_EDGE_START + i, i - 1 + x, y + deltaY, 1, 1, 14);
 }
 
 static void LoadMapNamePopUpWindowBg(void)

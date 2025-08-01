@@ -57,6 +57,13 @@ Hammersock_Event_Script_Woman2::
 	release
 	end
 
+Hammersock_Event_Script_Woman3::
+	lock
+	faceplayer
+	msgbox Hammersock_Text_Woman3, MSGBOX_DEFAULT
+	release
+	end
+
 Hammersock_Event_Script_Man1::
 	lock
 	faceplayer
@@ -109,14 +116,19 @@ Hammersock_Text_Woman2:
 	.string "I think cobbled streets are\n"
 	.string "the best feature of Hammersock!$"
 
+Hammersock_Text_Woman3::
+	.string "I just love watering these trees.\p"
+	.string "It's a good way of\l"
+	.string "giving to the community.$"
+
 Hammersock_Text_Man1:
 	.string "I wonder who planted these trees\n"
 	.string "here? It would most certainly be an\l"
 	.string "interesting story!$"
 
 Hammersock_Text_Boy1:
-	.string "Weeeee!\n"
-	.string "I want to be a Pokémon Trainer someday!\p"
+	.string "Weeeee! I want to be\n"
+	.string "a Pokémon Trainer someday!\p"
 	.string "You need to be 10, and I'm only 8.$"
 
 Hammersock_Text_WiseSage:

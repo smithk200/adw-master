@@ -2,7 +2,7 @@
   "id": "MAP_HAMMERSOCK_TRAINERS_CLUB",
   "name": "HammersockTrainersClub",
   "layout": "LAYOUT_HAMMERSOCK_TRAINERS_CLUB",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HAMMERSOCK",
   "region_map_section": "MAPSEC_HAMMERSOCK_TRAINERS_CLUB",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

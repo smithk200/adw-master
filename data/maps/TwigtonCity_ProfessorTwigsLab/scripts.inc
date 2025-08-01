@@ -82,6 +82,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_YouGotMyFood::
 	closemessage
 	giveitem ITEM_POKE_BALL, 5
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 7
+	setflag FLAG_GEN_ALPHA_KID
 	release
 	end
 

@@ -17,7 +17,13 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 26,
+      "y": 76,
+      "elevation": 0,
+      "dest_map": "MAP_GFYWOODS",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
