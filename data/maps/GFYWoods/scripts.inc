@@ -21,6 +21,81 @@ GFYWoods_EventScript_Sign3::
 	release
 	end
 
+GFYWoods_EventScript_Rick::
+	trainerbattle_single TRAINER_RICK, GFYWoods_Text_RickIntro, GFYWoods_Text_RickDefeat
+	msgbox GFYWoods_Text_RickPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Tom::
+	trainerbattle_single TRAINER_TOM, GFYWoods_Text_TomIntro, GFYWoods_Text_TomDefeat
+	msgbox GFYWoods_Text_TomPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Phil::
+	trainerbattle_single TRAINER_PHIL, GFYWoods_Text_PhilIntro, GFYWoods_Text_PhilDefeat
+	msgbox GFYWoods_Text_PhilPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Ignacio::
+	trainerbattle_single TRAINER_IGNACIO, GFYWoods_Text_IgnacioIntro, GFYWoods_Text_IgnacioDefeat
+	msgbox GFYWoods_Text_IgnacioPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Ryan::
+	trainerbattle_single TRAINER_RYAN, GFYWoods_Text_RyanIntro, GFYWoods_Text_RyanDefeat
+	msgbox GFYWoods_Text_RyanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Timmy::
+	trainerbattle_single TRAINER_TIMMY, GFYWoods_Text_TimmyIntro, GFYWoods_Text_TimmyDefeat
+	msgbox GFYWoods_Text_TimmyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Roy::
+	trainerbattle_single TRAINER_ROY, GFYWoods_Text_RoyIntro, GFYWoods_Text_RoyDefeat
+	msgbox GFYWoods_Text_RoyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Kent::
+	trainerbattle_single TRAINER_KENT, GFYWoods_Text_KentIntro, GFYWoods_Text_KentDefeat
+	msgbox GFYWoods_Text_KentPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Ernie::
+	trainerbattle_single TRAINER_ERNIE, GFYWoods_Text_ErnieIntro, GFYWoods_Text_ErnieDefeat
+	msgbox GFYWoods_Text_ErniePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Werner::
+	trainerbattle_single TRAINER_WERNER, GFYWoods_Text_WernerIntro, GFYWoods_Text_WernerDefeat
+	msgbox GFYWoods_Text_WernerPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Xavier::
+	trainerbattle_single TRAINER_XAVIER, GFYWoods_Text_XavierIntro, GFYWoods_Text_XavierDefeat
+	msgbox GFYWoods_Text_XavierPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Arnold::
+	trainerbattle_single TRAINER_ARNOLD, GFYWoods_Text_ArnoldIntro, GFYWoods_Text_ArnoldDefeat
+	msgbox GFYWoods_Text_ArnoldPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Takashi::
+	trainerbattle_single TRAINER_TAKASHI, GFYWoods_Text_TakashiIntro, GFYWoods_Text_TakashiDefeat
+	msgbox GFYWoods_Text_TakashiPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Daisuke::
+	trainerbattle_single TRAINER_DAISUKE, GFYWoods_Text_DaisukeIntro, GFYWoods_Text_DaisukeDefeat
+	msgbox GFYWoods_Text_DaisukePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+GFYWoods_EventScript_Pierre::
+	trainerbattle_single TRAINER_PIERRE, GFYWoods_Text_PierreIntro, GFYWoods_Text_PierreDefeat
+	msgbox GFYWoods_Text_PierrePostBattle, MSGBOX_AUTOCLOSE
+	end
+
 GFYWoods_EventScript_MattWalshLeft::
 	lockall
 	goto_if_eq VAR_GFY_WOODS_STATE, 0, GFYWoods_EventScript_MattWalshIntroLeft
@@ -140,6 +215,141 @@ GFYWoods_Text_Sign2:
 GFYWoods_Text_Sign3:
 	.string "Gofuckyourself Woods\n"
 	.string "Elwood City {UP_ARROW}$"
+
+GFYWoods_Text_RickIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_RickDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_RickPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_TomIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_TomDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_TomPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_PhilIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_PhilDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_PhilPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_IgnacioIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_IgnacioDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_IgnacioPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_RyanIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_RyanDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_RyanPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_TimmyIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_TimmyDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_TimmyPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_RoyIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_RoyDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_RoyPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_KentIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_KentDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_KentPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_ErnieIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_ErnieDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_ErniePostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_WernerIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_WernerDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_WernerPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_XavierIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_XavierDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_XavierPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_ArnoldIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_ArnoldDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_ArnoldPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_TakashiIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_TakashiDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_TakashiPostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_DaisukeIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_DaisukeDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_DaisukePostBattle:
+    .string "I will beat you next time!$"
+
+GFYWoods_Text_PierreIntro:
+    .string "Hi, I am a Trainer!$"
+
+GFYWoods_Text_PierreDefeat:
+    .string "Darn, I lost!$"
+
+GFYWoods_Text_PierrePostBattle:
+    .string "I will beat you next time!$"
 
 GFYWoods_Text_MattWalsh:
 	.string "Have you seen a Pokémon called\n"
