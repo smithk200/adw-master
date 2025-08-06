@@ -5813,6 +5813,8 @@ u16 GetBattleBGM(void)
             return MUS_VS_FRONTIER_BRAIN;
         case TRAINER_CLASS_PHILIP:
             return MUS_VS_FRY;
+        case TRAINER_CLASS_MATT:
+            return MUS_DEJA_VU;
         default:
             return MUS_RG_VS_TRAINER;
         }

@@ -1291,7 +1291,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_XAVIER] =
     {
 #line 579
-        .trainerName = _("GRUNT"),
+        .trainerName = _("Xavier"),
 #line 580
         .trainerClass = TRAINER_CLASS_BUG_CATCHER,
 #line 581
@@ -18584,14 +18584,14 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_PHIL] =
     {
 #line 7468
-        .trainerName = _("PHIL"),
+        .trainerName = _("Phil"),
 #line 7469
-        .trainerClass = TRAINER_CLASS_BIRD_KEEPER,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
 #line 7470
-        .trainerPic = TRAINER_PIC_BIRD_KEEPER,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
         .encounterMusic_gender =
 #line 7472
-            TRAINER_ENCOUNTER_MUSIC_COOL,
+            TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 7473
         .doubleBattle = FALSE,
 #line 7474
@@ -18606,7 +18606,7 @@ F_TRAINER_FEMALE |
 #line 7478
             .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
 #line 7477
-            .lvl = 26,
+            .lvl = 10,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
@@ -28586,7 +28586,7 @@ F_TRAINER_FEMALE |
     [DIFFICULTY_NORMAL][TRAINER_RICK] =
     {
 #line 11383
-        .trainerName = _("RICK"),
+        .trainerName = _("Rick"),
 #line 11384
         .trainerClass = TRAINER_CLASS_BUG_CATCHER,
 #line 11385
