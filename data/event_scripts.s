@@ -1196,3 +1196,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/HammersockRoute2Connection/scripts.inc"
 
 	.include "data/maps/GFYWoods/scripts.inc"
+
+	.include "data/maps/ViridianForest/scripts.inc"

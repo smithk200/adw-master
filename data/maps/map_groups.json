@@ -605,7 +605,8 @@
     "PokecenterFloor1",
     "PokecenterFloor2",
     "PokemonFanClub",
-    "SaffronCity"
+    "SaffronCity",
+    "ViridianForest"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

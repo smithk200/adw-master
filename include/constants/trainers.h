@@ -110,7 +110,8 @@
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_BRITTANY              93
 #define TRAINER_PIC_FRY                   94
-#define TRAINER_PIC_COUNT                 95
+#define TRAINER_PIC_MATT_WALSH            95
+#define TRAINER_PIC_COUNT                 96
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
@@ -360,7 +361,8 @@
 #define TRAINER_CLASS_SUPER_NERD     0x46
 #define TRAINER_CLASS_FURRY          0x47
 #define TRAINER_CLASS_CUE_BALL       0x48
-#define TRAINER_CLASS_COUNT          0x49
+#define TRAINER_CLASS_MATT           0x49
+#define TRAINER_CLASS_COUNT          0x4a
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

@@ -64,8 +64,9 @@ EventScript_PkmnCenterNurse_ReturnPkmn::
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message gText_WeHopeToSeeYouAgain
+	closemessage
 	goto EventScript_PkmnCenterNurse_PlayerTurn
-	return
+	end
 
 EventScript_PkmnCenterNurse_ReturnPkmn2::
 	message gText_ThankYouForWaiting
@@ -74,7 +75,8 @@ EventScript_PkmnCenterNurse_ReturnPkmn2::
 	waitmovement 0
 	message gText_WeHopeToSeeYouAgain2
 	goto EventScript_PkmnCenterNurse_PlayerTurn
-	return
+	closemessage
+	end
 
 EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom::
 	goto_if_set FLAG_NURSE_UNION_ROOM_REMINDER, EventScript_PkmnCenterNurse_ReturnPkmn
@@ -132,8 +134,7 @@ Movement_PkmnCenterNurse_Turn:
 	walk_in_place_faster_left
 	step_end
 
- EventScript_PkmnCenterNurse_PlayerTurn::
-   closemessage
+EventScript_PkmnCenterNurse_PlayerTurn::
    applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
    waitmovement 0
    release
