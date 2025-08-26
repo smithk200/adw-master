@@ -408,6 +408,7 @@ gCryTable::
 .endif @ P_GEN_4_CROSS_EVOS
 .if P_GEN_6_CROSS_EVOS == TRUE
 	cry Cry_Sylveon
+	cry Cry_Jolteon
 .endif @ P_GEN_6_CROSS_EVOS
 .endif @ P_FAMILY_EEVEE
 .if P_FAMILY_PORYGON == TRUE
@@ -2434,6 +2435,37 @@ gCryTable::
 	cry Cry_Bulbasaur
 	cry Cry_Bulbasaur
 .endif
+.if P_FAMILY_LARVADES == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
+.if P_FAMILY_CURICRAWL == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
+.if P_FAMILY_KENGEON == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
+.if P_FAMILY_LANDSHIT == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
+.if P_FAMILY_EJACASM == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
+.if P_FAMILY_ARABOMB == TRUE
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+	cry Cry_Bulbasaur
+.endif
+
 .endif
 .endif @ P_CRIES_ENABLED
 
@@ -2847,6 +2879,7 @@ gCryTable_Reverse::
 .endif @ P_GEN_4_CROSS_EVOS
 .if P_GEN_6_CROSS_EVOS == TRUE
 	cry_reverse Cry_Sylveon
+	cry_reverse Cry_Jolteon
 .endif @ P_GEN_6_CROSS_EVOS
 .endif @ P_FAMILY_EEVEE
 .if P_FAMILY_PORYGON == TRUE
@@ -4870,6 +4903,36 @@ gCryTable_Reverse::
 	cry_reverse Cry_Bulbasaur
 .endif
 .if P_FAMILY_FISHNISM == TRUE
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.if P_FAMILY_LARVADES == TRUE
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.if P_FAMILY_CURICRAWL == TRUE
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.if P_FAMILY_KENGEON == TRUE
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.if P_FAMILY_LANDSHIT == TRUE
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.if P_FAMILY_EJACASM == TRUE
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Bulbasaur
+.endif
+.if P_FAMILY_ARABOMB == TRUE
+	cry_reverse Cry_Bulbasaur
 	cry_reverse Cry_Bulbasaur
 	cry_reverse Cry_Bulbasaur
 .endif

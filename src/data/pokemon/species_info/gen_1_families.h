@@ -18018,6 +18018,64 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sSylveonLevelUpLearnset,
         .teachableLearnset = sSylveonTeachableLearnset,
     },
+    [SPECIES_AUDIEON] =
+    {
+        .baseHP        = 95,
+        .baseAttack    = 65,
+        .baseDefense   = 60,
+        .baseSpeed     = 110,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 60,
+        .types = MON_TYPES(TYPE_SOUND),
+        .catchRate = 45,
+        .expYield = 184,
+        .evYield_SpDefense = 2,
+        .genderRatio = PERCENT_FEMALE(12.5),
+        .eggCycles = 35,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_MEDIUM_FAST,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
+        .abilities = { ABILITY_CUTE_CHARM, ABILITY_CUTE_CHARM, ABILITY_PIXILATE },
+        .bodyColor = BODY_COLOR_PINK,
+        .noFlip = TRUE,
+        .speciesName = _("Audieon"),
+        .cryId = CRY_AUDIEON,
+        //.natDexNum = NATIONAL_DEX_AUDIEON,
+        .categoryName = _("Sound"),
+        .height = 10,
+        .weight = 235,
+        .description = COMPOUND_STRING(
+            "Its ribbonlike feelers give off an aura\n"
+            "that weakens hostility in its prey, causing\n"
+            "them to let down their guard. A moment\n"
+            "later, it pounces."),
+        .pokemonScale = 305,
+        .pokemonOffset = 7,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Audieon,
+        .frontPicSize = MON_COORDS_SIZE(48, 56),
+        .frontPicYOffset = 4,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 10),
+            ANIMCMD_FRAME(1, 20),
+            ANIMCMD_FRAME(0, 5),
+        ),
+        .frontAnimId = ANIM_SHRINK_GROW,
+        .backPic = gMonBackPic_Audieon,
+        .backPicSize = MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = 4,
+        .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
+        .palette = gMonPalette_Audieon,
+        .shinyPalette = gMonShinyPalette_Audieon,
+        .iconSprite = gMonIcon_Audieon,
+        .iconPalIndex = 0,
+        SHADOW(2, 9, SHADOW_SIZE_M)
+        FOOTPRINT(Audieon)
+        .levelUpLearnset = sAudieonLevelUpLearnset,
+        .teachableLearnset = sAudieonTeachableLearnset,
+        .eggMoveLearnset = sNoneEggMoveLearnset,
+    },
 #endif //P_GEN_6_CROSS_EVOS
 #endif //P_FAMILY_EEVEE
 

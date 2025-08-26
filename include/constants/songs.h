@@ -281,12 +281,12 @@
 // Music
 #define START_MUS                   350
 #define MUS_ROUTE2                  350 // MUS_TETSUJI          // Good Egg Galaxy from SMG
-#define MUS_DEJA_VU                 351 // MUS_FIELD13          // Unused, likely a test track.
+#define MUS_DEJA_VU                 351 // MUS_FIELD13          // Deja Vu from Initial D
 #define MUS_CAUGHT                  352 // MUS_KACHI22
 #define MUS_VICTORY_WILD            353 // MUS_KACHI2
 #define MUS_VICTORY_GYM_LEADER      354 // MUS_KACHI3           // Also used in Frontier Brain victories.
 #define MUS_VICTORY_LEAGUE          355 // MUS_KACHI5
-#define MUS_C_COMM_CENTER           356 // MUS_PCC              // Unused, likely a test track.
+#define MUS_ELWOOD_CITY             356 // MUS_PCC              // Unused, likely a test track.
 #define MUS_GSC_PEWTER              357 // MUS_NIBI             // Used in unused Contest Halls.
 #define MUS_C_VS_LEGEND_BEAST       358 // MUS_SUIKUN           // Unused, likely a test track.
 #define MUS_ROUTE1                  359 // MUS_DOORO1           // Buoy Base Galaxy from SMG

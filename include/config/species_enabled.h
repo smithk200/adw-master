@@ -465,22 +465,22 @@
 #define P_FAMILY_TAPU_LELE               P_GEN_7_POKEMON
 #define P_FAMILY_TAPU_BULU               P_GEN_7_POKEMON
 #define P_FAMILY_TAPU_FINI               P_GEN_7_POKEMON
-#define P_FAMILY_COSMOG                  P_GEN_7_POKEMON
-#define P_FAMILY_NIHILEGO                P_GEN_7_POKEMON
-#define P_FAMILY_BUZZWOLE                P_GEN_7_POKEMON
-#define P_FAMILY_PHEROMOSA               P_GEN_7_POKEMON
-#define P_FAMILY_XURKITREE               P_GEN_7_POKEMON
-#define P_FAMILY_CELESTEELA              P_GEN_7_POKEMON
-#define P_FAMILY_KARTANA                 P_GEN_7_POKEMON
-#define P_FAMILY_GUZZLORD                P_GEN_7_POKEMON
-#define P_FAMILY_NECROZMA                P_GEN_7_POKEMON
-#define P_FAMILY_MAGEARNA                P_GEN_7_POKEMON
-#define P_FAMILY_MARSHADOW               P_GEN_7_POKEMON
-#define P_FAMILY_POIPOLE                 P_GEN_7_POKEMON
-#define P_FAMILY_STAKATAKA               P_GEN_7_POKEMON
-#define P_FAMILY_BLACEPHALON             P_GEN_7_POKEMON
-#define P_FAMILY_ZERAORA                 P_GEN_7_POKEMON
-#define P_FAMILY_MELTAN                  P_GEN_7_POKEMON
+#define P_FAMILY_COSMOG                  FALSE
+#define P_FAMILY_NIHILEGO                FALSE
+#define P_FAMILY_BUZZWOLE                FALSE
+#define P_FAMILY_PHEROMOSA               FALSE
+#define P_FAMILY_XURKITREE               FALSE
+#define P_FAMILY_CELESTEELA              FALSE
+#define P_FAMILY_KARTANA                 FALSE
+#define P_FAMILY_GUZZLORD                FALSE
+#define P_FAMILY_NECROZMA                FALSE
+#define P_FAMILY_MAGEARNA                FALSE
+#define P_FAMILY_MARSHADOW               FALSE
+#define P_FAMILY_POIPOLE                 FALSE
+#define P_FAMILY_STAKATAKA               FALSE
+#define P_FAMILY_BLACEPHALON             FALSE
+#define P_FAMILY_ZERAORA                 FALSE
+#define P_FAMILY_MELTAN                  FALSE
 
 #define P_FAMILY_GROOKEY                 P_GEN_8_POKEMON
 #define P_FAMILY_SCORBUNNY               P_GEN_8_POKEMON
@@ -594,17 +594,26 @@
 #define P_FAMILY_IRON_LEAVES             P_GEN_9_POKEMON
 #define P_FAMILY_POLTCHAGEIST            P_GEN_9_POKEMON
 #define P_FAMILY_SINISTCHA               P_GEN_9_POKEMON
-#define P_FAMILY_OKIDOGI                 P_GEN_9_POKEMON
-#define P_FAMILY_MUNKIDORI               P_GEN_9_POKEMON
-#define P_FAMILY_FEZANDIPITI             P_GEN_9_POKEMON
-#define P_FAMILY_OGERPON                 P_GEN_9_POKEMON
-#define P_FAMILY_GOUGING_FIRE            P_GEN_9_POKEMON
-#define P_FAMILY_RAGING_BOLT             P_GEN_9_POKEMON
-#define P_FAMILY_IRON_BOULDER            P_GEN_9_POKEMON
-#define P_FAMILY_IRON_CROWN              P_GEN_9_POKEMON
-#define P_FAMILY_TERAPAGOS               P_GEN_9_POKEMON
-#define P_FAMILY_PECHARUNT               P_GEN_9_POKEMON
+#define P_FAMILY_OKIDOGI                 FALSE
+#define P_FAMILY_MUNKIDORI               FALSE
+#define P_FAMILY_FEZANDIPITI             FALSE
+#define P_FAMILY_OGERPON                 FALSE
+#define P_FAMILY_GOUGING_FIRE            FALSE
+#define P_FAMILY_RAGING_BOLT             FALSE
+#define P_FAMILY_IRON_BOULDER            FALSE
+#define P_FAMILY_IRON_CROWN              FALSE
+#define P_FAMILY_TERAPAGOS               FALSE
+#define P_FAMILY_PECHARUNT               FALSE
+
+
+//ADW and Clover mons are in the same group, ig
 #define P_FAMILY_GRASSHOLE               P_CLOVER_POKEMON
-#define P_FAMILY_FISHNISM               P_CLOVER_POKEMON
+#define P_FAMILY_FISHNISM                P_CLOVER_POKEMON
+#define P_FAMILY_LARVADES                P_CLOVER_POKEMON
+#define P_FAMILY_CURICRAWL               P_CLOVER_POKEMON
+#define P_FAMILY_KENGEON                 P_CLOVER_POKEMON
+#define P_FAMILY_LANDSHIT                P_CLOVER_POKEMON
+#define P_FAMILY_EJACASM                 P_CLOVER_POKEMON
+#define P_FAMILY_ARABOMB                 P_CLOVER_POKEMON
 
 #endif // GUARD_CONFIG_SPECIES_ENABLED_H

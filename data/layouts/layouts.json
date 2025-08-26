@@ -5513,11 +5513,11 @@
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
       "width": 34,
-      "height": 26,
+      "height": 55,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Viridiancity",
+      "secondary_tileset": "gTileset_Saffroncity",
       "border_filepath": "data/layouts/Route2/border.bin",
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
@@ -5556,6 +5556,42 @@
       "secondary_tileset": "gTileset_Viridianforest",
       "border_filepath": "data/layouts/ViridianForest/border.bin",
       "blockdata_filepath": "data/layouts/ViridianForest/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELWOOD_CITY",
+      "name": "ElwoodCity_Layout",
+      "width": 42,
+      "height": 32,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Saffroncity",
+      "border_filepath": "data/layouts/ElwoodCity/border.bin",
+      "blockdata_filepath": "data/layouts/ElwoodCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELWOOD_CITY_GYM",
+      "name": "ElwoodCityGym_Layout",
+      "width": 13,
+      "height": 19,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Pewtergym",
+      "border_filepath": "data/layouts/ElwoodCityGym/border.bin",
+      "blockdata_filepath": "data/layouts/ElwoodCityGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_GYM",
+      "name": "PewterCityGym_Layout",
+      "width": 13,
+      "height": 16,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Pewtergym",
+      "border_filepath": "data/layouts/PewterCityGym/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCityGym/map.bin"
     }
   ]
 }

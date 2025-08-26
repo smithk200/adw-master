@@ -97,7 +97,8 @@
     "Route1",
     "Hammersock",
     "Route2",
-    "GFYWoods"
+    "GFYWoods",
+    "ElwoodCity"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -130,7 +131,8 @@
     "DewfordTown_PokemonCenter_2F",
     "DewfordTown_Gym",
     "DewfordTown_Hall",
-    "DewfordTown_House2"
+    "DewfordTown_House2",
+    "ElwoodCityGym"
   ],
   "gMapGroup_IndoorLavaridge": [
     "LavaridgeTown_HerbShop",
@@ -606,7 +608,8 @@
     "PokecenterFloor2",
     "PokemonFanClub",
     "SaffronCity",
-    "ViridianForest"
+    "ViridianForest",
+    "PewterCityGym"
   ],
   "gMapGroup_IndoorRoute104Prototype": [
     "Route104_Prototype",

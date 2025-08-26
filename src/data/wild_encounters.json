@@ -11629,6 +11629,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_GFYWOODS",
+          "base_label": "gGFYWoods0",
+          "land_mons": {
+            "encounter_rate": 12,
+            "mons": [
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_CATERPIE"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_CURICRAWL"
+              },
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_WURMPLE"
+              },
+              {
+                "min_level": 6,
+                "max_level": 6,
+                "species": "SPECIES_WURMPLE"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_WEEDLE"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_WEEDLE"
+              },
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_LARVADES"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_LARVADES"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_LARVADES"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_LARVADES"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_GUTSICOON"
+              },
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_GUTSICOON"
+              }
+            ]
+          }
         }
       ]
     },

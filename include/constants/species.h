@@ -1637,12 +1637,35 @@
 #define SPECIES_URSHIFU_RAPID_STRIKE_STYLE_GMAX         SPECIES_URSHIFU_RAPID_STRIKE_GMAX
 #define SPECIES_MIMIKYU_BUSTED_TOTEM                    1523
 #define SPECIES_MIMIKYU_TOTEM_BUSTED                    SPECIES_MIMIKYU_BUSTED_TOTEM
-#define SPECIES_GRASSHOLE            1524
+
+//Clover/ADW Original
+#define SPECIES_GRASSHOLE          1524
 #define SPECIES_ANALGAE            1525
-#define SPECIES_RECTREEM            1526
+#define SPECIES_RECTREEM           1526
 #define SPECIES_FISHNISM           1527
 #define SPECIES_SJWHALE            1528
-#define SPECIES_LAST                SPECIES_SJWHALE
+#define SPECIES_SHARKY             1529
+#define SPECIES_SHARKEDO           1530
+#define SPECIES_LARVADES           1531
+#define SPECIES_PROBOSKITO         1532
+#define SPECIES_VENOWATT           1533
+#define SPECIES_CURICRAWL          1534
+#define SPECIES_GUTSICOON          1535
+#define SPECIES_GUTSIFLY           1536
+#define SPECIES_KENGEON            1537
+#define SPECIES_FRIEDEN            1538
+#define SPECIES_COROOSTER          1539
+#define SPECIES_LANDSHIT           1540
+#define SPECIES_EARTHCRAP          1541
+#define SPECIES_DIRTWASTE          1542
+#define SPECIES_EJACASM            1543
+#define SPECIES_HOSAJACK           1544
+#define SPECIES_CONDOOM            1545
+#define SPECIES_ARABOMB            1546
+#define SPECIES_IGUALLAH           1547
+#define SPECIES_LIZAKBAR           1548
+#define SPECIES_AUDIEON            1549
+#define SPECIES_LAST                SPECIES_AUDIEON
 
 #define SPECIES_EGG                                     (SPECIES_LAST + 1)
 

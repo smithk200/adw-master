@@ -1198,3 +1198,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/GFYWoods/scripts.inc"
 
 	.include "data/maps/ViridianForest/scripts.inc"
+
+	.include "data/maps/ElwoodCity/scripts.inc"
+
+	.include "data/maps/ElwoodCityGym/scripts.inc"
+
+	.include "data/maps/PewterCityGym/scripts.inc"

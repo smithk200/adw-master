@@ -35999,3 +35999,80 @@ static const u16 sSjwhaleTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 #endif
+
+#if P_FAMILY_LARVADES
+static const u16 sLarvadesTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sProboskitoTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sVenowattTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+#endif
+
+#if P_FAMILY_CURICRAWL
+static const u16 sCuricrawlTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sGutsicoonTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sGutsiflyTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+#endif
+
+#if P_FAMILY_KENGEON
+static const u16 sKengeonTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sFriedenTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sCoroosterTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+#endif
+
+#if P_FAMILY_LANDSHIT
+static const u16 sLandshitTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sEarthcrapTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sDirtwasteTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+#endif
+
+#if P_FAMILY_EJACASM
+static const u16 sEjacasmTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sHosajackTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sCondoomTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+#endif
+
+#if P_FAMILY_ARABOMB
+static const u16 sArabombTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sIguallahTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sLizakbarTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+#endif
+
+//Audieon and its Eeveelutions don't need to be "species-toggled."
+static const u16 sAudieonTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
