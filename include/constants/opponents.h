@@ -30,7 +30,7 @@
 #define TRAINER_XAVIER                       24
 #define TRAINER_ARNOLD                       25
 #define TRAINER_PIERRE                       26
-#define TRAINER_GRUNT_AQUA_HIDEOUT_5         27
+#define TRAINER_ROCKY                        27
 #define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
 #define TRAINER_FREDRICK                     29
 #define TRAINER_MATT                         30
@@ -47,8 +47,8 @@
 #define TRAINER_ROSE_3                       41
 #define TRAINER_ROSE_4                       42
 #define TRAINER_ROSE_5                       43
-#define TRAINER_DUSTY_1                      44
-#define TRAINER_CHIP                         45
+#define TRAINER_DUSTY                        44 //ADW Trainer!
+#define TRAINER_CHIP                         45 //ADW Trainer!
 #define TRAINER_FOSTER                       46
 #define TRAINER_DUSTY_2                      47
 #define TRAINER_DUSTY_3                      48

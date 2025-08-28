@@ -18027,7 +18027,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .baseSpAttack  = 130,
         .baseSpDefense = 60,
         .types = MON_TYPES(TYPE_SOUND),
-        .catchRate = 45,
+        .catchRate = 80,
         .expYield = 184,
         .evYield_SpDefense = 2,
         .genderRatio = PERCENT_FEMALE(12.5),
@@ -18035,7 +18035,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_FIELD),
-        .abilities = { ABILITY_CUTE_CHARM, ABILITY_CUTE_CHARM, ABILITY_PIXILATE },
+        .abilities = {ABILITY_CUTE_CHARM, ABILITY_CUTE_CHARM, ABILITY_PIXILATE },
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = TRUE,
         .speciesName = _("Audieon"),
@@ -18045,16 +18045,15 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .height = 10,
         .weight = 235,
         .description = COMPOUND_STRING(
-            "Its ribbonlike feelers give off an aura\n"
-            "that weakens hostility in its prey, causing\n"
-            "them to let down their guard. A moment\n"
-            "later, it pounces."),
+            "It always seeks out the freshest, hippest beats.\n"
+            "It especially loves syncopated off-beats\n"
+            "played on a bass saxophone or contrabass clarinet."),
         .pokemonScale = 305,
         .pokemonOffset = 7,
         .trainerScale = 257,
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Audieon,
-        .frontPicSize = MON_COORDS_SIZE(48, 56),
+        .frontPicSize = MON_COORDS_SIZE(64, 64),
         .frontPicYOffset = 4,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(0, 10),
@@ -18064,7 +18063,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .frontAnimId = ANIM_SHRINK_GROW,
         .backPic = gMonBackPic_Audieon,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 4,
+        .backPicYOffset = 12,
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         .palette = gMonPalette_Audieon,
         .shinyPalette = gMonShinyPalette_Audieon,

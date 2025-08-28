@@ -5592,6 +5592,30 @@
       "secondary_tileset": "gTileset_Pewtergym",
       "border_filepath": "data/layouts/PewterCityGym/border.bin",
       "blockdata_filepath": "data/layouts/PewterCityGym/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELWOOD_CITY_POKEMON_CENTER",
+      "name": "ElwoodCityPokemonCenter_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ElwoodCityPokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/ElwoodCityPokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELWOOD_CITY_POKEMON_MART",
+      "name": "ElwoodCityPokemonMart_Layout",
+      "width": 11,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Mart",
+      "border_filepath": "data/layouts/ElwoodCityPokemonMart/border.bin",
+      "blockdata_filepath": "data/layouts/ElwoodCityPokemonMart/map.bin"
     }
   ]
 }

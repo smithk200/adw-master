@@ -26756,6 +26756,8 @@ const u32 gMonFrontPic_Arabomb[] = INCBIN_U32("graphics/pokemon/arabomb/front.4b
 const u32 gMonFrontPic_Iguallah[] = INCBIN_U32("graphics/pokemon/iguallah/front.4bpp.lz");
 const u32 gMonFrontPic_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/front.4bpp.lz");
 const u32 gMonFrontPic_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/front.4bpp.lz");
+const u32 gMonFrontPic_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/front.4bpp.lz");
+const u32 gMonFrontPic_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/front.4bpp.lz");
 
 const u32 gMonBackPic_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/back.4bpp.lz");
 const u32 gMonBackPic_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/back.4bpp.lz");
@@ -26781,6 +26783,8 @@ const u32 gMonBackPic_Arabomb[] = INCBIN_U32("graphics/pokemon/arabomb/back.4bpp
 const u32 gMonBackPic_Iguallah[] = INCBIN_U32("graphics/pokemon/iguallah/back.4bpp.lz");
 const u32 gMonBackPic_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/back.4bpp.lz");
 const u32 gMonBackPic_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/back.4bpp.lz");
+const u32 gMonBackPic_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/back.4bpp.lz");
+const u32 gMonBackPic_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/back.4bpp.lz");
 
 const u32 gMonPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
 const u32 gMonPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
@@ -26806,6 +26810,8 @@ const u32 gMonPalette_Arabomb[] = INCBIN_U32("graphics/pokemon/arabomb/normal.gb
 const u32 gMonPalette_Iguallah[] = INCBIN_U32("graphics/pokemon/iguallah/normal.gbapal.lz");
 const u32 gMonPalette_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/normal.gbapal.lz");
 const u32 gMonPalette_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/normal.gbapal.lz");
+const u32 gMonPalette_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/normal.gbapal.lz");
+const u32 gMonPalette_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/normal.gbapal.lz");
 
 const u32 gMonShinyPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
 const u32 gMonShinyPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
@@ -26831,6 +26837,8 @@ const u32 gMonShinyPalette_Arabomb[] = INCBIN_U32("graphics/pokemon/arabomb/norm
 const u32 gMonShinyPalette_Iguallah[] = INCBIN_U32("graphics/pokemon/iguallah/normal.gbapal.lz");
 const u32 gMonShinyPalette_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/normal.gbapal.lz");
 const u32 gMonShinyPalette_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/shiny.gbapal.lz");
 
 const u8 gMonIcon_Grasshole[] = INCBIN_U8("graphics/pokemon/grasshole/icon.4bpp");
 const u8 gMonIcon_Analgae[] = INCBIN_U8("graphics/pokemon/analgae/icon.4bpp");
@@ -26856,6 +26864,8 @@ const u8 gMonIcon_Arabomb[] = INCBIN_U8("graphics/pokemon/arabomb/icon.4bpp");
 const u8 gMonIcon_Iguallah[] = INCBIN_U8("graphics/pokemon/iguallah/icon.4bpp");
 const u8 gMonIcon_Lizakbar[] = INCBIN_U8("graphics/pokemon/lizakbar/icon.4bpp");
 const u8 gMonIcon_Audieon[] = INCBIN_U8("graphics/pokemon/audieon/icon.4bpp");
+const u8 gMonIcon_Sharky[] = INCBIN_U8("graphics/pokemon/sharky/icon.4bpp");
+const u8 gMonIcon_Sharkedo[] = INCBIN_U8("graphics/pokemon/sharkedo/icon.4bpp");
 
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");

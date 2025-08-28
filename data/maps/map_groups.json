@@ -132,7 +132,9 @@
     "DewfordTown_Gym",
     "DewfordTown_Hall",
     "DewfordTown_House2",
-    "ElwoodCityGym"
+    "ElwoodCityGym",
+    "ElwoodCityPokemonCenter",
+    "ElwoodCityPokemonMart"
   ],
   "gMapGroup_IndoorLavaridge": [
     "LavaridgeTown_HerbShop",

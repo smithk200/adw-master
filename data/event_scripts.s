@@ -1204,3 +1204,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ElwoodCityGym/scripts.inc"
 
 	.include "data/maps/PewterCityGym/scripts.inc"
+
+	.include "data/maps/ElwoodCityPokemonCenter/scripts.inc"
+
+	.include "data/maps/ElwoodCityPokemonMart/scripts.inc"

@@ -10104,3 +10104,31 @@ BattleScript_SleepClausePreventsEnd::
 	printstring STRINGID_BLOCKEDBYSLEEPCLAUSE
 	waitmessage B_WAIT_TIME_LONG
 	end2
+
+BattleScript_EffectHolyDuty::
+	attackcanceler
+	attackstring
+	ppreduce
+	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
+	typecalc
+	jumpifmovehadnoeffect BattleScript_HitFromAtkAnimation
+	tryKO BattleScript_KOFail
+	trysetdestinybondtohappen
+	setatkhptozero
+	attackanimation
+	waitanimation
+	effectivenesssound
+	hitanimation BS_TARGET
+	waitstate
+	healthbarupdate BS_TARGET
+	datahpupdate BS_TARGET
+	tryfaintmon BS_TARGET
+	critmessage
+	waitmessage B_WAIT_TIME_LONG
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	setadditionaleffects
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	tryfaintmon BS_ATTACKER
+	goto BattleScript_MoveEnd

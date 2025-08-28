@@ -615,5 +615,6 @@
 #define P_FAMILY_LANDSHIT                P_CLOVER_POKEMON
 #define P_FAMILY_EJACASM                 P_CLOVER_POKEMON
 #define P_FAMILY_ARABOMB                 P_CLOVER_POKEMON
+#define P_FAMILY_SHARKY                  P_CLOVER_POKEMON
 
 #endif // GUARD_CONFIG_SPECIES_ENABLED_H

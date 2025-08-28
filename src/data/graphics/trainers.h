@@ -289,6 +289,9 @@ const u32 gTrainerPalette_Fry[] = INCBIN_U32("graphics/trainers/front_pics/fry.g
 const u32 gTrainerFrontPic_MattWalsh[] = INCBIN_U32("graphics/trainers/front_pics/matt_walsh.4bpp.lz");
 const u32 gTrainerPalette_MattWalsh[] = INCBIN_U32("graphics/trainers/front_pics/matt_walsh.gbapal.lz");
 
+const u32 gTrainerFrontPic_Rocky[] = INCBIN_U32("graphics/trainers/front_pics/rocky.4bpp.lz");
+const u32 gTrainerPalette_Rocky[] = INCBIN_U32("graphics/trainers/front_pics/rocky.gbapal.lz");
+
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
 const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
@@ -413,6 +416,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_BRITTANY, gTrainerFrontPic_Brittany, gTrainerPalette_Brittany),
     TRAINER_SPRITE(TRAINER_PIC_FRY, gTrainerFrontPic_Fry, gTrainerPalette_Fry),
     TRAINER_SPRITE(TRAINER_PIC_MATT_WALSH, gTrainerFrontPic_MattWalsh, gTrainerPalette_MattWalsh),
+    TRAINER_SPRITE(TRAINER_PIC_ROCKY, gTrainerFrontPic_Rocky, gTrainerPalette_Rocky),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

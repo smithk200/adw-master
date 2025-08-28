@@ -36076,3 +36076,12 @@ static const u16 sLizakbarTeachableLearnset[] = {
 static const u16 sAudieonTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
+
+#if P_FAMILY_SHARKY
+static const u16 sSharkyTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+static const u16 sSharkedoTeachableLearnset[] = {
+    MOVE_UNAVAILABLE,
+};
+#endif

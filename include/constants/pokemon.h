@@ -23,8 +23,11 @@
 #define TYPE_DARK             18
 #define TYPE_FAIRY            19
 #define TYPE_STELLAR          20
-#define TYPE_SOUND            21
-#define NUMBER_OF_MON_TYPES   22
+#define TYPE_LIGHT            21
+#define TYPE_HEART            22
+#define TYPE_GLITCH           23
+#define TYPE_SOUND            24
+#define NUMBER_OF_MON_TYPES   25
 
 // Pokémon egg groups
 #define EGG_GROUP_NONE                0

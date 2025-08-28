@@ -316,13 +316,16 @@ GFYWoods_Text_XavierPostBattle:
     .string "I will beat you next time!$"
 
 GFYWoods_Text_ArnoldIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "Do you like my collection\n"
+	.string "of Curicrawl?$"
 
 GFYWoods_Text_ArnoldDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_ArnoldPostBattle:
-    .string "I will beat you next time!$"
+    .string "Stan Curicrawl!\n"
+	.string "Stan Curicrawl!\l"
+	.string "Stan Curicrawl!$"
 
 GFYWoods_Text_TakashiIntro:
     .string "Hi, I am a Trainer!$"
@@ -343,13 +346,15 @@ GFYWoods_Text_DaisukePostBattle:
     .string "I will beat you next time!$"
 
 GFYWoods_Text_PierreIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "These are the strongest and\n"
+	.string "most dangerous Pokémon known to man.$"
 
 GFYWoods_Text_PierreDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_PierrePostBattle:
-    .string "I will beat you next time!$"
+    .string "Wait, I was supposed to evolve these?\n"
+	.string "Oh...$"
 
 GFYWoods_Text_MattWalsh:
 	.string "Have you seen a Pokémon called\n"
