@@ -1547,8 +1547,6 @@ static void Task_NewGameBirchSpeech_WaitToShowRivalNameMenu(u8 taskId)
 {
     if (!RunTextPrintersAndIsPrinter0Active())
     {
-        //NewGameBirchSpeech_ShowRivalNameMenu();
-        //gTasks[taskId].func = PrintNameChoiceOptions;
         gTasks[taskId].func = Task_OakSpeech28;
     }
 }
@@ -1565,20 +1563,17 @@ static void PrintNameChoiceOptions(u8 taskId)
     data[13] = AddWindow(&sNewGameBirchSpeechTextWindows[3]);
     //DrawMainMenuWindowBorder(&sNewGameBirchSpeechTextWindows[3], MAIN_MENU_BORDER_TILE);
     NewGameBirchSpeech_ShowRivalNameMenu();
-    //PutWindowTilemap(data[13]);
-    DrawStdFrameWithCustomTileAndPalette(data[13], 1, STD_WINDOW_BASE_TILE_NUM, 14);
-    //FillWindowPixelBuffer(gTasks[taskId].data[13], 0x11);
+    PutWindowTilemap(data[13]);
+    //DrawStdWindowFrame(windowId, FALSE);
+    //DrawStdFrameWithCustomTileAndPalette(data[13], 1, STD_WINDOW_BASE_TILE_NUM, 14);
+    FillWindowPixelBuffer(gTasks[taskId].data[13], 0x11);
     AddTextPrinterParameterized(data[13], FONT_NORMAL, gOtherText_NewName, 8, 1, 0, NULL);
     textPtrs = sRivalNameChoices;
     for (i = 0; i < 4; i++)
     {
         AddTextPrinterParameterized(data[13], FONT_NORMAL, textPtrs[i], 8, 16 * (i + 1) + 1, 0, NULL);
     }
-    CopyWindowToVram(data[13], COPYWIN_FULL);
-    //if (name2 != gTasks[taskId].defaultName)
-    //{
-        //gTasks[taskId].defaultName= name2;
-   // }
+   CopyWindowToVram(data[13], COPYWIN_FULL);
    InitMenuNormal(data[13], FONT_NORMAL, 0, 1, 16, 5, 0);
    gTasks[taskId].func = Task_OakSpeech29;
 }
@@ -1596,7 +1591,7 @@ static void GetDefaultName(u8 rivalNameChoice)
         dest[i] = EOS;
 }
 
-static void Task_OakSpeech29(u8 taskId)
+static void Task_OakSpeech29(u8 taskId) //select rival name
 {
     s16 * data = gTasks[taskId].data;
     s8 input = Menu_ProcessInput();
@@ -1623,7 +1618,7 @@ static void Task_OakSpeech29(u8 taskId)
     }
 }
 
-static void Task_OakSpeech26(u8 taskId)
+static void Task_OakSpeech26(u8 taskId)  //Confirm rival name
 {
     s16 * data = gTasks[taskId].data;
 
@@ -1649,7 +1644,7 @@ static void Task_OakSpeech26(u8 taskId)
     }
 }
 
-static void Task_OakSpeech27(u8 taskId)
+static void Task_OakSpeech27(u8 taskId) //Choose Yes or No for the rival
 {
     s8 input = Menu_ProcessInputNoWrapClearOnChoose();
     switch (input)
@@ -1666,10 +1661,9 @@ static void Task_OakSpeech27(u8 taskId)
     }
 }
 
-static void Task_OakSpeech28(u8 taskId)
+static void Task_OakSpeech28(u8 taskId) //introduces rival
 {
     PrintNameChoiceOptions(taskId);
-    //NewGameBirchSpeech_ClearWindow(0);
     AddTextPrinterForMessage(TRUE);
     StringExpandPlaceholders(gStringVar4, gText_Birch_ThisIsMyDaughter);
     gTasks[taskId].func = Task_OakSpeech29;

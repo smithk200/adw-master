@@ -18,8 +18,7 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	call_if_eq VAR_0x8004, 1, EventScript_PkmnCenterNurse_IllTakeYourPkmn2
 	waitmessage
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
-	goto_if_unset FLAG_POKERUS_EXPLAINED, EventScript_PkmnCenterNurse_CheckPokerus
-	goto EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
+	goto EventScript_PkmnCenterNurse_ReturnPkmn
 	end
 
 EventScript_PkmnCenterNurse_IllTakeYourPkmn::
@@ -35,16 +34,10 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Turn
 	waitmovement 0
 	dofieldeffect FLDEFF_POKECENTER_HEAL
-.if OW_UNION_DISABLE_CHECK == FALSE && OW_FLAG_MOVE_UNION_ROOM_CHECK != 0
-	setflag OW_FLAG_MOVE_UNION_ROOM_CHECK
-	call CableClub_OnResume
-	clearflag OW_FLAG_MOVE_UNION_ROOM_CHECK
-.endif
 	waitfieldeffect FLDEFF_POKECENTER_HEAL
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
-	callnative UpdateFollowingPokemon
 	return
 
 EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::

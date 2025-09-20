@@ -14111,4 +14111,17 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_TwigsFood,
         .iconPalette = gItemIconPalette_TwigsFood,
     },
+    [ITEM_MOON_HOOCH] =
+    {
+        .name = _("Moon Hooch"),
+        .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .description = sEvolutionStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 30,
+        .iconPic = gItemIcon_MoonHooch,
+        .iconPalette = gItemIconPalette_MoonHooch,
+    },
 };

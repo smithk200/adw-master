@@ -118,7 +118,7 @@ Hammersock_Text_Woman2:
 
 Hammersock_Text_Woman3::
 	.string "I just love watering these trees.\p"
-	.string "It's a good way of\l"
+	.string "It's a good way of\n"
 	.string "giving to the community.$"
 
 Hammersock_Text_Man1:

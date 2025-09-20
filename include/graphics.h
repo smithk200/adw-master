@@ -1737,6 +1737,8 @@ extern const u32 gItemIcon_PokeshiDoll[];
 extern const u32 gItemIconPalette_PokeshiDoll[];
 extern const u32 gItemIcon_TwigsFood[];
 extern const u32 gItemIconPalette_TwigsFood[];
+extern const u32 gItemIcon_MoonHooch[];
+extern const u32 gItemIconPalette_MoonHooch[];
 extern const u32 gItemIcon_SwapSnack[];
 extern const u32 gItemIconPalette_SwapSnack[];
 extern const u32 gItemIcon_TwiceSpicedRadish[];

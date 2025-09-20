@@ -21,6 +21,19 @@ GFYWoods_EventScript_Sign3::
 	release
 	end
 
+GFYWoods_EventScriptBiker::
+	lock
+	goto_if_set FLAG_BADGE01_GET, GFYWoods_EventScriptBiker2
+	msgbox GFYWoods_Text_BikerDefeatFirstGym, MSGBOX_DEFAULT
+	release
+	end
+
+GFYWoods_EventScriptBiker2::
+	lock
+	msgbox GFYWoods_Text_BikerAfterDefeatingFirstGym, MSGBOX_DEFAULT
+	release
+	end
+
 GFYWoods_EventScript_Rick::
 	trainerbattle_single TRAINER_RICK, GFYWoods_Text_RickIntro, GFYWoods_Text_RickDefeat
 	msgbox GFYWoods_Text_RickPostBattle, MSGBOX_AUTOCLOSE
@@ -204,6 +217,22 @@ GFYWoods_Movement_MattWalshStormsOffRight::
 	walk_up
 	step_end
 
+GFYWoods_EventScript_Repel1::
+	finditem ITEM_REPEL
+	end
+
+GFYWoods_EventScript_Repel2::
+	finditem ITEM_REPEL
+	end
+
+GFYWoods_EventScript_GreatBall::
+	finditem ITEM_GREAT_BALL
+	end
+
+GFYWoods_EventScript_Ether::
+	finditem ITEM_ETHER
+	end
+
 GFYWoods_Text_Sign:
 	.string "Gofuckyourself Woods\p"
 	.string "Go fuck yourself!$"
@@ -217,7 +246,8 @@ GFYWoods_Text_Sign3:
 	.string "Elwood City {UP_ARROW}$"
 
 GFYWoods_Text_RickIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "Tremble in fear agianst\n"
+	.string "my mighy Bug Pokémon!$"
 
 GFYWoods_Text_RickDefeat:
     .string "Darn, I lost!$"
@@ -226,13 +256,16 @@ GFYWoods_Text_RickPostBattle:
     .string "I will beat you next time!$"
 
 GFYWoods_Text_TomIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "See how my Wurmple line evolves?\n"
+	.string "I have all three stages!$"
 
 GFYWoods_Text_TomDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_TomPostBattle:
-    .string "I will beat you next time!$"
+    .string "My Pokémon are full of\n"
+	.string "light and beauty.\p"
+	.string "Wurmple can evolve into Cascoon, too!$"
 
 GFYWoods_Text_PhilIntro:
     .string "Hi, I am a Trainer!$"
@@ -244,76 +277,90 @@ GFYWoods_Text_PhilPostBattle:
     .string "I will beat you next time!$"
 
 GFYWoods_Text_IgnacioIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "I love bugs!\n"
+	.string "Aren't they the best?$"
 
 GFYWoods_Text_IgnacioDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_IgnacioPostBattle:
-    .string "I will beat you next time!$"
+    .string "My bug Pokémon are all\n"
+	.string "from different regions!\p"
+	.string "Isn't that cool?$"
 
 GFYWoods_Text_RyanIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "Hi, I just love Wurmple!$"
 
 GFYWoods_Text_RyanDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_RyanPostBattle:
-    .string "I will beat you next time!$"
+    .string "My Pokémon are full of darkness\n"
+	.string "and edginess.\p"
+	.string "Could Wurmple evolve another way, too?$"
 
 GFYWoods_Text_TimmyIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "I want to be like Jaiden Animations\n"
+	.string "when I grow up!$"
 
 GFYWoods_Text_TimmyDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_TimmyPostBattle:
-    .string "I will beat you next time!$"
+    .string "I will train until I am as strong as her!$"
 
 GFYWoods_Text_RoyIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "Prepare to be stunned by my\n"
+	.string "Electric Pokémon!$"
 
 GFYWoods_Text_RoyDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_RoyPostBattle:
-    .string "I will beat you next time!$"
+    .string "My brother Morton specializes\n"
+	.string "in Ground-type Pokémon.$"
 
 GFYWoods_Text_KentIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "Hi!\n"
+	.string "Do you like my cocoon Pokémon?$"
 
 GFYWoods_Text_KentDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_KentPostBattle:
-    .string "I will beat you next time!$"
+    .string "The GFY Woods is so confusing!\n"
+	.string "Will I ever get out of here?$"
 
 GFYWoods_Text_ErnieIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "My brother's name isn't Bert.$"
 
 GFYWoods_Text_ErnieDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_ErniePostBattle:
-    .string "I will beat you next time!$"
+    .string "I'm just the first of five Trainers\n"
+	.string "that you must face to get to Elwood City!$"
 
 GFYWoods_Text_WernerIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "Do you like Weedle?\n"
+	.string "I LOVE Weedle!$"
 
 GFYWoods_Text_WernerDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_WernerPostBattle:
-    .string "I will beat you next time!$"
+    .string "Maybe I should use Larvades instead...\n"
+	.string "It evolves to an Electric-type, right?$"
 
 GFYWoods_Text_XavierIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "I love catching Pokémon!$"
 
 GFYWoods_Text_XavierDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_XavierPostBattle:
-    .string "I will beat you next time!$"
+    .string "I just saw some weird guy run past.\p"
+	.string "He looked like he was in a rush.$"
 
 GFYWoods_Text_ArnoldIntro:
     .string "Do you like my collection\n"
@@ -328,22 +375,26 @@ GFYWoods_Text_ArnoldPostBattle:
 	.string "Stan Curicrawl!$"
 
 GFYWoods_Text_TakashiIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "I am one with my Pokémon.\n"
+	.string "I have meditated with them for years!$"
 
 GFYWoods_Text_TakashiDefeat:
-    .string "Darn, I lost!$"
+    .string "Oh, I lost.$"
 
 GFYWoods_Text_TakashiPostBattle:
-    .string "I will beat you next time!$"
+    .string "I will go back to meditating now.\p"
+	.string "Aum...$"
 
 GFYWoods_Text_DaisukeIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "Prepare to be defeated by my mighty\n"
+	.string "Bug Pokémon!$"
 
 GFYWoods_Text_DaisukeDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_DaisukePostBattle:
-    .string "I will beat you next time!$"
+    .string "That guy who ran by? He was a grown man!\n"
+	.string "Pokémon can be for anyone of any age.$"
 
 GFYWoods_Text_PierreIntro:
     .string "These are the strongest and\n"
@@ -407,3 +458,14 @@ GFYWoods_TextMattWalshPostBattle2:
 	.string "solely based on optics.\p"
 	.string "I'm going to put a stop to this madness\n"
 	.string "once and for all!$"
+
+GFYWoods_Text_BikerDefeatFirstGym:
+	.string "Hey you!\p"
+	.string "We need a strong Trainer to help us.\p"
+	.string "From the looks of it, you aren't\n"
+	.string "strong enough yet.\p"
+	.string "Come back when you're a little stronger.$"
+
+GFYWoods_Text_BikerAfterDefeatingFirstGym:
+	.string "You got a Gym Badge! Neat!\p"
+	.string "You can help us now!$"

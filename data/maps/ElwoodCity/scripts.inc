@@ -1,5 +1,15 @@
 ElwoodCity_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ElwoodCity_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, ElwoodCity_OnLoad
 	.byte 0
+
+ElwoodCity_OnTransition::
+	setflag FLAG_VISITED_ELWOOD_CITY
+	end
+
+ElwoodCity_OnLoad::
+	setrespawn HEAL_LOCATION_ELWOOD_CITY
+	end
 
 ElwoodCity_EventScriptLakewoodElementary::
 	msgbox ElwoodCity_TextLakewoodElementary, MSGBOX_DEFAULT
