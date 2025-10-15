@@ -7,9 +7,9 @@
 
 u32 GetCurrentLevelCap(void)
 {
-    static const u32 sLevelCapFlagMap[][2] =
+    static const u32 sLevelCapFlagMap[][2] = //soft caps
     {
-        {FLAG_BADGE01_GET, 14},
+        {FLAG_BADGE01_GET, 13},
         {FLAG_BADGE02_GET, 19},
         {FLAG_BADGE03_GET, 24},
         {FLAG_BADGE04_GET, 29},

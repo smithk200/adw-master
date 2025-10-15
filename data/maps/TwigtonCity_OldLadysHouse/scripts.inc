@@ -25,6 +25,7 @@ TwigtonCity_OldLadysHouse_EventScript_HealPokemon::
 TwigtonCity_OldLadysHouse_EventScript_HealPokemonSpeedy::
 	lock
 	faceplayer
+	msgbox gText_IllTakeYourPkmn, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special HealPlayerParty
 	playfanfare MUS_HEAL

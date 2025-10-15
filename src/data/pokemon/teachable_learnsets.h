@@ -31448,6 +31448,7 @@ static const u16 sRillaboomTeachableLearnset[] = {
 #if P_FAMILY_SCORBUNNY
 static const u16 sScorbunnyTeachableLearnset[] = {
     MOVE_ATTRACT,
+    MOVE_CUT,
     MOVE_FACADE,
     MOVE_FIRE_BLAST,
     MOVE_FLAMETHROWER,
@@ -31469,6 +31470,7 @@ static const u16 sScorbunnyTeachableLearnset[] = {
 static const u16 sRabootTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULK_UP,
+    MOVE_CUT,
     MOVE_FACADE,
     MOVE_FIRE_BLAST,
     MOVE_FLAMETHROWER,
@@ -31491,6 +31493,7 @@ static const u16 sRabootTeachableLearnset[] = {
 static const u16 sCinderaceTeachableLearnset[] = {
     MOVE_ATTRACT,
     MOVE_BULK_UP,
+    MOVE_CUT,
     MOVE_FACADE,
     MOVE_FIRE_BLAST,
     MOVE_FLAMETHROWER,
@@ -36074,6 +36077,37 @@ static const u16 sLizakbarTeachableLearnset[] = {
 
 //Audieon and its Eeveelutions don't need to be "species-toggled."
 static const u16 sAudieonTeachableLearnset[] = {
+    MOVE_AERIAL_ACE,
+    MOVE_ATTRACT,
+    MOVE_BULLET_SEED,
+    MOVE_CALM_MIND,
+    MOVE_DIG,
+    MOVE_DOUBLE_TEAM,
+    MOVE_FACADE,
+    MOVE_FLASH,
+    MOVE_GIGA_DRAIN,
+    MOVE_HYPER_BEAM,
+    MOVE_IRON_TAIL,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REST,
+    MOVE_ROAR,
+    MOVE_ROCK_SMASH,
+    MOVE_SHADOW_BALL,
+    MOVE_SOLAR_BEAM,
+    MOVE_STRENGTH,
+    MOVE_SUNNY_DAY,
+    MOVE_TOXIC,
+    MOVE_BODY_SLAM,
+    MOVE_DOUBLE_EDGE,
+    MOVE_ENDURE,
+    MOVE_FURY_CUTTER,
+    MOVE_MUD_SLAP,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_SWAGGER,
+    MOVE_SWIFT,
+    MOVE_SWORDS_DANCE,
     MOVE_UNAVAILABLE,
 };
 

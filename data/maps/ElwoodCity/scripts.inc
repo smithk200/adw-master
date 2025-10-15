@@ -26,6 +26,11 @@ ElwoodCity_EventScriptDuperMarket::
 	release
 	end
 
+ElwoodCity_EventScriptCuttersHouse::
+	msgbox ElwoodCity_TextCuttersHouse, MSGBOX_DEFAULT
+	release
+	end
+
 ElwoodCity_TextLakewoodElementary::
 	.string "Lakewood Elementary\p"
 	.string "Devoted to shaping the hearts\n"
@@ -40,3 +45,8 @@ ElwoodCity_TextDuperMarket:
 	.string "Duper Market\p"
 	.string "The store for all your non-fabric\n"
 	.string "softening needs!$"
+
+ElwoodCity_TextCuttersHouse:
+	.string "Cutter's House\p"
+	.string "From timber to stone,\n"
+	.string "he's your man!$"

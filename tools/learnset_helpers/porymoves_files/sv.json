@@ -67821,6 +67821,7 @@
     "TMMoves": [
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
+      "MOVE_CUT",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",
       "MOVE_LOW_KICK",
@@ -67915,6 +67916,7 @@
     "TMMoves": [
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
+      "MOVE_CUT",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",
       "MOVE_LOW_KICK",
@@ -68024,6 +68026,7 @@
     "TMMoves": [
       "MOVE_TAKE_DOWN",
       "MOVE_AGILITY",
+      "MOVE_CUT",
       "MOVE_MUD_SLAP",
       "MOVE_PROTECT",
       "MOVE_FIRE_FANG",

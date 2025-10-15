@@ -57,11 +57,11 @@
 #define FLAG_EXP_SHARE_ADW    0x2B // Unused Flag
 #define FLAG_GEN_ALPHA_KID    0x2C // Unused Flag
 #define FLAG_MATT_WALSH_GFY_WOODS    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
+#define FLAG_TREE_1_ELWOOD_CITY_CUT    0x2E // Unused Flag
+#define FLAG_TREE_2_ELWOOD_CITY_CUT    0x2F // Unused Flag
+#define FLAG_TREE_HAMMERSOCK_CUT_1    0x30 // Unused Flag
+#define FLAG_TREE_HAMMERSOCK_CUT_2    0x31 // Unused Flag
+#define FLAG_AUTO_HMS    0x32 // Unused Flag
 #define FLAG_UNUSED_0x033    0x33 // Unused Flag
 #define FLAG_UNUSED_0x034    0x34 // Unused Flag
 #define FLAG_UNUSED_0x035    0x35 // Unused Flag

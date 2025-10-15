@@ -481,7 +481,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "scythes, claws, etc."),
         .effect = EFFECT_HIT,
         .power = 50,
-        .type = TYPE_NORMAL,
+        .type = TYPE_STEEL,
         .accuracy = 95,
         .pp = 30,
         .target = MOVE_TARGET_SELECTED,
@@ -1351,7 +1351,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "always inflict 20 HP damage."),
         .effect = EFFECT_FIXED_DAMAGE_ARG,
         .power = 1,
-        .type = TYPE_NORMAL,
+        .type = TYPE_SOUND,
         .accuracy = 90,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -1370,8 +1370,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Disable"),
         .description = COMPOUND_STRING(
-            "Psychically disables one of\n"
-            "the foe's moves."),
+            "Disables one of the foe's moves.\n"
+            "IS THIS MOVE HACKED???"),
         #if B_UPDATED_MOVE_DATA >= GEN_5
             .accuracy = 100,
         #elif B_UPDATED_MOVE_DATA == GEN_4
@@ -1381,7 +1381,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         #endif
         .effect = EFFECT_DISABLE,
         .power = 0,
-        .type = TYPE_NORMAL,
+        .type = TYPE_GLITCH,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
@@ -1882,11 +1882,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Strength"),
         .description = COMPOUND_STRING(
-            "Builds enormous power,\n"
+            "Believes in itself,\n"
             "then slams the foe."),
         .effect = EFFECT_HIT,
         .power = 80,
-        .type = TYPE_NORMAL,
+        .type = TYPE_PSYCHIC,
         .accuracy = 100,
         .pp = 15,
         .target = MOVE_TARGET_SELECTED,
@@ -3901,8 +3901,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Looses a powerful blast of\n"
             "light that cuts accuracy."),
         .effect = EFFECT_ACCURACY_DOWN,
-        .power = 0,
-        .type = TYPE_NORMAL,
+        .power = 40,
+        .type = TYPE_LIGHT,
         .accuracy = B_UPDATED_MOVE_DATA >= GEN_4 ? 100 : 70,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -4419,8 +4419,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Thief"),
         .description = COMPOUND_STRING(
-            "While attacking, it may\n"
-            "steal the foe's held item."),
+            "While attacking, it\n"
+            "steals the foe's held item."),
         .effect = EFFECT_HIT,
         .power = B_UPDATED_MOVE_DATA >= GEN_6 ? 60 : 40,
         .type = TYPE_DARK,
@@ -5505,7 +5505,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             .power = 10,
         #endif
         .effect = EFFECT_FURY_CUTTER,
-        .type = TYPE_BUG,
+        .type = TYPE_GLITCH,
         .accuracy = 95,
         .pp = 20,
         .target = MOVE_TARGET_SELECTED,
@@ -6384,7 +6384,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Psych Up"),
         .description = COMPOUND_STRING(
-            "Copies the foe's effect(s)\n"
+            "Copies the foe's effects\n"
             "and gives to the user."),
         .effect = EFFECT_PSYCH_UP,
         .power = 0,
@@ -6440,7 +6440,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .power = 60,
         .type = TYPE_ROCK,
         .accuracy = 100,
-        .pp = 5,
+        .pp = 10,
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
@@ -6448,7 +6448,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .additionalEffects = ADDITIONAL_EFFECTS({
             .moveEffect = MOVE_EFFECT_ALL_STATS_UP,
             .self = TRUE,
-            .chance = 10,
+            .chance = 20,
         }),
         .contestEffect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
@@ -11573,9 +11573,11 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     [MOVE_BUG_BITE] =
     {
         .name = COMPOUND_STRING("Bug Bite"),
-        .description = sPluckDescription,
+        .description = COMPOUND_STRING(
+            "A bite from a bug.\n"
+            "Oh, how PAINFUL!"),
         .effect = EFFECT_HIT,
-        .power = 60,
+        .power = 7,
         .type = TYPE_BUG,
         .accuracy = 100,
         .pp = 20,
@@ -11583,9 +11585,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
         .makesContact = TRUE,
-        .additionalEffects = ADDITIONAL_EFFECTS({
-            .moveEffect = MOVE_EFFECT_BUG_BITE,
-        }),
         .contestEffect = CONTEST_EFFECT_AFFECTED_BY_PREV_APPEAL,
         .contestCategory = CONTEST_CATEGORY_TOUGH,
         .contestComboStarterId = 0,
@@ -13509,7 +13508,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "act. May cause flinching."),
         .effect = EFFECT_HIT,
         .power = 60,
-        .type = TYPE_PSYCHIC,
+        .type = TYPE_HEART,
         .accuracy = 100,
         .pp = 25,
         .target = MOVE_TARGET_SELECTED,
@@ -22607,7 +22606,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .type = TYPE_FIRE,
         .accuracy = 100,
         .pp = 5,
-        .target = MOVE_TARGET_SELECTED,
+        .target = MOVE_TARGET_FOES_AND_ALLY,
         .priority = 10,
         .category = DAMAGE_CATEGORY_SPECIAL,
         .makesContact = TRUE,
@@ -22619,4 +22618,1655 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .battleAnimScript = gBattleAnimMove_Explosion,
         .validApprenticeMove = TRUE,
     },
+    [MOVE_BOOM_BOX] =
+    {
+        .name = COMPOUND_STRING("Boom Box"),
+        .description = COMPOUND_STRING(
+            "Punches with a fist using\n"
+            "sonic vibrations. Can flinch."),
+        .power = 65,
+        .effect = EFFECT_HIT,
+        .type = TYPE_SOUND,
+        .accuracy = 95,
+        .pp = 15,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 40,
+        }),
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_TREBLE_BEAM] =
+    {
+        .name = COMPOUND_STRING("Treble Beam"),
+        .description = COMPOUND_STRING(
+            "Beams out a really high note.\n"
+            "It may also lower the target's Sp. Atk."),
+        .power = 85,
+        .effect = EFFECT_HIT,
+        .type = TYPE_SOUND,
+        .accuracy = 95,
+        .pp = 15,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SP_ATK_MINUS_1,
+            .chance = 75,
+        }),
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_SYMPHONY] = //reference "Symphony" song: https://www.youtube.com/watch?v=aatr_2MstrI
+    {
+        .name = COMPOUND_STRING("Symphony"),
+        .description = COMPOUND_STRING(
+            "Blasts everyone with a SYMPHONY.\n"
+            "Attacks both targets in doubles."),
+        .power = 120,
+        .effect = EFFECT_HIT,
+        .type = TYPE_SOUND,
+        .accuracy = 90,
+        .pp = 15,
+        .target = MOVE_TARGET_BOTH,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_ECHOLOCATION] =
+    {
+        .name = COMPOUND_STRING("Echolocation"),
+        .description = COMPOUND_STRING(
+            "Uses echolocation to increase\n"
+            "Speed and accuracy."),
+        .effect = EFFECT_SPEED_ACCURACY_UP,
+        .power = 0,
+        .type = TYPE_SOUND,
+        .accuracy = 0,
+        .pp = 15,
+        .target = MOVE_TARGET_USER,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_SQUEAK] =
+    {
+        .name = COMPOUND_STRING("Squeak"),
+        .description = COMPOUND_STRING(
+            "Squeaks annoyingly.\n"
+            "Can cause flinching."),
+        .power = 30,
+        .effect = EFFECT_HIT,
+        .type = TYPE_SOUND,
+        .accuracy = 100,
+        .pp = 40,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_VIBRATO] =
+    {
+        .name = COMPOUND_STRING("Vibrato"),
+        .description = COMPOUND_STRING(
+            "High pitched sound that can\n"
+            "reduce the target's Sp. Def."),
+        .power = 40,
+        .effect = EFFECT_HIT,
+        .type = TYPE_SOUND,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
+            .chance = 70,
+        }),
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_FORTISSIMO] =
+    {
+        .name = COMPOUND_STRING("Fortissimo"),
+        .description = COMPOUND_STRING(
+            "A 1st-turn, 1st-strike move\n"
+            "that causes flinching."),
+        .priority = B_UPDATED_MOVE_DATA >= GEN_5 ? 3 : 1,
+        .makesContact = B_UPDATED_MOVE_DATA >= GEN_4,
+        .effect = EFFECT_FIRST_TURN_ONLY,
+        .power = 40,
+        .type = TYPE_SOUND,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 100,
+        }),
+        .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_CUTE,
+        .contestComboStarterId = COMBO_STARTER_FAKE_OUT,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_FakeOut,
+        .validApprenticeMove = TRUE,
+    },
+    [MOVE_BOOING] =
+    {
+        .name = COMPOUND_STRING("Booing"),
+        .description = sUTurnDescription,
+        .effect = EFFECT_HIT_ESCAPE,
+        .power = 65,
+        .type = TYPE_SOUND,
+        .accuracy = 95,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .contestEffect = CONTEST_EFFECT_AVOID_STARTLE,
+        .contestCategory = CONTEST_CATEGORY_COOL,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_VoltSwitch,
+    },
+    [MOVE_CONCERTO] =
+    {   
+        .name = COMPOUND_STRING("Concerto"),
+        .description = COMPOUND_STRING(
+            "Makes target listen to a boring\n"
+            "concert. Can lower their Sp. Def."),
+        .effect = EFFECT_HIT,
+        .power = 65,
+        .type = TYPE_SOUND,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
+            .chance = 70,
+        }),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_PREV_MONS,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = COMBO_STARTER_PSYCHIC,
+        .contestComboMoves = {COMBO_STARTER_CALM_MIND, COMBO_STARTER_CONFUSION, COMBO_STARTER_KINESIS},
+        .battleAnimScript = gBattleAnimMove_Psychic,
+        .validApprenticeMove = TRUE,
+    },
+    [MOVE_DRUM_ROLL] =
+    {
+        .name = COMPOUND_STRING("Drum Roll"),
+        .description = COMPOUND_STRING(
+            "Attacks the foe by loud\n"
+            "drums 2 to 5 times in a row."),
+        .effect = EFFECT_MULTI_HIT,
+        .power = 25,
+        .type = TYPE_SOUND,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .contestEffect = CONTEST_EFFECT_STARTLE_MONS_SAME_TYPE_APPEAL,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_IcicleSpear,
+    },
+    [MOVE_SONIC_CHARGE] =
+    {
+        .name = COMPOUND_STRING("Sonic Charge"),
+        .description = COMPOUND_STRING(
+            "A full-body sound wave that\n"
+            "may cause paralysis."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_SOUND,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .minimizeDoubleDamage = B_UPDATED_MOVE_FLAGS >= GEN_6,
+        .skyBattleBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .chance = 30,
+        }),
+        .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_FRONT_MON,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_BodySlam,
+        .validApprenticeMove = TRUE,
+    },
+    [MOVE_REQUIEM] =
+    {
+        .name = COMPOUND_STRING("Requiem"),
+        .description = COMPOUND_STRING(
+            "A powerful, soul-moving blast\n"
+            "of sound. Can lower Speed."),
+        .power = 160,
+        .effect = EFFECT_HIT,
+        .type = TYPE_SOUND,
+        .accuracy = 60,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SPD_MINUS_1,
+            .chance = 50,
+        }),
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_GUN] =
+    {
+        .name = COMPOUND_STRING("Gun"),
+        .description = COMPOUND_STRING(
+            "Shoots the opponent\n"
+            "with a gun."),
+        .power = 1,
+        .effect = EFFECT_OHKO,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 1,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_TOUGH,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {COMBO_STARTER_DEFENSE_CURL, COMBO_STARTER_HARDEN, COMBO_STARTER_LEER},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_SOUND_FANG] =
+    {
+        .name = COMPOUND_STRING("Sound Fang"),
+        .description = COMPOUND_STRING(
+            "Uses fangs of sound\n"
+            "that can cause flinching."),
+        .effect = EFFECT_HIT,
+        .power = 65,
+        .type = TYPE_SOUND,
+        .accuracy = 95,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .bitingMove = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_FLINCH,
+            .chance = 40,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_ThunderFang,
+    },
+    [MOVE_SUPER_BUG] =
+    {
+        .name = COMPOUND_STRING("Super Bug"),
+        .description = COMPOUND_STRING(
+            "The most powerful bug move\n"
+            "in the game. You'll see."),
+        .effect = EFFECT_DO_NOTHING,
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 40,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_BLJ] =
+    {
+        .name = COMPOUND_STRING("BLJ"),
+        .description = COMPOUND_STRING(
+            "Performs a Backwards Long Jump\n"
+            "on the foe. WAHOOOO!"),
+        .effect = EFFECT_HIT,
+        .power = 65,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 35,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_DEF_MINUS_1,
+            .chance = 10,
+        }),
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_MORRIS_WORM] =
+    {
+        .name = COMPOUND_STRING("Morris Worm"),
+        .description = COMPOUND_STRING(
+            "Sends the Morris Worm on a\n"
+            "foe. Go, Morris, go!"),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 45,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_ION_SHOT] =
+    {
+        .name = COMPOUND_STRING("Ion Shot"),
+        .description = COMPOUND_STRING(
+            "Uses an ion shot to attack\n"
+            "the foe from afar."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 40,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
+            .chance = 20,
+        }),
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    
+	[MOVE_FL4M3THR0W3R] =
+    {
+        .name = COMPOUND_STRING("Fl4m3thr0w3r"),
+        .description = COMPOUND_STRING(
+            "Uses an ion shot to attack\n"
+            "the foe from afar."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 10,
+        }),
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_THUND3R] =
+    {
+        .name = COMPOUND_STRING("Thund3r"),
+        .description = COMPOUND_STRING(
+            "Uses an ion shot to attack\n"
+            "the foe from afar."),
+        .effect = EFFECT_HIT,
+        .power = 110,
+        .type = TYPE_GLITCH,
+        .accuracy = 70,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_PARALYSIS,
+            .chance = 10,
+        }),
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_CORRUPTION] =
+    {
+        .name = COMPOUND_STRING("Corruption"),
+        .description = COMPOUND_STRING(
+            "Uses an ion shot to attack\n"
+            "the foe from afar."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_CONFUSION,
+            .chance = 20,
+        }),
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_DOWNLOAD] =
+    {
+        .name = COMPOUND_STRING("Download"),
+        .description = COMPOUND_STRING(
+            "Uses an ion shot to attack\n"
+            "the foe from afar."),
+        .effect = EFFECT_HIT,
+        .power = 0,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_KILO_BYTE] =
+    {
+        .name = COMPOUND_STRING("Kilo Byte"),
+        .description = COMPOUND_STRING(
+            "Kilo Byte. Get it? Haha.\n"
+            "Kilo BITE."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Bite,
+    },
+
+	[MOVE_MEGA_BYTE] =
+    {
+        .name = COMPOUND_STRING("Mega Byte"),
+        .description = COMPOUND_STRING(
+            "Mega Byte. Get it? Haha.\n"
+            "Mega BITE."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Bite,
+    },
+
+	[MOVE_GIGA_BYTE] =
+    {
+        .name = COMPOUND_STRING("Giga Byte"),
+        .description = COMPOUND_STRING(
+            "Giga Byte. Get it? Haha.\n"
+            " Giga BITE."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Bite,
+    },
+
+	[MOVE_C_INJECTION] =
+    {
+        .name = COMPOUND_STRING("C Injection"),
+        .description = COMPOUND_STRING(
+            "Injects the target with C code.\n"
+            "Does more damage depending on weight."),
+        .effect = EFFECT_LOW_KICK,
+        .power = 1,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+    [MOVE_SELF_DOUBT] =
+    {
+        .name = COMPOUND_STRING("Self Doubt"),
+        .description = COMPOUND_STRING(
+            "Doubts the self.\n"
+            "Lowers all stats by one stage."),
+        .effect = EFFECT_LOW_KICK,
+        .power = 1,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_ALL_STATS_UP,
+            .self = TRUE,
+            .chance = 20,
+        }),
+        .category = DAMAGE_CATEGORY_STATUS,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_WALL_CLIP] =
+    {
+        .name = COMPOUND_STRING("Wall Clip"),
+        .description = COMPOUND_STRING(
+            "Clips through the wall to\n"
+            "sneak on the foe."),
+        .effect = EFFECT_HIT,
+        .power = 50,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 1,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_TROJAN_HORSE] =
+    {
+        .name = COMPOUND_STRING("Trojan Horse"),
+        .description = COMPOUND_STRING(
+            "Disguises itself as a real\n"
+            "program in order to be run."),
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_GLITCH,
+        .accuracy = 95,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_CONFUSION,
+            .chance = 50,
+        }),
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_VIRUS_DRAIN] =
+    {
+        .name = COMPOUND_STRING("Virus Drain"),
+        .description = COMPOUND_STRING(
+            "Uses a virus to drain the\n"
+            "energy from the foe to the user."),
+        .effect = EFFECT_ABSORB,
+        .power = 70,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_GigaDrain,
+    },
+
+	[MOVE_HACK] =
+    {
+        .name = COMPOUND_STRING("Hack"),
+        .description = COMPOUND_STRING(
+            "Hacks' the foe's code."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 35,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_SPAM_ATTACK] =
+    {
+        .name = COMPOUND_STRING("Spam Attack"),
+        .description = COMPOUND_STRING(
+            "Spam attacks the foe\n"
+            "2 to 5 times."),
+        .effect = EFFECT_MULTI_HIT,
+        .power = 20,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 45,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_POST_MEMES] =
+    {
+        .name = COMPOUND_STRING("Post Memes"),
+        .description = COMPOUND_STRING(
+            "Posts memes. Confuses the user\n"
+            "after 2 to 3 turns."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .instructBanned = TRUE,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_THRASH,
+            .self = TRUE,
+        }),
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_WORLD_MINUS_ONE] =
+    {
+        .name = COMPOUND_STRING("World -1"),
+        .description = COMPOUND_STRING(
+            "Attacks the foe with\n"
+            "a strange dimension."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_GLITCH,
+        .accuracy = 95,
+        .pp = 25,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_IDENTITY_THEFT] =
+    {
+        .name = COMPOUND_STRING("Identity Theft"),
+        .description = COMPOUND_STRING(
+            "Steals the foe's identity.\n"
+            "Takes their item if it hits."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_GLITCH,
+        .accuracy = 50,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_STEAL_ITEM,
+        }),
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_DEATH_NOTE] =
+    {
+        .name = COMPOUND_STRING("Death Note"),
+        .description = COMPOUND_STRING(
+            "Goes into the Shinigami realm the\n"
+            "1st turn, then comes out in the 2nd."),
+        .effect = EFFECT_SEMI_INVULNERABLE,
+        .power = 120,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LOVE_ARROW] =
+    {
+        .name = COMPOUND_STRING("Love Arrow"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_HEART,
+        .accuracy = 95,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+    [MOVE_MALWARE] =
+    {
+        .name = COMPOUND_STRING("Malware"),
+        .description = COMPOUND_STRING(
+            "Infects the target with malware.\n"
+            "May drop Sp. Def."),
+        .effect = EFFECT_HIT,
+        .power = 65,
+        .type = TYPE_GLITCH,
+        .accuracy = 100,
+        .pp = 25,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS({
+            .moveEffect = MOVE_EFFECT_SP_DEF_MINUS_1,
+            .chance = 40,
+        }),
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_COLD_HEART] =
+    {
+        .name = COMPOUND_STRING("Cold Heart"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_FIRST_KISS] =
+    {
+        .name = COMPOUND_STRING("First Kiss"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_HEART_BLADE] =
+    {
+        .name = COMPOUND_STRING("Heart Blade"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 75,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LOVE_BEAM] =
+    {
+        .name = COMPOUND_STRING("Love Beam"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_CHILDS_PLAY] =
+    {
+        .name = COMPOUND_STRING("Child's Play"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 15,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_BURNING_PASSION] =
+    {
+        .name = COMPOUND_STRING("Burning Passion"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .additionalEffects = ADDITIONAL_EFFECTS(
+        {
+            .moveEffect = MOVE_EFFECT_BURN,
+            .chance = 10,
+        }),
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_HEARTS_EYE] =
+    {
+        .name = COMPOUND_STRING("Heart's Eye"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_BREAK_UP] =
+    {
+        .name = COMPOUND_STRING("Break Up"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_ROBLOX_BOY] =
+    {
+        .name = COMPOUND_STRING("Roblox Boy)"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 1,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_ULTIMATE_DESIRE] =
+    {
+        .name = COMPOUND_STRING("Ultimate Desire"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 150,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_TENDER_STRIKE] =
+    {
+        .name = COMPOUND_STRING("Tender Strike"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_VALENTINE] =
+    {
+        .name = COMPOUND_STRING("Valentine"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 20,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 35,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_INDOCTRINATE] =
+    {
+        .name = COMPOUND_STRING("Indoctrinate"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_HEART_EXCHANGE] =
+    {
+        .name = COMPOUND_STRING("Heart Exchange"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HOLY_DUTY,
+        .power = 0,
+        .type = TYPE_HEART,
+        .accuracy = 100,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_MEGAHEART] =
+    {
+        .name = COMPOUND_STRING("Megaheart"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_HEART,
+        .accuracy = 85,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LOVE_LETTER] =
+    {
+        .name = COMPOUND_STRING("Love Letter"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_HEART,
+        .accuracy = 50,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LIGHT_BALL] =
+    {
+        .name = COMPOUND_STRING("Light Ball"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LIGHT_SPEED] =
+    {
+        .name = COMPOUND_STRING("Light Speed"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 85,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LIGHT_SABER] =
+    {
+        .name = COMPOUND_STRING("Light Saber"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 100,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_HAPPY_GLOW] =
+    {
+        .name = COMPOUND_STRING("Happy Glow"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 1,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_SUN_SHINE] =
+    {
+        .name = COMPOUND_STRING("Sun Shine"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LASER_POINT] =
+    {
+        .name = COMPOUND_STRING("Laser Point"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 30,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_SHINING_LIGHT] =
+    {
+        .name = COMPOUND_STRING("Shining Light"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LIGHT_ARROW] =
+    {
+        .name = COMPOUND_STRING("Light Arrow"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 90,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_BRIGHT_IDEA] =
+    {
+        .name = COMPOUND_STRING("Bright Idea"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 0,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_STATUS,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_SHINE_THIEF] =
+    {
+        .name = COMPOUND_STRING("Shine Thief"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_BULB_CHANGE] =
+    {
+        .name = COMPOUND_STRING("Bulb Change"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LIGHT_WHEEL] =
+    {
+        .name = COMPOUND_STRING("Light Wheel"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 35,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 40,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_RAY_OF_LIGHT] =
+    {
+        .name = COMPOUND_STRING("Ray of Light"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 95,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 10,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LIGHT_WEIGHT] =
+    {
+        .name = COMPOUND_STRING("Light Weight"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_LOW_KICK,
+        .power = 1,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_SHINE_HIT] =
+    {
+        .name = COMPOUND_STRING("Shine Hit"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 35,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_BIBLE_SLAM] =
+    {
+        .name = COMPOUND_STRING("Bible Slam"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 150,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 5,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_PHYSICAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LIGHT_PULSE] =
+    {
+        .name = COMPOUND_STRING("Light Pulse"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 70,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 20,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
+	[MOVE_LASER] =
+    {
+        .name = COMPOUND_STRING("Laser"),
+        .description = COMPOUND_STRING(
+            "This move still needs its\n"
+            "description added."),
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_LIGHT,
+        .accuracy = 100,
+        .pp = 25,
+        .target = MOVE_TARGET_SELECTED,
+        .priority = 0,
+        .category = DAMAGE_CATEGORY_SPECIAL,
+        .makesContact = TRUE,
+        .contestEffect = CONTEST_EFFECT_HIGHLY_APPEALING,
+        .contestCategory = CONTEST_CATEGORY_SMART,
+        .contestComboStarterId = 0,
+        .contestComboMoves = {0},
+        .battleAnimScript = gBattleAnimMove_Tackle,
+    },
+
 };

@@ -2294,6 +2294,7 @@ bool32 IsAttackBoostMoveEffect(u32 effect)
     case EFFECT_BULK_UP:
     case EFFECT_GROWTH:
     case EFFECT_FILLET_AWAY:
+    case EFFECT_SPEED_ACCURACY_UP:
         return TRUE;
     default:
         return FALSE;
@@ -2329,6 +2330,7 @@ bool32 IsStatRaisingEffect(u32 effect)
     case EFFECT_SHELL_SMASH:
     case EFFECT_SHIFT_GEAR:
     case EFFECT_ATTACK_ACCURACY_UP:
+    case EFFECT_SPEED_ACCURACY_UP:
     case EFFECT_ATTACK_SPATK_UP:
     case EFFECT_GROWTH:
     case EFFECT_COIL:

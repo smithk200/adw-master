@@ -1215,6 +1215,19 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-10);
             }
             break;
+        case EFFECT_SPEED_ACCURACY_UP: //echolocation
+            if (aiData->abilities[battlerAtk] != ABILITY_CONTRARY)
+            {
+                if (gBattleMons[battlerAtk].statStages[STAT_SPEED] >= MAX_STAT_STAGE
+                  && (gBattleMons[battlerAtk].statStages[STAT_ACC] >= MAX_STAT_STAGE))
+                    ADJUST_SCORE(-10);
+                break;
+            }
+            else
+            {
+                ADJUST_SCORE(-10);
+            }
+            break;
         case EFFECT_CHARGE:
             if (gStatuses3[battlerAtk] & STATUS3_CHARGED_UP)
                 ADJUST_SCORE(-20);

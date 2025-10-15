@@ -1408,6 +1408,9 @@ static const struct SearchOptionText sDexSearchTypeOptions[] =
     {gText_DexEmptyString, gTypesInfo[TYPE_DRAGON].name},
     {gText_DexEmptyString, gTypesInfo[TYPE_DARK].name},
     {gText_DexEmptyString, gTypesInfo[TYPE_FAIRY].name},
+    {gText_DexEmptyString, gTypesInfo[TYPE_LIGHT].name},
+    {gText_DexEmptyString, gTypesInfo[TYPE_HEART].name},
+    {gText_DexEmptyString, gTypesInfo[TYPE_GLITCH].name},
     {gText_DexEmptyString, gTypesInfo[TYPE_SOUND].name},
     {},
 };
@@ -1444,6 +1447,9 @@ static const u8 sDexSearchTypeIds[NUMBER_OF_MON_TYPES] =
     TYPE_DRAGON,
     TYPE_DARK,
     TYPE_FAIRY,
+    TYPE_LIGHT,
+    TYPE_HEART,
+    TYPE_GLITCH,
     TYPE_SOUND,
 };
 

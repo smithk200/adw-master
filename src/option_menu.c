@@ -28,6 +28,7 @@
 #define tButtonMode data[5]
 #define tWindowFrameType data[6]
 #define tEXPShare data[7]
+#define tAutoHMs data[8]
 // Menu items Pg1
 enum
 {
@@ -45,6 +46,7 @@ enum
 enum
 {
     MENUITEM_EXP_SHARE,
+    MENUITEM_AUTO_HMS,
     MENUITEM_CANCEL_PG2,
     MENUITEM_COUNT_PG2,
 };
@@ -65,6 +67,7 @@ enum
 
 //Pg2
 #define YPOS_EXP_SHARE        (MENUITEM_EXP_SHARE * 16)
+#define YPOS_AUTO_HMS        (MENUITEM_AUTO_HMS * 16)
 
 #define PAGE_COUNT  2
 
@@ -89,6 +92,8 @@ static u8 ButtonMode_ProcessInput(u8 selection);
 static void ButtonMode_DrawChoices(u8 selection);
 static u8  ExpShare_ProcessInput(u8 selection);
 static void ExpShare_DrawChoices(u8 selection);
+static u8 AutoHMs_ProcessInput(u8 selection);
+static void AutoHMs_DrawChoices(u8 selection);
 static void DrawHeaderText(void);
 static void DrawOptionMenuTexts(void);
 static void DrawBgWindowFrames(void);
@@ -190,6 +195,7 @@ static void ReadAllCurrentSettings(u8 taskId)
         gTasks[taskId].tButtonMode = gSaveBlock2Ptr->optionsButtonMode;
         gTasks[taskId].tWindowFrameType = gSaveBlock2Ptr->optionsWindowFrameType;
         gTasks[taskId].tEXPShare = gSaveBlock2Ptr->optionsEXPShare;
+        gTasks[taskId].tAutoHMs = gSaveBlock2Ptr->optionsAutoHMs;
 }
 
 static void DrawOptionsPg1(u8 taskId)
@@ -209,6 +215,7 @@ static void DrawOptionsPg2(u8 taskId)
 {
     ReadAllCurrentSettings(taskId);
     ExpShare_DrawChoices(gTasks[taskId].tEXPShare);
+    AutoHMs_DrawChoices(gTasks[taskId].tAutoHMs);
     HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
@@ -499,6 +506,17 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
             if (previousOption != gTasks[taskId].tEXPShare)
                 ExpShare_DrawChoices(gTasks[taskId].tEXPShare);
             break;
+        case MENUITEM_AUTO_HMS:
+            previousOption = gTasks[taskId].tAutoHMs;
+            gTasks[taskId].tEXPShare = AutoHMs_ProcessInput(gTasks[taskId].tAutoHMs);
+            if (gSaveBlock2Ptr->optionsAutoHMs == TRUE)
+                FlagSet(FLAG_AUTO_HMS);
+            if (gSaveBlock2Ptr->optionsAutoHMs == FALSE)
+                FlagClear(FLAG_AUTO_HMS);
+
+            if (previousOption != gTasks[taskId].tAutoHMs)
+                AutoHMs_DrawChoices(gTasks[taskId].tAutoHMs);
+            break;
         default:
             return;
         }
@@ -542,6 +560,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsButtonMode = gTasks[taskId].tButtonMode;
     gSaveBlock2Ptr->optionsWindowFrameType = gTasks[taskId].tWindowFrameType;
     gSaveBlock2Ptr->optionsEXPShare = gTasks[taskId].tEXPShare; // == 1 ? FlagClear(I_EXP_SHARE_FLAG) : FlagSet(I_EXP_SHARE_FLAG);
+    gSaveBlock2Ptr->optionsAutoHMs = gTasks[taskId].tAutoHMs;
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
     gTasks[taskId].func = Task_OptionMenuFadeOut;
@@ -660,6 +679,19 @@ static void ExpShare_DrawChoices(u8 selection)
     
     DrawOptionMenuChoice(gText_BattleSceneOff, 104, YPOS_EXP_SHARE, styles[0]);
     DrawOptionMenuChoice(gText_BattleSceneOn, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOn, 198), YPOS_EXP_SHARE, styles[1]);
+}
+
+
+static void AutoHMs_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;
+    
+    DrawOptionMenuChoice(gText_BattleSceneOff, 104, YPOS_AUTO_HMS, styles[0]);
+    DrawOptionMenuChoice(gText_BattleSceneOn, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOn, 198), YPOS_AUTO_HMS, styles[1]);
 }
 
 static u8 BattleStyle_ProcessInput(u8 selection)
@@ -814,6 +846,17 @@ static void ButtonMode_DrawChoices(u8 selection)
 }
 
 static u8 ExpShare_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+        sArrowPressed = TRUE;
+    }
+
+    return selection;
+}
+
+static u8 AutoHMs_ProcessInput(u8 selection)
 {
     if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
     {

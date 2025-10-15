@@ -9,6 +9,7 @@ Hammersock_OnLoad::
 
 Hammersock_OnTransition::
 	setflag FLAG_VISITED_HAMMERSOCK
+	call_if_eq VAR_HAMMERSOCK_GYM_DOOR, 0, Hammersock_EventScript_TryUnlockGym
 	end
 
 Hammersock_Event_Script_CitySign::
@@ -22,6 +23,39 @@ Hammersock_Event_Script_Gym_Sign::
 	goto_if_set FLAG_BADGE07_GET, Hammersock_Event_Script_Gym_Sign_Raihan
 	msgbox Hammersock_Text_Gym_Sign, MSGBOX_DEFAULT
 	release
+	end
+
+Hammersock_EventScript_TryUnlockGym::
+	goto_if_unset FLAG_BADGE02_GET, EventScript_Return
+	goto_if_unset FLAG_BADGE03_GET, EventScript_Return
+	goto_if_unset FLAG_BADGE04_GET, EventScript_Return
+	goto_if_unset FLAG_BADGE05_GET, EventScript_Return
+	goto_if_unset FLAG_BADGE06_GET, EventScript_Return
+	goto_if_unset FLAG_BADGE07_GET, EventScript_Return
+	setvar VAR_HAMMERSOCK_GYM_DOOR, 1
+	return
+
+EventScript_Return::
+	return
+
+Hammersock_Event_Script_Gym_Door::
+	msgbox Hammersock_Text_Gym_DoorLocked, MSGBOX_DEFAULT
+	release
+	end
+
+Hammersock_EventScript_GymDoorLocked::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	delay 20
+	msgbox Hammersock_Text_Gym_DoorLocked
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Hammersock_Movement_JumpDownLedge
+	waitmovement 0
+	releaseall
+	end
+
+Hammersock_Event_Script_Gym_DoorLocked::
 	end
 
 Hammersock_Event_Script_TrainerClub_Sign::
@@ -85,6 +119,10 @@ Hammersock_EventScript_WiseSage::
 	release
 	end
 
+Hammersock_Movement_JumpDownLedge::
+	jump_2_down
+	step_end
+
 Hammersock_Text_CitySign::
 	.string "Hammersock\p"
 	.string "An ancient city, full of\n"
@@ -138,3 +176,6 @@ Hammersock_Text_WiseSage:
 	.string "determination.\p"
 	.string "If you can work hard, you\n"
 	.string "can achieve almost anything.$"
+
+Hammersock_Text_Gym_DoorLocked:
+	.string "The door is locked.$"

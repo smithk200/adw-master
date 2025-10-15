@@ -451,6 +451,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_TwigWishesYouFarewell::
 	call_if_eq VAR_TEMP_2, 3, TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleRight
 	msgbox TwigtonCity_ProfessorTwigsLab_TwigMakesSpeechAfterBrittanyLeaves
 	closemessage
+	applymovement LOCALID_PROF_TWIG, TwigtonCity_ProfessorTwigsLab_Movement_ProfessorTwigIsGoingToMakeHisDoordashSpeech
 	msgbox TwigtonCity_ProfessorTwigsLab_TwigIsSoLazyHeDoorDashesHisFoodAndMakesYouGetItForHim
 	closemessage
 	setflag FLAG_RECIEVED_STARTER_POKEMON
@@ -566,6 +567,12 @@ TwigtonCity_ProfessorTwigsLab_Movement_RivalExitAfterBattleMid::
 	walk_down
 	walk_down
 	delay_8
+	step_end
+
+TwigtonCity_ProfessorTwigsLab_Movement_ProfessorTwigIsGoingToMakeHisDoordashSpeech::
+	walk_down
+	walk_down
+	walk_down
 	step_end
 
 TwigtonCity_ProfessorTwigsLab_Movement_PlayerWatchRivalExitAfterBattle::

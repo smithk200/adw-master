@@ -5405,7 +5405,7 @@
       "id": "LAYOUT_HAMMERSOCK",
       "name": "Hammersock_Layout",
       "width": 51,
-      "height": 41,
+      "height": 43,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5513,7 +5513,7 @@
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
       "width": 34,
-      "height": 55,
+      "height": 57,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5561,7 +5561,7 @@
       "id": "LAYOUT_ELWOOD_CITY",
       "name": "ElwoodCity_Layout",
       "width": 42,
-      "height": 32,
+      "height": 34,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5616,6 +5616,18 @@
       "secondary_tileset": "gTileset_Mart",
       "border_filepath": "data/layouts/ElwoodCityPokemonMart/border.bin",
       "blockdata_filepath": "data/layouts/ElwoodCityPokemonMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELWOOD_CITY_CUTTERS_HOUSE",
+      "name": "ElwoodCityCuttersHouse_Layout",
+      "width": 7,
+      "height": 8,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding2",
+      "border_filepath": "data/layouts/ElwoodCityCuttersHouse/border.bin",
+      "blockdata_filepath": "data/layouts/ElwoodCityCuttersHouse/map.bin"
     }
   ]
 }

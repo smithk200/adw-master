@@ -2251,4 +2251,9 @@ const struct BattleMoveEffect gBattleMoveEffects[NUM_BATTLE_MOVE_EFFECTS] =
         .battleScript = BattleScript_EffectHolyDuty,
         .battleTvScore = 0,
     },
+    [EFFECT_SPEED_ACCURACY_UP] =
+    {
+        .battleScript = BattleScript_EffectSpeedAccuracyUp,
+        .battleTvScore = 0,
+    },
 };

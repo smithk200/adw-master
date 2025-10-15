@@ -18053,7 +18053,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .trainerOffset = 0,
         .frontPic = gMonFrontPic_Audieon,
         .frontPicSize = MON_COORDS_SIZE(64, 64),
-        .frontPicYOffset = 4,
+        .frontPicYOffset = 10,
         .frontAnimFrames = ANIM_FRAMES(
             ANIMCMD_FRAME(0, 10),
             ANIMCMD_FRAME(1, 20),
@@ -18062,13 +18062,12 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .frontAnimId = ANIM_SHRINK_GROW,
         .backPic = gMonBackPic_Audieon,
         .backPicSize = MON_COORDS_SIZE(64, 64),
-        .backPicYOffset = 12,
+        .backPicYOffset = 9,
         .backAnimId = BACK_ANIM_SHRINK_GROW_VIBRATE,
         .palette = gMonPalette_Audieon,
         .shinyPalette = gMonShinyPalette_Audieon,
         .iconSprite = gMonIcon_Audieon,
         .iconPalIndex = 0,
-        SHADOW(2, 9, SHADOW_SIZE_M)
         FOOTPRINT(Audieon)
         .levelUpLearnset = sAudieonLevelUpLearnset,
         .teachableLearnset = sAudieonTeachableLearnset,
