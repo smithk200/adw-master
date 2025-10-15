@@ -120,6 +120,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 static const u8 *const sOptionMenuItemsNames_Pg2[MENUITEM_COUNT_PG2] =
 {
     [MENUITEM_EXP_SHARE]        = gText_EXPShare,
+    [MENUITEM_AUTO_HMS]        = gText_AutoHMs,
     [MENUITEM_CANCEL_PG2]      = gText_OptionMenuCancel,
 };
 
@@ -508,14 +509,14 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
             break;
         case MENUITEM_AUTO_HMS:
             previousOption = gTasks[taskId].tAutoHMs;
-            gTasks[taskId].tEXPShare = AutoHMs_ProcessInput(gTasks[taskId].tAutoHMs);
-            if (gSaveBlock2Ptr->optionsAutoHMs == TRUE)
-                FlagSet(FLAG_AUTO_HMS);
-            if (gSaveBlock2Ptr->optionsAutoHMs == FALSE)
-                FlagClear(FLAG_AUTO_HMS);
+            gTasks[taskId].tAutoHMs = AutoHMs_ProcessInput(gTasks[taskId].tAutoHMs);
 
             if (previousOption != gTasks[taskId].tAutoHMs)
                 AutoHMs_DrawChoices(gTasks[taskId].tAutoHMs);
+            if (gSaveBlock2Ptr->optionsAutoHMs == TRUE)
+                FlagClear(FLAG_AUTO_HMS);
+            if (gSaveBlock2Ptr->optionsAutoHMs == FALSE)
+                FlagSet(FLAG_AUTO_HMS);
             break;
         default:
             return;

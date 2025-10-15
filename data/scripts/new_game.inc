@@ -274,5 +274,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL
 	setflag FLAG_HIDE_TWIG_IN_HIS_LAB
 	setflag FLAG_HIDE_BRITTANY_IN_TWIGS_LAB
+	setflag FLAG_AUTO_HMS
 	call EventScript_ResetAllBerries
 	end

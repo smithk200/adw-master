@@ -984,6 +984,7 @@ const u8 gText_SmallDot[] = _("·");
 const u8 gText_LargeDot[] = _("{EMOJI_CIRCLE}");
 const u8 gText_PageNav[] = _("{L_BUTTON}{R_BUTTON} Page");
 const u8 gText_EXPShare[] = _("EXP. Share");
+const u8 gText_AutoHMs[] = _("Auto-HMs");
 const u8 gText_TextSpeed[] = _("Text Speed");
 const u8 gText_BattleScene[] = _("Battle Scene");
 const u8 gText_BattleStyle[] = _("Battle Style");
