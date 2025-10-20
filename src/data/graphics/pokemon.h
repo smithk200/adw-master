@@ -26758,6 +26758,9 @@ const u32 gMonFrontPic_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/front.
 const u32 gMonFrontPic_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/front.4bpp.lz");
 const u32 gMonFrontPic_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/front.4bpp.lz");
 const u32 gMonFrontPic_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/front.4bpp.lz");
+const u32 gMonFrontPic_Squirrfap[] = INCBIN_U32("graphics/pokemon/question_mark/circled/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Rodebation[] = INCBIN_U32("graphics/pokemon/question_mark/circled/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/front.4bpp.lz");
 
 const u32 gMonBackPic_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/back.4bpp.lz");
 const u32 gMonBackPic_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/back.4bpp.lz");
@@ -26785,6 +26788,9 @@ const u32 gMonBackPic_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/back.4b
 const u32 gMonBackPic_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/back.4bpp.lz");
 const u32 gMonBackPic_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/back.4bpp.lz");
 const u32 gMonBackPic_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/back.4bpp.lz");
+const u32 gMonBackPic_Squirrfap[] = INCBIN_U32("graphics/pokemon/sharkedo/back.4bpp.lz");
+const u32 gMonBackPic_Rodebation[] = INCBIN_U32("graphics/pokemon/sharkedo/back.4bpp.lz");
+const u32 gMonBackPic_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/back.4bpp.lz");
 
 const u32 gMonPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
 const u32 gMonPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
@@ -26812,6 +26818,9 @@ const u32 gMonPalette_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/normal.
 const u32 gMonPalette_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/normal.gbapal.lz");
 const u32 gMonPalette_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/normal.gbapal.lz");
 const u32 gMonPalette_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/normal.gbapal.lz");
+const u32 gMonPalette_Squirrfap[] = INCBIN_U32("graphics/pokemon/sharkedo/normal.gbapal.lz");
+const u32 gMonPalette_Rodebation[] = INCBIN_U32("graphics/pokemon/sharkedo/normal.gbapal.lz");
+const u32 gMonPalette_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/normal.gbapal.lz");
 
 const u32 gMonShinyPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
 const u32 gMonShinyPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
@@ -26839,6 +26848,9 @@ const u32 gMonShinyPalette_Lizakbar[] = INCBIN_U32("graphics/pokemon/lizakbar/no
 const u32 gMonShinyPalette_Audieon[] = INCBIN_U32("graphics/pokemon/audieon/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Sharky[] = INCBIN_U32("graphics/pokemon/sharky/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Squirrfap[] = INCBIN_U32("graphics/pokemon/sharkedo/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Rodebation[] = INCBIN_U32("graphics/pokemon/sharkedo/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/shiny.gbapal.lz");
 
 const u8 gMonIcon_Grasshole[] = INCBIN_U8("graphics/pokemon/grasshole/icon.4bpp");
 const u8 gMonIcon_Analgae[] = INCBIN_U8("graphics/pokemon/analgae/icon.4bpp");
@@ -26866,6 +26878,9 @@ const u8 gMonIcon_Lizakbar[] = INCBIN_U8("graphics/pokemon/lizakbar/icon.4bpp");
 const u8 gMonIcon_Audieon[] = INCBIN_U8("graphics/pokemon/audieon/icon.4bpp");
 const u8 gMonIcon_Sharky[] = INCBIN_U8("graphics/pokemon/sharky/icon.4bpp");
 const u8 gMonIcon_Sharkedo[] = INCBIN_U8("graphics/pokemon/sharkedo/icon.4bpp");
+const u8 gMonIcon_Squirrfap[] = INCBIN_U8("graphics/pokemon/sharkedo/icon.4bpp");
+const u8 gMonIcon_Rodebation[] = INCBIN_U8("graphics/pokemon/sharkedo/icon.4bpp");
+const u8 gMonIcon_Caroline[] = INCBIN_U8("graphics/pokemon/caroline/icon.4bpp");
 
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");

@@ -2100,6 +2100,12 @@ const u32 gItemIconPalette_TwigsFood[] = INCBIN_U32("graphics/items/icon_palette
 const u32 gItemIcon_MoonHooch[] = INCBIN_U32("graphics/items/icons/moon_hooch.4bpp.lz");
 const u32 gItemIconPalette_MoonHooch[] = INCBIN_U32("graphics/items/icon_palettes/moon_hooch.gbapal.lz");
 
+const u32 gItemIcon_GalarianStone[] = INCBIN_U32("graphics/items/icons/dawn_stone.4bpp.lz");
+const u32 gItemIconPalette_GalarianStone[] = INCBIN_U32("graphics/items/icon_palettes/dawn_stone.gbapal.lz");
+
+const u32 gItemIcon_PaldeanStone[] = INCBIN_U32("graphics/items/icons/dawn_stone.4bpp.lz");
+const u32 gItemIconPalette_PaldeanStone[] = INCBIN_U32("graphics/items/icon_palettes/dawn_stone.gbapal.lz");
+
 const u32 gItemIcon_SwapSnack[] = INCBIN_U32("graphics/items/icons/swap_snack.4bpp.lz");
 const u32 gItemIconPalette_SwapSnack[] = INCBIN_U32("graphics/items/icon_palettes/swap_snack.gbapal.lz");
 

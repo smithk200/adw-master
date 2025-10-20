@@ -467,7 +467,7 @@ TwigtonCity_Text_WhatAreYouDoing:
 	.string "If you don't have a Pokémon, you'll\n"
 	.string "have to come to my lab to get one!\p"
 	.string "That's a law we have in my\n"
-	.string "precious Trigton City!$"
+	.string "precious Twigton City!$"
 
 TwigtonCity_Text_ComeWithMeToGetAPokemon:
 	.string "Prof. Twig: Come with me to get\n"

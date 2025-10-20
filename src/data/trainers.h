@@ -998,23 +998,23 @@ F_TRAINER_FEMALE |
         {
             {
 #line 465
-            .species = SPECIES_BIDOOF,
+            .species = SPECIES_CLOYSTER,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 467
-            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+            .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
 #line 466
-            .lvl = 10,
+            .lvl = 13,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
             {
 #line 469
-            .species = SPECIES_CLOYSTER,
+            .species = SPECIES_CAROLINE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 471
-            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+            .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
 #line 470
-            .lvl = 10,
+            .lvl = 13,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
@@ -1023,9 +1023,9 @@ F_TRAINER_FEMALE |
             .species = SPECIES_LUXIO,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 475
-            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+            .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
 #line 474
-            .lvl = 10,
+            .lvl = 13,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             },
@@ -1039,7 +1039,7 @@ F_TRAINER_FEMALE |
 #line 479
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
 #line 480
-        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
         .encounterMusic_gender =
 #line 482
             TRAINER_ENCOUNTER_MUSIC_MALE,

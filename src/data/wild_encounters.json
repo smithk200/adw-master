@@ -11569,63 +11569,63 @@
             "mons": [
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 9,
                 "species": "SPECIES_ZIGZAGOON"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 9,
                 "species": "SPECIES_RATTATA"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 9,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
                 "species": "SPECIES_BIDOOF"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_BIDOOF"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_BIDOOF"
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_ZIGZAGOON"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
+                "min_level": 6,
+                "max_level": 10,
                 "species": "SPECIES_ZIGZAGOON"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_ZIGZAGOON"
+                "max_level": 9,
+                "species": "SPECIES_LANDSHIT"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_WOOPER"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_ZIGZAGOON"
+                "max_level": 9,
+                "species": "SPECIES_WOOPER"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_ZIGZAGOON"
+                "max_level": 9,
+                "species": "SPECIES_WOOPER"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_ZIGZAGOON"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_ZIGZAGOON"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_ZIGZAGOON"
+                "max_level": 9,
+                "species": "SPECIES_LANDSHIT"
               }
             ]
           }
@@ -11639,17 +11639,17 @@
               {
                 "min_level": 7,
                 "max_level": 11,
-                "species": "SPECIES_CATERPIE"
+                "species": "SPECIES_SQUIRRFAP"
               },
               {
                 "min_level": 6,
                 "max_level": 10,
-                "species": "SPECIES_CURICRAWL"
+                "species": "SPECIES_SQUIRRFAP"
               },
               {
                 "min_level": 7,
                 "max_level": 11,
-                "species": "SPECIES_WURMPLE"
+                "species": "SPECIES_SQUIRRFAP"
               },
               {
                 "min_level": 6,
@@ -11659,7 +11659,7 @@
               {
                 "min_level": 6,
                 "max_level": 10,
-                "species": "SPECIES_WEEDLE"
+                "species": "SPECIES_CATERPIE"
               },
               {
                 "min_level": 6,

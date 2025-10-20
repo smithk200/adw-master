@@ -14124,4 +14124,30 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_MoonHooch,
         .iconPalette = gItemIconPalette_MoonHooch,
     },
+    [ITEM_GALARIAN_STONE] =
+    {
+        .name = _("Galarian Stone"),
+        .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .description = sEvolutionStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 30,
+        .iconPic = gItemIcon_GalarianStone,
+        .iconPalette = gItemIconPalette_GalarianStone,
+    },
+    [ITEM_PALDEAN_STONE] =
+    {
+        .name = _("Paldean Stone"),
+        .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .description = sEvolutionStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 30,
+        .iconPic = gItemIcon_PaldeanStone,
+        .iconPalette = gItemIconPalette_PaldeanStone,
+    },
 };

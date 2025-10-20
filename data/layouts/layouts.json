@@ -5628,6 +5628,18 @@
       "secondary_tileset": "gTileset_Genericbuilding2",
       "border_filepath": "data/layouts/ElwoodCityCuttersHouse/border.bin",
       "blockdata_filepath": "data/layouts/ElwoodCityCuttersHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ELWOOD_CITY_TRADERS_HOUSE",
+      "name": "ElwoodCityTradersHouse_Layout",
+      "width": 7,
+      "height": 8,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Genericbuilding2",
+      "border_filepath": "data/layouts/ElwoodCityTradersHouse/border.bin",
+      "blockdata_filepath": "data/layouts/ElwoodCityTradersHouse/map.bin"
     }
   ]
 }

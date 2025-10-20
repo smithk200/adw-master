@@ -3326,7 +3326,8 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sWooperTeachableLearnset,
         .eggMoveLearnset = sWooperEggMoveLearnset,
         .formSpeciesIdTable = sWooperFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_QUAGSIRE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_QUAGSIRE},
+                                {EVO_ITEM, ITEM_PALDEAN_STONE, SPECIES_CLODSIRE}),
     },
 
     [SPECIES_QUAGSIRE] =

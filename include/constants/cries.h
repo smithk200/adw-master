@@ -2466,6 +2466,13 @@ enum {
     CRY_EARTHCRAP,
     CRY_DIRTWASTE,
 #endif
+#if P_FAMILY_SQUIRRFAP
+    CRY_SQUIRRFAP,
+    CRY_RODEBATION,
+#endif
+#if P_FAMILY_CAROLINE
+    CRY_CAROLINE,
+#endif
     CRY_COUNT,
 };
 

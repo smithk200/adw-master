@@ -22773,6 +22773,42 @@ static const struct LevelUpMove sAudieonLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+static const struct LevelUpMove sSquirrfapLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_GROWL),
+    LEVEL_UP_END
+};
+static const struct LevelUpMove sRodebationLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_GROWL),
+    LEVEL_UP_END
+};
+static const struct LevelUpMove sCarolineLevelUpLearnset[] = {
+    LEVEL_UP_MOVE(1, MOVE_LEER),
+    LEVEL_UP_MOVE(1, MOVE_PECK),
+    LEVEL_UP_MOVE(1, MOVE_PURIFY),
+    LEVEL_UP_MOVE(5, MOVE_MUD_SLAP),
+    LEVEL_UP_MOVE(9, MOVE_PURSUIT),
+    LEVEL_UP_MOVE(12, MOVE_QUICK_ATTACK),
+    LEVEL_UP_MOVE(15, MOVE_MUD_SHOT),
+    LEVEL_UP_MOVE(18, MOVE_WING_ATTACK),
+    LEVEL_UP_MOVE(20, MOVE_WORK_UP),
+    LEVEL_UP_MOVE(23, MOVE_FEATHER_DANCE),
+    LEVEL_UP_MOVE(26, MOVE_AIR_CUTTER),
+    LEVEL_UP_MOVE(30, MOVE_AGILITY),
+    LEVEL_UP_MOVE(34, MOVE_TEETER_DANCE),
+    LEVEL_UP_MOVE(37, MOVE_AIR_SLASH),
+    LEVEL_UP_MOVE(41, MOVE_EARTH_POWER),
+    LEVEL_UP_MOVE(45, MOVE_ROOST),
+    LEVEL_UP_MOVE(48, MOVE_HURRICANE),
+    LEVEL_UP_MOVE(52, MOVE_EGG_BOMB),
+    LEVEL_UP_MOVE(57, MOVE_BRAVE_BIRD),
+    LEVEL_UP_MOVE(61, MOVE_CLOSE_COMBAT),
+    LEVEL_UP_MOVE(66, MOVE_DARK_PULSE),
+    LEVEL_UP_MOVE(66, MOVE_NASTY_PLOT),
+    LEVEL_UP_END
+};
+
 #if P_FAMILY_SHARKY
     static const struct LevelUpMove sSharkyLevelUpLearnset[] = {
         LEVEL_UP_MOVE( 1, MOVE_TACKLE),

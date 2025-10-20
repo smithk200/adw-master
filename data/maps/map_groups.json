@@ -135,7 +135,8 @@
     "ElwoodCityGym",
     "ElwoodCityPokemonCenter",
     "ElwoodCityPokemonMart",
-    "ElwoodCityCuttersHouse"
+    "ElwoodCityCuttersHouse",
+    "ElwoodCityTradersHouse"
   ],
   "gMapGroup_IndoorLavaridge": [
     "LavaridgeTown_HerbShop",

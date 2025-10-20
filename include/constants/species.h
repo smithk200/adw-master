@@ -1665,7 +1665,10 @@
 #define SPECIES_IGUALLAH           1547
 #define SPECIES_LIZAKBAR           1548
 #define SPECIES_AUDIEON            1549
-#define SPECIES_LAST                SPECIES_AUDIEON
+#define SPECIES_SQUIRRFAP          1550
+#define SPECIES_RODEBATION         1551
+#define SPECIES_CAROLINE         1552
+#define SPECIES_LAST                SPECIES_CAROLINE
 
 #define SPECIES_EGG                                     (SPECIES_LAST + 1)
 

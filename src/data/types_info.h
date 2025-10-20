@@ -531,7 +531,7 @@ const struct TypeInfo gTypesInfo[NUMBER_OF_MON_TYPES] =
     {
         .name = _("Glitch"),
         .generic = _("a GLITCH move"),
-        .palette = 15,
+        .palette = 14,
         .zMove = MOVE_TWINKLE_TACKLE,
         .maxMove = MOVE_MAX_STARFALL,
         .teraTypeRGBValue = RGB(31, 15, 21),
