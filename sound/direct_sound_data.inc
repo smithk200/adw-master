@@ -1,4 +1,7 @@
 	.align 2
+DirectSoundWaveData_maraca::
+	.incbin "sound/direct_sound_samples/maraca.bin"
+	.align 2
 DirectSoundWaveData_sd90_classical_shakuhachi_low::
 	.incbin "sound/direct_sound_samples/sd90_classical_shakuhachi_low.bin"
 
