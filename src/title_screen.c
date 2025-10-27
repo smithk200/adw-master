@@ -658,7 +658,7 @@ void CB2_InitTitleScreen(void)
                                     | DISPCNT_OBJ_ON
                                     | DISPCNT_WIN0_ON
                                     | DISPCNT_OBJWIN_ON);
-        m4aSongNumStart(MUS_ELWOOD_CITY);
+        m4aSongNumStart(MUS_LUNCHEON_KINGDOM);
         //m4aSongNumStart(MUS_TITLE);
         gMain.state = 5;
         break;

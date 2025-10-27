@@ -44,7 +44,7 @@ Debug_CheatStart2::
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	release
 	end
-	Debug_CheatStart::
+Debug_CheatStart::
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
@@ -102,6 +102,7 @@ Debug_CheatStart2::
 	setflag FLAG_LANDMARK_BATTLE_FRONTIER
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
+	giveitem ITEM_HM01
 	release
 	end
 

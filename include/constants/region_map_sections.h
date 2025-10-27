@@ -1,9 +1,9 @@
 #ifndef GUARD_REGIONMAPSEC_H
 #define GUARD_REGIONMAPSEC_H
 
-#define MAPSEC_LITTLEROOT_TOWN              0x00
-#define MAPSEC_OLDALE_TOWN                  0x01
-#define MAPSEC_DEWFORD_TOWN                 0x02
+#define MAPSEC_TWIGTON_CITY              0x00
+#define MAPSEC_HAMMERSOCK                  0x01
+#define MAPSEC_ELWOOD_CITY                 0x02
 #define MAPSEC_LAVARIDGE_TOWN               0x03
 #define MAPSEC_FALLARBOR_TOWN               0x04
 #define MAPSEC_VERDANTURF_TOWN              0x05
@@ -127,12 +127,12 @@
 #define MAPSEC_ROUTE_23                     0x7B
 #define MAPSEC_ROUTE_24                     0x7C
 #define MAPSEC_ROUTE_25                     0x7D
-#define MAPSEC_VIRIDIAN_FOREST              0x7E
+#define MAPSEC_GFY_WOODS              0x7E
 #define MAPSEC_MT_MOON                      0x7F
 #define MAPSEC_S_S_ANNE                     0x80
 #define MAPSEC_UNDERGROUND_PATH             0x81
 #define MAPSEC_UNDERGROUND_PATH_2           0x82
-#define MAPSEC_DIGLETTS_CAVE                0x83
+#define MAPSEC_DAVES_CAVE                0x83
 #define MAPSEC_KANTO_VICTORY_ROAD           0x84
 #define MAPSEC_ROCKET_HIDEOUT               0x85
 #define MAPSEC_SILPH_CO                     0x86

@@ -5560,7 +5560,7 @@
     {
       "id": "LAYOUT_ELWOOD_CITY",
       "name": "ElwoodCity_Layout",
-      "width": 42,
+      "width": 48,
       "height": 34,
       "border_width": 2,
       "border_height": 2,
@@ -5640,6 +5640,30 @@
       "secondary_tileset": "gTileset_Genericbuilding2",
       "border_filepath": "data/layouts/ElwoodCityTradersHouse/border.bin",
       "blockdata_filepath": "data/layouts/ElwoodCityTradersHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Saffroncity",
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
+    },
+    {
+      "id": "LAYOUT_DAVES_CAVE",
+      "name": "DavesCave_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DavesCave/border.bin",
+      "blockdata_filepath": "data/layouts/DavesCave/map.bin"
     }
   ]
 }

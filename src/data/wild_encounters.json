@@ -11574,7 +11574,7 @@
               },
               {
                 "min_level": 5,
-                "max_level": 9,
+                "max_level": 10,
                 "species": "SPECIES_RATTATA"
               },
               {
@@ -11589,7 +11589,7 @@
               },
               {
                 "min_level": 5,
-                "max_level": 8,
+                "max_level": 9,
                 "species": "SPECIES_BIDOOF"
               },
               {
@@ -11600,7 +11600,7 @@
               {
                 "min_level": 6,
                 "max_level": 10,
-                "species": "SPECIES_ZIGZAGOON"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 5,
@@ -11610,17 +11610,17 @@
               {
                 "min_level": 6,
                 "max_level": 10,
-                "species": "SPECIES_WOOPER"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 5,
                 "max_level": 9,
-                "species": "SPECIES_WOOPER"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 5,
                 "max_level": 9,
-                "species": "SPECIES_WOOPER"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 5,
@@ -11695,6 +11695,75 @@
                 "min_level": 7,
                 "max_level": 11,
                 "species": "SPECIES_GUTSICOON"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DAVES_CAVE",
+          "base_label": "gDavesCave0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 13,
+                "max_level": 17,
+                "species": "SPECIES_CHEWTLE"
+              },
+              {
+                "min_level": 13,
+                "max_level": 17,
+                "species": "SPECIES_BALTOY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CHEWTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CHEWTLE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_EKANS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_EKANS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_EKANS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_KOFFING"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_EKANS"
               }
             ]
           }

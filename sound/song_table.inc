@@ -506,7 +506,7 @@ gSongTable::
 	song mus_rg_credits, 0, 0
 	song mus_rg_route1, 0, 0
 	song mus_rg_route24, 0, 0
-	song mus_rg_route3, 0, 0
+	song HoneyhiveGalaxy, 0, 0
 	song mus_rg_route11, 0, 0
 	song mus_rg_victory_road, 0, 0
 	song mus_rg_vs_gym_leader, 0, 0
@@ -613,6 +613,7 @@ gSongTable::
 	song ph_nurse_solo, 2, 2
 	song vs_fry, 0, 0
 	song stick_figures, 0, 0
+	song luncheon_kingdom, 0, 0
 
 	.align 2
 dummy_song_header:

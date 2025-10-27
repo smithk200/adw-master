@@ -28,6 +28,36 @@ EventScript_CutTreeDown:: @ fallthrough
 	releaseall
 	end
 
+@ Interact with cuttable cheese (Dave's Cave exlcusive)
+EventScript_CutCheese::
+	lockall
+	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckCheeseCantCut
+	checkpartymove MOVE_CUT
+	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckCheeseCantCut
+	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	buffermovename STR_VAR_2, MOVE_CUT
+	goto_if_set FLAG_AUTO_HMS, EventScript_CutACheese
+	msgbox Text_WantToCutCheese, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EventScript_CancelCut
+	goto EventScript_CutACheese
+EventScript_CutACheese::
+	msgbox Text_MonCutTheCheese, MSGBOX_DEFAULT
+	closemessage
+EventScript_CutCheeseCommon:
+	isfollowerfieldmoveuser VAR_0x8004
+	setfieldeffectargument 3, VAR_0x8004 @ skip pose if so
+	dofieldeffect FLDEFF_USE_CUT_ON_TREE
+	waitstate
+EventScript_CutCheeseDown:: @ fallthrough
+	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
+	call_if_eq VAR_0x8004, TRUE, EventScript_FollowerFieldMove
+	applymovement VAR_LAST_TALKED, Movement_CutTreeDown
+	waitmovement 0
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 @ Use cut from party menu
 EventScript_UseCut::
 	lockall
@@ -47,6 +77,15 @@ EventScript_CancelCut::
 	releaseall
 	end
 
+EventScript_CheckCheeseCantCut::
+	msgbox Text_BeforeBadge1TryToCutCheese, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Text_BeforeBadge1TryToCutCheese::
+	.string "This cheese looks like it can be\n"
+	.string "cut down!$"
+
 Text_WantToCut:
 	.string "This tree looks like it can be\n"
 	.string "cut down!\p"
@@ -55,9 +94,21 @@ Text_WantToCut:
 Text_MonUsedFieldMove:
 	.string "{STR_VAR_1} used {STR_VAR_2}!$"
 
+Text_MonCutTheCheese:
+	.string "{STR_VAR_1} cut the cheese!$"
+
 Text_CantCut:
 	.string "This tree looks like it can be\n"
 	.string "cut down!$"
+
+Text_CheeseCantCut:
+	.string "This cheese looks like it can be\n"
+	.string "cut down!$"
+
+Text_WantToCutCheese:
+	.string "This cheese looks like it can be\n"
+	.string "cut down!\p"
+	.string "Would you like to cut it?$"
 
 @ Use rock smash from party menu
 EventScript_UseRockSmash::

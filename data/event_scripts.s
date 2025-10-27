@@ -1212,3 +1212,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ElwoodCityCuttersHouse/scripts.inc"
 
 	.include "data/maps/ElwoodCityTradersHouse/scripts.inc"
+
+	.include "data/maps/Route3/scripts.inc"
+
+	.include "data/maps/DavesCave/scripts.inc"

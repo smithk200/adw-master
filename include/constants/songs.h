@@ -280,8 +280,8 @@
 
 // Music
 #define START_MUS                   350
-#define MUS_ROUTE2                  350 // MUS_TETSUJI          // Good Egg Galaxy from SMG
-#define MUS_DEJA_VU                 351 // MUS_FIELD13          // Deja Vu from Initial D
+#define MUS_ROUTE2                  350 // MUS_ROUTE2         // Good Egg Galaxy from SMG
+#define MUS_DEJA_VU                 351 // MUS_DEJA_VU          // Deja Vu from Initial D
 #define MUS_CAUGHT                  352 // MUS_KACHI22
 #define MUS_VICTORY_WILD            353 // MUS_KACHI2
 #define MUS_VICTORY_GYM_LEADER      354 // MUS_KACHI3           // Also used in Frontier Brain victories.
@@ -311,7 +311,7 @@
 #define MUS_MOVE_DELETED            378 // MUS_ME_WASURE
 #define MUS_ENCOUNTER_GIRL          379 // MUS_SYOUJOEYE
 #define MUS_ENCOUNTER_MALE          380 // MUS_BOYEYE
-#define MUS_CONTRA          381 // MUS_DAN02            // Also used in Faraway and Southern Islands.
+#define MUS_CONTRA                  381 // MUS_CONTRA            // Contra by Moon Hooch
 #define MUS_FORTREE                 382 // MUS_MACHI_S3         // Also used in Secret Bases and the Safari Zone's entrance.
 #define MUS_BIRCH_LAB               383 // MUS_ODAMAKI
 #define MUS_B_TOWER_RS              384 // MUS_B_TOWER          // Used in Battle Tents, Trainer Hill and Battle Frontier's lounges and Exchange Service Corner.
@@ -436,7 +436,7 @@
 #define MUS_RG_CREDITS              502 // MUS_RG_ENDING
 #define MUS_RG_ROUTE1               503 // MUS_RG_LOAD01
 #define MUS_RG_ROUTE24              504 // MUS_RG_OPENING
-#define MUS_RG_ROUTE3               505 // MUS_RG_LOAD02
+#define MUS_ROUTE3               505 // MUS_RG_LOAD02
 #define MUS_RG_ROUTE11              506 // MUS_RG_LOAD03
 #define MUS_RG_VICTORY_ROAD         507 // MUS_RG_CHAMP_R
 #define MUS_RG_VS_GYM_LEADER        508 // MUS_RG_VS_GYM
@@ -547,7 +547,8 @@
 
 #define MUS_VS_FRY                  610
 #define MUS_STICK_FIGURES           611
-#define END_MUS                     MUS_STICK_FIGURES
+#define MUS_LUNCHEON_KINGDOM        612
+#define END_MUS                     MUS_LUNCHEON_KINGDOM
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

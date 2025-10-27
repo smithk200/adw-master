@@ -1,7 +1,7 @@
 {
   "map_sections": [
     {
-      "map_section": "MAPSEC_LITTLEROOT_TOWN",
+      "map_section": "MAPSEC_TWIGTON_CITY",
       "name": "Twigton City",
       "x": 4,
       "y": 11,
@@ -9,7 +9,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_OLDALE_TOWN",
+      "map_section": "MAPSEC_HAMMERSOCK",
       "name": "Hammersock",
       "x": 4,
       "y": 9,
@@ -17,7 +17,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_DEWFORD_TOWN",
+      "map_section": "MAPSEC_ELWOOD_CITY",
       "name": "DEWFORD TOWN",
       "x": 2,
       "y": 14,
@@ -1012,7 +1012,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_VIRIDIAN_FOREST",
+      "map_section": "MAPSEC_GFY_WOODS",
       "name": "VIRIDIAN FOREST",
       "x": 0,
       "y": 0,
@@ -1053,7 +1053,7 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_DIGLETTS_CAVE",
+      "map_section": "MAPSEC_DAVES_CAVE",
       "name": "DIGLETT'S CAVE",
       "x": 0,
       "y": 0,

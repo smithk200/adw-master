@@ -1,17 +1,17 @@
 static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
 {
     {
-        .mapSecId = MAPSEC_LITTLEROOT_TOWN,
+        .mapSecId = MAPSEC_TWIGTON_CITY,
         .index = 0,
         .tilemap = gPokenavCityMap_Littleroot_0,
     },
     {
-        .mapSecId = MAPSEC_OLDALE_TOWN,
+        .mapSecId = MAPSEC_HAMMERSOCK,
         .index = 0,
         .tilemap = gPokenavCityMap_Oldale_0,
     },
     {
-        .mapSecId = MAPSEC_DEWFORD_TOWN,
+        .mapSecId = MAPSEC_ELWOOD_CITY,
         .index = 0,
         .tilemap = gPokenavCityMap_Dewford_0,
     },

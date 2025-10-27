@@ -86,9 +86,9 @@ static const u16 sMapPopUp_Palette_Underwater[16] = INCBIN_U16("graphics/map_pop
 
 static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping[] =
 {
-    [MAPSEC_LITTLEROOT_TOWN] = MAPPOPUP_THEME_FR,
-    [MAPSEC_OLDALE_TOWN] = MAPPOPUP_THEME_FR,
-    [MAPSEC_DEWFORD_TOWN] = MAPPOPUP_THEME_FR,
+    [MAPSEC_TWIGTON_CITY] = MAPPOPUP_THEME_FR,
+    [MAPSEC_HAMMERSOCK] = MAPPOPUP_THEME_FR,
+    [MAPSEC_ELWOOD_CITY] = MAPPOPUP_THEME_FR,
     [MAPSEC_LAVARIDGE_TOWN] = MAPPOPUP_THEME_FR,
     [MAPSEC_FALLARBOR_TOWN] = MAPPOPUP_THEME_FR,
     [MAPSEC_VERDANTURF_TOWN] = MAPPOPUP_THEME_FR,
@@ -207,9 +207,9 @@ static const u16 sMapPopUpTilesPalette_BW_White[] = {0};
 
 static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping_BW[] =
 {
-    [MAPSEC_LITTLEROOT_TOWN] = MAPPOPUP_THEME_BW_DEFAULT,
-    [MAPSEC_OLDALE_TOWN] = MAPPOPUP_THEME_BW_DEFAULT,
-    [MAPSEC_DEWFORD_TOWN] = MAPPOPUP_THEME_BW_DEFAULT,
+    [MAPSEC_TWIGTON_CITY] = MAPPOPUP_THEME_BW_DEFAULT,
+    [MAPSEC_HAMMERSOCK] = MAPPOPUP_THEME_BW_DEFAULT,
+    [MAPSEC_ELWOOD_CITY] = MAPPOPUP_THEME_BW_DEFAULT,
     [MAPSEC_LAVARIDGE_TOWN] = MAPPOPUP_THEME_BW_DEFAULT,
     [MAPSEC_FALLARBOR_TOWN] = MAPPOPUP_THEME_BW_DEFAULT,
     [MAPSEC_VERDANTURF_TOWN] = MAPPOPUP_THEME_BW_DEFAULT,
@@ -590,7 +590,7 @@ static void DrawMapNamePopUpFrame(u8 bg, u8 x, u8 y, u8 deltaX, u8 deltaY, u8 un
     u16 regionMapSectionId = gMapHeader.regionMapSectionId;
 
     // Draw top edge
-    if (regionMapSectionId == MAPSEC_VIRIDIAN_FOREST)
+    if (regionMapSectionId == MAPSEC_GFY_WOODS)
     {
         {
             for (i = 0; i < 1 + TILE_TOP_EDGE_END - TILE_TOP_EDGE_START; i++)
@@ -604,7 +604,7 @@ static void DrawMapNamePopUpFrame(u8 bg, u8 x, u8 y, u8 deltaX, u8 deltaY, u8 un
     }
 
     // Draw sides
-    if (regionMapSectionId == MAPSEC_VIRIDIAN_FOREST)
+    if (regionMapSectionId == MAPSEC_GFY_WOODS)
     {
         FillBgTilemapBufferRect(bg, TILE_LEFT_EDGE_TOP,       x - 1,     y, 1, 1, 14);
         FillBgTilemapBufferRect(bg, TILE_RIGHT_EDGE_TOP, deltaX + x,     y, 1, 1, 14);

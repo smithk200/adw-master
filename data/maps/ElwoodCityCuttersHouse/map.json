@@ -3,7 +3,7 @@
   "name": "ElwoodCityCuttersHouse",
   "layout": "LAYOUT_ELWOOD_CITY_CUTTERS_HOUSE",
   "music": "MUS_ELWOOD_CITY",
-  "region_map_section": "MAPSEC_OLDALE_TOWN",
+  "region_map_section": "MAPSEC_HAMMERSOCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",

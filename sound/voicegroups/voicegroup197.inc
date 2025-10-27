@@ -24,7 +24,7 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_accordion, 255, 249, 0, 165 @accordion
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_accordion, 255, 249, 0, 165 @harmonica
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_accordion_duplicate, 255, 249, 0, 165 @accordion
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 249, 0, 165 @nylon guitar
+	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @nylon guitar
     voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @steel guitar TODO
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @jazz guitar TODO
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @clean electric guitar TODO
@@ -70,7 +70,7 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_keysplit voicegroup195, KeySplitTable4 @bari sax
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 0, 165 @oboe
 	voice_directsound 60, 0, DirectSoundWaveData_unused_sd90_oboe, 255, 255, 0, 165 @english horn
-	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 0, 165 @bassoon
+	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_oboe, 255, 255, 255, 0 @bassoon
 	voice_directsound 60, 0, DirectSoundWaveData_unused_sd90_oboe, 255, 255, 0, 165 @clarinet
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 255, 0, 99 @piccolo
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_flute, 255, 255, 0, 99 @flute
