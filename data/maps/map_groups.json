@@ -17,7 +17,7 @@
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
-    "gMapGroup_IndoorRoute104",
+    "gMapGroup_IndoorRoute4",
     "gMapGroup_IndoorRoute111",
     "gMapGroup_IndoorRoute112",
     "gMapGroup_IndoorRoute114",
@@ -43,7 +43,11 @@
     "GFYWoods",
     "ElwoodCity",
     "Route3",
-    "DavesCave"
+    "DavesCave",
+    "Route4",
+    "MtPompous1F",
+    "MtPompousB1F",
+    "MtPompousB2F"
   ],
   "gMapGroup_IndoorTwigton": [
     "TwigtonCity_PlayersHouse2F",
@@ -246,9 +250,8 @@
     "EverGrandeCity_PokemonCenter_2F",
     "EverGrandeCity_PokemonLeague_2F"
   ],
-  "gMapGroup_IndoorRoute104": [
-    "Route104_MrBrineysHouse",
-    "Route104_PrettyPetalFlowerShop"
+  "gMapGroup_IndoorRoute4": [
+    "Route4PokemonCenter1F"
   ],
   "gMapGroup_IndoorRoute111": [
     "Route111_WinstrateFamilysHouse",
@@ -380,7 +383,9 @@
     "TerraCave_Entrance",
     "TerraCave_End",
     "AlteringCave",
-    "MeteorFalls_StevensCave"
+    "MeteorFalls_StevensCave",
+    "Route104_MrBrineysHouse",
+    "Route104_PrettyPetalFlowerShop"
   ],
   "gMapGroup_IndoorDynamic": [
     "SecretBase_RedCave1",

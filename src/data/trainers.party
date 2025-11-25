@@ -510,11 +510,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Wurmple
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Silcoon
-Level: 11
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Beautifly
@@ -531,11 +531,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Wurmple
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Cascoon
-Level: 11
+Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Dustox
@@ -552,15 +552,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Curicrawl
-Level: 10
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Weedle
-Level: 10
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Caterpie
-Level: 10
+Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ERNIE ===
@@ -572,12 +572,12 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move
 
-Gutsicoon
-Level: 10
+Curicrawl
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Larvades
-Level: 11
+Level: 6
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Proboskito
@@ -615,15 +615,15 @@ Double Battle: No
 AI: Check Bad Move
 
 Caterpie
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Caterpie
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Zigzagoon
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ARNOLD ===
@@ -635,15 +635,15 @@ Music: Male
 AI: Check Bad Move
 
 Curicrawl
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Curicrawl
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 Curicrawl
-Level: 10
+Level: 8
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_PIERRE ===

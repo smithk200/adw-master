@@ -5664,6 +5664,66 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/DavesCave/border.bin",
       "blockdata_filepath": "data/layouts/DavesCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4",
+      "name": "Route4_Layout",
+      "width": 108,
+      "height": 15,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Ceruleancity",
+      "border_filepath": "data/layouts/Route4/border.bin",
+      "blockdata_filepath": "data/layouts/Route4/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4POKEMON_CENTER1F",
+      "name": "Route4PokemonCenter1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/Route4PokemonCenter1F/border.bin",
+      "blockdata_filepath": "data/layouts/Route4PokemonCenter1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_POMPOUS1F",
+      "name": "MtPompous1F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtPompous1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtPompous1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_POMPOUS_B1F",
+      "name": "MtPompousB1F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtPompousB1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtPompousB1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_POMPOUS_B2F",
+      "name": "MtPompousB2F_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/MtPompousB2F/border.bin",
+      "blockdata_filepath": "data/layouts/MtPompousB2F/map.bin"
     }
   ]
 }

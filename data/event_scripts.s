@@ -1216,3 +1216,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route3/scripts.inc"
 
 	.include "data/maps/DavesCave/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/Route4PokemonCenter1F/scripts.inc"
+
+	.include "data/maps/MtPompous1F/scripts.inc"
+
+	.include "data/maps/MtPompousB1F/scripts.inc"
+
+	.include "data/maps/MtPompousB2F/scripts.inc"

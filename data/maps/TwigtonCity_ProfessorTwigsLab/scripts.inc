@@ -111,8 +111,6 @@ TwigtonCity_ProfessorTwigsLab_EventScript_TwigTellsYouToPickStarterMon::
 
 TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall::
 	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
-	lock
-	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
 	setvar PLAYER_STARTER_SPECIES, SPECIES_GRASSHOLE
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SCORBUNNY
@@ -124,8 +122,6 @@ TwigtonCity_ProfessorTwigsLab_EventScript_GrassholeBall::
 
 TwigtonCity_ProfessorTwigsLab_EventScript_SquirtleBall::
 	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
-	lock
-	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
 	setvar RIVAL_STARTER_SPECIES, SPECIES_GRASSHOLE
@@ -137,8 +133,6 @@ TwigtonCity_ProfessorTwigsLab_EventScript_SquirtleBall::
 
 TwigtonCity_ProfessorTwigsLab_EventScript_ScorbunnyBall::
 	goto_if_ge VAR_TWIGTON_CITY_MAP_STATE_LAB, 3, TwigtonCity_ProfessorTwigsLab_EventScript_LastPokeBall
-	lock
-	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SCORBUNNY
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE

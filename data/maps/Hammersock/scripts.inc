@@ -120,7 +120,7 @@ Hammersock_EventScript_WiseSage::
 	end
 
 Hammersock_Movement_JumpDownLedge::
-	jump_2_down
+	walk_down
 	step_end
 
 Hammersock_Text_CitySign::
