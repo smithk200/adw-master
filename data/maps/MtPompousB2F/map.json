@@ -3,7 +3,7 @@
   "name": "MtPompousB2F",
   "layout": "LAYOUT_MT_POMPOUS_B2F",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ROUTE_4",
+  "region_map_section": "MAPSEC_MT_POMPOUS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",

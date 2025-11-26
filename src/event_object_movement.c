@@ -517,6 +517,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_NpcBlue,              OBJ_EVENT_PAL_TAG_NPC_BLUE},
     {gObjectEventPal_NpcGreen,              OBJ_EVENT_PAL_TAG_NPC_GREEN},
     {gObjectEventPal_NpcPink,              OBJ_EVENT_PAL_TAG_NPC_PINK},
+    {gObjectEventPal_LeaderJoe,              OBJ_EVENT_PAL_TAG_LEADER_JOE},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -2473,7 +2474,7 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
         case MAPSEC_VERMILION_CITY:
             multi = TYPE_ELECTRIC;
             break;
-        case MAPSEC_LAVARIDGE_TOWN:
+        case MAPSEC_WASHINGTON_CITY:
         case MAPSEC_CINNABAR_ISLAND:
             multi = TYPE_FIRE;
             break;

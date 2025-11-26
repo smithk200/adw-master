@@ -1,2 +1,2 @@
 SaffronCity_MapScripts::
-	.byte 0
+	end

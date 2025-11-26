@@ -5736,6 +5736,18 @@
       "secondary_tileset": "gTileset_Goldenrod",
       "border_filepath": "data/layouts/WashingtonCity/border.bin",
       "blockdata_filepath": "data/layouts/WashingtonCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_WASHINGTON_CITY_GYM",
+      "name": "WashingtonCity_Gym_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Ceruleangym",
+      "border_filepath": "data/layouts/WashingtonCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/WashingtonCity_Gym/map.bin"
     }
   ]
 }

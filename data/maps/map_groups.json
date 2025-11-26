@@ -73,13 +73,7 @@
     "ElwoodCityTradersHouse"
   ],
   "gMapGroup_IndoorWashington": [
-    "LavaridgeTown_HerbShop",
-    "LavaridgeTown_Gym_1F",
-    "LavaridgeTown_Gym_B1F",
-    "LavaridgeTown_House",
-    "LavaridgeTown_Mart",
-    "LavaridgeTown_PokemonCenter_1F",
-    "LavaridgeTown_PokemonCenter_2F"
+    "WashingtonCity_Gym"
   ],
   "gMapGroup_IndoorFallarbor": [
     "FallarborTown_Mart",
@@ -657,6 +651,13 @@
     "DewfordTown_PokemonCenter_2F",
     "DewfordTown_Gym",
     "DewfordTown_Hall",
-    "DewfordTown_House2"
+    "DewfordTown_House2",
+    "LavaridgeTown_HerbShop",
+    "LavaridgeTown_Gym_1F",
+    "LavaridgeTown_Gym_B1F",
+    "LavaridgeTown_House",
+    "LavaridgeTown_Mart",
+    "LavaridgeTown_PokemonCenter_1F",
+    "LavaridgeTown_PokemonCenter_2F"
   ]
 }

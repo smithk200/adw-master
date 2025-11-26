@@ -3,7 +3,7 @@
   "name": "WashingtonCity",
   "layout": "LAYOUT_WASHINGTON_CITY",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_SLATEPORT_CITY",
+  "region_map_section": "MAPSEC_WASHINGTON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
@@ -27,7 +27,7 @@
       "x": 43,
       "y": 38,
       "elevation": 0,
-      "dest_map": "MAP_WASHINGTON_CITY",
+      "dest_map": "MAP_WASHINGTON_CITY_GYM",
       "dest_warp_id": "0"
     }
   ],

@@ -4,7 +4,7 @@
 #define MAPSEC_TWIGTON_CITY              0x00
 #define MAPSEC_HAMMERSOCK                  0x01
 #define MAPSEC_ELWOOD_CITY                 0x02
-#define MAPSEC_LAVARIDGE_TOWN               0x03
+#define MAPSEC_WASHINGTON_CITY               0x03
 #define MAPSEC_FALLARBOR_TOWN               0x04
 #define MAPSEC_VERDANTURF_TOWN              0x05
 #define MAPSEC_PACIFIDLOG_TOWN              0x06
@@ -128,7 +128,7 @@
 #define MAPSEC_ROUTE_24                     0x7C
 #define MAPSEC_ROUTE_25                     0x7D
 #define MAPSEC_GFY_WOODS              0x7E
-#define MAPSEC_MT_MOON                      0x7F
+#define MAPSEC_MT_POMPOUS                      0x7F
 #define MAPSEC_S_S_ANNE                     0x80
 #define MAPSEC_UNDERGROUND_PATH             0x81
 #define MAPSEC_UNDERGROUND_PATH_2           0x82

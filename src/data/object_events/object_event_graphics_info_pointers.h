@@ -291,6 +291,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRWorkerF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRWorkerM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRYoungster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableCheese;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeaderJoe;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -600,6 +601,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FR_WORKERM] =                   &gObjectEventGraphicsInfo_FRWorkerM,
     [OBJ_EVENT_GFX_FR_YOUNGSTER] =                   &gObjectEventGraphicsInfo_FRYoungster,
     [OBJ_EVENT_GFX_CUTTABLE_CHEESE] =                   &gObjectEventGraphicsInfo_CuttableCheese,
+    [OBJ_EVENT_GFX_LEADER_JOE] =                   &gObjectEventGraphicsInfo_LeaderJoe,
 
 };
 

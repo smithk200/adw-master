@@ -416,6 +416,8 @@ const u16 gObjectEventPic_FRWoman3[] = INCBIN_U16("graphics/object_events/pics/p
 const u16 gObjectEventPic_FRWorkerF[] = INCBIN_U16("graphics/object_events/pics/people/worker_f.4bpp");
 const u16 gObjectEventPic_FRWorkerM[] = INCBIN_U16("graphics/object_events/pics/people/worker_m.4bpp");
 const u16 gObjectEventPic_FRYoungster[] = INCBIN_U16("graphics/object_events/pics/people/fr_youngster.4bpp");
+const u32 gObjectEventPic_LeaderJoe[] = INCBIN_U32("graphics/object_events/pics/people/leader_joe.4bpp");
+const u16 gObjectEventPal_LeaderJoe[] = INCBIN_U16("graphics/object_events/palettes/leader_joe.gbapal");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/deoxys.4bpp");
 const u32 gObjectEventPic_MewOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/mew.4bpp");

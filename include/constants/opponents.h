@@ -31,7 +31,7 @@
 #define TRAINER_ARNOLD                       25
 #define TRAINER_PIERRE                       26
 #define TRAINER_ROCKY                        27
-#define TRAINER_GRUNT_AQUA_HIDEOUT_6         28
+#define TRAINER_JOE                          28
 #define TRAINER_FREDRICK                     29
 #define TRAINER_MATT                         30
 #define TRAINER_ZANDER                       31
