@@ -529,28 +529,28 @@ static void Task_OptionMenuProcessInput_Pg2(u8 taskId)
     }
 }
 
- static void DrawTextOption(void)
- {
-    u32 i, widthOptions, xMid;
-    u8 pageDots[9] = _("");  // Array size should be at least (2 * PAGE_COUNT) -1
-    widthOptions = GetStringWidth(FONT_NORMAL, gText_Option, 0);
+static void DrawTextOption(void)
+{
+u32 i, widthOptions, xMid;
+u8 pageDots[9] = _("");  // Array size should be at least (2 * PAGE_COUNT) -1
+widthOptions = GetStringWidth(FONT_NORMAL, gText_Option, 0);
 
-    for (i = 0; i < PAGE_COUNT; i++)
-    {
-        if (i == sCurrPage)
-            StringAppend(pageDots, gText_LargeDot);
-        else
-            StringAppend(pageDots, gText_SmallDot);
-        if (i < PAGE_COUNT - 1)
-            StringAppend(pageDots, gText_Space);            
-    }
-    xMid = (8 + widthOptions + 5);
-    FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(1));
-    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, pageDots, xMid, 1, TEXT_SKIP_DRAW, NULL);
-    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_PageNav, GetStringRightAlignXOffset(FONT_NORMAL, gText_PageNav, 198), 1, TEXT_SKIP_DRAW, NULL);
-    CopyWindowToVram(WIN_HEADER, COPYWIN_FULL);
- }
+for (i = 0; i < PAGE_COUNT; i++)
+{
+    if (i == sCurrPage)
+        StringAppend(pageDots, gText_LargeDot);
+    else
+        StringAppend(pageDots, gText_SmallDot);
+    if (i < PAGE_COUNT - 1)
+        StringAppend(pageDots, gText_Space);            
+}
+xMid = (8 + widthOptions + 5);
+FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(1));
+AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
+AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, pageDots, xMid, 1, TEXT_SKIP_DRAW, NULL);
+AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_PageNav, GetStringRightAlignXOffset(FONT_NORMAL, gText_PageNav, 198), 1, TEXT_SKIP_DRAW, NULL);
+CopyWindowToVram(WIN_HEADER, COPYWIN_FULL);
+}
 
 static void Task_OptionMenuSave(u8 taskId)
 {

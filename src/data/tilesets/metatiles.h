@@ -397,3 +397,6 @@ const u16 gMetatileAttributes_Viridianforest[] = INCBIN_U16("data/tilesets/secon
 
 const u16 gMetatiles_Viridiangym[] = INCBIN_U16("data/tilesets/secondary/viridian_gym/metatiles.bin");
 const u16 gMetatileAttributes_Viridiangym[] = INCBIN_U16("data/tilesets/secondary/viridian_gym/metatile_attributes.bin");
+
+const u16 gMetatiles_Goldenrod[] = INCBIN_U16("data/tilesets/secondary/goldenrod/metatiles.bin");
+const u16 gMetatileAttributes_Goldenrod[] = INCBIN_U16("data/tilesets/secondary/goldenrod/metatile_attributes.bin");

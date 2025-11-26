@@ -1519,3 +1519,14 @@ const struct Tileset gTileset_Viridiangym =
     .metatileAttributes = gMetatileAttributes_Viridiangym,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Goldenrod =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Goldenrod,
+    .palettes = gTilesetPalettes_Goldenrod,
+    .metatiles = gMetatiles_Goldenrod,
+    .metatileAttributes = gMetatileAttributes_Goldenrod,
+    .callback = NULL,
+};

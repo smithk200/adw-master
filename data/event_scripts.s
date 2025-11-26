@@ -1226,3 +1226,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/MtPompousB1F/scripts.inc"
 
 	.include "data/maps/MtPompousB2F/scripts.inc"
+
+	.include "data/maps/WashingtonCity/scripts.inc"

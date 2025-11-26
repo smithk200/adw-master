@@ -5668,8 +5668,8 @@
     {
       "id": "LAYOUT_ROUTE4",
       "name": "Route4_Layout",
-      "width": 108,
-      "height": 15,
+      "width": 112,
+      "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5724,6 +5724,18 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/MtPompousB2F/border.bin",
       "blockdata_filepath": "data/layouts/MtPompousB2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_WASHINGTON_CITY",
+      "name": "WashingtonCity_Layout",
+      "width": 80,
+      "height": 80,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Goldenrod",
+      "border_filepath": "data/layouts/WashingtonCity/border.bin",
+      "blockdata_filepath": "data/layouts/WashingtonCity/map.bin"
     }
   ]
 }
