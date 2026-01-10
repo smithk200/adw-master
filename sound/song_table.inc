@@ -426,7 +426,7 @@ gSongTable::
 	song mus_ever_grande, 0, 0
 	song mus_encounter_suspicious, 0, 0
 	song mus_victory_aqua_magma, 0, 0
-	song mus_cable_car, 0, 0
+	song us_air_force_theme, 0, 0
 	song mus_game_corner, 0, 0
 	song mus_dewford, 0, 0
 	song mus_safari_zone, 0, 0

@@ -5748,6 +5748,18 @@
       "secondary_tileset": "gTileset_Ceruleangym",
       "border_filepath": "data/layouts/WashingtonCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/WashingtonCity_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_GOLDENROD_CITY",
+      "name": "GoldenrodCity_Layout",
+      "width": 58,
+      "height": 46,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Goldenrod",
+      "border_filepath": "data/layouts/GoldenrodCity/border.bin",
+      "blockdata_filepath": "data/layouts/GoldenrodCity/map.bin"
     }
   ]
 }

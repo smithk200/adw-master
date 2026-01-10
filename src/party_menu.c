@@ -4695,6 +4695,10 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     {
         cannotUse = TRUE;
     }
+    if (gItemLimit > 4) //can't use more than 4 items in battle
+    {
+        cannotUse = TRUE;
+    }
     else
     {
         canHeal = IsHPRecoveryItem(item);
@@ -4711,7 +4715,12 @@ void ItemUseCB_Medicine(u8 taskId, TaskFunc task)
     {
         gPartyMenuUseExitCallback = FALSE;
         PlaySE(SE_SELECT);
-        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+        if (gItemLimit > 4)
+        {
+            DisplayPartyMenuMessage(gText_ItemLimitHasBeenReached, TRUE);
+        }
+        else
+            DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
         ScheduleBgCopyTilemapToVram(2);
         if (gPartyMenu.menuType == PARTY_MENU_TYPE_FIELD)
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;

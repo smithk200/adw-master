@@ -355,7 +355,7 @@
 #define MUS_EVER_GRANDE             422 // MUS_RAINBOW          // Also used in link rooms.
 #define MUS_ENCOUNTER_SUSPICIOUS    423 // MUS_AYASII
 #define MUS_VICTORY_AQUA_MAGMA      424 // MUS_KACHI4
-#define MUS_CABLE_CAR               425 // MUS_ROPEWAY
+#define MUS_WASHINGTON_CITY         425 // MUS_ROPEWAY
 #define MUS_GAME_CORNER             426 // MUS_CASINO
 #define MUS_DEWFORD                 427 // MUS_HIGHTOWN         // Also used in Route 109's Seashore house.
 #define MUS_SAFARI_ZONE             428 // MUS_SAFARI

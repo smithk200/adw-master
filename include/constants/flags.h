@@ -68,10 +68,10 @@
 #define FLAG_DAVES_CAVE_CHEESE_CUT_3    0x36 // Unused Flag
 #define FLAG_DAVES_CAVE_CHEESE_CUT_4    0x37 // Unused Flag
 #define FLAG_DAVES_CAVE_CHEESE_CUT_5    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_MT_POMPOUS_HIDE_GRUNTS    0x39 // Unused Flag
+#define FLAG_MT_POMPOUS_HIDE_FOSSILS    0x3A // Unused Flag
+#define FLAG_HIDE_FRY_WASHINGTON_CITY    0x3B // Unused Flag
+#define FLAG_FRY_WASHINGTON_CITY_SCENE    0x3C // Unused Flag
 #define FLAG_UNUSED_0x03D    0x3D // Unused Flag
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag

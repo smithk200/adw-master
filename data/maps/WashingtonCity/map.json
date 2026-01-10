@@ -2,7 +2,7 @@
   "id": "MAP_WASHINGTON_CITY",
   "name": "WashingtonCity",
   "layout": "LAYOUT_WASHINGTON_CITY",
-  "music": "MUS_DUMMY",
+  "music": "MUS_WASHINGTON_CITY",
   "region_map_section": "MAPSEC_WASHINGTON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -20,21 +20,64 @@
     }
   ],
   "object_events": [
-
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 34,
+      "y": 40,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_FRY_WASHINGTON_CITY"
+    }
   ],
   "warp_events": [
     {
-      "x": 43,
-      "y": 38,
+      "x": 42,
+      "y": 39,
       "elevation": 0,
       "dest_map": "MAP_WASHINGTON_CITY_GYM",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 42,
+      "y": 40,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "WashingtonCity_EventScript_FryTrigger"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 39,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "WashingtonCity_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 73,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "WashingtonCity_EventScript_Sign_ThrowAwayTrash"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 40,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "WashingtonCity_EventScript_WashingtonCitySign"
+    }
   ]
 }

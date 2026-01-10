@@ -275,5 +275,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_TWIG_IN_HIS_LAB
 	setflag FLAG_HIDE_BRITTANY_IN_TWIGS_LAB
 	setflag FLAG_AUTO_HMS
+	setflag FLAG_MT_POMPOUS_HIDE_GRUNTS
+	setflag FLAG_HIDE_FRY_WASHINGTON_CITY
 	call EventScript_ResetAllBerries
 	end

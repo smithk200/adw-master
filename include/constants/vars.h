@@ -98,7 +98,7 @@
 #define VAR_TWIGTON_CITY_MAP_STATE                       0x404E
 #define VAR_LOTAD_SIZE_RECORD                            0x404F
 #define VAR_LITTLEROOT_TOWN_STATE                        0x4050
-#define VAR_OLDALE_TOWN_STATE                            0x4051
+#define VAR_MT_POMPOUS_B2F_STATE                            0x4051
 #define VAR_TWIGTON_CITY_MAP_STATE_LAB                   0x4052
 #define VAR_LAVARIDGE_TOWN_STATE                         0x4053
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
