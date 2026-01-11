@@ -48,7 +48,9 @@
     "MtPompous1F",
     "MtPompousB1F",
     "MtPompousB2F",
-    "WashingtonCity"
+    "WashingtonCity",
+    "Route5",
+    "StoneveilTown"
   ],
   "gMapGroup_IndoorTwigton": [
     "TwigtonCity_PlayersHouse2F",

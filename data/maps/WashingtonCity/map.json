@@ -17,13 +17,18 @@
       "map": "MAP_ROUTE4",
       "offset": 20,
       "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE5",
+      "offset": 50,
+      "direction": "right"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 34,
-      "y": 40,
+      "x": 30,
+      "y": 36,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -32,12 +37,25 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_FRY_WASHINGTON_CITY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 43,
+      "y": 66,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 42,
-      "y": 39,
+      "x": 38,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_WASHINGTON_CITY_GYM",
       "dest_warp_id": "0"
@@ -46,8 +64,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 42,
-      "y": 40,
+      "x": 38,
+      "y": 36,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -57,16 +75,16 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 46,
-      "y": 39,
+      "x": 34,
+      "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "WashingtonCity_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 73,
-      "y": 35,
+      "x": 58,
+      "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "WashingtonCity_EventScript_Sign_ThrowAwayTrash"
@@ -74,7 +92,7 @@
     {
       "type": "sign",
       "x": 16,
-      "y": 40,
+      "y": 39,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "WashingtonCity_EventScript_WashingtonCitySign"

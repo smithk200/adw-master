@@ -3839,7 +3839,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_ROUTE110) \
     X(MUS_ROUTE120) \
     X(MUS_PETALBURG) \
-    X(MUS_OLDALE) \
+    X(MUS_STONEVEIL) \
     X(MUS_GYM) \
     X(MUS_SURF) \
     X(MUS_PETALBURG_WOODS) \

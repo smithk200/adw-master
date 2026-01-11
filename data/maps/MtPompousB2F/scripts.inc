@@ -162,6 +162,9 @@ MtPompousB2F_MapScript_AbortionTriggerRight::
 	release
 	end
 
+MtPompousB2F_AssGrunt1::
+	end
+
 MtPompousB2F_MapScript_HideGrunts::
 	setflag FLAG_MT_POMPOUS_HIDE_GRUNTS
 	setflag FLAG_MT_POMPOUS_HIDE_FOSSILS

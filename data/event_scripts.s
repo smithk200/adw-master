@@ -1230,3 +1230,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/WashingtonCity/scripts.inc"
 
 	.include "data/maps/WashingtonCity_Gym/scripts.inc"
+
+	.include "data/maps/Route5/scripts.inc"
+
+	.include "data/maps/StoneveilTown/scripts.inc"

@@ -58,7 +58,7 @@ voicegroup196:: @universal drums
 	voice_directsound 64, 14, DirectSoundWaveData_trinity_cymbal_crash, 255, 231, 0, 188
 	voice_directsound 64, 89, DirectSoundWaveData_sd90_cowbell, 255, 0, 255, 242
 	voice_directsound 60, 29, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231
-	voice_directsound_no_resample 64, 64, DirectSoundWaveData_sd90_solo_snare, 255, 180, 175, 228
+	voice_directsound 64, 64, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 180, 175, 228
 	voice_directsound 58, 54, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231
 	voice_directsound 62, 54, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 8, 0, 255, 216
 	voice_directsound 64, 94, DirectSoundWaveData_unused_heart_of_asia_indian_drum, 255, 0, 255, 0

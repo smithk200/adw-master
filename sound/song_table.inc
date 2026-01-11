@@ -364,7 +364,7 @@ gSongTable::
 	song mus_route110, 0, 0
 	song mus_route120, 0, 0
 	song mus_petalburg, 0, 0
-	song mus_oldale, 0, 0
+	song Stoneveil_Town, 0, 0
 	song mus_gym, 0, 0
 	song mus_surf, 0, 0
 	song mus_petalburg_woods, 0, 0

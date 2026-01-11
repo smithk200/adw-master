@@ -5404,7 +5404,7 @@
     {
       "id": "LAYOUT_HAMMERSOCK",
       "name": "Hammersock_Layout",
-      "width": 51,
+      "width": 46,
       "height": 43,
       "border_width": 2,
       "border_height": 2,
@@ -5668,7 +5668,7 @@
     {
       "id": "LAYOUT_ROUTE4",
       "name": "Route4_Layout",
-      "width": 112,
+      "width": 104,
       "height": 30,
       "border_width": 2,
       "border_height": 2,
@@ -5728,8 +5728,8 @@
     {
       "id": "LAYOUT_WASHINGTON_CITY",
       "name": "WashingtonCity_Layout",
-      "width": 80,
-      "height": 80,
+      "width": 74,
+      "height": 70,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -5760,6 +5760,30 @@
       "secondary_tileset": "gTileset_Goldenrod",
       "border_filepath": "data/layouts/GoldenrodCity/border.bin",
       "blockdata_filepath": "data/layouts/GoldenrodCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE5",
+      "name": "Route5_Layout",
+      "width": 20,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Goldenrod",
+      "border_filepath": "data/layouts/Route5/border.bin",
+      "blockdata_filepath": "data/layouts/Route5/map.bin"
+    },
+    {
+      "id": "LAYOUT_STONEVEIL_TOWN",
+      "name": "StoneveilTown_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Viridiancity",
+      "border_filepath": "data/layouts/StoneveilTown/border.bin",
+      "blockdata_filepath": "data/layouts/StoneveilTown/map.bin"
     }
   ]
 }
