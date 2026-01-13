@@ -67,6 +67,7 @@
 #include "config/battle.h"
 #include "data/battle_move_effects.h"
 #include "constants/layouts.h"
+#include "follower_npc.h"
 
 // table to avoid ugly powing on gba (courtesy of doesnt)
 // this returns (i^2.5)/4

@@ -52,6 +52,7 @@
 #include "constants/weather.h"
 #include "wild_encounter.h"
 #include "constants/layouts.h"
+#include "follower_npc.h"
 
 enum {
     TRANSITION_TYPE_NORMAL,

@@ -67,6 +67,7 @@
 #include "constants/species.h"
 #include "constants/weather.h"
 #include "save.h"
+#include "follower_npc.h"
 
 // *******************************
 enum DebugMenu
@@ -1148,8 +1149,8 @@ static const u16 sLocationFlags[] =
     FLAG_VISITED_LITTLEROOT_TOWN,
     FLAG_VISITED_HAMMERSOCK,
     FLAG_VISITED_ELWOOD_CITY,
-    FLAG_VISITED_LAVARIDGE_TOWN,
-    FLAG_VISITED_FALLARBOR_TOWN,
+    FLAG_VISITED_WASHINGTON_CITY,
+    FLAG_VISITED_STONEVEIL_TOWN,
     FLAG_VISITED_VERDANTURF_TOWN,
     FLAG_VISITED_PACIFIDLOG_TOWN,
     FLAG_VISITED_PETALBURG_CITY,

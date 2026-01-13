@@ -15,6 +15,7 @@
 #include "agb_flash.h"
 #include "event_data.h"
 #include "constants/event_objects.h"
+#include "follower_npc.h"
 
 static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey);
 

@@ -1234,3 +1234,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route5/scripts.inc"
 
 	.include "data/maps/StoneveilTown/scripts.inc"
+
+	.include "data/maps/StoneveilPowerPlant/scripts.inc"

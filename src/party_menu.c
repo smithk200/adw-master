@@ -75,6 +75,7 @@
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "follower_npc.h"
 
 enum {
     MENU_SUMMARY,

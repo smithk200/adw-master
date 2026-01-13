@@ -5769,14 +5769,14 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Goldenrod",
+      "secondary_tileset": "gTileset_Viridiancity",
       "border_filepath": "data/layouts/Route5/border.bin",
       "blockdata_filepath": "data/layouts/Route5/map.bin"
     },
     {
       "id": "LAYOUT_STONEVEIL_TOWN",
       "name": "StoneveilTown_Layout",
-      "width": 20,
+      "width": 30,
       "height": 20,
       "border_width": 2,
       "border_height": 2,
@@ -5784,6 +5784,18 @@
       "secondary_tileset": "gTileset_Viridiancity",
       "border_filepath": "data/layouts/StoneveilTown/border.bin",
       "blockdata_filepath": "data/layouts/StoneveilTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_STONEVEIL_POWER_PLANT",
+      "name": "StoneveilPowerPlant_Layout",
+      "width": 20,
+      "height": 26,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Saffroncity",
+      "border_filepath": "data/layouts/StoneveilPowerPlant/border.bin",
+      "blockdata_filepath": "data/layouts/StoneveilPowerPlant/map.bin"
     }
   ]
 }

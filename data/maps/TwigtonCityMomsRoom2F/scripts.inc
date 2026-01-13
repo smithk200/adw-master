@@ -75,7 +75,7 @@ TwigtonCityPlayersHouse2F_TextWorried3:
 	.string "it turns out they were part of an\l"
 	.string "evil cult.\p"
 	.string "Please help my son in any way you can.\p"
-	.string "Signed, Lisa Walters.$"
+	.string "Signed, (Your Mom).$"
 	
 
 TwigtonCityPlayersHouse2F_TextWorried4:

@@ -19,6 +19,7 @@
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
 #include "constants/trainer_types.h"
+#include "follower_npc.h"
 
 // this file's functions
 static u8 CheckTrainer(u8 objectEventId);

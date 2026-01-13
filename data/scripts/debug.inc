@@ -85,8 +85,8 @@ Debug_CheatStart::
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	setflag FLAG_VISITED_HAMMERSOCK
 	setflag FLAG_VISITED_ELWOOD_CITY
-	setflag FLAG_VISITED_LAVARIDGE_TOWN
-	setflag FLAG_VISITED_FALLARBOR_TOWN
+	setflag FLAG_VISITED_WASHINGTON_CITY
+	setflag FLAG_VISITED_STONEVEIL_TOWN
 	setflag FLAG_VISITED_VERDANTURF_TOWN
 	setflag FLAG_VISITED_PACIFIDLOG_TOWN
 	setflag FLAG_VISITED_PETALBURG_CITY
@@ -308,6 +308,11 @@ Debug_ExpansionVersion:
 	.string "pokeemerald-expansion {STR_VAR_1}$"
 
 Debug_EventScript_Steven_Multi::
+	call TwigtonCity_Event_Script_MultiBattle
+	release
+	end
+
+Debug_EventScript_Steven_MultiOld::
 	call MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
 	release
 	end

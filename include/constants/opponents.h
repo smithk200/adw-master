@@ -31,14 +31,14 @@
 #define TRAINER_ARNOLD                       25
 #define TRAINER_PIERRE                       26
 #define TRAINER_ROCKY                        27
-#define TRAINER_JOE                          28  //ADW Trainer
+#define TRAINER_JOE                          28 
 #define TRAINER_FRY_WASHINGTON_CITY          29
 #define TRAINER_MATT                         30  //from Emerald
 #define TRAINER_ZANDER                       31  //from Emerald
 #define TRAINER_ABORTION_DEBATER_JUMBO       32
 #define TRAINER_ABORTION_DEBATER_ASS         33
-#define TRAINER_ARCHIE                       34
-#define TRAINER_LEAH                         35
+#define TRAINER_YOUR_MOM                     34
+#define TRAINER_BEN_SHAPIRO_TWIGTON          35  //last in the ADW Trainer list
 #define TRAINER_DAISY                        36
 #define TRAINER_ROSE_1                       37
 #define TRAINER_FELIX                        38

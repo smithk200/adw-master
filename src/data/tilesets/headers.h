@@ -1322,6 +1322,17 @@ const struct Tileset gTileset_Saffroncity =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_Saffroncity2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Saffroncity2,
+    .palettes = gTilesetPalettes_Saffroncity2,
+    .metatiles = gMetatiles_Saffroncity2,
+    .metatileAttributes = gMetatileAttributes_Saffroncity2,
+    .callback = NULL,
+};
+
 const struct Tileset gTileset_Saffrongym =
 {
     .isCompressed = TRUE,

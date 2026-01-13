@@ -48,6 +48,7 @@
 #include "constants/items.h"
 #include "difficulty.h"
 #include "constants/heal_locations.h"
+#include "follower_npc.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
 

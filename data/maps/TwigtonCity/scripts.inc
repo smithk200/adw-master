@@ -191,6 +191,19 @@ TwigtonCity_EventScript_TwigLeadPlayerToLabRight::
 	waitmovement 0
 	return
 
+TwigtonCity_Event_Script_MultiBattle::
+	special ChooseHalfPartyForBattle
+	special LoadPlayerParty
+	multi_2_vs_2 TRAINER_YOUR_MOM, TwigtonCity_Text_YourMomSpeaks, TRAINER_BEN_SHAPIRO_TWIGTON, TwigtonCity_Text_BenShapiro_Speaks, PARTNER_CYRUS
+	switch VAR_RESULT
+	case 1, TwigtonCity_Event_Script_EventScript_DefeatedYourMomAndBen
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+
+TwigtonCity_Event_Script_EventScript_DefeatedYourMomAndBen::
+	end
+
 TwigtonCity_Movement_TwigEnterLeft::
 	walk_right
 	walk_up
@@ -472,3 +485,13 @@ TwigtonCity_Text_WhatAreYouDoing:
 TwigtonCity_Text_ComeWithMeToGetAPokemon:
 	.string "Prof. Twig: Come with me to get\n"
 	.string "your Pokémon!$"
+
+TwigtonCity_Text_YourMomSpeaks:
+	.string "No…\n"
+	.string "NO!\p"
+	.string "My own son…\n"
+	.string "Why, oh why?!?$"
+
+TwigtonCity_Text_BenShapiro_Speaks:
+	.string "No!\n"
+	.string "How dare you interrupt our plans!$"

@@ -38,6 +38,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/map_types.h"
+#include "follower_npc.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 

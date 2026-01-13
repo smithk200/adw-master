@@ -103,3 +103,146 @@
             },
         },
     },
+#line 45
+    [DIFFICULTY_NORMAL][PARTNER_CYRUS] =
+    {
+#line 46
+        .trainerName = _("Cyrus"),
+#line 47
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 48
+        .trainerPic = TRAINER_BACK_PIC_CYRUS,
+        .encounterMusic_gender =
+#line 50
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 6,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 52
+            .species = SPECIES_HONCHKROW,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 56
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 6, 252),
+#line 55
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 54
+            .lvl = 43,
+#line 53
+            .nature = NATURE_IMPISH,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 57
+                MOVE_TOXIC,
+                MOVE_AERIAL_ACE,
+                MOVE_PROTECT,
+                MOVE_STEEL_WING,
+            },
+            },
+            {
+#line 62
+            .species = SPECIES_GLISCOR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 66
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 252, 6),
+#line 65
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 64
+            .lvl = 44,
+#line 63
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 67
+                MOVE_THUNDER,
+                MOVE_PROTECT,
+                MOVE_SOLAR_BEAM,
+                MOVE_DRAGON_CLAW,
+            },
+            },
+            {
+#line 72
+            .species = SPECIES_CROBAT,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 76
+            .ev = TRAINER_PARTY_EVS(0, 252, 252, 0, 6, 0),
+#line 75
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 74
+            .lvl = 42,
+#line 73
+            .nature = NATURE_BRAVE,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 77
+                MOVE_LIGHT_SCREEN,
+                MOVE_PSYCHIC,
+                MOVE_REFLECT,
+                MOVE_METAL_CLAW,
+            },
+            },
+            {
+#line 82
+            .species = SPECIES_HOUNDOOM,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 86
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 6, 252),
+#line 85
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 84
+            .lvl = 43,
+#line 83
+            .nature = NATURE_IMPISH,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 87
+                MOVE_TOXIC,
+                MOVE_AERIAL_ACE,
+                MOVE_PROTECT,
+                MOVE_STEEL_WING,
+            },
+            },
+            {
+#line 92
+            .species = SPECIES_GYARADOS,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 96
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 252, 6),
+#line 95
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 94
+            .lvl = 44,
+#line 93
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 97
+                MOVE_THUNDER,
+                MOVE_PROTECT,
+                MOVE_SOLAR_BEAM,
+                MOVE_DRAGON_CLAW,
+            },
+            },
+            {
+#line 102
+            .species = SPECIES_WEAVILE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 106
+            .ev = TRAINER_PARTY_EVS(0, 252, 252, 0, 6, 0),
+#line 105
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 104
+            .lvl = 42,
+#line 103
+            .nature = NATURE_BRAVE,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 107
+                MOVE_NIGHT_SLASH,
+                MOVE_DRAIN_PUNCH,
+                MOVE_ICE_SPINNER,
+                MOVE_METAL_CLAW,
+            },
+            },
+        },
+    },
