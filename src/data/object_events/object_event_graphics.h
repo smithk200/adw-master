@@ -418,6 +418,17 @@ const u16 gObjectEventPic_FRWorkerM[] = INCBIN_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_FRYoungster[] = INCBIN_U16("graphics/object_events/pics/people/fr_youngster.4bpp");
 const u32 gObjectEventPic_LeaderJoe[] = INCBIN_U32("graphics/object_events/pics/people/leader_joe.4bpp");
 const u16 gObjectEventPal_LeaderJoe[] = INCBIN_U16("graphics/object_events/palettes/leader_joe.gbapal");
+const u32 gObjectEventPic_Cyrus[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/cyrus.4bpp");
+const u16 gObjectEventPal_Cyrus[] = INCBIN_U16("graphics/object_events/palettes/cyrus.gbapal");
+const u32 gObjectEventPic_Mars[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/mars.4bpp");
+const u16 gObjectEventPal_Mars[] = INCBIN_U16("graphics/object_events/palettes/mars.gbapal");
+const u32 gObjectEventPic_Jupiter[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/jupiter.4bpp");
+const u16 gObjectEventPal_Jupiter[] = INCBIN_U16("graphics/object_events/palettes/jupiter.gbapal");
+const u32 gObjectEventPic_Saturn[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/saturn.4bpp");
+const u16 gObjectEventPal_Saturn[] = INCBIN_U16("graphics/object_events/palettes/saturn.gbapal");
+const u32 gObjectEventPic_Galactic_grunt_m[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/galactic_grunt_m.4bpp");
+const u16 gObjectEventPal_Galactic_grunt[] = INCBIN_U16("graphics/object_events/palettes/galactic_grunt.gbapal");
+const u32 gObjectEventPic_Galactic_grunt_f[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/galactic_grunt_f.4bpp");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/deoxys.4bpp");
 const u32 gObjectEventPic_MewOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/mew.4bpp");

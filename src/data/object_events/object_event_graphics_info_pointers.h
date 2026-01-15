@@ -292,6 +292,13 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRWorkerM;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_FRYoungster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CuttableCheese;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LeaderJoe;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cyrus;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mars;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jupiter;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Saturn;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Galactic_grunt_m;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Galactic_grunt_f;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -602,6 +609,12 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_FR_YOUNGSTER] =                   &gObjectEventGraphicsInfo_FRYoungster,
     [OBJ_EVENT_GFX_CUTTABLE_CHEESE] =                   &gObjectEventGraphicsInfo_CuttableCheese,
     [OBJ_EVENT_GFX_LEADER_JOE] =                   &gObjectEventGraphicsInfo_LeaderJoe,
+    [OBJ_EVENT_GFX_CYRUS] =                   &gObjectEventGraphicsInfo_Cyrus,
+    [OBJ_EVENT_GFX_MARS] =                   &gObjectEventGraphicsInfo_Mars,
+    [OBJ_EVENT_GFX_JUPITER] =                   &gObjectEventGraphicsInfo_Jupiter,
+    [OBJ_EVENT_GFX_SATURN] =                   &gObjectEventGraphicsInfo_Saturn,
+    [OBJ_EVENT_GFX_GALACTIC_GRUNT_M] =                   &gObjectEventGraphicsInfo_Galactic_grunt_m,
+    [OBJ_EVENT_GFX_GALACTIC_GRUNT_F] =                   &gObjectEventGraphicsInfo_Galactic_grunt_f,
 
 };
 

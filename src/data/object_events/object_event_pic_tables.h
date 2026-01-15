@@ -2052,3 +2052,104 @@ static const struct SpriteFrameImage sPicTable_LeaderJoe[] = {
     overworld_frame(gObjectEventPic_LeaderJoe, 2, 4, 7),
     overworld_frame(gObjectEventPic_LeaderJoe, 2, 4, 8),
 };
+
+static const struct SpriteFrameImage sPicTable_Cyrus[] = {
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 8),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 9),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 10),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 11),
+    overworld_frame(gObjectEventPic_Cyrus, 4, 4, 12),
+};
+
+
+static const struct SpriteFrameImage sPicTable_Mars[] = {
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 8),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 9),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 10),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 11),
+    overworld_frame(gObjectEventPic_Mars, 4, 4, 12),
+};
+
+
+static const struct SpriteFrameImage sPicTable_Jupiter[] = {
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 8),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 9),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 10),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 11),
+    overworld_frame(gObjectEventPic_Jupiter, 4, 4, 12),
+};
+
+
+static const struct SpriteFrameImage sPicTable_Saturn[] = {
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 8),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 9),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 10),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 11),
+    overworld_frame(gObjectEventPic_Saturn, 4, 4, 12),
+};
+
+
+static const struct SpriteFrameImage sPicTable_Galactic_grunt_m[] = {
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 8),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 9),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 10),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 11),
+    overworld_frame(gObjectEventPic_Galactic_grunt_m, 4, 4, 12),
+};
+
+
+static const struct SpriteFrameImage sPicTable_Galactic_grunt_f[] = {
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 0),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 1),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 2),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 3),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 4),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 5),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 6),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 7),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 8),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 9),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 10),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 11),
+    overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 12),
+};

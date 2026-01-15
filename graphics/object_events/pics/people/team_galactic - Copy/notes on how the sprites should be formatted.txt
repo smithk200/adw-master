@@ -1,0 +1,13 @@
+Alright. But the order of the sprites is messed up (that's on me, not on you)
+The sprites need to be rearranged in this format, with each frame being a 32x32 segment:
+Input frame 1 needs to be output frame 2.
+Input frame 2 needs to be output frame 8.
+Input frame 3 can be kept the same.
+Input frame 4 needs to be output frame 9.
+Input frames 5-7 need to be output frame 10-12, respectively.
+Input frame 8 needs to be output frame 6.
+Input frame 9 needs to be output frame 7.
+Input frame 10 needs to be output frame 1.
+Input frame 11 needs to be output frame 4.
+Input frame 12 needs to be output frame 5.
+How would I do this in Python 2.7?

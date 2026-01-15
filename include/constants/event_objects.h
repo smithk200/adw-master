@@ -524,6 +524,12 @@
 #define OBJ_EVENT_PAL_TAG_NPC_GREEN               0x1128
 #define OBJ_EVENT_PAL_TAG_NPC_PINK                0x1129
 #define OBJ_EVENT_PAL_TAG_LEADER_JOE              0x112A
+#define OBJ_EVENT_PAL_TAG_CYRUS                  0x112B
+#define OBJ_EVENT_PAL_TAG_MARS                   0x112C
+#define OBJ_EVENT_PAL_TAG_JUPITER                0x112D
+#define OBJ_EVENT_PAL_TAG_SATURN                 0x112E
+#define OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT         0x112F
+
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla
