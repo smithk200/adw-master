@@ -3357,7 +3357,7 @@ static const u32 gDebugFollowerNPCGraphics[] =
     OBJ_EVENT_GFX_WALLY,
     OBJ_EVENT_GFX_RED,
     OBJ_EVENT_GFX_LEAF,
-    OBJ_EVENT_GFX_CYRUS,
+    OBJ_EVENT_GFX_CYRUS, //this is a test
 };
 
 static void DebugAction_CreateFollowerNPC(u8 taskId)
