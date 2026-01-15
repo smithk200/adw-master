@@ -354,7 +354,15 @@ EventScript_UseWaterfall::
 	goto_if_eq VAR_RESULT, NO, EventScript_EndWaterfall
 	msgbox Text_MonUsedWaterfall, MSGBOX_DEFAULT
 	dofieldeffect FLDEFF_USE_WATERFALL
+	callnative FollowerNPC_WarpSetEnd
 	goto EventScript_EndWaterfall
+
+EventScript_MoveUpAWaterfall:
+	@hidefollowernpc
+	dofieldeffect FLDEFF_USE_WATERFALL
+	callnative FollowerNPC_WarpSetEnd
+	goto EventScript_EndWaterfall
+	end
 
 EventScript_CannotUseWaterfall::
 	lockall

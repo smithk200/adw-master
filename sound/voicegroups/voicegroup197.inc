@@ -26,8 +26,8 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_accordion_duplicate, 255, 249, 0, 165 @accordion
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @nylon guitar
     voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @steel guitar TODO
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_nylon_str_guitar, 255, 255, 0, 99 @jazz guitar TODO
-	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @clean electric guitar TODO
+	voice_directsound 60, 0, DirectSoundWaveData_jazz_guitar, 255, 255, 0, 99 @jazz guitar
+	voice_directsound 60, 0, DirectSoundWaveData_clean_guitar, 255, 255, 0, 99 @clean electric guitar
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @muted electric guitar TODO
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_overdrive_guitar, 255, 255, 0, 99 @overdrive
 	voice_directsound 60, 0, DirectSoundWaveData_sd90_classical_distortion_guitar_high, 255, 255, 0, 99 @distortion
@@ -39,7 +39,7 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_slap_bass, 255, 253, 0, 188 @slap bass 1
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_slap_bass, 255, 253, 0, 188 @slap bass 2
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_synth_bass, 255, 255, 0, 99 @synth bass 1
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_synth_bass, 255, 255, 0, 99 @synth bass 2
+	voice_directsound 60, 0, DirectSoundWaveData_synth_bass, 255, 255, 0, 99 @synth bass 2
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_string_ensemble_84, 255, 255, 0, 99 @violin
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_string_ensemble_84, 255, 255, 0, 99 @viola
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_string_ensemble_60, 255, 255, 0, 99 @cello
@@ -52,18 +52,18 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_keysplit voicegroup199, KeySplitTable2 @string ens. 2
 	voice_keysplit voicegroup199, KeySplitTable2 @synth strings 1
 	voice_keysplit voicegroup199, KeySplitTable2 @synth strings 2
-	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @aahs
+	voice_keysplit voicegroup200, KeySplitTable2 @aahs
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @oohs
 	voice_directsound 60, 0, DirectSoundWaveData_classical_choir_voice_ahhs, 255, 255, 255, 0 @synth voice
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 255, 0, 99 @orchestra hit TODO
 	voice_keysplit voicegroup198, KeySplitTable6 @trumpet
 	voice_keysplit voicegroup008, KeySplitTable2 @trombone
 	voice_keysplit voicegroup008, KeySplitTable2 @tuba
-	voice_keysplit voicegroup198, KeySplitTable6 @muted trumpet
+	voice_directsound 60, 0, DirectSoundWaveData_muted_trumpet, 255, 255, 0, 99 @muted trumpet
 	voice_keysplit voicegroup009, KeySplitTable5 @french horn
 	voice_keysplit voicegroup198, KeySplitTable6 @brass
-	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
-	voice_keysplit voicegroup198, KeySplitTable6 @synth brass
+	voice_directsound 60, 0, DirectSoundWaveData_synth_brass_1, 255, 255, 0, 99 @synth brass
+	voice_directsound 60, 0, DirectSoundWaveData_synth_brass_2, 255, 255, 0, 99 @synth brass
 	voice_directsound 60, 0, DirectSoundWaveData_soprano_sax, 255, 255, 0, 99 @soprano sax
 	voice_keysplit voicegroup193, KeySplitTable2 @alto sax
 	voice_keysplit voicegroup194, KeySplitTable4 @tenor sax
@@ -97,11 +97,11 @@ voicegroup197:: @am using placeholder voices for sounds until I find the real so
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @halo
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @sweep
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @rain
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @soundtrack
+	voice_directsound 60, 0, DirectSoundWaveData_soundtrack, 255, 255, 0, 99 @soundtrack
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @crystal
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @atmosphere
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @brightness
-	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @goblins
+	voice_directsound 60, 0, DirectSoundWaveData_atmosphere_synth, 255, 255, 0, 99 @atmosphere
+	voice_directsound 60, 0, DirectSoundWaveData_brightness_synth, 255, 255, 0, 99 @brightness
+	voice_directsound 60, 0, DirectSoundWaveData_goblins, 255, 255, 0, 99 @goblins
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @echoes
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @sci-fi
 	voice_directsound 60, 0, DirectSoundWaveData_sc88pro_fretless_bass, 255, 255, 0, 99 @pads and stuff

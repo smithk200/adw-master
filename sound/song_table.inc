@@ -359,7 +359,7 @@ gSongTable::
 	song mus_victory_league, 0, 0
 	song ElwoodCity, 0, 0
 	song mus_gsc_pewter, 0, 0
-	song mus_c_vs_legend_beast, 0, 0
+	song HellWaltz, 0, 0
 	song BuoyBaseGalaxy, 0, 0
 	song mus_route110, 0, 0
 	song mus_route120, 0, 0

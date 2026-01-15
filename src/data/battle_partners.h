@@ -246,3 +246,83 @@
             },
         },
     },
+#line 112
+    [DIFFICULTY_NORMAL][PARTNER_CYRUS_2] =
+    {
+#line 113
+        .trainerName = _("Cyrus"),
+#line 114
+        .trainerClass = TRAINER_CLASS_RIVAL,
+#line 115
+        .trainerPic = TRAINER_BACK_PIC_CYRUS,
+        .encounterMusic_gender =
+#line 117
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 119
+            .species = SPECIES_HONCHKROW,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 123
+            .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 6, 252),
+#line 122
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 121
+            .lvl = 43,
+#line 120
+            .nature = NATURE_IMPISH,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 124
+                MOVE_TOXIC,
+                MOVE_AERIAL_ACE,
+                MOVE_PROTECT,
+                MOVE_STEEL_WING,
+            },
+            },
+            {
+#line 129
+            .species = SPECIES_GLISCOR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 133
+            .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 252, 6),
+#line 132
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 131
+            .lvl = 44,
+#line 130
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 134
+                MOVE_THUNDER,
+                MOVE_PROTECT,
+                MOVE_SOLAR_BEAM,
+                MOVE_DRAGON_CLAW,
+            },
+            },
+            {
+#line 139
+            .species = SPECIES_CROBAT,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 143
+            .ev = TRAINER_PARTY_EVS(0, 252, 252, 0, 6, 0),
+#line 142
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 141
+            .lvl = 42,
+#line 140
+            .nature = NATURE_BRAVE,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 144
+                MOVE_LIGHT_SCREEN,
+                MOVE_PSYCHIC,
+                MOVE_REFLECT,
+                MOVE_METAL_CLAW,
+            },
+            },
+        },
+    },

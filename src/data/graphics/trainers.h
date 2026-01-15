@@ -553,6 +553,22 @@ const struct SpriteFrameImage gTrainerBackPicTable_Cyrus[] =
     {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
 };
 
+const struct SpriteFrameImage gTrainerBackPicTable_Savanna[] = //right now Savanna and Joy will use Cyrus' backsprite as a placeholder until I draw the proper sprites.
+{
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+};
+
+const struct SpriteFrameImage gTrainerBackPicTable_Joy[] =
+{
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 0, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 1, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 2, TRAINER_PIC_SIZE},
+    {gTrainerBackPic_Cyrus + TRAINER_PIC_SIZE * 3, TRAINER_PIC_SIZE},
+};
+
 // .backPic goes functionally unused, since none of these pics are compressed
 // and the place they would get extracted to gets overwritten later anyway
 // the casts are so they'll play nice with the strict struct definition
@@ -576,4 +592,6 @@ const struct TrainerBacksprite gTrainerBacksprites[] =
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_WALLY, 4, gTrainerBackPic_Wally, gTrainerBackPicTable_Wally, gTrainerPalette_Wally, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_STEVEN, 4, gTrainerBackPic_Steven, gTrainerBackPicTable_Steven, gTrainerPalette_Steven, sBackAnims_Hoenn),
     TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_CYRUS, 4, gTrainerBackPic_Cyrus, gTrainerBackPicTable_Cyrus, gTrainerBackPicPalette_Cyrus, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_SAVANNA, 4, gTrainerBackPic_Cyrus, gTrainerBackPicTable_Cyrus, gTrainerBackPicPalette_Cyrus, sBackAnims_Hoenn),
+    TRAINER_BACK_SPRITE(TRAINER_BACK_PIC_JOY, 4, gTrainerBackPic_Cyrus, gTrainerBackPicTable_Cyrus, gTrainerBackPicPalette_Cyrus, sBackAnims_Hoenn),
 };

@@ -288,7 +288,7 @@
 #define MUS_VICTORY_LEAGUE          355 // MUS_KACHI5
 #define MUS_ELWOOD_CITY             356 // MUS_PCC              // Unused, likely a test track.
 #define MUS_GSC_PEWTER              357 // MUS_NIBI             // Used in unused Contest Halls.
-#define MUS_C_VS_LEGEND_BEAST       358 // MUS_SUIKUN           // Unused, likely a test track.
+#define MUS_HELL_WALTZ       358 // MUS_SUIKUN           // Unused, likely a test track.
 #define MUS_ROUTE1                  359 // MUS_DOORO1           // Buoy Base Galaxy from SMG
 #define MUS_ROUTE110                360 // MUS_DOORO_X1         // Also used in Routes 112, 114, 117, 111's non-desert section and 118's west half.
 #define MUS_ROUTE120                361 // MUS_DOORO_X3         // Also used in Routes 121, 124, 125, 126, 127 and 128.
@@ -436,7 +436,7 @@
 #define MUS_RG_CREDITS              502 // MUS_RG_ENDING
 #define MUS_RG_ROUTE1               503 // MUS_RG_LOAD01
 #define MUS_RG_ROUTE24              504 // MUS_RG_OPENING
-#define MUS_ROUTE3               505 // MUS_RG_LOAD02
+#define MUS_ROUTE3                  505 // MUS_RG_LOAD02
 #define MUS_RG_ROUTE11              506 // MUS_RG_LOAD03
 #define MUS_RG_VICTORY_ROAD         507 // MUS_RG_CHAMP_R
 #define MUS_RG_VS_GYM_LEADER        508 // MUS_RG_VS_GYM

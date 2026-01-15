@@ -215,6 +215,7 @@ void NewGameInitData(void)
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
+    ClearFollowerNPCData();
     SetLastHealLocationWarp(HEAL_LOCATION_TWIGTON_CITY_PLAYERS_HOUSE2F);
 }
 

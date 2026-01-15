@@ -874,9 +874,9 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ABORTION_DEBATER_JUMBO ===
 Name: Grunt
-Class: Team Magma
+Class: Team Jumbo
 Pic: Magma Grunt M
-Gender: Female
+Gender: Male
 Music: Aqua
 Double Battle: No
 AI: Basic Trainer
@@ -891,7 +891,7 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_ABORTION_DEBATER_ASS ===
 Name: Grunt
-Class: Team Aqua
+Class: Team Ass
 Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
@@ -908,8 +908,8 @@ IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 === TRAINER_YOUR_MOM ===
 Name: Your mom
-Class: Aqua Leader
-Pic: Aqua Leader Archie
+Class: Jumbo Boss
+Pic: Aqua Grunt F
 Gender: Female
 Music: Aqua
 Items: Full Restore / Full Restore / Full Restore
@@ -929,13 +929,14 @@ Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BEN_SHAPIRO_TWIGTON ===
-Name: LEAH
+Name: Ben
 Class: Aqua Admin
-Pic: Hex Maniac
+Pic: Aqua Leader Archie
 Gender: Male
 Music: Aqua
+Items: Full Restore / Full Restore / Full Restore
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
 Groudon
 Level: 50

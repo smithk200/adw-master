@@ -192,8 +192,23 @@ TwigtonCity_EventScript_TwigLeadPlayerToLabRight::
 	return
 
 TwigtonCity_Event_Script_MultiBattle::
+	special SavePlayerParty
+	fadescreen FADE_TO_BLACK
 	special ChooseHalfPartyForBattle
+	waitstate
+	goto_if_ne VAR_RESULT, 0, TwigtonCity_Event_Script_DoCyrusMultiBattle
 	special LoadPlayerParty
+	goto TwigtonCity_Event_Script_ReadyForBattlePrompt
+
+TwigtonCity_Event_Script_ReadyForBattlePrompt::
+	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
+	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly, MSGBOX_DEFAULT
+	closemessage
+
+TwigtonCity_Event_Script_DoCyrusMultiBattle::
 	multi_2_vs_2 TRAINER_YOUR_MOM, TwigtonCity_Text_YourMomSpeaks, TRAINER_BEN_SHAPIRO_TWIGTON, TwigtonCity_Text_BenShapiro_Speaks, PARTNER_CYRUS
 	switch VAR_RESULT
 	case 1, TwigtonCity_Event_Script_EventScript_DefeatedYourMomAndBen

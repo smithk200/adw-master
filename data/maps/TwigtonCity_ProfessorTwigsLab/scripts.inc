@@ -143,7 +143,6 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ScorbunnyBall::
 	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmStarterChoice::
-	waitmovement 0
 	showmonpic PLAYER_STARTER_SPECIES, 10, 3
 	goto_if_eq PLAYER_STARTER_NUM, 0, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmGrasshole
 	goto_if_eq PLAYER_STARTER_NUM, 1, TwigtonCity_ProfessorTwigsLab_EventScript_ConfirmSquirtle

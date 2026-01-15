@@ -6472,5 +6472,58 @@ DirectSoundWaveData_sd90_classical_whistle::
 DirectSoundWaveData_sd90_enhanced_delay_shaku::
 	.incbin "sound/direct_sound_samples/sd90_enhanced_delay_shaku.bin"
 	
+	.align 2
+DirectSoundWaveData_jazz_guitar::
+	.incbin "sound/direct_sound_samples/hg_091jazorgc3.bin"
 
-	
+	.align 2
+DirectSoundWaveData_wack_increase::
+	.incbin "sound/direct_sound_samples/increase.bin"
+
+	.align 2
+DirectSoundWaveData_wack_decrease::
+	.incbin "sound/direct_sound_samples/decrease.bin"
+
+	.align 2
+DirectSoundWaveData_clean_guitar::
+	.incbin "sound/direct_sound_samples/clean_guitar.bin"
+
+	.align 2
+DirectSoundWaveData_synth_bass::
+	.incbin "sound/direct_sound_samples/synthbass.bin"
+
+	.align 2
+DirectSoundWaveData_brightness_synth::
+	.incbin "sound/direct_sound_samples/brightness_synth.bin"
+
+	.align 2
+DirectSoundWaveData_muted_trumpet::
+	.incbin "sound/direct_sound_samples/muted_trumpet.bin"
+
+	.align 2
+DirectSoundWaveData_atmosphere_synth::
+	.incbin "sound/direct_sound_samples/atmosphere_synth.bin"
+
+	.align 2
+DirectSoundWaveData_synth_brass_1::
+	.incbin "sound/direct_sound_samples/synth_brass_1.bin"
+
+	.align 2
+DirectSoundWaveData_synth_brass_2::
+	.incbin "sound/direct_sound_samples/synth_brass_2.bin"
+
+	.align 2
+DirectSoundWaveData_goblins::
+	.incbin "sound/direct_sound_samples/goblins.bin"
+
+	.align 2
+DirectSoundWaveData_soundtrack::
+	.incbin "sound/direct_sound_samples/soundtrack.bin"
+
+	.align 2
+DirectSoundWaveData_crystal::
+	.incbin "sound/direct_sound_samples/crystal.bin"
+
+	.align 2
+DirectSoundWaveData_choir::
+	.incbin "sound/direct_sound_samples/choir.bin"

@@ -370,6 +370,17 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_FURRY] = { _("Furry"), 4 },
     [TRAINER_CLASS_CUE_BALL] = { _("Cue Ball"), 9 },
     [TRAINER_CLASS_MATT] = { _("Matt"), 15 },
+    [TRAINER_CLASS_TEAM_JUMBO] = { _("Team Jumbo"), 1},
+    [TRAINER_CLASS_TEAM_ASS] = { _("Team Ass"), 1},
+    [TRAINER_CLASS_TEAM_GALACTIC] = { _("Team"), 1},
+    [TRAINER_CLASS_JUMBO_ADMIN] = { _("Jumbo Admin"), 10},
+    [TRAINER_CLASS_ASS_ADMIN] = { _("Ass Admin"), 10},
+    [TRAINER_CLASS_GALACTIC_ADMIN] = { _("Admin"), 10},
+    [TRAINER_CLASS_JUMBO_BOSS] = { _("Jumbo Boss"), 20},
+    [TRAINER_CLASS_ASS_BOSS] = { _("Ass Boss"), 20},
+    [TRAINER_CLASS_GALACTIC_BOSS] = { _("Boss"), 20},
+    [TRAINER_CLASS_TEACHER] = { _("Teacher"), 2},
+    [TRAINER_CLASS_ELITE_FIVE] = { _("Elite Five"), 25, BALL_ULTRA },
 };
 
 static void (* const sTurnActionsFuncsTable[])(void) =
@@ -1416,6 +1427,8 @@ static void CB2_PreInitIngamePlayerPartnerBattle(void)
         *savedBattleTypeFlags = gBattleTypeFlags;
         gMain.savedCallback = CB2_PreInitIngamePlayerPartnerBattle;
         ShowPartyMenuToShowcaseMultiBattleParty();
+        if (!PlayerHasFollowerNPC() || !FollowerNPCIsBattlePartner() || (FNPC_NPC_FOLLOWER_PARTY_PREVIEW && FollowerNPCIsBattlePartner()))
+            ShowPartyMenuToShowcaseMultiBattleParty();
         break;
     case 1:
         if (!gPaletteFade.active)

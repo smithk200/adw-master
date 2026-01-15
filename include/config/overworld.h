@@ -21,6 +21,10 @@
 #define GEN_6_XY GEN_6
 #define GEN_6_ORAS GEN_LATEST + 1
 
+// These defines only make a distinction for OW_ALTERED_TIME_RATIO
+#define GEN_8_PLA                       GEN_LATEST + 2
+#define TIME_DEBUG                      GEN_LATEST + 3
+
 // PC settings
 #define OW_PC_PRESS_B               GEN_LATEST // In Gen4, pressing B when holding a Pokémon is equivalent to placing it. In Gen3, it gives the "You're holding a Pokémon!" error.
 #define OW_PC_JAPAN_WALDA_ICONS     TRUE       // In the US release of Emerald, the Cross, Bolt, and Plusle icons for Walda's wallpapers were left blank from the Japan release. Setting this to TRUE will restore them.

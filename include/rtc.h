@@ -83,12 +83,17 @@
     #define NIGHT_HOUR_END     6
 #endif
 
-#define TIME_MORNING           0
-#define TIME_DAY               1
-#define TIME_EVENING           2
-#define TIME_NIGHT             3
+enum TimeOfDay
+{
+    TIME_MORNING,
+    TIME_DAY,
+    TIME_EVENING,
+    TIME_NIGHT,
+    TIMES_OF_DAY_COUNT,
+};
 
 extern struct Time gLocalTime;
+extern const s32 sNumDaysInMonths[MONTH_COUNT];
 
 void RtcDisableInterrupts(void);
 void RtcRestoreInterrupts(void);

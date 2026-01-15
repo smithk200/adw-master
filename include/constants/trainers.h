@@ -194,7 +194,9 @@
 #define TRAINER_BACK_PIC_RUBY_SAPPHIRE_MAY      5
 #define TRAINER_BACK_PIC_WALLY                  6
 #define TRAINER_BACK_PIC_STEVEN                 7
-#define TRAINER_BACK_PIC_CYRUS                 8
+#define TRAINER_BACK_PIC_CYRUS                  8
+#define TRAINER_BACK_PIC_SAVANNA                9
+#define TRAINER_BACK_PIC_JOY                    10
 
 #define FACILITY_CLASS_HIKER                 0x0
 #define FACILITY_CLASS_AQUA_GRUNT_M          0x1
@@ -435,7 +437,19 @@
 #define TRAINER_CLASS_FURRY          0x47
 #define TRAINER_CLASS_CUE_BALL       0x48
 #define TRAINER_CLASS_MATT           0x49
-#define TRAINER_CLASS_COUNT          0x4a
+
+#define TRAINER_CLASS_TEAM_JUMBO         0x4A
+#define TRAINER_CLASS_TEAM_ASS           0x4B
+#define TRAINER_CLASS_TEAM_GALACTIC      0x4C
+#define TRAINER_CLASS_JUMBO_ADMIN         0x4D
+#define TRAINER_CLASS_ASS_ADMIN           0x4E
+#define TRAINER_CLASS_GALACTIC_ADMIN      0x4F
+#define TRAINER_CLASS_JUMBO_BOSS          0x50
+#define TRAINER_CLASS_ASS_BOSS            0x51
+#define TRAINER_CLASS_GALACTIC_BOSS       0x52
+#define TRAINER_CLASS_TEACHER             0x53
+#define TRAINER_CLASS_ELITE_FIVE          0x54
+#define TRAINER_CLASS_COUNT          0x55
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music

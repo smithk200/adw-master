@@ -880,6 +880,33 @@ static const struct SpriteTemplate sTrainerBackSpriteTemplates[] =
         .affineAnims = gAffineAnims_BattleSpritePlayerSide,
         .callback = SpriteCB_BattleSpriteStartSlideLeft,
     },
+    [TRAINER_BACK_PIC_CYRUS] = {
+    .tileTag = TAG_NONE,
+    .paletteTag = 0,
+    .oam = &gOamData_BattleSpritePlayerSide,
+    .anims = NULL,
+    .images = gTrainerBackPicTable_Cyrus,
+    .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+    .callback = SpriteCB_BattleSpriteStartSlideLeft,
+},
+    [TRAINER_BACK_PIC_SAVANNA] = {
+    .tileTag = TAG_NONE,
+    .paletteTag = 0,
+    .oam = &gOamData_BattleSpritePlayerSide,
+    .anims = NULL,
+    .images = gTrainerBackPicTable_Cyrus,
+    .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+    .callback = SpriteCB_BattleSpriteStartSlideLeft,
+},
+    [TRAINER_BACK_PIC_JOY] = {
+    .tileTag = TAG_NONE,
+    .paletteTag = 0,
+    .oam = &gOamData_BattleSpritePlayerSide,
+    .anims = NULL,
+    .images = gTrainerBackPicTable_Cyrus,
+    .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+    .callback = SpriteCB_BattleSpriteStartSlideLeft,
+},
 };
 
 #define NUM_SECRET_BASE_CLASSES 5
@@ -3455,7 +3482,8 @@ u8 GetMonsStateToDoubles_2(void)
     s32 aliveCount = 0;
     s32 i;
 
-    if (OW_DOUBLE_APPROACH_WITH_ONE_MON)
+    if (OW_DOUBLE_APPROACH_WITH_ONE_MON
+     || FollowerNPCIsBattlePartner())
         return PLAYER_HAS_TWO_USABLE_MONS;
 
     for (i = 0; i < PARTY_SIZE; i++)
@@ -5794,6 +5822,8 @@ u16 GetBattleBGM(void)
             return MUS_SANDSTORM;
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
+        case TRAINER_CLASS_JUMBO_BOSS:  //MUST GO BEFORE JUMBO ADMIN!!!
+            return MUS_HELL_WALTZ;
         case TRAINER_CLASS_FR_RIVAL:
             return MUS_SANDSTORM;
         case TRAINER_CLASS_RIVAL:
@@ -5816,7 +5846,7 @@ u16 GetBattleBGM(void)
             return MUS_VS_FRY;
         case TRAINER_CLASS_MATT:
             return MUS_DEJA_VU;
-        default:
+        default:            
             return MUS_RG_VS_TRAINER;
         }
     }

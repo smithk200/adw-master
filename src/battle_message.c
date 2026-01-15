@@ -84,6 +84,8 @@ static const u8 sText_LegendaryPkmnAppeared[] = _("You encountered a wild {B_OPP
 static const u8 sText_WildPkmnAppearedPause[] = _("You encountered a wild {B_OPPONENT_MON1_NAME}!{PAUSE 127}");
 static const u8 sText_TwoWildPkmnAppeared[] = _("Oh! A wild {B_OPPONENT_MON1_NAME} and {B_OPPONENT_MON2_NAME} appeared!\p");
 static const u8 sText_Trainer1WantsToBattle[] = _("{B_TRAINER1_NAME_WITH_CLASS}\nwould like to battle!\p");
+static const u8 sText_Trainer1WantsToBattleGalacticGrunt[] = _("Team Galactic Grunt\nwould like to battle!\p");
+static const u8 sText_Trainer1WantsToBattleGalacticAdminAndBoss[] = _("Galactic {B_TRAINER1_NAME_WITH_CLASS}\nwould like to battle!\p");
 static const u8 sText_LinkTrainerWantsToBattle[] = _("You are challenged by {B_LINK_OPPONENT1_NAME}!");
 static const u8 sText_TwoLinkTrainersWantToBattle[] = _("You are challenged by {B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}!");
 static const u8 sText_Trainer1SentOutPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} sent out {B_OPPONENT_MON1_NAME}!");
@@ -2061,6 +2063,8 @@ void BufferStringBattle(u16 stringID, u32 battler)
 {
     s32 i;
     const u8 *stringPtr = NULL;
+    u8 trainerClass;
+    trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
 
     gBattleMsgDataPtr = (struct BattleMsgData *)(&gBattleResources->bufferA[battler][4]);
     gLastUsedItem = gBattleMsgDataPtr->lastItem;
@@ -2112,6 +2116,10 @@ void BufferStringBattle(u16 stringID, u32 battler)
             }
             else
             {
+                if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)  //team galactic takes up too many characters for some reason
+                    stringPtr = sText_Trainer1WantsToBattleGalacticGrunt;
+                if ((trainerClass == TRAINER_CLASS_GALACTIC_ADMIN) || (trainerClass == TRAINER_CLASS_GALACTIC_BOSS))  //team galactic takes up too many characters for some reason
+                    stringPtr = sText_Trainer1WantsToBattleGalacticAdminAndBoss;
                 if (BATTLE_TWO_VS_ONE_OPPONENT)
                     stringPtr = sText_Trainer1WantsToBattle;
                 else if (gBattleTypeFlags & (BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER))
