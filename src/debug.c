@@ -85,6 +85,7 @@ enum FollowerNPCCreateDebugMenu
     DEBUG_FNPC_WALLY,
     DEBUG_FNPC_RED,
     DEBUG_FNPC_LEAF,
+    DEBUG_FNPC_CYRUS,
     DEBUG_FNPC_COUNT,
 };
 
@@ -429,6 +430,7 @@ static const u8 *const gFollowerNPCStringsTable[DEBUG_FNPC_COUNT] = {
     COMPOUND_STRING("Wally"),
     COMPOUND_STRING("Red"),
     COMPOUND_STRING("Leaf"),
+    COMPOUND_STRING("Cyrus"),
 };
 
 // Flags/Vars Menu
@@ -500,6 +502,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_FollowerNPCMenu_Create[] 
     [DEBUG_FNPC_WALLY] =   { gFollowerNPCStringsTable[DEBUG_FNPC_WALLY],   DebugAction_CreateFollowerNPC },
     [DEBUG_FNPC_RED] =     { gFollowerNPCStringsTable[DEBUG_FNPC_RED],     DebugAction_CreateFollowerNPC },
     [DEBUG_FNPC_LEAF] =    { gFollowerNPCStringsTable[DEBUG_FNPC_LEAF],    DebugAction_CreateFollowerNPC },
+    [DEBUG_FNPC_CYRUS] =    { gFollowerNPCStringsTable[DEBUG_FNPC_CYRUS],    DebugAction_CreateFollowerNPC },
     { NULL }
 };
 
@@ -3354,6 +3357,7 @@ static const u32 gDebugFollowerNPCGraphics[] =
     OBJ_EVENT_GFX_WALLY,
     OBJ_EVENT_GFX_RED,
     OBJ_EVENT_GFX_LEAF,
+    OBJ_EVENT_GFX_CYRUS,
 };
 
 static void DebugAction_CreateFollowerNPC(u8 taskId)
