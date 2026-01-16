@@ -841,35 +841,47 @@ EVs: 128 Def/ 128 SpD / 252 Spe
 - Bite
 - Howl
 
-=== TRAINER_MATT ===
-Name: MATT
-Class: Aqua Admin
-Pic: Aqua Admin M
-Gender: Male
+=== TRAINER_COMMANDER_MARS_STONEVEIL ===
+Name: Mars
+Class: Galactic Admin
+Pic: Mars
+Gender: Female
 Music: Aqua
 Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Mightyena
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Zubat
+Level: 22
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Golbat
-Level: 34
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+Glameow
+Level: 23
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_ZANDER ===
-Name: ZANDER
-Class: Black Belt
-Pic: Black Belt
+Luxio
+Level: 23
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- Spark
+- Ice Fang
+- Confuse Ray
+- Bite
+
+=== TRAINER_GALACTIC_GRUNT_STONEVEIL_1 ===
+Name: Grunt
+Class: Team Galactic
+Pic: Galactic Grunt M
 Gender: Male
-Music: Intense
+Music: Aqua
 Double Battle: No
 AI: Check Bad Move
 
-Hariyama
-Level: 31
+Zubat
+Level: 19
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Dustox
+Level: 20
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ABORTION_DEBATER_JUMBO ===
@@ -950,22 +962,34 @@ Registeel
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
-=== TRAINER_DAISY ===
-Name: DAISY
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
+=== TRAINER_CYRUS_1 ===
+Name: Cyrus
+Class: Galactic Boss
+Pic: Cyrus
+Gender: Male
+Music: Male
 Double Battle: No
-AI: Check Bad Move
+AI: Smart Trainer
 
-Shroomish
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Honchkrow
+Level: 50
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Sneasel
+Level: 50
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
+
+Bruxish
+Level: 50
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
+
+Gyarados
+Level: 50
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
+
+Golbat
+Level: 50
+IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 === TRAINER_ROSE_1 ===
 Name: ROSE

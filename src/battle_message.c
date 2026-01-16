@@ -78,6 +78,8 @@ static const u8 sText_PlayerBattledToDrawVsTwo[] = _("You battled to a draw agai
 static const u8 sText_WildFled[] = _("{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} fled!"); //not in gen 5+, replaced with match was forfeited text
 static const u8 sText_TwoWildFled[] = _("{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME} fled!"); //not in gen 5+, replaced with match was forfeited text
 static const u8 sText_PlayerDefeatedLinkTrainerTrainer1[] = _("You defeated {B_TRAINER1_NAME_WITH_CLASS}!\p");
+static const u8 sText_PlayerDefeatedLinkTrainerGalactic[] = _("You defeated Team Galactic Grunt!");
+static const u8 sText_PlayerDefeatedLinkTrainerGalacticBoss[] = _("You defeated Galactic {B_TRAINER1_NAME_WITH_CLASS}!");
 static const u8 sText_OpponentMon1Appeared[] = _("{B_OPPONENT_MON1_NAME} appeared!\p");
 static const u8 sText_WildPkmnAppeared[] = _("You encountered a wild {B_OPPONENT_MON1_NAME}!\p");
 static const u8 sText_LegendaryPkmnAppeared[] = _("You encountered a wild {B_OPPONENT_MON1_NAME}!\p");
@@ -85,12 +87,15 @@ static const u8 sText_WildPkmnAppearedPause[] = _("You encountered a wild {B_OPP
 static const u8 sText_TwoWildPkmnAppeared[] = _("Oh! A wild {B_OPPONENT_MON1_NAME} and {B_OPPONENT_MON2_NAME} appeared!\p");
 static const u8 sText_Trainer1WantsToBattle[] = _("{B_TRAINER1_NAME_WITH_CLASS}\nwould like to battle!\p");
 static const u8 sText_Trainer1WantsToBattleGalacticGrunt[] = _("Team Galactic Grunt\nwould like to battle!\p");
-static const u8 sText_Trainer1WantsToBattleGalacticAdminAndBoss[] = _("Galactic {B_TRAINER1_NAME_WITH_CLASS}\nwould like to battle!\p");
+//static const u8 sText_Trainer1WantsToBattleGalacticGrunt[] = _("Go fuck yourself!\nYou fucking suck!\p");
+static const u8 sText_Trainer1WantsToBattleGalacticBoss[] = _("Galactic Boss {B_TRAINER1_NAME_WITH_CLASS}\nwould like to battle!\p");
 static const u8 sText_LinkTrainerWantsToBattle[] = _("You are challenged by {B_LINK_OPPONENT1_NAME}!");
 static const u8 sText_TwoLinkTrainersWantToBattle[] = _("You are challenged by {B_LINK_OPPONENT1_NAME} and {B_LINK_OPPONENT2_NAME}!");
 static const u8 sText_Trainer1SentOutPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} sent out {B_OPPONENT_MON1_NAME}!");
 static const u8 sText_Trainer1SentOutTwoPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} sent out {B_OPPONENT_MON1_NAME} and {B_OPPONENT_MON2_NAME}!");
 static const u8 sText_Trainer1SentOutPkmn2[] = _("{B_TRAINER1_NAME_WITH_CLASS} sent out {B_BUFF1}!");
+static const u8 sText_Trainer1SentOutPkmnGalactic[] = _("Team Galactic Grunt sent out {B_BUFF1}!");
+static const u8 sText_Trainer1SentOutPkmnGalacticBoss[] = _("Galactic {B_TRAINER1_NAME_WITH_CLASS} sent out {B_BUFF1}!");
 static const u8 sText_LinkTrainerSentOutPkmn[] = _("{B_LINK_OPPONENT1_NAME} sent out {B_OPPONENT_MON1_NAME}!");
 static const u8 sText_LinkTrainerSentOutTwoPkmn[] = _("{B_LINK_OPPONENT1_NAME} sent out {B_OPPONENT_MON1_NAME} and {B_OPPONENT_MON2_NAME}!");
 static const u8 sText_TwoLinkTrainersSentOutPkmn[] = _("{B_LINK_OPPONENT1_NAME} sent out {B_LINK_OPPONENT_MON1_NAME}! {B_LINK_OPPONENT2_NAME} sent out {B_LINK_OPPONENT_MON2_NAME}!");
@@ -110,6 +115,8 @@ static const u8 sText_PkmnComeBack[] = _("{B_BUFF1}, come back!");
 static const u8 sText_PkmnOkComeBack[] = _("OK, {B_BUFF1}! Come back!");
 static const u8 sText_PkmnGoodComeBack[] = _("Good job, {B_BUFF1}! Come back!");
 static const u8 sText_Trainer1WithdrewPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} withdrew {B_BUFF1}!");
+static const u8 sText_Trainer1WithdrewPkmnGalactic[] = _("Team Galactic Grunt withdrew {B_BUFF1}!");
+static const u8 sText_Trainer1WithdrewPkmnGalacticBoss[] = _("Galactic {B_TRAINER1_NAME_WITH_CLASS} withdrew {B_BUFF1}!");
 static const u8 sText_LinkTrainer1WithdrewPkmn[] = _("{B_LINK_OPPONENT1_NAME} withdrew {B_BUFF1}!");
 static const u8 sText_LinkTrainer2WithdrewPkmn[] = _("{B_LINK_SCR_TRAINER_NAME} withdrew {B_BUFF1}!");
 static const u8 sText_WildPkmnPrefix[] = _("The wild ");
@@ -517,8 +524,8 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_STATSWONTDECREASE2]                   = COMPOUND_STRING("{B_DEF_NAME_WITH_PREFIX}'s stats won't go any lower!"),
     [STRINGID_PKMNSXBLOCKSY2]                       = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} blocks {B_CURRENT_MOVE}!"), //not in gen 5+, ability popup
     [STRINGID_PKMNSXWOREOFF]                        = COMPOUND_STRING("{B_ATK_TEAM1} team's {B_BUFF1} wore off!"),
-    [STRINGID_PKMNRAISEDDEFALITTLE]                 = COMPOUND_STRING("{B_ATK_PREFIX1}'s {B_CURRENT_MOVE} raised DEFENSE a little!"), //expansion doesn't use anymore
-    [STRINGID_PKMNRAISEDSPDEFALITTLE]               = COMPOUND_STRING("{B_ATK_PREFIX1}'s {B_CURRENT_MOVE} raised SP. DEF a little!"), //expansion doesn't use anymore
+    [STRINGID_PKMNRAISEDDEFALITTLE]                 = COMPOUND_STRING("{B_ATK_PREFIX1}'s {B_CURRENT_MOVE} raised Defense a little!"), //expansion doesn't use anymore
+    [STRINGID_PKMNRAISEDSPDEFALITTLE]               = COMPOUND_STRING("{B_ATK_PREFIX1}'s {B_CURRENT_MOVE} raised Sp. Def a little!"), //expansion doesn't use anymore
     [STRINGID_THEWALLSHATTERED]                     = COMPOUND_STRING("The wall shattered!"), //not in gen5+, uses "your teams light screen wore off!" etc instead
     [STRINGID_PKMNSXPREVENTSYSZ]                    = COMPOUND_STRING("{B_ATK_NAME_WITH_PREFIX}'s {B_ATK_ABILITY} prevents {B_DEF_NAME_WITH_PREFIX2}'s {B_DEF_ABILITY} from working!"),
     [STRINGID_PKMNSXCUREDITSYPROBLEM]               = COMPOUND_STRING("{B_SCR_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY} cured its {B_BUFF1} problem!"), //not in gen 5+, ability popup
@@ -1474,7 +1481,7 @@ const u8 gText_Body[] = _("Body");
 const u8 gText_Judgment[] = _("{B_BUFF1}{CLEAR 13}Judgment{CLEAR 13}{B_BUFF2}");
 static const u8 sText_TwoTrainersSentPkmn[] = _("{B_TRAINER1_NAME_WITH_CLASS} sent out {B_OPPONENT_MON1_NAME}!\p{B_TRAINER2_NAME_WITH_CLASS} sent out {B_OPPONENT_MON2_NAME}!");
 static const u8 sText_Trainer2SentOutPkmn[] = _("{B_TRAINER2_NAME_WITH_CLASS} sent out {B_BUFF1}!");
-static const u8 sText_TwoTrainersWantToBattle[] = _("You are challenged by {B_TRAINER1_NAME_WITH_CLASS} and {B_TRAINER2_NAME_WITH_CLASS}!\p");
+static const u8 sText_TwoTrainersWantToBattle[] = _("You are challenged by {B_TRAINER1_NAME_WITH_CLASS}\nand {B_TRAINER2_NAME_WITH_CLASS}!\p");
 static const u8 sText_InGamePartnerSentOutZGoN[] = _("{B_PARTNER_NAME_WITH_CLASS} sent out {B_PLAYER_MON2_NAME}! Go, {B_PLAYER_MON1_NAME}!");
 
 const u16 gBattlePalaceFlavorTextTable[] =
@@ -1500,6 +1507,8 @@ const u8 *const gRefereeStringsTable[] =
 
 static const u8 sText_Trainer1Fled[] = _( "{PLAY_SE SE_FLEE}{B_TRAINER1_NAME_WITH_CLASS} fled!");
 static const u8 sText_PlayerLostAgainstTrainer1[] = _("You lost to {B_TRAINER1_NAME_WITH_CLASS}!");
+static const u8 sText_PlayerLostAgainstTrainerGalactic[] = _("You lost to Team Galactic Grunt!");
+static const u8 sText_PlayerLostAgainstTrainerGalacticBoss[] = _("You lost to Galactic {B_TRAINER1_NAME_WITH_CLASS}!");
 static const u8 sText_PlayerBattledToDrawTrainer1[] = _("You battled to a draw against {B_TRAINER1_NAME_WITH_CLASS}!");
 const u8 gText_RecordBattleToPass[] = _("Would you like to record your battle\non your Frontier Pass?");
 const u8 gText_BattleRecordedOnPass[] = _("{B_PLAYER_NAME}'s battle result was recorded\non the Frontier Pass.");
@@ -2063,8 +2072,7 @@ void BufferStringBattle(u16 stringID, u32 battler)
 {
     s32 i;
     const u8 *stringPtr = NULL;
-    u8 trainerClass;
-    trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
+    u32 trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
 
     gBattleMsgDataPtr = (struct BattleMsgData *)(&gBattleResources->bufferA[battler][4]);
     gLastUsedItem = gBattleMsgDataPtr->lastItem;
@@ -2116,10 +2124,6 @@ void BufferStringBattle(u16 stringID, u32 battler)
             }
             else
             {
-                if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)  //team galactic takes up too many characters for some reason
-                    stringPtr = sText_Trainer1WantsToBattleGalacticGrunt;
-                if ((trainerClass == TRAINER_CLASS_GALACTIC_ADMIN) || (trainerClass == TRAINER_CLASS_GALACTIC_BOSS))  //team galactic takes up too many characters for some reason
-                    stringPtr = sText_Trainer1WantsToBattleGalacticAdminAndBoss;
                 if (BATTLE_TWO_VS_ONE_OPPONENT)
                     stringPtr = sText_Trainer1WantsToBattle;
                 else if (gBattleTypeFlags & (BATTLE_TYPE_MULTI | BATTLE_TYPE_INGAME_PARTNER))
@@ -2127,7 +2131,12 @@ void BufferStringBattle(u16 stringID, u32 battler)
                 else if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
                     stringPtr = sText_TwoTrainersWantToBattle;
                 else
-                    stringPtr = sText_Trainer1WantsToBattle;
+                    if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)  //team galactic takes up too many characters for some reason
+                        stringPtr = sText_Trainer1WantsToBattleGalacticGrunt;
+                    else if ((trainerClass == TRAINER_CLASS_GALACTIC_BOSS))  //team galactic takes up too many characters for some reason
+                        stringPtr = sText_Trainer1WantsToBattleGalacticBoss;
+                    else
+                        stringPtr = sText_Trainer1WantsToBattle;
             }
         }
         else
@@ -2212,7 +2221,12 @@ void BufferStringBattle(u16 stringID, u32 battler)
             }
             else
             {
-                stringPtr = sText_Trainer1WithdrewPkmn;
+                if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)  //team galactic takes up too many characters for some reason
+                        stringPtr = sText_Trainer1WithdrewPkmnGalactic;
+                else if (trainerClass == TRAINER_CLASS_GALACTIC_BOSS)  //team galactic takes up too many characters for some reason
+                    stringPtr = sText_Trainer1WithdrewPkmnGalacticBoss;
+                else
+                    stringPtr = sText_Trainer1WithdrewPkmn;
             }
         }
         break;
@@ -2260,7 +2274,12 @@ void BufferStringBattle(u16 stringID, u32 battler)
                 }
                 else
                 {
-                    stringPtr = sText_Trainer1SentOutPkmn2;
+                    if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)  //team galactic takes up too many characters for some reason
+                        stringPtr = sText_Trainer1SentOutPkmnGalactic;
+                    else if (trainerClass == TRAINER_CLASS_GALACTIC_BOSS) //team galactic takes up too many characters for some reason
+                        stringPtr = sText_Trainer1SentOutPkmnGalacticBoss;
+                    else
+                        stringPtr = sText_Trainer1SentOutPkmn2;
                 }
             }
         }
@@ -2316,10 +2335,10 @@ void BufferStringBattle(u16 stringID, u32 battler)
                 switch (gBattleTextBuff1[0])
                 {
                 case B_OUTCOME_WON:
-                    stringPtr = sText_PlayerDefeatedLinkTrainerTrainer1;
+                        stringPtr = sText_PlayerDefeatedLinkTrainerTrainer1;
                     break;
                 case B_OUTCOME_LOST:
-                    stringPtr = sText_PlayerLostAgainstTrainer1;
+                        stringPtr = sText_PlayerLostAgainstTrainer1;
                     break;
                 case B_OUTCOME_DREW:
                     stringPtr = sText_PlayerBattledToDrawTrainer1;
@@ -2331,10 +2350,20 @@ void BufferStringBattle(u16 stringID, u32 battler)
                 switch (gBattleTextBuff1[0])
                 {
                 case B_OUTCOME_WON:
-                    stringPtr = sText_PlayerDefeatedLinkTrainer;
+                    if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)  //team galactic takes up too many characters for some reason
+                        stringPtr = sText_PlayerDefeatedLinkTrainerGalactic;
+                    else if (trainerClass == TRAINER_CLASS_GALACTIC_BOSS) //team galactic takes up too many characters for some reason
+                        stringPtr = sText_PlayerDefeatedLinkTrainerGalacticBoss;
+                    else
+                        stringPtr = sText_PlayerDefeatedLinkTrainer;
                     break;
                 case B_OUTCOME_LOST:
-                    stringPtr = sText_PlayerLostAgainstLinkTrainer;
+                    if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)  //team galactic takes up too many characters for some reason
+                        stringPtr = sText_PlayerLostAgainstTrainerGalactic;
+                    else if (trainerClass == TRAINER_CLASS_GALACTIC_BOSS) //team galactic takes up too many characters for some reason
+                        stringPtr = sText_PlayerLostAgainstTrainerGalacticBoss;
+                    else
+                        stringPtr = sText_PlayerLostAgainstLinkTrainer;
                     break;
                 case B_OUTCOME_DREW:
                     stringPtr = sText_PlayerBattledToDrawLinkTrainer;

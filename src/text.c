@@ -205,7 +205,7 @@ static const struct FontInfo sFontInfos[] =
         .shadowColor = 3,
     },
     [FONT_NARROW] = {
-        .fontFunction = FontFunc_Narrow,
+        .fontFunction = FontFunc_SmallNarrow,
         .maxLetterWidth = 5,
         .maxLetterHeight = 16,
         .letterSpacing = 0,
@@ -746,13 +746,13 @@ static u16 FontFunc_Small(struct TextPrinter *textPrinter)
     return RenderText(textPrinter);
 }
 
-static u16 FontFunc_Normal(struct TextPrinter *textPrinter)
+static u16 FontFunc_Normal(struct TextPrinter *textPrinter) //use this to change the font
 {
     struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
 
     if (subStruct->hasFontIdBeenSet == FALSE)
     {
-        subStruct->fontId = FONT_NORMAL;
+        subStruct->fontId = FONT_SHORT;
         subStruct->hasFontIdBeenSet = TRUE;
     }
     return RenderText(textPrinter);

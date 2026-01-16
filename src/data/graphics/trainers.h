@@ -295,6 +295,21 @@ const u32 gTrainerPalette_Rocky[] = INCBIN_U32("graphics/trainers/front_pics/roc
 const u32 gTrainerFrontPic_Cyrus[] = INCBIN_U32("graphics/trainers/front_pics/cyrus.4bpp.lz");
 const u32 gTrainerPalette_Cyrus[] = INCBIN_U32("graphics/trainers/front_pics/cyrus.gbapal.lz");
 
+const u32 gTrainerFrontPic_Mars[] = INCBIN_U32("graphics/trainers/front_pics/mars.4bpp.lz");
+const u32 gTrainerPalette_Mars[] = INCBIN_U32("graphics/trainers/front_pics/mars.gbapal.lz");
+
+const u32 gTrainerFrontPic_Jupiter[] = INCBIN_U32("graphics/trainers/front_pics/jupiter.4bpp.lz");
+const u32 gTrainerPalette_Jupiter[] = INCBIN_U32("graphics/trainers/front_pics/jupiter.gbapal.lz");
+
+const u32 gTrainerFrontPic_Saturn[] = INCBIN_U32("graphics/trainers/front_pics/saturn.4bpp.lz");
+const u32 gTrainerPalette_Saturn[] = INCBIN_U32("graphics/trainers/front_pics/saturn.gbapal.lz");
+
+const u32 gTrainerFrontPic_Galactic_grunt_m[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_m.4bpp.lz");
+const u32 gTrainerPalette_Galactic_grunt_m[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_m.gbapal.lz");
+
+const u32 gTrainerFrontPic_Galactic_grunt_f[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_f.4bpp.lz");
+const u32 gTrainerPalette_Galactic_grunt_f[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_f.gbapal.lz");
+
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
 const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
@@ -423,6 +438,11 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_MATT_WALSH, gTrainerFrontPic_MattWalsh, gTrainerPalette_MattWalsh),
     TRAINER_SPRITE(TRAINER_PIC_ROCKY, gTrainerFrontPic_Rocky, gTrainerPalette_Rocky),
     TRAINER_SPRITE(TRAINER_PIC_CYRUS, gTrainerFrontPic_Cyrus, gTrainerPalette_Cyrus),
+    TRAINER_SPRITE(TRAINER_PIC_MARS, gTrainerFrontPic_Mars, gTrainerPalette_Mars),
+    TRAINER_SPRITE(TRAINER_PIC_JUPITER, gTrainerFrontPic_Jupiter, gTrainerPalette_Jupiter),
+    TRAINER_SPRITE(TRAINER_PIC_SATURN, gTrainerFrontPic_Saturn, gTrainerPalette_Saturn),
+    TRAINER_SPRITE(TRAINER_PIC_GALACTIC_GRUNT_M, gTrainerFrontPic_Galactic_grunt_m, gTrainerPalette_Galactic_grunt_m),
+    TRAINER_SPRITE(TRAINER_PIC_GALACTIC_GRUNT_F, gTrainerFrontPic_Galactic_grunt_f, gTrainerPalette_Galactic_grunt_f),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

@@ -8,10 +8,12 @@ WashingtonCity_Gym_EventScript_Joe::
 	end
 
 WashingtonCity_Gym_TextJoeIntro:
-	.string "Hullo there!\n"
-	.string "I’m Joe Biden, leader of Washington City.\p"
-	.string "I don’t know what it means to be strong\n"
-	.string "or how I got to be the Gym Leader.\p"
+	.string "Hullo there!\p"
+	.string "I’m Joe Biden, leader of\n"
+	.string "Washington City.\p"
+	.string "I don’t know what it means\n"
+	.string "to be strong or how I got to\l"
+	.string "be the Gym Leader.\p"
 	.string "Wait, what was I saying?\p"
 	.string "Oh yeah…\p"
 	.string "I’ve got hairy legs that\n"
