@@ -5796,6 +5796,18 @@
       "secondary_tileset": "gTileset_Saffroncity",
       "border_filepath": "data/layouts/StoneveilPowerPlant/border.bin",
       "blockdata_filepath": "data/layouts/StoneveilPowerPlant/map.bin"
+    },
+    {
+      "id": "LAYOUT_STONEVEIL_POWER_PLANT_1F",
+      "name": "StoneveilPowerPlant_1F_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Powerplant",
+      "border_filepath": "data/layouts/StoneveilPowerPlant_1F/border.bin",
+      "blockdata_filepath": "data/layouts/StoneveilPowerPlant_1F/map.bin"
     }
   ]
 }

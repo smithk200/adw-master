@@ -1236,3 +1236,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/StoneveilTown/scripts.inc"
 
 	.include "data/maps/StoneveilPowerPlant/scripts.inc"
+
+	.include "data/maps/StoneveilPowerPlant_1F/scripts.inc"

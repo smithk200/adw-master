@@ -17,7 +17,7 @@
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
-    "gMapGroup_IndoorRoute4",
+    "gMapGroup_IndoorMiscellaneous",
     "gMapGroup_IndoorRoute111",
     "gMapGroup_IndoorRoute112",
     "gMapGroup_IndoorRoute114",
@@ -248,8 +248,9 @@
     "EverGrandeCity_PokemonCenter_2F",
     "EverGrandeCity_PokemonLeague_2F"
   ],
-  "gMapGroup_IndoorRoute4": [
-    "Route4PokemonCenter1F"
+  "gMapGroup_IndoorMiscellaneous": [
+    "Route4PokemonCenter1F",
+    "StoneveilPowerPlant_1F"
   ],
   "gMapGroup_IndoorRoute111": [
     "Route111_WinstrateFamilysHouse",
