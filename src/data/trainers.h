@@ -1980,7 +1980,7 @@ F_TRAINER_FEMALE |
 #line 848
 F_TRAINER_FEMALE | 
 #line 849
-            TRAINER_ENCOUNTER_MUSIC_AQUA,
+            TRAINER_ENCOUNTER_MUSIC_GALACTIC,
 #line 850
         .items = { ITEM_SUPER_POTION },
 #line 851
@@ -2043,7 +2043,7 @@ F_TRAINER_FEMALE |
         .trainerPic = TRAINER_PIC_GALACTIC_GRUNT_M,
         .encounterMusic_gender =
 #line 875
-            TRAINER_ENCOUNTER_MUSIC_AQUA,
+            TRAINER_ENCOUNTER_MUSIC_GALACTIC,
 #line 876
         .doubleBattle = FALSE,
 #line 877
@@ -2288,7 +2288,7 @@ F_TRAINER_FEMALE |
         .trainerPic = TRAINER_PIC_CYRUS,
         .encounterMusic_gender =
 #line 970
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+            TRAINER_ENCOUNTER_MUSIC_GALACTIC,
 #line 971
         .doubleBattle = FALSE,
 #line 972

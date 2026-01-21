@@ -5544,6 +5544,16 @@ BattleScript_LocalTrainerBattleWonNoMoney::
 	waitstate
 	printstring STRINGID_TRAINER1LOSETEXT
 	end2
+BattleScript_LocalTrainerBattleWonGalacticBoss::
+	jumpifbattletype BATTLE_TYPE_TWO_OPPONENTS, BattleScript_LocalTwoTrainersDefeated
+	printstring STRINGID_PLAYERDEFEATEDGALACTICBOSS
+	waitstate
+	goto BattleScript_LocalBattleWonLoseTexts
+BattleScript_LocalTrainerBattleWonTeamGalactic::
+	jumpifbattletype BATTLE_TYPE_TWO_OPPONENTS, BattleScript_LocalTwoTrainersDefeated
+	printstring STRINGID_PLAYERDEFEATEDTEAMGALACTIC
+	waitstate
+	goto BattleScript_LocalBattleWonLoseTexts
 BattleScript_LocalTwoTrainersDefeated::
 	printstring STRINGID_TWOENEMIESDEFEATED
 BattleScript_LocalBattleWonLoseTexts::

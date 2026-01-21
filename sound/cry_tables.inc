@@ -2425,15 +2425,14 @@ gCryTable::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
-.if CLOVER_POKEMON == TRUE
 .if P_FAMILY_GRASSHOLE == TRUE
-	cry Cry_Bulbasaur
-	cry Cry_Bulbasaur
-	cry Cry_Bulbasaur
+	cry Cry_Grasshole
+	cry Cry_Analgae
+	cry Cry_Rectreem
 .endif
 .if P_FAMILY_FISHNISM == TRUE
-	cry Cry_Bulbasaur
-	cry Cry_Bulbasaur
+	cry Cry_Fishnism
+	cry Cry_Sjwhale
 .endif
 .if P_FAMILY_LARVADES == TRUE
 	cry Cry_Bulbasaur
@@ -2465,8 +2464,9 @@ gCryTable::
 	cry Cry_Bulbasaur
 	cry Cry_Bulbasaur
 .endif
-
-.endif
+.if P_FAMILY_CAROLINE == TRUE
+	cry Cry_Caroline
+.endif @ P_FAMILY_CAROLINE
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4896,15 +4896,14 @@ gCryTable_Reverse::
 .if P_FAMILY_PECHARUNT == TRUE
 	cry_reverse Cry_Pecharunt
 .endif @ P_FAMILY_PECHARUNT
-.if CLOVER_POKEMON == TRUE
 .if P_FAMILY_GRASSHOLE == TRUE
-	cry_reverse Cry_Bulbasaur
-	cry_reverse Cry_Bulbasaur
-	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Grasshole
+	cry_reverse Cry_Analgae
+	cry_reverse Cry_Rectreem
 .endif
 .if P_FAMILY_FISHNISM == TRUE
-	cry_reverse Cry_Bulbasaur
-	cry_reverse Cry_Bulbasaur
+	cry_reverse Cry_Fishnism
+	cry_reverse Cry_Sjwhale
 .endif
 .if P_FAMILY_LARVADES == TRUE
 	cry_reverse Cry_Bulbasaur
@@ -4936,5 +4935,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Bulbasaur
 	cry_reverse Cry_Bulbasaur
 .endif
-.endif
+.if P_FAMILY_CAROLINE == TRUE
+	cry_reverse Cry_Caroline
+.endif @ P_FAMILY_CAROLINE
 .endif @ P_CRIES_ENABLED

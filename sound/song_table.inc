@@ -358,7 +358,7 @@ gSongTable::
 	song mus_victory_gym_leader, 0, 0
 	song mus_victory_league, 0, 0
 	song ElwoodCity, 0, 0
-	song mus_gsc_pewter, 0, 0
+	song mus_dp_encounter_galactic, 0, 0
 	song HellWaltz, 0, 0
 	song BuoyBaseGalaxy, 0, 0
 	song mus_route110, 0, 0
@@ -367,16 +367,16 @@ gSongTable::
 	song Stoneveil_Town, 0, 0
 	song mus_gym, 0, 0
 	song mus_surf, 0, 0
-	song mus_petalburg_woods, 0, 0
+	song mus_dp_vs_galactic, 0, 0
 	song mus_level_up, 2, 2
 	song mus_heal, 2, 2
 	song mus_obtain_badge, 2, 2
 	song mus_obtain_item, 2, 2
 	song mus_evolved, 2, 2
 	song mus_obtain_tmhm, 2, 2
-	song mus_lilycove_museum, 0, 0
+	song mus_dp_vs_galactic_commander, 0, 0
 	song mus_slts, 0, 0
-	song mus_oceanic_museum, 0, 0
+	song mus_dp_vs_galactic_boss, 0, 0
 	song mus_evolution_intro, 2, 2
 	song mus_evolution, 0, 0
 	song mus_move_deleted, 2, 2

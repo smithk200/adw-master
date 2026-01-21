@@ -846,7 +846,7 @@ Name: Mars
 Class: Galactic Admin
 Pic: Mars
 Gender: Female
-Music: Aqua
+Music: Galactic
 Items: Super Potion
 Double Battle: No
 AI: Basic Trainer
@@ -872,7 +872,7 @@ Name: Grunt
 Class: Team Galactic
 Pic: Galactic Grunt M
 Gender: Male
-Music: Aqua
+Music: Galactic
 Double Battle: No
 AI: Check Bad Move
 
@@ -967,7 +967,7 @@ Name: Cyrus
 Class: Galactic Boss
 Pic: Cyrus
 Gender: Male
-Music: Male
+Music: Galactic
 Double Battle: No
 AI: Smart Trainer
 

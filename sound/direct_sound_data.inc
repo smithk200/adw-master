@@ -6234,6 +6234,29 @@ Cry_Pecharunt::
 Cry_Caroline::
 	.incbin "sound/direct_sound_samples/cries/caroline.bin"
 .endif @ P_FAMILY_CAROLINE
+
+.if P_FAMILY_GRASSHOLE == TRUE
+	.align 2
+Cry_Grasshole::
+	.incbin "sound/direct_sound_samples/cries/grasshole.bin"
+
+	.align 2
+Cry_Analgae::
+	.incbin "sound/direct_sound_samples/cries/analgae.bin"
+
+	.align 2
+Cry_Rectreem::
+	.incbin "sound/direct_sound_samples/cries/rectreem.bin"
+.endif
+.if P_FAMILY_FISHNISM == TRUE
+	.align 2
+Cry_Fishnism::
+	.incbin "sound/direct_sound_samples/cries/fishnism.bin"
+
+	.align 2
+Cry_Sjwhale::
+	.incbin "sound/direct_sound_samples/cries/sjwhale.bin"
+.endif
 .endif @ P_CRIES_ENABLED
 
 	.align 2

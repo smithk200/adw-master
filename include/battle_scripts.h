@@ -860,5 +860,7 @@ extern const u8 BattleScript_EffectFickleBeam[];
 extern const u8 BattleScript_FickleBeamDoubled[];
 extern const u8 BattleScript_EffectHolyDuty[];
 extern const u8 BattleScript_EffectSpeedAccuracyUp[];
+extern const u8 BattleScript_LocalTrainerBattleWonGalacticBoss[];
+extern const u8 BattleScript_LocalTrainerBattleWonTeamGalactic[];
 
 #endif // GUARD_BATTLE_SCRIPTS_H

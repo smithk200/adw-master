@@ -11836,6 +11836,75 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_ROUTE5",
+          "base_label": "gRoute5_0",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 22,
+                "max_level": 26,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 22,
+                "max_level": 26,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 23,
+                "max_level": 27,
+                "species": "SPECIES_BIDOOF"
+              },
+              {
+                "min_level": 22,
+                "max_level": 27,
+                "species": "SPECIES_KRICKETOT"
+              },
+              {
+                "min_level": 22,
+                "max_level": 27,
+                "species": "SPECIES_KRICKETUNE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_STARAVIA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_STARAVIA"
+              },
+              {
+                "min_level": 22,
+                "max_level": 26,
+                "species": "SPECIES_LUXIO"
+              },
+              {
+                "min_level": 22,
+                "max_level": 29,
+                "species": "SPECIES_LUXIO"
+              }
+            ]
+          }
         }
       ]
     },

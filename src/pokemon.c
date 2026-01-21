@@ -5846,6 +5846,12 @@ u16 GetBattleBGM(void)
             return MUS_VS_FRY;
         case TRAINER_CLASS_MATT:
             return MUS_DEJA_VU;
+        case TRAINER_CLASS_TEAM_GALACTIC:
+            return MUS_DP_VS_GALACTIC;
+        case TRAINER_CLASS_GALACTIC_ADMIN:
+            return MUS_VS_GALACTIC_COMMANDER;
+        case TRAINER_CLASS_GALACTIC_BOSS:
+            return MUS_VS_CYRUS;
         default:            
             return MUS_RG_VS_TRAINER;
         }

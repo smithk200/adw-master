@@ -284,34 +284,34 @@
 #define MUS_DEJA_VU                 351 // MUS_DEJA_VU          // Deja Vu from Initial D
 #define MUS_CAUGHT                  352 // MUS_KACHI22
 #define MUS_VICTORY_WILD            353 // MUS_KACHI2
-#define MUS_VICTORY_GYM_LEADER      354 // MUS_KACHI3           // Also used in Frontier Brain victories.
+#define MUS_VICTORY_GYM_LEADER      354 // MUS_KACHI3
 #define MUS_VICTORY_LEAGUE          355 // MUS_KACHI5
 #define MUS_ELWOOD_CITY             356 // MUS_PCC              // Unused, likely a test track.
-#define MUS_GSC_PEWTER              357 // MUS_NIBI             // Used in unused Contest Halls.
-#define MUS_HELL_WALTZ       358 // MUS_SUIKUN           // Unused, likely a test track.
+#define MUS_ENCOUNTER_GALACTIC      357 // MUS_NIBI             // ADW. Used for encountering Team Galactic.
+#define MUS_HELL_WALTZ              358 // MUS_SUIKUN           // ADW. Used for the final fight between Cyrus, Ben Shapiro, and your mom.
 #define MUS_ROUTE1                  359 // MUS_DOORO1           // Buoy Base Galaxy from SMG
 #define MUS_ROUTE110                360 // MUS_DOORO_X1         // Also used in Routes 112, 114, 117, 111's non-desert section and 118's west half.
 #define MUS_ROUTE120                361 // MUS_DOORO_X3         // Also used in Routes 121, 124, 125, 126, 127 and 128.
 #define MUS_PETALBURG               362 // MUS_MACHI_S2         // Also used in Mr. Briney's House and Pretty Petal Flower Shop.
 #define MUS_STONEVEIL               363 // MUS_MACHI_S4         // Also used in Lavaridge Town.
-#define MUS_GYM                     364 // MUS_GIM
+#define MUS_GYM                     364 // MUS_GIM              //ADW. Used for the Gyms. Please don't delete.
 #define MUS_SURF                    365 // MUS_NAMINORI
-#define MUS_PETALBURG_WOODS         366 // MUS_DAN01            // Also used in Artisan Cave, Fiery Path, Granite Cave, Jagged Pass, Marine Cave, Rusturf Tunnel, Scorched Slab and Terra Cave.
+#define MUS_DP_VS_GALACTIC         366 // MUS_DAN01            // ADW. Used for facing against Team Galactic.
 #define MUS_LEVEL_UP                367 // MUS_FANFA1
 #define MUS_HEAL                    368 // MUS_ME_ASA
 #define MUS_OBTAIN_BADGE            369 // MUS_ME_BACHI
 #define MUS_OBTAIN_ITEM             370 // MUS_FANFA4
 #define MUS_EVOLVED                 371 // MUS_FANFA5           // Also used in egg hatching, trades and upon catching.
 #define MUS_OBTAIN_TMHM             372 // MUS_ME_WAZA
-#define MUS_LILYCOVE_MUSEUM         373 // MUS_BIJYUTU          // Also used in the Battle Frontier's Ranking Hall.
-#define MUS_SLTS                    374 // MUS_DOORO_X4         // Also used in Route 123 and Birch's intro speech. Smells Like Teen Spirit
-#define MUS_OCEANIC_MUSEUM          375 // MUS_FUNE_KAN
+#define MUS_VS_GALACTIC_COMMANDER    373 // MUS_BIJYUTU          // ADW. Used for facing Commanders Mars, Jupiter, and Saturn.
+#define MUS_SLTS                    374 // MUS_DOORO_X4         // ADW. Used in Twig's intro speech and Twigton City. "SLTS" stands for "Smells Like Teen Spirit"
+#define MUS_VS_CYRUS          375 // MUS_FUNE_KAN
 #define MUS_EVOLUTION_INTRO         376 // MUS_ME_SHINKA        // Also used in egg hatching.
 #define MUS_EVOLUTION               377 // MUS_SHINKA           // Also used in egg hatching and trades.
 #define MUS_MOVE_DELETED            378 // MUS_ME_WASURE
 #define MUS_ENCOUNTER_GIRL          379 // MUS_SYOUJOEYE
 #define MUS_ENCOUNTER_MALE          380 // MUS_BOYEYE
-#define MUS_CONTRA                  381 // MUS_CONTRA            // Contra by Moon Hooch
+#define MUS_CONTRA                  381 // MUS_CONTRA            // ADW. Contra by Moon Hooch
 #define MUS_FORTREE                 382 // MUS_MACHI_S3         // Also used in Secret Bases and the Safari Zone's entrance.
 #define MUS_BIRCH_LAB               383 // MUS_ODAMAKI
 #define MUS_B_TOWER_RS              384 // MUS_B_TOWER          // Used in Battle Tents, Trainer Hill and Battle Frontier's lounges and Exchange Service Corner.
@@ -335,7 +335,7 @@
 #define MUS_ROUTE119                402 // MUS_GRANROAD         // Also used in Routes 129, 130, 131, 132, 133, 134 and 118's east half.
 #define MUS_CYCLING                 403 // MUS_CYCLING
 #define MUS_POKE_MART               404 // MUS_FRIENDLY         // Also used in Lilycove's Department Store.
-#define MUS_HAMMERSOCK              405 // MUS_MISHIRO          // Hammersock
+#define MUS_HAMMERSOCK              405 // MUS_MISHIRO          // ADW: Hammersock.
 #define MUS_MT_CHIMNEY              406 // MUS_TOZAN            // Also used in Desert Underpass, Mirage Tower, Seafloor Cavern and Sky Pillar.
 #define MUS_ENCOUNTER_FEMALE        407 // MUS_GIRLEYE
 #define MUS_LILYCOVE                408 // MUS_MINAMO           // Also used in Pacifidlog Town and the Diving Treasure Hunter's house.

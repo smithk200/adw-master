@@ -3404,7 +3404,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_VICTORY_GYM_LEADER)       \
     X(MUS_VICTORY_LEAGUE)           \
     X(MUS_ELWOOD_CITY)            \
-    X(MUS_GSC_PEWTER)               \
+    X(MUS_ENCOUNTER_GALACTIC)               \
     X(MUS_HELL_WALTZ)        \
     X(MUS_ROUTE1)                 \
     X(MUS_ROUTE110)                 \
@@ -3413,16 +3413,16 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_STONEVEIL)                   \
     X(MUS_GYM)                      \
     X(MUS_SURF)                     \
-    X(MUS_PETALBURG_WOODS)          \
+    X(MUS_DP_VS_GALACTIC)          \
     X(MUS_LEVEL_UP)                 \
     X(MUS_HEAL)                     \
     X(MUS_OBTAIN_BADGE)             \
     X(MUS_OBTAIN_ITEM)              \
     X(MUS_EVOLVED)                  \
     X(MUS_OBTAIN_TMHM)              \
-    X(MUS_LILYCOVE_MUSEUM)          \
+    X(MUS_VS_GALACTIC_COMMANDER)          \
     X(MUS_SLTS)                 \
-    X(MUS_OCEANIC_MUSEUM)           \
+    X(MUS_VS_CYRUS)           \
     X(MUS_EVOLUTION_INTRO)          \
     X(MUS_EVOLUTION)                \
     X(MUS_MOVE_DELETED)             \
