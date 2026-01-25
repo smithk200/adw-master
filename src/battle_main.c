@@ -4361,8 +4361,6 @@ static void HandleTurnActionSelectionState(void)
                     {
                         BtlController_EmitChooseItem(battler, BUFFER_A, gBattleStruct->battlerPartyOrders[battler]);
                         MarkBattlerForControllerExec(battler);
-                        if (battler == 0) //ONLY when the player uses an item. Should be either 0 or 1...?
-                            gItemLimit++;
                     }
                     break;
                 case B_ACTION_SWITCH:
@@ -5483,13 +5481,13 @@ static void HandleEndTurn_BattleWon(void)
         else
             PlayBGM(MUS_VICTORY_TRAINER);
     }
-    else if (trainerClass == TRAINER_CLASS_TEAM_GALACTIC)
+    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && (trainerClass == TRAINER_CLASS_TEAM_GALACTIC))
     {
         BattleStopLowHpSound();
         gBattlescriptCurrInstr = BattleScript_LocalTrainerBattleWonTeamGalactic;
         PlayProperBGM();
     }
-    else if (trainerClass == TRAINER_CLASS_GALACTIC_BOSS)
+    else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER && (trainerClass == TRAINER_CLASS_GALACTIC_BOSS))
     {
         BattleStopLowHpSound();
         gBattlescriptCurrInstr = BattleScript_LocalTrainerBattleWonGalacticBoss;

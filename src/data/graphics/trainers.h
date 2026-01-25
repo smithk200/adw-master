@@ -310,6 +310,9 @@ const u32 gTrainerPalette_Galactic_grunt_m[] = INCBIN_U32("graphics/trainers/fro
 const u32 gTrainerFrontPic_Galactic_grunt_f[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_f.4bpp.lz");
 const u32 gTrainerPalette_Galactic_grunt_f[] = INCBIN_U32("graphics/trainers/front_pics/galactic_grunt_f.gbapal.lz");
 
+const u32 gTrainerFrontPic_BenShapiro[] = INCBIN_U32("graphics/trainers/front_pics/ben_shapiro.4bpp.lz");
+const u32 gTrainerPalette_BenShapiro[] = INCBIN_U32("graphics/trainers/front_pics/ben_shapiro.gbapal.lz");
+
 const u8 gTrainerBackPic_Brendan[] = INCBIN_U8("graphics/trainers/back_pics/brendan.4bpp");
 const u8 gTrainerBackPic_May[] = INCBIN_U8("graphics/trainers/back_pics/may.4bpp");
 const u8 gTrainerBackPic_Red[] = INCBIN_U8("graphics/trainers/back_pics/red.4bpp");
@@ -443,6 +446,7 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_SATURN, gTrainerFrontPic_Saturn, gTrainerPalette_Saturn),
     TRAINER_SPRITE(TRAINER_PIC_GALACTIC_GRUNT_M, gTrainerFrontPic_Galactic_grunt_m, gTrainerPalette_Galactic_grunt_m),
     TRAINER_SPRITE(TRAINER_PIC_GALACTIC_GRUNT_F, gTrainerFrontPic_Galactic_grunt_f, gTrainerPalette_Galactic_grunt_f),
+    TRAINER_SPRITE(TRAINER_PIC_BEN_SHAPIRO, gTrainerFrontPic_BenShapiro, gTrainerPalette_BenShapiro),
 };
 
 static const union AnimCmd sAnimCmd_Hoenn[] =

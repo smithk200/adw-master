@@ -277,5 +277,6 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_AUTO_HMS
 	setflag FLAG_MT_POMPOUS_HIDE_GRUNTS
 	setflag FLAG_HIDE_FRY_WASHINGTON_CITY
+	clearflag FLAG_USED_ITEM
 	call EventScript_ResetAllBerries
 	end

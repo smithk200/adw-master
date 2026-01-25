@@ -861,6 +861,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 Luxio
 Level: 23
+Ability: Intimidate
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Spark
 - Ice Fang
@@ -942,8 +943,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_BEN_SHAPIRO_TWIGTON ===
 Name: Ben
-Class: Aqua Admin
-Pic: Aqua Leader Archie
+Class: Jumbo Admin
+Pic: Ben Shapiro
 Gender: Male
 Music: Aqua
 Items: Full Restore / Full Restore / Full Restore
@@ -972,23 +973,23 @@ Double Battle: No
 AI: Smart Trainer
 
 Honchkrow
-Level: 50
+Level: 40
 IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 Sneasel
-Level: 50
+Level: 40
 IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 Bruxish
-Level: 50
+Level: 40
 IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 Gyarados
-Level: 50
+Level: 40
 IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 Golbat
-Level: 50
+Level: 40
 IVs: 21 HP / 21 Atk / 21 Def / 21 SpA / 21 SpD / 21 Spe
 
 === TRAINER_ROSE_1 ===

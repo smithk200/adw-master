@@ -80,6 +80,12 @@ const struct SpritePalette sSpritePalettes_HealthBoxHealthBar[2] =
     {gBattleInterface_BallDisplayPal, TAG_HEALTHBAR_PAL}
 };
 
+const struct SpritePalette sSpritePalettes_HealthBoxHealthBarCustom[2] =
+{
+    {gHealthboxPlayerPal, TAG_HEALTHBOX_PAL},
+    {gHealthbarPlayerPal, TAG_HEALTHBAR_PAL}
+};
+
 const struct CompressedSpriteSheet gSpriteSheet_EnemyShadow =
 {
     .data = gEnemyMonShadow_Gfx, .size = 0x80, .tag = TAG_SHADOW_TILE
@@ -747,8 +753,8 @@ bool8 BattleLoadAllHealthBoxesGfx(u8 state)
     {
         if (state == 1)
         {
-            LoadSpritePalette(&sSpritePalettes_HealthBoxHealthBar[0]);
-            LoadSpritePalette(&sSpritePalettes_HealthBoxHealthBar[1]);
+            LoadSpritePalette(&sSpritePalettes_HealthBoxHealthBarCustom[0]);
+            LoadSpritePalette(&sSpritePalettes_HealthBoxHealthBarCustom[1]);
             LoadIndicatorSpritesGfx();
             CategoryIcons_LoadSpritesGfx();
         }

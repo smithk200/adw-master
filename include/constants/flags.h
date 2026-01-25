@@ -43,36 +43,36 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_TALKED_TO_MOM_BEGINNING_OF_GAME    0x20 // Unused Flag
-#define FLAG_RECIEVED_STARTER    0x21 // Unused Flag
-#define FLAG_HIDE_TWIG_IN_HIS_CITY   0x22 // Unused Flag
-#define FLAG_HIDE_TWIG_IN_HIS_LAB    0x23 // Unused Flag
-#define FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK    0x24 // Unused Flag
-#define FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK    0x25 // Unused Flag
-#define FLAG_GRASSHOLE_BALL    0x26 // Unused Flag
-#define FLAG_SQUIRTLE_BALL    0x27 // Unused Flag
-#define FLAG_SCORBUNNY_BALL    0x28 // Unused Flag
-#define FLAG_HIDE_BRITTANY_IN_TWIGS_LAB     0x29 // Unused Flag
-#define FLAG_LOST_FIRST_BATTLE    0x2A // Unused Flag
-#define FLAG_EXP_SHARE_ADW    0x2B // Unused Flag
-#define FLAG_GEN_ALPHA_KID    0x2C // Unused Flag
-#define FLAG_MATT_WALSH_GFY_WOODS    0x2D // Unused Flag
-#define FLAG_TREE_1_ELWOOD_CITY_CUT    0x2E // Unused Flag
-#define FLAG_TREE_2_ELWOOD_CITY_CUT    0x2F // Unused Flag
-#define FLAG_TREE_HAMMERSOCK_CUT_1    0x30 // Unused Flag
-#define FLAG_TREE_HAMMERSOCK_CUT_2    0x31 // Unused Flag
-#define FLAG_AUTO_HMS    0x32 // Unused Flag
-#define FLAG_IN_GAME_TRADE_BUIZEL    0x33 // Unused Flag
-#define FLAG_DAVES_CAVE_CHEESE_CUT_1    0x34 // Unused Flag
-#define FLAG_DAVES_CAVE_CHEESE_CUT_2    0x35 // Unused Flag
-#define FLAG_DAVES_CAVE_CHEESE_CUT_3    0x36 // Unused Flag
-#define FLAG_DAVES_CAVE_CHEESE_CUT_4    0x37 // Unused Flag
-#define FLAG_DAVES_CAVE_CHEESE_CUT_5    0x38 // Unused Flag
-#define FLAG_MT_POMPOUS_HIDE_GRUNTS    0x39 // Unused Flag
-#define FLAG_MT_POMPOUS_HIDE_FOSSILS    0x3A // Unused Flag
-#define FLAG_HIDE_FRY_WASHINGTON_CITY    0x3B // Unused Flag
-#define FLAG_FRY_WASHINGTON_CITY_SCENE    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
+#define FLAG_TALKED_TO_MOM_BEGINNING_OF_GAME    0x20
+#define FLAG_RECIEVED_STARTER    0x21
+#define FLAG_HIDE_TWIG_IN_HIS_CITY   0x22
+#define FLAG_HIDE_TWIG_IN_HIS_LAB    0x23
+#define FLAG_HIDE_FRY_ROUTE1_HAMMERSOCK    0x24
+#define FLAG_DEFEATED_FRY_ROUTE1_HAMMERSOCK    0x25
+#define FLAG_GRASSHOLE_BALL    0x26
+#define FLAG_SQUIRTLE_BALL    0x27
+#define FLAG_SCORBUNNY_BALL    0x28
+#define FLAG_HIDE_BRITTANY_IN_TWIGS_LAB     0x29
+#define FLAG_LOST_FIRST_BATTLE    0x2A
+#define FLAG_EXP_SHARE_ADW    0x2B
+#define FLAG_GEN_ALPHA_KID    0x2C
+#define FLAG_MATT_WALSH_GFY_WOODS    0x2D
+#define FLAG_TREE_1_ELWOOD_CITY_CUT    0x2E
+#define FLAG_TREE_2_ELWOOD_CITY_CUT    0x2F
+#define FLAG_TREE_HAMMERSOCK_CUT_1    0x30
+#define FLAG_TREE_HAMMERSOCK_CUT_2    0x31
+#define FLAG_AUTO_HMS    0x32
+#define FLAG_IN_GAME_TRADE_BUIZEL    0x33
+#define FLAG_DAVES_CAVE_CHEESE_CUT_1    0x34
+#define FLAG_DAVES_CAVE_CHEESE_CUT_2    0x35
+#define FLAG_DAVES_CAVE_CHEESE_CUT_3    0x36
+#define FLAG_DAVES_CAVE_CHEESE_CUT_4    0x37
+#define FLAG_DAVES_CAVE_CHEESE_CUT_5    0x38
+#define FLAG_MT_POMPOUS_HIDE_GRUNTS    0x39
+#define FLAG_MT_POMPOUS_HIDE_FOSSILS    0x3A
+#define FLAG_HIDE_FRY_WASHINGTON_CITY    0x3B
+#define FLAG_FRY_WASHINGTON_CITY_SCENE    0x3C
+#define FLAG_USED_ITEM    0x3D
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag

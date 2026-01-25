@@ -127,7 +127,7 @@
 #line 55
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 54
-            .lvl = 43,
+            .lvl = 50,
 #line 53
             .nature = NATURE_IMPISH,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -148,7 +148,7 @@
 #line 65
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 64
-            .lvl = 44,
+            .lvl = 50,
 #line 63
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -169,7 +169,7 @@
 #line 75
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 74
-            .lvl = 42,
+            .lvl = 50,
 #line 73
             .nature = NATURE_BRAVE,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -270,7 +270,7 @@
 #line 122
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 121
-            .lvl = 43,
+            .lvl = 50,
 #line 120
             .nature = NATURE_IMPISH,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -291,7 +291,7 @@
 #line 132
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 131
-            .lvl = 44,
+            .lvl = 50,
 #line 130
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -312,7 +312,7 @@
 #line 142
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 141
-            .lvl = 42,
+            .lvl = 50,
 #line 140
             .nature = NATURE_BRAVE,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
