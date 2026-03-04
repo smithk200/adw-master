@@ -4,7 +4,88 @@
 MtPompousB2F_MapScripts::
 	.byte 0
 
+MtPompousB2F_JumboGrunt1::
+	trainerbattle_single TRAINER_JUMBO_GRUNT_MT_POMPOUS_1, MtPompousB2F_Text_JumboGrunt_1_Intro, MtPompousB2F_Text_JumboGrunt_1_Defeat
+	msgbox MtPompousB2F_Text_JumboGrunt_1_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtPompousB2F_AssGrunt1::
+	trainerbattle_single TRAINER_ASS_GRUNT_MT_POMPOUS_1, MtPompousB2F_Text_AssGrunt_1_Intro, MtPompousB2F_Text_AssGrunt_1_Defeat
+	msgbox MtPompousB2F_Text_AssGrunt_1_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtPompousB2F_JumboGrunt2::
+	trainerbattle_single TRAINER_JUMBO_GRUNT_MT_POMPOUS_2, MtPompousB2F_Text_JumboGrunt_2_Intro, MtPompousB2F_Text_JumboGrunt_2_Defeat
+	msgbox MtPompousB2F_Text_JumboGrunt_2_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+MtPompousB2F_AssGrunt2::
+	trainerbattle_single TRAINER_ASS_GRUNT_MT_POMPOUS_2, MtPompousB2F_Text_AssGrunt_2_Intro, MtPompousB2F_Text_AssGrunt_2_Defeat
+	msgbox MtPompousB2F_Text_AssGrunt_2_PostBattle, MSGBOX_AUTOCLOSE
+	end
+
 MtPompousB2F_MapScript_AbortionTriggerLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, MtPompousB2F_Movement_Player_Abortion_Scene
+	waitmovement 0
+	clearflag FLAG_MT_POMPOUS_HIDE_GRUNTS
+	addobject 4
+	addobject 5
+	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_JumboGruntEnter
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_AssGruntEnter
+	waitmovement 0
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_AssGrunt_Talking
+	waitmovement 0
+	msgbox MtPompousB2F_Text_AssGrunt_1, MSGBOX_DEFAULT
+	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_JumboGrunt_Talking
+	waitmovement 0
+	msgbox MtPompousB2F_Text_JumboGrunt_1, MSGBOX_DEFAULT
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_AssGrunt_Talking
+	waitmovement 0
+	msgbox MtPompousB2F_Text_AssGrunt_2, MSGBOX_DEFAULT
+	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_JumboGrunt_Talking
+	waitmovement 0
+	msgbox MtPompousB2F_Text_JumboGrunt_2, MSGBOX_DEFAULT
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_AssGrunt_Talking
+	waitmovement 0
+	msgbox MtPompousB2F_Text_AssGrunt_3, MSGBOX_DEFAULT
+	applymovement LOCALID_ASS_GRUNT, Common_Movement_ExclamationMark
+	applymovement LOCALID_JUMBO_GRUNT, Common_Movement_ExclamationMark
+	waitmovement 0
+	turnobject 4, DIR_NORTH
+	turnobject 5, DIR_NORTH
+	waitmovement 0
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
+	waitmovement 0
+	msgbox MtPompousB2F_Text_AssGrunt_4, MSGBOX_DEFAULT
+	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
+	waitmovement 0
+	msgbox MtPompousB2F_Text_JumboGrunt_4, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ABORTION_DEBATER_JUMBO, MtPompousB2F_Text_JumboGrunt_AbortionDebater_Defeat
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
+	waitmovement 0
+	msgbox MtPompousB2F_Text_JumboGrunt_7, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ABORTION_DEBATER_ASS, MtPompousB2F_Text_AssGrunt_AbortionDebater_Defeat
+	setflag FLAG_MT_POMPOUS_HIDE_FOSSILS
+	removeobject 6 @why please why louis and shayna
+	removeobject 7 @why please why louis and shayna
+	msgbox MtPompousB2F_Text_PlayerTookFossils, MSGBOX_DEFAULT
+	applymovement LOCALID_JUMBO_GRUNT, Common_Movement_ExclamationMark
+	msgbox MtPompousB2F_Text_JumboGrunt_8, MSGBOX_DEFAULT
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
+	waitmovement 0
+	msgbox MtPompousB2F_Text_AssGrunt_9, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_MT_POMPOUS_B2F_STATE, 1
+	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_JumboGruntExitLeft
+	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_AssGruntExitLeft
+	waitmovement 0
+	setflag FLAG_MT_POMPOUS_HIDE_GRUNTS
+	removeobject 4
+	removeobject 5
+	release
+	end
+
+MtPompousB2F_MapScript_AbortionTriggerLeft_Old::
 	applymovement OBJ_EVENT_ID_PLAYER, MtPompousB2F_Movement_Player_Abortion_Scene
 	waitmovement 0
 	clearflag FLAG_MT_POMPOUS_HIDE_GRUNTS
@@ -119,29 +200,11 @@ MtPompousB2F_MapScript_AbortionTriggerRight::
 	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
 	waitmovement 0
 	msgbox MtPompousB2F_Text_JumboGrunt_4, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_ABORTION_DEBATER_JUMBO, MtPompousB2F_Text_JumboGrunt_AbortionDebater_Defeat
 	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
-	waitmovement 0
-	msgbox MtPompousB2F_Text_AssGrunt_5, MSGBOX_DEFAULT
-	applymovement LOCALID_JUMBO_GRUNT, Common_Movement_ExclamationMark
-	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
-	waitmovement 0
-	msgbox MtPompousB2F_Text_JumboGrunt_5, MSGBOX_DEFAULT
-	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
-	waitmovement 0
-	msgbox MtPompousB2F_Text_AssGrunt_6, MSGBOX_DEFAULT
-	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
-	waitmovement 0
-	msgbox MtPompousB2F_Text_JumboGrunt_6, MSGBOX_DEFAULT
-	applymovement LOCALID_ASS_GRUNT, Common_Movement_ExclamationMark
-	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
-	waitmovement 0
-	msgbox MtPompousB2F_Text_AssGrunt_7, MSGBOX_DEFAULT
-	msgbox MtPompousB2F_Text_AssGrunt_8, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_ABORTION_DEBATER_ASS, MtPompousB2F_Text_AssGrunt_AbortionDebater_Defeat
-	applymovement LOCALID_JUMBO_GRUNT, MtPompousB2F_Movement_Talking_Facing_Player
 	waitmovement 0
 	msgbox MtPompousB2F_Text_JumboGrunt_7, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_ABORTION_DEBATER_JUMBO, MtPompousB2F_Text_JumboGrunt_AbortionDebater_Defeat
+	trainerbattle_no_intro TRAINER_ABORTION_DEBATER_ASS, MtPompousB2F_Text_AssGrunt_AbortionDebater_Defeat
 	setflag FLAG_MT_POMPOUS_HIDE_FOSSILS
 	removeobject 6 @why please why louis and shayna
 	removeobject 7 @why please why louis and shayna
@@ -157,12 +220,10 @@ MtPompousB2F_MapScript_AbortionTriggerRight::
 	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_AssGruntExitRight
 	waitmovement 0
 	setflag FLAG_MT_POMPOUS_HIDE_GRUNTS
+	setflag FLAG_HIDE_OTHER_GRUNTS_MT_POMPOUS
 	removeobject 4
 	removeobject 5
 	release
-	end
-
-MtPompousB2F_AssGrunt1::
 	end
 
 MtPompousB2F_MapScript_HideGrunts::
@@ -384,3 +445,60 @@ MtPompousB2F_Text_JumboGrunt_8:
 MtPompousB2F_Text_AssGrunt_9:
 	.string "No, they were MY fossils!\p"
 	.string "Whatever, let's get out of here!$"
+
+MtPompousB2F_Text_JumboGrunt_1_Intro:
+	.string "Nothing can stop the plan of the mighty\n"
+	.string "Team Jumbo!$"
+
+MtPompousB2F_Text_JumboGrunt_1_Defeat:
+	.string "You beat my sacred Pokémon?\n"
+	.string "How could you!$"
+
+MtPompousB2F_Text_JumboGrunt_1_PostBattle:
+	.string "Team Jumbo's mission?\p"
+	.string "To save the world from the evil\n"
+	.string "ideas of Team Ass!$"
+
+MtPompousB2F_Text_AssGrunt_1_Intro:
+	.string "Team Ass will lead the world one\n"
+	.string "day!$"
+
+MtPompousB2F_Text_AssGrunt_1_Defeat:
+	.string "NO!\n"
+	.string "Not my precious Pokémon!$"
+
+MtPompousB2F_Text_AssGrunt_1_PostBattle:
+	.string "We, the great Team Ass, are going\n"
+	.string "to stop Team Jumbo once and for all!$"
+
+MtPompousB2F_Text_JumboGrunt_2_Intro:
+	.string "Children are being indoctrinated by Team\n"
+	.string "Ass' evil lies!\p"
+	.string "It's up to Team Jumbo to stop them, and\n"
+	.string "save our children!$"
+
+MtPompousB2F_Text_JumboGrunt_2_Defeat:
+	.string "Do you not care about the children?\p"
+	.string "How dare you get in our way!$"
+
+MtPompousB2F_Text_JumboGrunt_2_PostBattle:
+	.string "If only Team Ass would repent from their\n"
+	.string "evil ways and turn to God…\p"
+	.string "Then we would have peace, wouldn't\n"
+	.string "you think?$"
+
+MtPompousB2F_Text_AssGrunt_2_Intro:
+	.string "Team Jumbo indoctrinates children by teaching\n"
+	.string "about a magical sky daddy!\p"
+	.string "Are they serious?\n"
+	.string "Kids need to be taught the truth$"
+
+MtPompousB2F_Text_AssGrunt_2_Defeat:
+	.string "Do you not care about the children?\p"
+	.string "How dare you get in our way!$"
+
+MtPompousB2F_Text_AssGrunt_2_PostBattle:
+	.string "If only Team Jumbo would see the error\n"
+	.string "of their ways…\p"
+	.string "The world would be a much better place,\n"
+	.string "wouldn't you think?$"

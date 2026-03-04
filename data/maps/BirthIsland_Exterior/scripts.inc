@@ -27,7 +27,6 @@ BirthIsland_Exterior_EventScript_HideDeoxysAndPuzzle::
 	return
 
 BirthIsland_Exterior_EventScript_TryShowDeoxysPuzzle::
-	goto_if_set FLAG_DEFEATED_DEOXYS, Common_EventScript_NopReturn
 	clearflag FLAG_HIDE_BIRTH_ISLAND_DEOXYS_TRIANGLE
 	clearflag FLAG_DEOXYS_ROCK_COMPLETE
 	return
@@ -99,7 +98,6 @@ BirthIsland_Exterior_EventScript_Deoxys::
 	end
 
 BirthIsland_Exterior_EventScript_DefeatedDeoxys::
-	setflag FLAG_DEFEATED_DEOXYS
 	setvar VAR_0x8004, SPECIES_DEOXYS_NORMAL
 	goto Common_EventScript_LegendaryFlewAway
 	end

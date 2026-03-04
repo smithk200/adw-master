@@ -615,7 +615,10 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SATURN] =                   &gObjectEventGraphicsInfo_Saturn,
     [OBJ_EVENT_GFX_GALACTIC_GRUNT_M] =                   &gObjectEventGraphicsInfo_Galactic_grunt_m,
     [OBJ_EVENT_GFX_GALACTIC_GRUNT_F] =                   &gObjectEventGraphicsInfo_Galactic_grunt_f,
-
+     [OBJ_EVENT_GFX_ASS_GRUNT_M] =            &gObjectEventGraphicsInfo_AquaMemberM,
+    [OBJ_EVENT_GFX_ASS_GRUNT_F] =            &gObjectEventGraphicsInfo_AquaMemberF,
+    [OBJ_EVENT_GFX_JUMBO_GRUNT_F] =           &gObjectEventGraphicsInfo_MagmaMemberF,
+    [OBJ_EVENT_GFX_JUMBO_GRUNT_M] =           &gObjectEventGraphicsInfo_MagmaMemberM,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

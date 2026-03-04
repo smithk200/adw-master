@@ -5800,8 +5800,8 @@
     {
       "id": "LAYOUT_STONEVEIL_POWER_PLANT_1F",
       "name": "StoneveilPowerPlant_1F_Layout",
-      "width": 20,
-      "height": 20,
+      "width": 27,
+      "height": 21,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",

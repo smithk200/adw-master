@@ -6190,3 +6190,9 @@ static s32 Factorial(s32 n)
         f *= i;
     return f;
 }
+
+void BattleDebug_WonBattle(void)
+{
+    gBattleOutcome |= B_OUTCOME_WON;
+    gBattleMainFunc = sEndTurnFuncsTable[gBattleOutcome & 0x7F];
+}

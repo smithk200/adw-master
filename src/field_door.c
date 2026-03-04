@@ -74,6 +74,7 @@ static const u8 sDoorAnimTiles_HideoutElevator[] = INCBIN_U8("graphics/door_anim
 static const u16 sDoorNullPalette20[16] = {};
 static const u8 sDoorAnimTiles_SSAnne[] = INCBIN_U8("graphics/door_anims/ss_anne.4bpp");
 static const u16 sDoorNullPalette21[16] = {};
+static const u8 sDoorAnimTiles_Goldenrod[] = INCBIN_U8("graphics/door_anims/goldenrod.4bpp");
 
 // Doors from R/S dummied below
 static const u8 sDoorAnimTiles_Empty1[256 * 3] = {};

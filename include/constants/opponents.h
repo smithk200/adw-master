@@ -34,19 +34,19 @@
 #define TRAINER_JOE                          28 
 #define TRAINER_FRY_WASHINGTON_CITY          29
 #define TRAINER_COMMANDER_MARS_STONEVEIL     30
-#define TRAINER_GALACTIC_GRUNT_STONEVEIL_1                       31  //from Emerald
+#define TRAINER_GALACTIC_GRUNT_STONEVEIL_1   31
 #define TRAINER_ABORTION_DEBATER_JUMBO       32
 #define TRAINER_ABORTION_DEBATER_ASS         33
 #define TRAINER_YOUR_MOM                     34
-#define TRAINER_BEN_SHAPIRO_TWIGTON          35  //last in the ADW Trainer list
-#define TRAINER_CYRUS_1                        36
-#define TRAINER_ROSE_1                       37
+#define TRAINER_BEN_SHAPIRO_TWIGTON          35
+#define TRAINER_CYRUS_1                      36 //last in the ADW Trainer list
+#define TRAINER_ROSE_1                       37 //Emerald trainers
 #define TRAINER_FELIX                        38
 #define TRAINER_VIOLET                       39
-#define TRAINER_ROSE_2                       40
-#define TRAINER_ROSE_3                       41
-#define TRAINER_ROSE_4                       42
-#define TRAINER_ROSE_5                       43
+#define TRAINER_JUMBO_GRUNT_MT_POMPOUS_1     40 //ADW Trainers
+#define TRAINER_ASS_GRUNT_MT_POMPOUS_1       41
+#define TRAINER_JUMBO_GRUNT_MT_POMPOUS_2     42
+#define TRAINER_ASS_GRUNT_MT_POMPOUS_2       43
 #define TRAINER_DUSTY                        44 //ADW Trainer!
 #define TRAINER_CHIP                         45 //ADW Trainer!
 #define TRAINER_FOSTER                       46
@@ -54,9 +54,9 @@
 #define TRAINER_DUSTY_3                      48
 #define TRAINER_DUSTY_4                      49
 #define TRAINER_DUSTY_5                      50
-#define TRAINER_GABBY_AND_TY_1               51
-#define TRAINER_GABBY_AND_TY_2               52
-#define TRAINER_GABBY_AND_TY_3               53
+#define TRAINER_GALACTIC_GRUNT_STONEVEIL_2               51
+#define TRAINER_GALACTIC_GRUNT_STONEVEIL_3               52
+#define TRAINER_GALACTIC_GRUNT_STONEVEIL_4               53
 #define TRAINER_GABBY_AND_TY_4               54
 #define TRAINER_GABBY_AND_TY_5               55
 #define TRAINER_GABBY_AND_TY_6               56

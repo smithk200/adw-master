@@ -205,7 +205,7 @@ static const struct FontInfo sFontInfos[] =
         .shadowColor = 3,
     },
     [FONT_NARROW] = {
-        .fontFunction = FontFunc_SmallNarrow,
+        .fontFunction = FontFunc_Narrow,
         .maxLetterWidth = 5,
         .maxLetterHeight = 16,
         .letterSpacing = 0,
@@ -812,7 +812,7 @@ static u16 FontFunc_Narrow(struct TextPrinter *textPrinter)
 
     if (subStruct->hasFontIdBeenSet == FALSE)
     {
-        subStruct->fontId = FONT_NARROW;
+        subStruct->fontId = FONT_SHORT_NARROW;
         subStruct->hasFontIdBeenSet = TRUE;
     }
     return RenderText(textPrinter);
