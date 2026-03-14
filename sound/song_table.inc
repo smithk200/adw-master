@@ -383,7 +383,7 @@ gSongTable::
 	song mus_encounter_girl, 0, 0
 	song mus_encounter_male, 0, 0
 	song Contra, 0, 0
-	song mus_fortree, 0, 0
+	song battlerock_galaxy, 0, 0
 	song mus_birch_lab, 0, 0
 	song mus_b_tower_rs, 0, 0
 	song mus_encounter_swimmer, 0, 0

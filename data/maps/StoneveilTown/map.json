@@ -26,7 +26,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_JUMBO_GRUNT_M",
       "x": 15,
       "y": 13,
       "elevation": 0,
@@ -35,24 +35,24 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "0x0",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
-      "x": 0,
+      "graphics_id": "OBJ_EVENT_GFX_JUMBO_GRUNT_M",
+      "x": 2,
       "y": 15,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
+      "movement_range_x": 3,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StoneveilTown_EventScript_Grunt1",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_JUMBO_GRUNT_M",
       "x": 8,
       "y": 2,
       "elevation": 0,
@@ -61,11 +61,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StoneveilTown_EventScript_Grunt3",
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_M",
+      "graphics_id": "OBJ_EVENT_GFX_JUMBO_GRUNT_M",
       "x": 12,
       "y": 8,
       "elevation": 0,
@@ -74,15 +74,75 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "StoneveilTown_EventScript_Grunt4",
       "flag": "0"
     }
   ],
   "warp_events": [
-
+    {
+      "x": 3,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_STONEVEIL_TOWN_HOUSE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_STONEVEIL_TOWN_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_STONEVEIL_TOWN_HOUSE3",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_STONEVEIL_TOWN_HOUSE4",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_STONEVEIL_TOWN_POKEMON_CENTER",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "1",
+      "script": "StoneveilTown_EventScript_TriggerDirectionTop"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "StoneveilTown_EventScript_TriggerDirectionBottom"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "StoneveilTown_EventScript_Grunt2"
+    }
   ],
   "bg_events": [
 

@@ -5,8 +5,8 @@
     "gMapGroup_IndoorHammersock",
     "gMapGroup_IndoorElwood",
     "gMapGroup_IndoorWashington",
-    "gMapGroup_IndoorFallarbor",
-    "gMapGroup_IndoorVerdanturf",
+    "gMapGroup_IndoorStoneveil",
+    "gMapGroup_IndoorTorchwood",
     "gMapGroup_IndoorPacifidlog",
     "gMapGroup_IndoorPetalburg",
     "gMapGroup_IndoorSlateport",
@@ -37,21 +37,23 @@
   ],
   "gMapGroup_TownsAndRoutes": [
     "TwigtonCity",
-    "Route1",
     "Hammersock",
-    "Route2",
     "GFYWoods",
     "ElwoodCity",
-    "Route3",
     "DavesCave",
-    "Route4",
     "MtPompous1F",
     "MtPompousB1F",
     "MtPompousB2F",
     "WashingtonCity",
-    "Route5",
     "StoneveilTown",
-    "StoneveilPowerPlant"
+    "StoneveilPowerPlant",
+    "TorchwoodCity",
+    "Route1",
+    "Route2",
+    "Route3",
+    "Route4",
+    "Route5",
+    "Route6"
   ],
   "gMapGroup_IndoorTwigton": [
     "TwigtonCity_PlayersHouse2F",
@@ -78,26 +80,15 @@
   "gMapGroup_IndoorWashington": [
     "WashingtonCity_Gym"
   ],
-  "gMapGroup_IndoorFallarbor": [
-    "FallarborTown_Mart",
-    "FallarborTown_BattleTentLobby",
-    "FallarborTown_BattleTentCorridor",
-    "FallarborTown_BattleTentBattleRoom",
-    "FallarborTown_PokemonCenter_1F",
-    "FallarborTown_PokemonCenter_2F",
-    "FallarborTown_CozmosHouse",
-    "FallarborTown_MoveRelearnersHouse"
+  "gMapGroup_IndoorStoneveil": [
+    "StoneveilTown_House1",
+    "StoneveilTownHouse2",
+    "StoneveilTownHouse3",
+    "StoneveilTownHouse4",
+    "StoneveilTown_PokemonCenter"
   ],
-  "gMapGroup_IndoorVerdanturf": [
-    "VerdanturfTown_BattleTentLobby",
-    "VerdanturfTown_BattleTentCorridor",
-    "VerdanturfTown_BattleTentBattleRoom",
-    "VerdanturfTown_Mart",
-    "VerdanturfTown_PokemonCenter_1F",
-    "VerdanturfTown_PokemonCenter_2F",
-    "VerdanturfTown_WandasHouse",
-    "VerdanturfTown_FriendshipRatersHouse",
-    "VerdanturfTown_House"
+  "gMapGroup_IndoorTorchwood": [
+    "Route6_Torchwood_Connection"
   ],
   "gMapGroup_IndoorPacifidlog": [
     "PacifidlogTown_PokemonCenter_1F",
@@ -663,6 +654,23 @@
     "LavaridgeTown_Mart",
     "LavaridgeTown_PokemonCenter_1F",
     "LavaridgeTown_PokemonCenter_2F",
-    "GoldenrodCity"
+    "GoldenrodCity",
+    "FallarborTown_Mart",
+    "FallarborTown_BattleTentLobby",
+    "FallarborTown_BattleTentCorridor",
+    "FallarborTown_BattleTentBattleRoom",
+    "FallarborTown_PokemonCenter_1F",
+    "FallarborTown_PokemonCenter_2F",
+    "FallarborTown_CozmosHouse",
+    "FallarborTown_MoveRelearnersHouse",
+    "VerdanturfTown_BattleTentLobby",
+    "VerdanturfTown_BattleTentCorridor",
+    "VerdanturfTown_BattleTentBattleRoom",
+    "VerdanturfTown_Mart",
+    "VerdanturfTown_PokemonCenter_1F",
+    "VerdanturfTown_PokemonCenter_2F",
+    "VerdanturfTown_WandasHouse",
+    "VerdanturfTown_FriendshipRatersHouse",
+    "VerdanturfTown_House"
   ]
 }

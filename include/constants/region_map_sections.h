@@ -6,7 +6,7 @@
 #define MAPSEC_ELWOOD_CITY                 0x02
 #define MAPSEC_WASHINGTON_CITY               0x03
 #define MAPSEC_STONEVEIL_TOWN               0x04
-#define MAPSEC_VERDANTURF_TOWN              0x05
+#define MAPSEC_TORCHWOOD_CITY              0x05
 #define MAPSEC_PACIFIDLOG_TOWN              0x06
 #define MAPSEC_PETALBURG_CITY               0x07
 #define MAPSEC_SLATEPORT_CITY               0x08

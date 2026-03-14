@@ -3429,7 +3429,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ENCOUNTER_GIRL)           \
     X(MUS_ENCOUNTER_MALE)           \
     X(MUS_CONTRA)           \
-    X(MUS_FORTREE)                  \
+    X(MUS_BATTLEROCK)                  \
     X(MUS_BIRCH_LAB)                \
     X(MUS_B_TOWER_RS)               \
     X(MUS_ENCOUNTER_SWIMMER)        \

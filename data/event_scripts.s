@@ -1238,3 +1238,19 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/StoneveilPowerPlant/scripts.inc"
 
 	.include "data/maps/StoneveilPowerPlant_1F/scripts.inc"
+
+	.include "data/maps/StoneveilTown_House1/scripts.inc"
+
+	.include "data/maps/StoneveilTownHouse2/scripts.inc"
+
+	.include "data/maps/StoneveilTownHouse3/scripts.inc"
+
+	.include "data/maps/StoneveilTownHouse4/scripts.inc"
+
+	.include "data/maps/StoneveilTown_PokemonCenter/scripts.inc"
+
+	.include "data/maps/Route6/scripts.inc"
+
+	.include "data/maps/TorchwoodCity/scripts.inc"
+
+	.include "data/maps/Route6_Torchwood_Connection/scripts.inc"
