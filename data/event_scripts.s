@@ -1254,3 +1254,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TorchwoodCity/scripts.inc"
 
 	.include "data/maps/Route6_Torchwood_Connection/scripts.inc"
+
+	.include "data/maps/Route7/scripts.inc"
+
+	.include "data/maps/Route8/scripts.inc"
+
+	.include "data/maps/CheekyWakaHotel/scripts.inc"

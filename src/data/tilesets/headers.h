@@ -1541,3 +1541,25 @@ const struct Tileset gTileset_Goldenrod =
     .metatileAttributes = gMetatileAttributes_Goldenrod,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_General_Hoenn =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_HoennGeneral,
+    .palettes = gTilesetPalettes_HoennGeneral,
+    .metatiles = gMetatiles_HoennGeneral,
+    .metatileAttributes = gMetatileAttributes_HoennGeneral,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_Building_Hoenn =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_HoennBuilding,
+    .palettes = gTilesetPalettes_HoennBuilding,
+    .metatiles = gMetatiles_HoennBuilding,
+    .metatileAttributes = gMetatileAttributes_HoennBuilding,
+    .callback = InitTilesetAnim_Building,
+};

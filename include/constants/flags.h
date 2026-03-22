@@ -60,7 +60,7 @@
 #define FLAG_TREE_1_ELWOOD_CITY_CUT    0x2E
 #define FLAG_TREE_2_ELWOOD_CITY_CUT    0x2F
 #define FLAG_TREE_HAMMERSOCK_CUT    0x30
-#define FLAG_TREE_WASHINGTON_CUT    0x31
+#define FLAG_UNUSED_0x031    0x31
 #define FLAG_AUTO_HMS    0x32
 #define FLAG_IN_GAME_TRADE_BUIZEL    0x33
 #define FLAG_DAVES_CAVE_CHEESE_CUT_1    0x34
@@ -74,10 +74,10 @@
 #define FLAG_FRY_WASHINGTON_CITY_SCENE    0x3C
 #define FLAG_USED_ITEM    0x3D
 #define FLAG_TREE_TORCHWOOD_CUT    0x3E
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_TREE_WASHINGTON_CUT_1    0x3F
+#define FLAG_TREE_WASHINGTON_CUT_2    0x40 
+#define FLAG_HIDE_MATT_WALSH_ROUTE_8    0x41
+#define FLAG_DEFEATED_MATT_WALSH_ROUTE_8    0x42
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag

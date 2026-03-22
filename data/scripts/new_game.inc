@@ -278,5 +278,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_MT_POMPOUS_HIDE_GRUNTS
 	setflag FLAG_HIDE_FRY_WASHINGTON_CITY
 	clearflag FLAG_USED_ITEM
+	setflag FLAG_HIDE_MATT_WALSH_ROUTE_8
+	clearflag FLAG_DEFEATED_MATT_WALSH_ROUTE_8
 	call EventScript_ResetAllBerries
 	end

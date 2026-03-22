@@ -1,6 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_IndoorMiscellaneous",
     "gMapGroup_IndoorTwigton",
     "gMapGroup_IndoorHammersock",
     "gMapGroup_IndoorElwood",
@@ -17,7 +18,6 @@
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
-    "gMapGroup_IndoorMiscellaneous",
     "gMapGroup_IndoorRoute111",
     "gMapGroup_IndoorRoute112",
     "gMapGroup_IndoorRoute114",
@@ -53,7 +53,14 @@
     "Route3",
     "Route4",
     "Route5",
-    "Route6"
+    "Route6",
+    "Route7",
+    "Route8"
+  ],
+  "gMapGroup_IndoorMiscellaneous": [
+    "Route4PokemonCenter1F",
+    "StoneveilPowerPlant_1F",
+    "CheekyWakaHotel"
   ],
   "gMapGroup_IndoorTwigton": [
     "TwigtonCity_PlayersHouse2F",
@@ -238,10 +245,6 @@
     "EverGrandeCity_PokemonCenter_1F",
     "EverGrandeCity_PokemonCenter_2F",
     "EverGrandeCity_PokemonLeague_2F"
-  ],
-  "gMapGroup_IndoorMiscellaneous": [
-    "Route4PokemonCenter1F",
-    "StoneveilPowerPlant_1F"
   ],
   "gMapGroup_IndoorRoute111": [
     "Route111_WinstrateFamilysHouse",

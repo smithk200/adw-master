@@ -1,0 +1,39 @@
+{
+  "id": "MAP_ROUTE7",
+  "name": "Route7",
+  "layout": "LAYOUT_ROUTE7",
+  "music": "MUS_BATTLEROCK",
+  "region_map_section": "MAPSEC_ROUTE_7",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_TORCHWOOD_CITY",
+      "offset": -19,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE8",
+      "offset": -3,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

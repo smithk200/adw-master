@@ -383,7 +383,7 @@ gSongTable::
 	song mus_encounter_girl, 0, 0
 	song mus_encounter_male, 0, 0
 	song Contra, 0, 0
-	song battlerock_galaxy, 0, 0
+	song BattlerockGalaxy, 0, 0
 	song mus_birch_lab, 0, 0
 	song mus_b_tower_rs, 0, 0
 	song mus_encounter_swimmer, 0, 0
@@ -427,7 +427,7 @@ gSongTable::
 	song mus_encounter_suspicious, 0, 0
 	song mus_victory_aqua_magma, 0, 0
 	song us_air_force_theme, 0, 0
-	song mus_game_corner, 0, 0
+	song DoctorWho, 0, 0
 	song mus_dewford, 0, 0
 	song mus_safari_zone, 0, 0
 	song mus_victory_road, 0, 0

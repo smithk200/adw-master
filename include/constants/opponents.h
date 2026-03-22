@@ -40,8 +40,8 @@
 #define TRAINER_YOUR_MOM                     34
 #define TRAINER_BEN_SHAPIRO_TWIGTON          35
 #define TRAINER_CYRUS_1                      36 //last in the ADW Trainer list
-#define TRAINER_ROSE_1                       37 //Emerald trainers
-#define TRAINER_FELIX                        38
+#define TRAINER_MATT_WALSH_ROUTE_8           37
+#define TRAINER_FELIX                        38 //Emerald trainers
 #define TRAINER_VIOLET                       39
 #define TRAINER_JUMBO_GRUNT_MT_POMPOUS_1     40 //ADW Trainers
 #define TRAINER_ASS_GRUNT_MT_POMPOUS_1       41

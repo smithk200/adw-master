@@ -247,20 +247,21 @@ GFYWoods_Text_Sign3:
 
 GFYWoods_Text_RickIntro:
     .string "Tremble in fear agianst\n"
-	.string "my mighy Bug Pokémon!$"
+	.string "my mighty Bug Pokémon!$"
 
 GFYWoods_Text_RickDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_RickPostBattle:
-    .string "I will beat you next time!$"
+    .string "I will defeat you next time!$"
 
 GFYWoods_Text_TomIntro:
     .string "See how my Wurmple line evolves?\n"
 	.string "I have all three stages!$"
 
 GFYWoods_Text_TomDefeat:
-    .string "Darn, I lost!$"
+    .string "Stupid Wurmple!\n"
+	.string "You're good for nothing!$"
 
 GFYWoods_Text_TomPostBattle:
     .string "My Pokémon are full of\n"
@@ -268,20 +269,23 @@ GFYWoods_Text_TomPostBattle:
 	.string "Wurmple can evolve into Cascoon, too!$"
 
 GFYWoods_Text_PhilIntro:
-    .string "Hi, I am a Trainer!$"
+    .string "It's so confusing to navigate through\n"
+	.string "these dark and profane woods.$"
 
 GFYWoods_Text_PhilDefeat:
-    .string "Darn, I lost!$"
+    .string "Gah! First I get lost in these woods,\n"
+	.string "now I lose to you!$"
 
 GFYWoods_Text_PhilPostBattle:
-    .string "I will beat you next time!$"
+    .string "Hopefully my mom can find me before\n"
+	.string "it gets too dark out here…$"
 
 GFYWoods_Text_IgnacioIntro:
     .string "I love bugs!\n"
 	.string "Aren't they the best?$"
 
 GFYWoods_Text_IgnacioDefeat:
-    .string "Darn, I lost!$"
+    .string "Maybe bugs aren't the best after all…$"
 
 GFYWoods_Text_IgnacioPostBattle:
     .string "My bug Pokémon are all\n"
@@ -292,7 +296,7 @@ GFYWoods_Text_RyanIntro:
     .string "Hi, I just love Wurmple!$"
 
 GFYWoods_Text_RyanDefeat:
-    .string "Darn, I lost!$"
+    .string "No, my beloved Wurmple!$"
 
 GFYWoods_Text_RyanPostBattle:
     .string "My Pokémon are full of darkness\n"
@@ -314,7 +318,7 @@ GFYWoods_Text_RoyIntro:
 	.string "Electric Pokémon!$"
 
 GFYWoods_Text_RoyDefeat:
-    .string "Darn, I lost!$"
+    .string "Wow! What a “shocking” defeat!$"
 
 GFYWoods_Text_RoyPostBattle:
     .string "My brother Morton specializes\n"
@@ -349,7 +353,7 @@ GFYWoods_Text_WernerDefeat:
     .string "Darn, I lost!$"
 
 GFYWoods_Text_WernerPostBattle:
-    .string "Maybe I should use Larvades instead...\n"
+    .string "Maybe I should use Larvades instead…\n"
 	.string "It evolves to an Electric-type, right?$"
 
 GFYWoods_Text_XavierIntro:
@@ -383,7 +387,7 @@ GFYWoods_Text_TakashiDefeat:
 
 GFYWoods_Text_TakashiPostBattle:
     .string "I will go back to meditating now.\p"
-	.string "Aum...$"
+	.string "Aum…$"
 
 GFYWoods_Text_DaisukeIntro:
     .string "Prepare to be defeated by my mighty\n"
@@ -405,7 +409,7 @@ GFYWoods_Text_PierreDefeat:
 
 GFYWoods_Text_PierrePostBattle:
     .string "Wait, I was supposed to evolve these?\n"
-	.string "Oh...$"
+	.string "Oh…$"
 
 GFYWoods_Text_MattWalsh:
 	.string "Have you seen a Pokémon called\n"

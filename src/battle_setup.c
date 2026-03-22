@@ -53,6 +53,7 @@
 #include "wild_encounter.h"
 #include "constants/layouts.h"
 #include "follower_npc.h"
+#include "constants/layouts.h"
 
 enum {
     TRANSITION_TYPE_NORMAL,
@@ -557,7 +558,7 @@ static void CB2_EndScriptedWildBattle(void)
     }
 }
 
-u8 BattleSetup_GetTerrainId(void)
+u8 BattleSetup_GetTerrainId(void) //how to change battle backgrounds (to change which maps get which battle backgrounds, NOT adding new ones)
 {
     u16 tileBehavior;
     s16 x, y;
@@ -574,6 +575,8 @@ u8 BattleSetup_GetTerrainId(void)
     if (MetatileBehavior_IsLongGrass(tileBehavior))
         return BATTLE_TERRAIN_LONG_GRASS;
     if (MetatileBehavior_IsSandOrDeepSand(tileBehavior))
+        return BATTLE_TERRAIN_SAND;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROUTE8) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROUTE8))
         return BATTLE_TERRAIN_SAND;
 
     switch (gMapHeader.mapType)

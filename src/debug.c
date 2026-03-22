@@ -3473,7 +3473,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ENCOUNTER_SUSPICIOUS)     \
     X(MUS_VICTORY_AQUA_MAGMA)       \
     X(MUS_WASHINGTON_CITY)                \
-    X(MUS_GAME_CORNER)              \
+    X(MUS_TORCHWOOD_CITY)              \
     X(MUS_DEWFORD)                  \
     X(MUS_SAFARI_ZONE)              \
     X(MUS_VICTORY_ROAD)             \

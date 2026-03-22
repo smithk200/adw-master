@@ -619,6 +619,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_ASS_GRUNT_F] =            &gObjectEventGraphicsInfo_AquaMemberF,
     [OBJ_EVENT_GFX_JUMBO_GRUNT_F] =           &gObjectEventGraphicsInfo_MagmaMemberF,
     [OBJ_EVENT_GFX_JUMBO_GRUNT_M] =           &gObjectEventGraphicsInfo_MagmaMemberM,
+    [OBJ_EVENT_GFX_MATT_WALSH] =           &gObjectEventGraphicsInfo_Man4,
+    [OBJ_EVENT_GFX_FRY] =           &gObjectEventGraphicsInfo_Man3,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
