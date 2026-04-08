@@ -3397,7 +3397,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
 #undef tDigit
 
 #define SOUND_LIST_BGM              \
-    X(MUS_ROUTE2)          \
+    X(MUS_GOOD_EGG)          \
     X(MUS_DEJA_VU)              \
     X(MUS_CAUGHT)                   \
     X(MUS_VICTORY_WILD)             \
@@ -3406,8 +3406,8 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_ELWOOD_CITY)            \
     X(MUS_ENCOUNTER_GALACTIC)               \
     X(MUS_HELL_WALTZ)        \
-    X(MUS_ROUTE1)                 \
-    X(MUS_ROUTE110)                 \
+    X(MUS_BUOY_BASE)                 \
+    X(MUS_VS_BARRY)                 \
     X(MUS_ROUTE120)                 \
     X(MUS_PETALBURG)                \
     X(MUS_STONEVEIL)                   \
@@ -3474,7 +3474,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_VICTORY_AQUA_MAGMA)       \
     X(MUS_WASHINGTON_CITY)                \
     X(MUS_TORCHWOOD_CITY)              \
-    X(MUS_DEWFORD)                  \
+    X(MUS_BEACH_BOWL)                  \
     X(MUS_SAFARI_ZONE)              \
     X(MUS_VICTORY_ROAD)             \
     X(MUS_AQUA_MAGMA_HIDEOUT)       \
@@ -3552,7 +3552,7 @@ static void DebugAction_DestroyFollowerNPC(u8 taskId)
     X(MUS_RG_CREDITS)               \
     X(MUS_RG_ROUTE1)                \
     X(MUS_RG_ROUTE24)               \
-    X(MUS_ROUTE3)                \
+    X(MUS_HONEYHIVE)                \
     X(MUS_RG_ROUTE11)               \
     X(MUS_RG_VICTORY_ROAD)          \
     X(MUS_RG_VS_GYM_LEADER)         \

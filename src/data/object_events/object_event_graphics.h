@@ -429,6 +429,8 @@ const u16 gObjectEventPal_Saturn[] = INCBIN_U16("graphics/object_events/palettes
 const u32 gObjectEventPic_Galactic_grunt_m[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/galactic_grunt_m.4bpp");
 const u16 gObjectEventPal_Galactic_grunt[] = INCBIN_U16("graphics/object_events/palettes/galactic_grunt.gbapal");
 const u32 gObjectEventPic_Galactic_grunt_f[] = INCBIN_U32("graphics/object_events/pics/people/team_galactic/galactic_grunt_f.4bpp");
+const u32 gObjectEventPic_Tardis[] = INCBIN_U32("graphics/object_events/pics/misc/tardis.4bpp");
+const u16 gObjectEventPal_Tardis[] = INCBIN_U16("graphics/object_events/palettes/tardis.gbapal");
 
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/deoxys.4bpp");
 const u32 gObjectEventPic_MewOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/mew.4bpp");

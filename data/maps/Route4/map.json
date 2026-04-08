@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE4",
   "name": "Route4",
   "layout": "LAYOUT_ROUTE4",
-  "music": "MUS_ROUTE3",
+  "music": "MUS_HONEYHIVE",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE3",
-      "offset": -2,
-      "direction": "left"
-    },
-    {
       "map": "MAP_WASHINGTON_CITY",
       "offset": -20,
       "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE3PART2",
+      "offset": -3,
+      "direction": "left"
     }
   ],
   "object_events": [

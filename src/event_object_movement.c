@@ -552,6 +552,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Jupiter,             OBJ_EVENT_PAL_TAG_JUPITER},
     {gObjectEventPal_Saturn,             OBJ_EVENT_PAL_TAG_SATURN},
     {gObjectEventPal_Galactic_grunt,             OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT},
+    {gObjectEventPal_Tardis,             OBJ_EVENT_PAL_TAG_TARDIS},
     // Gen VIII
     #ifdef ITEM_STRANGE_BALL
     {gObjectEventPal_StrangeBall,           OBJ_EVENT_PAL_TAG_BALL_STRANGE},

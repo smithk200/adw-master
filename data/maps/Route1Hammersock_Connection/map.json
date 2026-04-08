@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE1HAMMERSOCK_CONNECTION",
   "name": "Route1Hammersock_Connection",
   "layout": "LAYOUT_ROUTE1HAMMERSOCK_CONNECTION",
-  "music": "MUS_ROUTE1",
+  "music": "MUS_BUOY_BASE",
   "region_map_section": "MAPSEC_HAMMERSOCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

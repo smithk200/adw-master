@@ -23,12 +23,30 @@ Route8_EventScript_MattWalshEncounter::
 	giveitem ITEM_HM_ROCK_SMASH
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	closemessage
+	msgbox Route8_TextMattWalshExplainRockSmash, MSGBOX_AUTOCLOSE
+	goto_if_unset FLAG_BADGE03_GET, Route8_EventScript_MattWalshNeedDonnasBadge
 	msgbox Route8_TextMattWalshPartingSpeech, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_MATT_WALSH, Route8_Movement_MattWalshLeaves
 	waitmovement 0
 	setflag FLAG_HIDE_MATT_WALSH_ROUTE_8
 	removeobject LOCALID_MATT_WALSH
+	end
+
+Route8_EventScript_MattWalshNeedDonnasBadge::
+	msgbox Route8_TextMattWalshNeedDonnasBadge, MSGBOX_DEFAULT
+	closemessage
+	msgbox Route8_TextMattWalshPartingSpeech, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_MATT_WALSH, Route8_Movement_MattWalshLeaves
+	waitmovement 0
+	setflag FLAG_HIDE_MATT_WALSH_ROUTE_8
+	removeobject LOCALID_MATT_WALSH
+	end
+
+Route8_EventScript_Felix::
+	trainerbattle_single TRAINER_FELIX, Route8_Text_FelixIntro, Route8_Text_FelixDefeat
+	msgbox Route8_Text_FelixPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route8_Movement_MattWalshLeaves::
@@ -83,6 +101,15 @@ Route8_TextMattWalshPostBattle:
 	.string "It's helped me, and I'm sure it\n"
 	.string "will help you too.$"
 
+Route8_TextMattWalshExplainRockSmash:
+	.string "That's Rock Smash.\n"
+	.string "Use it to smash rocks in your way.$"
+
+Route8_TextMattWalshNeedDonnasBadge:
+	.string "Though to use Rock Smash, you'll need\n"
+	.string "the Timey-Wimey Badge in Torchwood\l"
+	.string "City.$"
+
 Route8_TextMattWalshPartingSpeech:
 	.string "Team Ass! What a name!\n"
 	.string "What a bunch of losers!\p"
@@ -93,3 +120,16 @@ Route8_TextMattWalshPartingSpeech:
 	.string "Showing them that Pokémon battling\n"
 	.string "isn't about the colors of the rainbow!\p"
 	.string "I'm sure I'll run into you on Mt. Tlmp.$"
+
+Route8_Text_FelixIntro:
+	.string "My Pokémon are ready to battle!\n"
+	.string "Go, go, go!$"
+
+Route8_Text_FelixDefeat:
+	.string "My Pokémon ran out of gas…$"
+
+Route8_Text_FelixPostBattle:
+	.string "Hopefully your Pokémon will have\n"
+	.string "the strength and courage to climb\l"
+	.string "Mt. Tlmp!\p"
+	.string "I couldn't do it!$"

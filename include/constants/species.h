@@ -1668,7 +1668,8 @@
 #define SPECIES_SQUIRRFAP          1550
 #define SPECIES_RODEBATION         1551
 #define SPECIES_CAROLINE         1552
-#define SPECIES_LAST                SPECIES_CAROLINE
+#define SPECIES_JONRUS         1553
+#define SPECIES_LAST                SPECIES_JONRUS
 
 #define SPECIES_EGG                                     (SPECIES_LAST + 1)
 

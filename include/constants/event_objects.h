@@ -376,6 +376,7 @@
 #define OBJ_EVENT_GFX_BROWNHAIREDCHILDF	371
 #define OBJ_EVENT_GFX_BLACKHAIREDCHILDM	372
 #define OBJ_EVENT_GFX_BLACKHARIEDCHILDF	373
+#define OBJ_EVENT_GFX_TARDIS	374
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
@@ -529,7 +530,7 @@
 #define OBJ_EVENT_PAL_TAG_JUPITER                0x112D
 #define OBJ_EVENT_PAL_TAG_SATURN                 0x112E
 #define OBJ_EVENT_PAL_TAG_GALACTIC_GRUNT         0x112F
-
+#define OBJ_EVENT_PAL_TAG_TARDIS                0x1130
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

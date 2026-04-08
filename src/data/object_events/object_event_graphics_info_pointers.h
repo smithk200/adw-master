@@ -299,6 +299,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jupiter;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Saturn;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Galactic_grunt_m;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Galactic_grunt_f;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Tardis;
 
 // Begin pokemon event objects
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeBall;
@@ -621,6 +622,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_JUMBO_GRUNT_M] =           &gObjectEventGraphicsInfo_MagmaMemberM,
     [OBJ_EVENT_GFX_MATT_WALSH] =           &gObjectEventGraphicsInfo_Man4,
     [OBJ_EVENT_GFX_FRY] =           &gObjectEventGraphicsInfo_Man3,
+    [OBJ_EVENT_GFX_TARDIS] =           &gObjectEventGraphicsInfo_Tardis,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

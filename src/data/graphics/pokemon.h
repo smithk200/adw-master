@@ -26761,6 +26761,7 @@ const u32 gMonFrontPic_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/front.
 const u32 gMonFrontPic_Squirrfap[] = INCBIN_U32("graphics/pokemon/question_mark/circled/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Rodebation[] = INCBIN_U32("graphics/pokemon/question_mark/circled/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/front.4bpp.lz");
+const u32 gMonFrontPic_Jonrus[] = INCBIN_U32("graphics/pokemon/jonrus/front.4bpp.lz");
 
 const u32 gMonBackPic_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/back.4bpp.lz");
 const u32 gMonBackPic_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/back.4bpp.lz");
@@ -26791,6 +26792,7 @@ const u32 gMonBackPic_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/back.4b
 const u32 gMonBackPic_Squirrfap[] = INCBIN_U32("graphics/pokemon/sharkedo/back.4bpp.lz");
 const u32 gMonBackPic_Rodebation[] = INCBIN_U32("graphics/pokemon/sharkedo/back.4bpp.lz");
 const u32 gMonBackPic_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/back.4bpp.lz");
+const u32 gMonBackPic_Jonrus[] = INCBIN_U32("graphics/pokemon/jonrus/back.4bpp.lz");
 
 const u32 gMonPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
 const u32 gMonPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
@@ -26821,6 +26823,7 @@ const u32 gMonPalette_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/normal.
 const u32 gMonPalette_Squirrfap[] = INCBIN_U32("graphics/pokemon/sharkedo/normal.gbapal.lz");
 const u32 gMonPalette_Rodebation[] = INCBIN_U32("graphics/pokemon/sharkedo/normal.gbapal.lz");
 const u32 gMonPalette_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/normal.gbapal.lz");
+const u32 gMonPalette_Jonrus[] = INCBIN_U32("graphics/pokemon/jonrus/normal.gbapal.lz");
 
 const u32 gMonShinyPalette_Grasshole[] = INCBIN_U32("graphics/pokemon/grasshole/normal.gbapal.lz");
 const u32 gMonShinyPalette_Analgae[] = INCBIN_U32("graphics/pokemon/analgae/normal.gbapal.lz");
@@ -26851,6 +26854,7 @@ const u32 gMonShinyPalette_Sharkedo[] = INCBIN_U32("graphics/pokemon/sharkedo/sh
 const u32 gMonShinyPalette_Squirrfap[] = INCBIN_U32("graphics/pokemon/sharkedo/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Rodebation[] = INCBIN_U32("graphics/pokemon/sharkedo/shiny.gbapal.lz");
 const u32 gMonShinyPalette_Caroline[] = INCBIN_U32("graphics/pokemon/caroline/shiny.gbapal.lz");
+const u32 gMonShinyPalette_Jonrus[] = INCBIN_U32("graphics/pokemon/jonrus/shiny.gbapal.lz");
 
 const u8 gMonIcon_Grasshole[] = INCBIN_U8("graphics/pokemon/grasshole/icon.4bpp");
 const u8 gMonIcon_Analgae[] = INCBIN_U8("graphics/pokemon/analgae/icon.4bpp");
@@ -26881,6 +26885,7 @@ const u8 gMonIcon_Sharkedo[] = INCBIN_U8("graphics/pokemon/sharkedo/icon.4bpp");
 const u8 gMonIcon_Squirrfap[] = INCBIN_U8("graphics/pokemon/sharkedo/icon.4bpp");
 const u8 gMonIcon_Rodebation[] = INCBIN_U8("graphics/pokemon/sharkedo/icon.4bpp");
 const u8 gMonIcon_Caroline[] = INCBIN_U8("graphics/pokemon/caroline/icon.4bpp");
+const u8 gMonIcon_Jonrus[] = INCBIN_U8("graphics/pokemon/jonrus/icon.4bpp");
 
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");

@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE3",
   "name": "Route3",
   "layout": "LAYOUT_ROUTE3",
-  "music": "MUS_ROUTE3",
+  "music": "MUS_GOOD_EGG",
   "region_map_section": "MAPSEC_ROUTE_3",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -19,8 +19,13 @@
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE4",
-      "offset": 12,
+      "map": "MAP_ROUTE3PART2",
+      "offset": 7,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_ROUTE3PART2",
+      "offset": 7,
       "direction": "right"
     }
   ],

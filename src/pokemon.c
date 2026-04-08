@@ -5825,8 +5825,12 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_JUMBO_BOSS:  //MUST GO BEFORE JUMBO ADMIN!!!
             return MUS_HELL_WALTZ;
         case TRAINER_CLASS_FR_RIVAL:
-            return MUS_SANDSTORM;
+            return MUS_VS_BARRY;
         case TRAINER_CLASS_RIVAL:
+            if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE) || \
+            (TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE) || \
+            (TRAINER_BATTLE_PARAM.opponentA == TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY))
+                return MUS_VS_BARRY; //leave this in here in case I want to do trainer based battle music
             if (gBattleTypeFlags & BATTLE_TYPE_FRONTIER)
                 return MUS_VS_RIVAL;
             if (!StringCompare(GetTrainerNameFromId(TRAINER_BATTLE_PARAM.opponentA), gText_BattleWallyName))

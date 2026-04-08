@@ -22814,12 +22814,24 @@ static const struct LevelUpMove sCarolineLevelUpLearnset[] = {
         LEVEL_UP_MOVE( 1, MOVE_TACKLE),
         LEVEL_UP_MOVE( 1, MOVE_GROWL),
         LEVEL_UP_MOVE( 10, MOVE_ROCK_TOMB),
+        LEVEL_UP_MOVE( 20, MOVE_BULLDOZE),
         LEVEL_UP_END
     };
     static const struct LevelUpMove sSharkedoLevelUpLearnset[] = {
         LEVEL_UP_MOVE( 1, MOVE_TACKLE),
         LEVEL_UP_MOVE( 1, MOVE_GROWL),
         LEVEL_UP_MOVE( 1, MOVE_ROCK_TOMB),
+        LEVEL_UP_MOVE( 1, MOVE_BULLDOZE),
+        LEVEL_UP_END
+    };
+#endif
+#if P_FAMILY_JONRUS
+    static const struct LevelUpMove sJonrusLevelUpLearnset[] = {
+        LEVEL_UP_MOVE( 1, MOVE_POUND),
+        LEVEL_UP_MOVE( 1, MOVE_GROWL),
+        LEVEL_UP_MOVE( 6, MOVE_WATER_GUN),
+        LEVEL_UP_MOVE( 7, MOVE_SMOKESCREEN),
+        LEVEL_UP_MOVE( 10, MOVE_CONFUSION),
         LEVEL_UP_END
     };
 #endif

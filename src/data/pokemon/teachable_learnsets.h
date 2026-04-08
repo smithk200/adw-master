@@ -36356,4 +36356,17 @@ static const u16 sCarolineTeachableLearnset[] = {
     MOVE_FALSE_SWIPE,
     MOVE_UNAVAILABLE,
 };
+static const u16 sJonrusTeachableLearnset[] = {
+    MOVE_SURF,
+    MOVE_WATER_PULSE,
+    MOVE_NASTY_PLOT,
+    MOVE_RETURN,
+    MOVE_REST,
+    MOVE_LIGHT_SCREEN,
+    MOVE_REFLECT,
+    MOVE_SKILL_SWAP,
+    MOVE_TOXIC,
+    MOVE_SWIFT,
+    MOVE_UNAVAILABLE,
+};
 #endif

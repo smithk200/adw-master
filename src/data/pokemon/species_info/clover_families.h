@@ -524,6 +524,7 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
             .iconSprite = gMonIcon_Curicrawl,
             .iconPalIndex = 0,
             FOOTPRINT(Curicrawl)
+            SHADOW(0, 7, SHADOW_SIZE_M)
             .levelUpLearnset = sCuricrawlLevelUpLearnset,
             .teachableLearnset = sCuricrawlTeachableLearnset,
             .eggMoveLearnset = sNoneEggMoveLearnset,
@@ -583,6 +584,7 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
             .iconSprite = gMonIcon_Gutsicoon,
             .iconPalIndex = 1,
             FOOTPRINT(Gutsicoon)
+            SHADOW(0, 7, SHADOW_SIZE_S)
             .levelUpLearnset = sGutsicoonLevelUpLearnset,
             .teachableLearnset = sGutsicoonTeachableLearnset,
             .eggMoveLearnset = sNoneEggMoveLearnset,
@@ -1302,6 +1304,7 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
             .iconSprite = gMonIcon_Iguallah,
             .iconPalIndex = 0,
             FOOTPRINT(Iguallah)
+            SHADOW(0, 11, SHADOW_SIZE_S)
             .levelUpLearnset = sIguallahLevelUpLearnset,
             .teachableLearnset = sIguallahTeachableLearnset,
             .eggMoveLearnset = sNoneEggMoveLearnset,
@@ -1641,10 +1644,6 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
             .frontPicYOffset = 4,
             .frontAnimFrames = ANIM_FRAMES(
                 ANIMCMD_FRAME(0, 10),
-                ANIMCMD_FRAME(1, 10),
-                ANIMCMD_FRAME(0, 10),
-                ANIMCMD_FRAME(1, 10),
-                ANIMCMD_FRAME(0, 10),
             ),
             .frontAnimId = ANIM_SWING_CONCAVE_FAST_SHORT,
             .backPic = gMonBackPic_Caroline,
@@ -1655,13 +1654,69 @@ const struct SpeciesInfo gSpeciesInfoGenClover[] =
             .shinyPalette = gMonShinyPalette_Caroline,
             .iconSprite = gMonIcon_Caroline,
             .iconPalIndex = 0,
-            SHADOW(0, 1, SHADOW_SIZE_M)
+            SHADOW(0, 8, SHADOW_SIZE_M)
             FOOTPRINT(Caroline)
             .levelUpLearnset = sCarolineLevelUpLearnset,
             .teachableLearnset = sCarolineTeachableLearnset,
             .eggMoveLearnset = sNoneEggMoveLearnset,
             },
-#endif //Caroline
+#endif //Jonrus
+#if P_FAMILY_JONRUS
+    [SPECIES_JONRUS] =
+        {
+            .baseHP        = 91,
+            .baseAttack    = 38,
+            .baseDefense   = 78,
+            .baseSpeed     = 67,
+            .baseSpAttack  = 77,
+            .baseSpDefense = 139,
+            .types = MON_TYPES(TYPE_WATER, TYPE_NORMAL),
+            .catchRate = 167,
+            .expYield = 124,
+            .evYield_SpDefense  = 2,
+            .genderRatio = MON_MALE,
+            .eggCycles = 20,
+            .friendship = 100,
+            .growthRate = GROWTH_FLUCTUATING,
+            .eggGroups = MON_EGG_GROUPS(EGG_GROUP_HUMAN_LIKE),
+            .abilities = {ABILITY_SCRAPPY, ABILITY_SWIFT_SWIM, ABILITY_WATER_ABSORB},
+            .bodyColor = BODY_COLOR_BLUE,
+            .speciesName = _("Jonrus"),
+            .cryId = CRY_JONRUS,
+            //.natDexNum = NATIONAL_DEX_JONRUS,
+            .categoryName = _("Walshrus"),
+            .height = 12,
+            .weight = 55,
+            .description = COMPOUND_STRING(
+                "This Pokémon likes to identify as\n"
+                "anything other than what it actually is.\n"
+                "Its ultimate goal is to kill Matt Walsh."),
+            .pokemonScale = 365,
+            .pokemonOffset = 18,
+            .trainerScale = 256,
+            .trainerOffset = 0,
+            .frontPic = gMonFrontPic_Jonrus,
+            .frontPicSize = MON_COORDS_SIZE(64, 64),
+            .frontPicYOffset = 4,
+            .frontAnimFrames = ANIM_FRAMES(
+                ANIMCMD_FRAME(0, 10),
+            ),
+            .frontAnimId = ANIM_SWING_CONCAVE_FAST_SHORT,
+            .backPic = gMonBackPic_Jonrus,
+            .backPicSize = MON_COORDS_SIZE(64, 64),
+            .backPicYOffset = 3,
+            .backAnimId = BACK_ANIM_H_SLIDE,
+            .palette = gMonPalette_Jonrus,
+            .shinyPalette = gMonShinyPalette_Jonrus,
+            .iconSprite = gMonIcon_Jonrus,
+            .iconPalIndex = 2,
+            //SHADOW(0, 1, SHADOW_SIZE_M)
+            FOOTPRINT(Jonrus)
+            .levelUpLearnset = sJonrusLevelUpLearnset,
+            .teachableLearnset = sJonrusTeachableLearnset,
+            .eggMoveLearnset = sNoneEggMoveLearnset,
+            },
+#endif //Jonrus
 #ifdef __INTELLISENSE__
 };
 #endif

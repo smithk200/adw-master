@@ -5644,7 +5644,7 @@
     {
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
-      "width": 40,
+      "width": 23,
       "height": 40,
       "border_width": 2,
       "border_height": 2,
@@ -5920,7 +5920,7 @@
     {
       "id": "LAYOUT_ROUTE8",
       "name": "Route8_Layout",
-      "width": 20,
+      "width": 40,
       "height": 40,
       "border_width": 2,
       "border_height": 2,
@@ -5940,6 +5940,54 @@
       "secondary_tileset": "gTileset_Genericbuilding2",
       "border_filepath": "data/layouts/CheekyWakaHotel/border.bin",
       "blockdata_filepath": "data/layouts/CheekyWakaHotel/map.bin"
+    },
+    {
+      "id": "LAYOUT_TARDIS_ROOM1",
+      "name": "TardisRoom1_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Ssanne",
+      "border_filepath": "data/layouts/TardisRoom1/border.bin",
+      "blockdata_filepath": "data/layouts/TardisRoom1/map.bin"
+    },
+    {
+      "id": "LAYOUT_MT_TLMP1F",
+      "name": "MtTlmp1F_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rocktunnel",
+      "border_filepath": "data/layouts/MtTlmp1F/border.bin",
+      "blockdata_filepath": "data/layouts/MtTlmp1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE9",
+      "name": "Route9_Layout",
+      "width": 40,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lavendertown",
+      "border_filepath": "data/layouts/Route9/border.bin",
+      "blockdata_filepath": "data/layouts/Route9/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE3PART2",
+      "name": "Route3Part2_Layout",
+      "width": 19,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Ceruleancity",
+      "border_filepath": "data/layouts/Route3Part2/border.bin",
+      "blockdata_filepath": "data/layouts/Route3Part2/map.bin"
     }
   ]
 }

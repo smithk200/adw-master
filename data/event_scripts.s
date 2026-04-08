@@ -1260,3 +1260,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route8/scripts.inc"
 
 	.include "data/maps/CheekyWakaHotel/scripts.inc"
+
+	.include "data/maps/TardisRoom1/scripts.inc"
+
+	.include "data/maps/MtTlmp1F/scripts.inc"
+
+	.include "data/maps/Route9/scripts.inc"
+
+	.include "data/maps/Route3Part2/scripts.inc"

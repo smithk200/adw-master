@@ -2467,6 +2467,9 @@ gCryTable::
 .if P_FAMILY_CAROLINE == TRUE
 	cry Cry_Caroline
 .endif @ P_FAMILY_CAROLINE
+.if P_FAMILY_JONRUS == TRUE
+	cry Cry_Dewgong
+.endif @ P_FAMILY_JONRUS
 .endif @ P_CRIES_ENABLED
 
 	.align 2
@@ -4938,4 +4941,7 @@ gCryTable_Reverse::
 .if P_FAMILY_CAROLINE == TRUE
 	cry_reverse Cry_Caroline
 .endif @ P_FAMILY_CAROLINE
+.if P_FAMILY_JONRUS == TRUE
+	cry_reverse Cry_Dewgong
+.endif @ P_FAMILY_JONRUS
 .endif @ P_CRIES_ENABLED

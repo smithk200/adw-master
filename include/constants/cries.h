@@ -2473,6 +2473,9 @@ enum {
 #if P_FAMILY_CAROLINE
     CRY_CAROLINE,
 #endif
+#if P_FAMILY_JONRUS
+    CRY_JONRUS,
+#endif
     CRY_COUNT,
 };
 

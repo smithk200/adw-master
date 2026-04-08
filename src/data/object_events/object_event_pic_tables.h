@@ -2153,3 +2153,7 @@ static const struct SpriteFrameImage sPicTable_Galactic_grunt_f[] = {
     overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 11),
     overworld_frame(gObjectEventPic_Galactic_grunt_f, 4, 4, 12),
 };
+
+static const struct SpriteFrameImage sPicTable_Tardis[] = {
+    overworld_frame(gObjectEventPic_Tardis, 2, 4, 0),
+};

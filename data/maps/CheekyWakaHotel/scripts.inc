@@ -6,7 +6,6 @@ CheekyWakaHotel_OnFrame::
 	.2byte 0
 
 CheekyWakaHotel_OnLoad::
-	goto_if_unset FLAG_DEFEATED_MATT_WALSH_ROUTE_8, CheekyWakaHotel_EventScript_ClearMattWalshFlag
 	end
 
 CheekyWakaHotel_EventScript_CheckMattWalshFlag::
@@ -14,10 +13,12 @@ CheekyWakaHotel_EventScript_CheckMattWalshFlag::
 	end
 
 CheekyWakaHotel_Trigger_SetMattWalshFlag:: @to prevent the player from accessing Matt Walsh on the wrong warp (aka the east Cheeky Waka Hotel entrance)
+	goto_if_unset FLAG_BADGE02_GET, CheekyWakaHotel_EventScript_SetMattWalshFlag
 	goto_if_unset FLAG_DEFEATED_MATT_WALSH_ROUTE_8, CheekyWakaHotel_EventScript_SetMattWalshFlag
 	end
 
 CheekyWakaHotel_Trigger_ClearMattWalshFlag::
+	goto_if_unset FLAG_BADGE02_GET, CheekyWakaHotel_EventScript_SetMattWalshFlag
 	goto_if_unset FLAG_DEFEATED_MATT_WALSH_ROUTE_8, CheekyWakaHotel_EventScript_ClearMattWalshFlag
 	end
 
@@ -32,7 +33,7 @@ CheekyWakaHotel_EventScript_ClearMattWalshFlag::
 CheekyWakaHotel_EventScript_Attendant::
 	lock
 	faceplayer
-	msgbox CheekyWakaHotel_Text_WeAreBookedLetMeHeal, MSGBOX_DEFAULT
+	msgbox CheekyWakaHotel_Text_WeAreBookedLetMeHeal, MSGBOX_AUTOCLOSE
 	fadescreen FADE_TO_BLACK
 	special HealPlayerParty
 	playfanfare MUS_HEAL

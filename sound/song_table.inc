@@ -361,7 +361,7 @@ gSongTable::
 	song mus_dp_encounter_galactic, 0, 0
 	song HellWaltz, 0, 0
 	song BuoyBaseGalaxy, 0, 0
-	song mus_route110, 0, 0
+	song mus_dp_vs_rival, 0, 0
 	song mus_route120, 0, 0
 	song mus_petalburg, 0, 0
 	song Stoneveil_Town, 0, 0
@@ -428,7 +428,7 @@ gSongTable::
 	song mus_victory_aqua_magma, 0, 0
 	song us_air_force_theme, 0, 0
 	song DoctorWho, 0, 0
-	song mus_dewford, 0, 0
+	song BeachBowl, 0, 0
 	song mus_safari_zone, 0, 0
 	song mus_victory_road, 0, 0
 	song mus_aqua_magma_hideout, 0, 0

@@ -8,7 +8,7 @@
     "gMapGroup_IndoorWashington",
     "gMapGroup_IndoorStoneveil",
     "gMapGroup_IndoorTorchwood",
-    "gMapGroup_IndoorPacifidlog",
+    "gMapGroup_IndoorTardis",
     "gMapGroup_IndoorPetalburg",
     "gMapGroup_IndoorSlateport",
     "gMapGroup_IndoorMauville",
@@ -51,16 +51,19 @@
     "Route1",
     "Route2",
     "Route3",
+    "Route3Part2",
     "Route4",
     "Route5",
     "Route6",
     "Route7",
-    "Route8"
+    "Route8",
+    "Route9"
   ],
   "gMapGroup_IndoorMiscellaneous": [
     "Route4PokemonCenter1F",
     "StoneveilPowerPlant_1F",
-    "CheekyWakaHotel"
+    "CheekyWakaHotel",
+    "MtTlmp1F"
   ],
   "gMapGroup_IndoorTwigton": [
     "TwigtonCity_PlayersHouse2F",
@@ -97,14 +100,8 @@
   "gMapGroup_IndoorTorchwood": [
     "Route6_Torchwood_Connection"
   ],
-  "gMapGroup_IndoorPacifidlog": [
-    "PacifidlogTown_PokemonCenter_1F",
-    "PacifidlogTown_PokemonCenter_2F",
-    "PacifidlogTown_House1",
-    "PacifidlogTown_House2",
-    "PacifidlogTown_House3",
-    "PacifidlogTown_House4",
-    "PacifidlogTown_House5"
+  "gMapGroup_IndoorTardis": [
+    "TardisRoom1"
   ],
   "gMapGroup_IndoorPetalburg": [
     "PetalburgCity_WallysHouse",
@@ -674,6 +671,13 @@
     "VerdanturfTown_PokemonCenter_2F",
     "VerdanturfTown_WandasHouse",
     "VerdanturfTown_FriendshipRatersHouse",
-    "VerdanturfTown_House"
+    "VerdanturfTown_House",
+    "PacifidlogTown_PokemonCenter_1F",
+    "PacifidlogTown_PokemonCenter_2F",
+    "PacifidlogTown_House1",
+    "PacifidlogTown_House2",
+    "PacifidlogTown_House3",
+    "PacifidlogTown_House4",
+    "PacifidlogTown_House5"
   ]
 }
