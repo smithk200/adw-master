@@ -1,5 +1,3 @@
-.set LOCALID_MATT_WALSH, 17
-
 GFYWoods_MapScripts::
 	.byte 0
 
@@ -119,16 +117,16 @@ GFYWoods_EventScript_MattWalshIntroLeft::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 30
-	applymovement LOCALID_MATT_WALSH, GFYWoods_Movement_MattWalshEntersLeft
+	applymovement LOCALID_MATT_WALSH_GFY_WOODS, GFYWoods_Movement_MattWalshEntersLeft
 	waitmovement 0
 	msgbox GFYWoods_Text_MattWalsh, MSGBOX_DEFAULT
 	call GFYWoods_EventScript_MattWalshIntro
 	trainerbattle_no_intro TRAINER_MATT_WALSH_1, GFYWoods_Text_MattWalsh_Defeat
 	msgbox GFYWoods_TextMattWalshPostBattle, MSGBOX_DEFAULT
 	msgbox GFYWoods_TextMattWalshPostBattle2, MSGBOX_DEFAULT
-	applymovement LOCALID_MATT_WALSH, GFYWoods_Movement_MattWalshStormsOffLeft
+	applymovement LOCALID_MATT_WALSH_GFY_WOODS, GFYWoods_Movement_MattWalshStormsOffLeft
 	waitmovement 0
-	removeobject LOCALID_MATT_WALSH
+	removeobject LOCALID_MATT_WALSH_GFY_WOODS
 	setflag FLAG_MATT_WALSH_GFY_WOODS
 	setvar VAR_GFY_WOODS_STATE, 1
 	release
@@ -144,23 +142,23 @@ GFYWoods_EventScript_MattWalshIntroRight::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 30
-	applymovement LOCALID_MATT_WALSH, GFYWoods_Movement_MattWalshEntersRight
+	applymovement LOCALID_MATT_WALSH_GFY_WOODS, GFYWoods_Movement_MattWalshEntersRight
 	waitmovement 0
 	msgbox GFYWoods_Text_MattWalsh, MSGBOX_DEFAULT
 	call GFYWoods_EventScript_MattWalshIntro
 	trainerbattle_no_intro TRAINER_MATT_WALSH_1, GFYWoods_Text_MattWalsh_Defeat
 	msgbox GFYWoods_TextMattWalshPostBattle, MSGBOX_DEFAULT
 	msgbox GFYWoods_TextMattWalshPostBattle2, MSGBOX_DEFAULT
-	applymovement LOCALID_MATT_WALSH, GFYWoods_Movement_MattWalshStormsOffRight
+	applymovement LOCALID_MATT_WALSH_GFY_WOODS, GFYWoods_Movement_MattWalshStormsOffRight
 	waitmovement 0
-	removeobject LOCALID_MATT_WALSH
+	removeobject LOCALID_MATT_WALSH_GFY_WOODS
 	setflag FLAG_MATT_WALSH_GFY_WOODS
 	setvar VAR_GFY_WOODS_STATE, 1
 	release
 	end
 
 GFYWoods_EventScript_MattWalshIntro::
-	applymovement LOCALID_MATT_WALSH, GFYWoods_Movement_MattWalshLookAround
+	applymovement LOCALID_MATT_WALSH_GFY_WOODS, GFYWoods_Movement_MattWalshLookAround
 	waitmovement 0
 	msgbox GFYWoods_Text_MattWalshSaysNotFound, MSGBOX_DEFAULT
 	closemessage

@@ -11,10 +11,13 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_MATT_WALSH_GFY_WOODS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 0,
       "y": 76,
@@ -25,9 +28,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GFYWoods_EventScript_Repel1",
-      "flag": "FLAG_HIDDEN_ITEM_GFY_WOODS_REPEL_1"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 3,
       "y": 77,
@@ -41,6 +45,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 12,
       "y": 57,
@@ -54,6 +59,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 0,
       "y": 49,
@@ -64,9 +70,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GFYWoods_EventScript_Repel2",
-      "flag": "FLAG_HIDDEN_ITEM_GFY_WOODS_REPEL_2"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 3,
       "y": 49,
@@ -80,6 +87,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 41,
       "y": 68,
@@ -93,6 +101,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 34,
       "y": 56,
@@ -106,6 +115,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 25,
       "y": 57,
@@ -119,6 +129,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 46,
       "y": 10,
@@ -132,6 +143,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 51,
       "y": 25,
@@ -145,6 +157,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 62,
       "y": 36,
@@ -158,6 +171,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 45,
       "y": 35,
@@ -171,6 +185,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 55,
       "y": 25,
@@ -184,6 +199,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 33,
       "y": 45,
@@ -197,6 +213,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 0,
       "y": 38,
@@ -210,6 +227,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 6,
       "y": 35,
@@ -223,6 +241,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 57,
       "y": 10,
@@ -236,6 +255,7 @@
       "flag": "FLAG_MATT_WALSH_GFY_WOODS"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 33,
       "y": 17,
@@ -249,6 +269,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 41,
       "y": 40,
@@ -259,9 +280,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GFYWoods_EventScript_Ether",
-      "flag": "FLAG_HIDDEN_ITEM_GFY_WOODS_ETHER"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 23,
       "y": 27,
@@ -275,7 +297,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_BIKER",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 5,
       "y": 4,
       "elevation": 0,
@@ -288,7 +311,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_BIKER",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 23,
       "y": 12,
       "elevation": 0,

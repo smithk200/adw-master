@@ -2,7 +2,7 @@
   "id": "MAP_STONEVEIL_TOWN_HOUSE2",
   "name": "StoneveilTownHouse2",
   "layout": "LAYOUT_STONEVEIL_TOWN_HOUSE2",
-  "music": "MUS_STONEVEIL",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_STONEVEIL_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

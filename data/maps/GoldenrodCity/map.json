@@ -2,7 +2,7 @@
   "id": "MAP_GOLDENROD_CITY",
   "name": "GoldenrodCity",
   "layout": "LAYOUT_GOLDENROD_CITY",
-  "music": "MUS_BUOY_BASE",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_CELADON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

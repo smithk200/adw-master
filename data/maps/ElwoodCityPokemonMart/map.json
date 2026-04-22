@@ -2,7 +2,7 @@
   "id": "MAP_ELWOOD_CITY_POKEMON_MART",
   "name": "ElwoodCityPokemonMart",
   "layout": "LAYOUT_ELWOOD_CITY_POKEMON_MART",
-  "music": "MUS_POKE_MART",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ELWOOD_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

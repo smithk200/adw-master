@@ -6,11 +6,12 @@ Gender: Male
 Music: Male
 
 === PARTNER_STEVEN ===
-Name: STEVEN
+Name: Steven
 Class: Rival
 Pic: Steven
 Gender: Male
 Music: Male
+AI: Basic Trainer
 
 Metang
 Brave Nature
@@ -44,104 +45,92 @@ EVs: 252 Atk / 252 SpA / 6 SpD
 
 === PARTNER_CYRUS ===
 Name: Cyrus
-Class: Rival
+Class: Galactic Boss
 Pic: Cyrus
 Gender: Male
 Music: Male
+AI: Basic Trainer
 
 Honchkrow
-Impish Nature
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 6 SpA / 252 SpD
-- Toxic
-- Aerial Ace
-- Protect
-- Steel Wing
-
-Gliscor
-Adamant Nature
-Level: 50
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 SpA / 6 SpD
-- Thunder
-- Protect
-- Solar Beam
-- Dragon Claw
-
-Crobat
 Brave Nature
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Def / 6 SpA
-- Light Screen
-- Psychic
-- Reflect
-- Metal Claw
 
-Houndoom
+Crobat
 Impish Nature
-Level: 43
+Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 6 SpA / 252 SpD
-- Toxic
-- Aerial Ace
-- Protect
-- Steel Wing
+
+Houndoom
+Adamant Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 SpA / 6 SpD
 
 Gyarados
 Adamant Nature
-Level: 44
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 SpA / 6 SpD
-- Thunder
-- Protect
-- Solar Beam
-- Dragon Claw
-
-Weavile
-Brave Nature
-Level: 42
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 Atk / 252 Def / 6 SpA
-- Night Slash
-- Drain Punch
-- Ice Spinner
-- Metal Claw
-
-=== PARTNER_CYRUS_2 ===
-Name: Cyrus
-Class: Rival
-Pic: Cyrus
-Gender: Male
-Music: Male
-
-Honchkrow
-Impish Nature
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 6 SpA / 252 SpD
-- Toxic
-- Aerial Ace
-- Protect
-- Steel Wing
+EVs: 252 Atk / 252 SpA / 6 SpD
+- Waterfall
+- Crunch
+- Rain Dance
+- Double Edge
 
-Gliscor
+Skuntank
 Adamant Nature
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 SpA / 6 SpD
-- Thunder
-- Protect
-- Solar Beam
-- Dragon Claw
 
-Crobat
+Weavile
+Adamant Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 SpA / 6 SpD
+
+=== PARTNER_JOY ===
+Name: Joy
+Class: Pkmn Trainer 1
+Pic: May
+Gender: Female
+Music: Female
+AI: Basic Trainer
+
+Jolteon
 Brave Nature
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 Atk / 252 Def / 6 SpA
-- Light Screen
-- Psychic
-- Reflect
-- Metal Claw
+
+Raichu
+Impish Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 6 SpA / 252 SpD
+
+Ampharos
+Adamant Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 SpA / 6 SpD
+
+Caroline
+Adamant Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 SpA / 6 SpD
+
+Audieon
+Adamant Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 SpA / 6 SpD
+
+Manectric
+Adamant Nature
+Level: 50
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 Atk / 252 SpA / 6 SpD

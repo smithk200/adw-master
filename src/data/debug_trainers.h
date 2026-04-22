@@ -1,9 +1,7 @@
 //
 // DO NOT MODIFY THIS FILE! It is auto-generated from src/data/debug_trainers.party
 //
-// If you want to modify this file set COMPETITIVE_PARTY_SYNTAX to FALSE
-// in include/config/general.h and remove this notice.
-// Use sed -i '/^#line/d' 'src/data/debug_trainers.h' to remove #line markers.
+// If you want to modify this file see expansion PR #7154
 //
 
 #line 1 "src/data/debug_trainers.party"
@@ -17,9 +15,12 @@
         .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
 #line 17
         .trainerPic = TRAINER_PIC_BRENDAN,
-        .encounterMusic_gender =
+#line 18
+        .gender = TRAINER_GENDER_MALE,
 #line 19
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 0
+        .multiTeamSize = MULTI_TEAM_SIZE_FULL,
         .partySize = 1,
         .party = (const struct TrainerMon[])
         {
@@ -35,6 +36,7 @@
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 23
             .lvl = 100,
+            .ball = POKEBALL_COUNT,
 #line 22
             .nature = NATURE_BRAVE,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -57,13 +59,16 @@
         .trainerClass = TRAINER_CLASS_RIVAL,
 #line 36
         .trainerPic = TRAINER_PIC_STEVEN,
-        .encounterMusic_gender =
+#line 37
+        .gender = TRAINER_GENDER_MALE,
 #line 38
-            TRAINER_ENCOUNTER_MUSIC_MALE,
+        .encounterMusic = TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 35
-        .doubleBattle = FALSE,
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 33
-        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .aiFlags = AI_FLAG_SMART_TRAINER,
+#line 0
+        .multiTeamSize = MULTI_TEAM_SIZE_FULL,
         .partySize = 3,
         .party = (const struct TrainerMon[])
         {
@@ -77,6 +82,7 @@
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 42
             .lvl = 42,
+            .ball = POKEBALL_COUNT,
 #line 41
             .nature = NATURE_BRAVE,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -98,6 +104,7 @@
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 52
             .lvl = 43,
+            .ball = POKEBALL_COUNT,
 #line 51
             .nature = NATURE_IMPISH,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -119,6 +126,7 @@
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 62
             .lvl = 44,
+            .ball = POKEBALL_COUNT,
 #line 61
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,

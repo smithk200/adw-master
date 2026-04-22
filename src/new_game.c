@@ -19,6 +19,7 @@
 #include "event_data.h"
 #include "money.h"
 #include "trainer_hill.h"
+#include "trainer_tower.h"
 #include "tv.h"
 #include "coins.h"
 #include "text.h"
@@ -39,6 +40,7 @@
 #include "pokemon_jump.h"
 #include "decoration_inventory.h"
 #include "secret_base.h"
+#include "string_util.h"
 #include "player_pc.h"
 #include "field_specials.h"
 #include "berry_powder.h"
@@ -47,10 +49,10 @@
 #include "constants/map_groups.h"
 #include "constants/items.h"
 #include "difficulty.h"
-#include "constants/heal_locations.h"
 #include "follower_npc.h"
 
 extern const u8 EventScript_ResetAllMapFlags[];
+extern const u8 EventScript_ResetAllMapFlagsFrlg[];
 
 static void ClearFrontierRecord(void);
 static void WarpToTruck(void);
@@ -99,11 +101,9 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_MONO;
-    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SET;
+    gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
-    gSaveBlock2Ptr->optionsEXPShare = TRUE;
-    gSaveBlock2Ptr->optionsAutoHMs = TRUE;
 }
 
 static void ClearPokedexFlags(void)
@@ -134,7 +134,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(TWIGTON_CITY_PLAYERS_HOUSE2F), MAP_NUM(TWIGTON_CITY_PLAYERS_HOUSE2F), -1, 2, 5);
+    SetWarpDestination(MAP_GROUP(MAP_TWIGTON_CITY_PLAYERS_HOUSE2F), MAP_NUM(MAP_TWIGTON_CITY_PLAYERS_HOUSE2F), WARP_ID_NONE, 6, 6);
     WarpIntoMap();
 }
 
@@ -156,9 +156,10 @@ void ResetMenuAndMonGlobals(void)
 
 void NewGameInitData(void)
 {
+    u8 rivalName[PLAYER_NAME_LENGTH + 1];
     if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
         RtcReset();
-
+    StringCopy(rivalName, gSaveBlock2Ptr->rivalName);
     gDifferentSaveFile = TRUE;
     gSaveBlock2Ptr->encryptionKey = 0;
     ZeroPlayerPartyMons();
@@ -186,7 +187,7 @@ void NewGameInitData(void)
     ClearPlayerLinkBattleRecords();
     InitSeedotSizeRecord();
     InitLotadSizeRecord();
-    gPlayerPartyCount = 0;
+    gPartiesCount[B_TRAINER_0] = 0;
     ZeroPlayerPartyMons();
     ResetPokemonStorageSystem();
     DeactivateAllRoamers();
@@ -201,7 +202,11 @@ void NewGameInitData(void)
     ResetFanClub();
     ResetLotteryCorner();
     WarpToTruck();
-    RunScriptImmediately(EventScript_ResetAllMapFlags);
+    if (IS_FRLG)
+        RunScriptImmediately(EventScript_ResetAllMapFlagsFrlg);
+    else
+        RunScriptImmediately(EventScript_ResetAllMapFlags);
+    StringCopy(gSaveBlock2Ptr->rivalName, rivalName);
     ResetMiniGamesRecords();
     InitUnionRoomChatRegisteredTexts();
     InitLilycoveLady();
@@ -211,12 +216,12 @@ void NewGameInitData(void)
     ClearMysteryGift();
     WipeTrainerNameRecords();
     ResetTrainerHillResults();
+    ResetTrainerTowerResults();
     ResetContestLinkResults();
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
-    SetLastHealLocationWarp(HEAL_LOCATION_TWIGTON_CITY_PLAYERS_HOUSE2F);
 }
 
 static void ResetMiniGamesRecords(void)

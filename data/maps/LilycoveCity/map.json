@@ -2,7 +2,7 @@
   "id": "MAP_LILYCOVE_CITY",
   "name": "LilycoveCity",
   "layout": "LAYOUT_LILYCOVE_CITY",
-  "music": "MUS_LILYCOVE",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_LILYCOVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -260,6 +260,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_LILYCOVE_WOMAN_1",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
       "x": 41,
       "y": 25,
@@ -273,6 +274,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_LILYCOVE_MAN_1",
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
       "x": 40,
       "y": 25,
@@ -412,9 +414,7 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
@@ -502,7 +502,7 @@
       "y": 31,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -510,7 +510,7 @@
       "y": 7,
       "elevation": 0,
       "item": "ITEM_PP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_PP_UP"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -518,7 +518,7 @@
       "y": 31,
       "elevation": 0,
       "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_POKE_BALL"
+      "flag": "FLAG_GARBAGEFLAG"
     }
   ]
 }

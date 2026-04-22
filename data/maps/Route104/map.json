@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE104",
   "name": "Route104",
   "layout": "LAYOUT_ROUTE104",
-  "music": "MUS_ROUTE104",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_104",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -109,6 +109,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE104_BOAT",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
       "x": 12,
       "y": 54,
@@ -122,6 +123,7 @@
       "flag": "FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT"
     },
     {
+      "local_id": "LOCALID_ROUTE104_BRINEY",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 12,
       "y": 51,
@@ -460,6 +462,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE104_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 17,
       "y": 50,
@@ -589,7 +592,7 @@
       "y": 6,
       "elevation": 3,
       "item": "ITEM_SUPER_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_SUPER_POTION"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -597,7 +600,7 @@
       "y": 9,
       "elevation": 3,
       "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_POKE_BALL"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -605,7 +608,7 @@
       "y": 55,
       "elevation": 3,
       "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_POTION"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -613,7 +616,7 @@
       "y": 72,
       "elevation": 3,
       "item": "ITEM_ANTIDOTE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_ANTIDOTE"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -621,7 +624,7 @@
       "y": 64,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_104_HEART_SCALE"
+      "flag": "FLAG_GARBAGEFLAG"
     }
   ]
 }

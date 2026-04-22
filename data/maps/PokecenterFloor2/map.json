@@ -2,7 +2,7 @@
   "id": "MAP_POKECENTER_FLOOR2",
   "name": "PokecenterFloor2",
   "layout": "LAYOUT_POKECENTER_FLOOR2",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_HAMMERSOCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

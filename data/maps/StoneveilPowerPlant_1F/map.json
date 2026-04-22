@@ -2,7 +2,7 @@
   "id": "MAP_STONEVEIL_POWER_PLANT_1F",
   "name": "StoneveilPowerPlant_1F",
   "layout": "LAYOUT_STONEVEIL_POWER_PLANT_1F",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_STONEVEIL_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -90,7 +90,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_TM_TOXIC",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_TM_TOXIC"
+      "flag": "FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_F",

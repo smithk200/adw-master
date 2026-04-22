@@ -1,5 +1,3 @@
-.set LOCALID_LITTLE_BOY, 5
-
 Route119_WeatherInstitute_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route119_WeatherInstitute_1F_OnTransition
 	.byte 0
@@ -9,8 +7,8 @@ Route119_WeatherInstitute_1F_OnTransition:
 	end
 
 Route119_WeatherInstitute_1F_EventScript_SetLittleBoyPos::
-	setobjectxyperm LOCALID_LITTLE_BOY, 0, 5
-	setobjectmovementtype LOCALID_LITTLE_BOY, MOVEMENT_TYPE_FACE_RIGHT
+	setobjectxyperm LOCALID_WEATHER_INSTITUTE_LITTLE_BOY, 0, 5
+	setobjectmovementtype LOCALID_WEATHER_INSTITUTE_LITTLE_BOY, MOVEMENT_TYPE_FACE_RIGHT
 	return
 
 Route119_WeatherInstitute_1F_EventScript_LittleBoy::
@@ -61,10 +59,12 @@ Route119_WeatherInstitute_1F_EventScript_Bed::
 	end
 
 Route119_WeatherInstitute_1F_EventScript_Grunt1::
+	trainerbattle_single TRAINER_NONE, Route119_WeatherInstitute_1F_Text_Grunt1Intro, Route119_WeatherInstitute_1F_Text_Grunt1Defeat
 	msgbox Route119_WeatherInstitute_1F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_WeatherInstitute_1F_EventScript_Grunt4::
+	trainerbattle_single TRAINER_NONE, Route119_WeatherInstitute_1F_Text_Grunt4Intro, Route119_WeatherInstitute_1F_Text_Grunt4Defeat
 	msgbox Route119_WeatherInstitute_1F_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -2,7 +2,7 @@
   "id": "MAP_SAFARI_ZONE_NORTHEAST",
   "name": "SafariZone_Northeast",
   "layout": "LAYOUT_SAFARI_ZONE_NORTHEAST",
-  "music": "MUS_SAFARI_ZONE",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_SAFARI_ZONE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -152,7 +152,7 @@
       "y": 35,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_EAST_RARE_CANDY"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -160,7 +160,7 @@
       "y": 5,
       "elevation": 3,
       "item": "ITEM_ZINC",
-      "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_EAST_ZINC"
+      "flag": "FLAG_GARBAGEFLAG"
     }
   ]
 }

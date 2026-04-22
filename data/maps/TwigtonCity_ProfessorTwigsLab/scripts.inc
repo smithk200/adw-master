@@ -24,13 +24,6 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ReadyPlayerForStarterScene::
 .equ PLAYER_STARTER_SPECIES,  VAR_TEMP_2
 .equ RIVAL_STARTER_SPECIES,   VAR_TEMP_3
 .equ RIVAL_STARTER_ID,        VAR_TEMP_4
-.equ LOCALID_PROF_TWIG,  1
-.equ LOCALID_GRASSHOLE_BALL,  2
-.equ LOCALID_SQUIRTLE_BALL,   4
-.equ LOCALID_SCORBUNNY_BALL, 3
-.equ LOCALID_RIVAL,           5
-.equ LOCALID_POKEDEX_1,       9
-.equ LOCALID_POKEDEX_2,       10
 
 
 @VAR_TWIGTON_CITY_MAP_STATE
@@ -187,7 +180,7 @@ TwigtonCity_ProfessorTwigsLab_EventScript_ChoseStarter::
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	setflag FLAG_RECIEVED_STARTER_POKEMON
+	setflag FLAG_GARBAGEFLAG
 	goto_if_eq VAR_RESULT, YES, EventScript_GiveNicknameToStarter
 	goto_if_eq VAR_RESULT, NO, TwigtonCity_ProfessorTwigsLab_EventScript_RivalPicksStarter
 	end
@@ -410,26 +403,32 @@ TwigtonCity_ProfessorTwigsLab_Movement_RivalApproachForBattleGrassholeRight::
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleGrasshole::
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
-	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro
+	trainerbattle_earlyrival TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE, 0, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_TwigWishesYouFarewell
+	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleSquirtle::
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
-	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro
+	trainerbattle_earlyrival TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY, 0, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_TwigWishesYouFarewell
+	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_RivalBattleScorbunny::
 	setvar VAR_TWIGTON_CITY_MAP_STATE_LAB, 4
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
-	trainerbattle_single TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE, TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
-	goto TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle
+	msgbox TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro
+	trainerbattle_earlyrival TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE, 0, TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat, TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory
+	goto TwigtonCity_ProfessorTwigsLab_EventScript_TwigWishesYouFarewell
+	end
 
 TwigtonCity_ProfessorTwigsLab_EventScript_EndRivalBattle::
 	special HealPlayerParty
-	setflag 0x501
-	setflag 0x502
-	setflag 0x503
+	settrainerflag TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE
+	settrainerflag TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY
+	settrainerflag TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE
 	setflag FLAG_RECIEVED_STARTER_POKEMON
 	msgbox TwigtonCity_ProfessorTwigsLab_Text_TestText
 	closemessage
@@ -439,6 +438,9 @@ TwigtonCity_ProfessorTwigsLab_EventScript_TwigWishesYouFarewell::
 	special HealPlayerParty
 	msgbox TwigtonCity_ProfessorTwigsLab_RivalIsOuttaHere
 	closemessage
+	settrainerflag TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SQUIRTLE
+	settrainerflag TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_SCORBUNNY
+	settrainerflag TRAINER_BRITTANY_TWIGS_LAB_PLAYER_CHOSE_GRASSHOLE
 	call_if_eq VAR_TEMP_2, 1, TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleLeft
 	call_if_eq VAR_TEMP_2, 2, TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleMid
 	call_if_eq VAR_TEMP_2, 3, TwigtonCity_ProfessorTwigsLab_EventScript_RivalExitAfterBattleRight
@@ -631,11 +633,14 @@ TwigtonCity_ProfessorTwigsLab_Text_ChooseAPokemon2:
 
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyIntro:
 	.string "I guess I'll battle you now.$"
+
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyDefeat:
 	.string "I lost? Why should I care?$"
+
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyVictory:
 	.string "Oh yeah!\n"
 	.string "Am I great or what?$"
+	
 TwigtonCity_ProfessorTwigsLab_Text_BrittanyPostBattle:
 	.string "weeeeeeeee$"
 

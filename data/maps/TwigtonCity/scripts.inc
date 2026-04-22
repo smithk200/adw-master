@@ -1,5 +1,3 @@
-.equ LOCALID_PROF_TWIG,  3
-
 TwigtonCity_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, TwigtonCity_OnLoad
 	.byte 0
@@ -144,7 +142,7 @@ TwigtonCity_EventScript_TwigTrigger::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 30
-	addobject LOCALID_PROF_TWIG
+	addobject LOCALID_PROF_TWIG_TWIGTON
 	call_if_eq VAR_TEMP_1, 0, TwigtonCity_EventScript_TwigEnterLeft
 	call_if_eq VAR_TEMP_1, 1, TwigtonCity_EventScript_TwigEnterRight
 	delay 30
@@ -155,7 +153,7 @@ TwigtonCity_EventScript_TwigTrigger::
 	call_if_eq VAR_TEMP_1, 1, TwigtonCity_EventScript_TwigLeadPlayerToLabRight
 	opendoor 16, 13
 	waitdooranim
-	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigEnterLab
+	applymovement LOCALID_PROF_TWIG_TWIGTON, TwigtonCity_Movement_TwigEnterLab
 	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_Movement_TwigEnterLab @can prob use the same one
 	waitmovement 0
 	closedoor 16, 13
@@ -170,51 +168,26 @@ TwigtonCity_EventScript_TwigTrigger::
 	end
 
 TwigtonCity_EventScript_TwigEnterLeft::
-	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigEnterLeft
+	applymovement LOCALID_PROF_TWIG_TWIGTON, TwigtonCity_Movement_TwigEnterLeft
 	waitmovement 0
 	return
 
 TwigtonCity_EventScript_TwigEnterRight::
-	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigEnterRight
+	applymovement LOCALID_PROF_TWIG_TWIGTON, TwigtonCity_Movement_TwigEnterRight
 	waitmovement 0
 	return
 
 TwigtonCity_EventScript_TwigLeadPlayerToLabLeft::
-	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigLeadPlayerToLabLeft
+	applymovement LOCALID_PROF_TWIG_TWIGTON, TwigtonCity_Movement_TwigLeadPlayerToLabLeft
 	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_Movement_PlayerFollowsTwigToHisLabLeft
 	waitmovement 0
 	return
 
 TwigtonCity_EventScript_TwigLeadPlayerToLabRight::
-	applymovement LOCALID_PROF_TWIG, TwigtonCity_Movement_TwigLeadPlayerToLabRight
+	applymovement LOCALID_PROF_TWIG_TWIGTON, TwigtonCity_Movement_TwigLeadPlayerToLabRight
 	applymovement OBJ_EVENT_ID_PLAYER, TwigtonCity_Movement_PlayerFollowsTwigToHisLabRight
 	waitmovement 0
 	return
-
-TwigtonCity_Event_Script_MultiBattle::
-	special SavePlayerParty
-	fadescreen FADE_TO_BLACK
-	special ChooseHalfPartyForBattle
-	waitstate
-	goto_if_ne VAR_RESULT, 0, TwigtonCity_Event_Script_DoCyrusMultiBattle
-	special LoadPlayerParty
-	goto TwigtonCity_Event_Script_ReadyForBattlePrompt
-
-TwigtonCity_Event_Script_ReadyForBattlePrompt::
-	applymovement VAR_LAST_TALKED, Common_Movement_FacePlayer
-	waitmovement 0
-	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenAreYouReadyToBattle, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
-	msgbox MossdeepCity_SpaceCenter_2F_Text_StevenHurryGetReadyQuickly, MSGBOX_DEFAULT
-	closemessage
-
-TwigtonCity_Event_Script_DoCyrusMultiBattle::
-	multi_2_vs_2 TRAINER_YOUR_MOM, TwigtonCity_Text_YourMomSpeaks, TRAINER_BEN_SHAPIRO_TWIGTON, TwigtonCity_Text_BenShapiro_Speaks, PARTNER_CYRUS
-	switch VAR_RESULT
-	case 1, TwigtonCity_Event_Script_EventScript_DefeatedYourMomAndBen
-	fadescreen FADE_TO_BLACK
-	special SetCB2WhiteOut
-	waitstate
 
 TwigtonCity_Event_Script_EventScript_DefeatedYourMomAndBen::
 	end

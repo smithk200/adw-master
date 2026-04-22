@@ -2,7 +2,7 @@
   "id": "MAP_TARDIS_ROOM1",
   "name": "TardisRoom1",
   "layout": "LAYOUT_TARDIS_ROOM1",
-  "music": "MUS_TORCHWOOD_CITY",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_101",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -11,11 +11,10 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
-  "object_events": [
-
-  ],
+  "connections": null,
+  "object_events": [],
   "warp_events": [
     {
       "x": 9,
@@ -25,10 +24,6 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

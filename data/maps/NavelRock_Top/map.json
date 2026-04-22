@@ -2,7 +2,7 @@
   "id": "MAP_NAVEL_ROCK_TOP",
   "name": "NavelRock_Top",
   "layout": "LAYOUT_NAVEL_ROCK_TOP",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_NAVEL_ROCK",
   "requires_flash": false,
   "weather": "WEATHER_SHADE",
@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_NAVEL_ROCK_HO_OH",
       "graphics_id": "OBJ_EVENT_GFX_HOOH",
       "x": 12,
       "y": 4,
@@ -55,7 +56,7 @@
       "y": 9,
       "elevation": 3,
       "item": "ITEM_SACRED_ASH",
-      "flag": "FLAG_HIDDEN_ITEM_NAVEL_ROCK_TOP_SACRED_ASH"
+      "flag": "FLAG_GARBAGEFLAG"
     }
   ]
 }

@@ -4,20 +4,20 @@ TwigtonCity_OldLadysHouse_MapScripts::
 TwigtonCity_OldLadysHouse_EventScript_Nurse::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECIEVED_STARTER_POKEMON, TwigtonCity_OldLadysHouse_EventScript_HealPokemon
+	goto_if_set FLAG_GARBAGEFLAG, TwigtonCity_OldLadysHouse_EventScript_HealPokemon
 	msgbox TwigtonCity_OldLadysHouse_TextYouDontHaveAStarterPokemon, MSGBOX_DEFAULT
 	release
 	end
 
 TwigtonCity_OldLadysHouse_EventScript_HealPokemon::
-	goto_if_set FLAG_TWIGTON_HEALING_LADY, TwigtonCity_OldLadysHouse_EventScript_HealPokemonSpeedy
+	goto_if_set FLAG_GARBAGEFLAG, TwigtonCity_OldLadysHouse_EventScript_HealPokemonSpeedy
 	msgbox TwigtonCity_OldLadysHouse_TextIAmAHealingLady, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special HealPlayerParty
 	playfanfare MUS_HEAL
 	waitfanfare
 	fadescreen FADE_FROM_BLACK
-	setflag FLAG_TWIGTON_HEALING_LADY
+	setflag FLAG_GARBAGEFLAG
 	msgbox TwigtonCity_OldLadysHouse_TextAnyTimeYouNeedMe, MSGBOX_DEFAULT
 	release
 	end

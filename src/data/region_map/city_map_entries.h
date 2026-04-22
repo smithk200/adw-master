@@ -1,7 +1,7 @@
 static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
 {
     {
-        .mapSecId = MAPSEC_TWIGTON_CITY,
+        .mapSecId = MAPSEC_HAMMERSOCK,
         .index = 0,
         .tilemap = gPokenavCityMap_Littleroot_0,
     },
@@ -11,22 +11,22 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Oldale_0,
     },
     {
-        .mapSecId = MAPSEC_ELWOOD_CITY,
+        .mapSecId = MAPSEC_HAMMERSOCK,
         .index = 0,
         .tilemap = gPokenavCityMap_Dewford_0,
     },
     {
-        .mapSecId = MAPSEC_WASHINGTON_CITY,
+        .mapSecId = MAPSEC_HAMMERSOCK,
         .index = 0,
         .tilemap = gPokenavCityMap_Lavaridge_0,
     },
     {
-        .mapSecId = MAPSEC_STONEVEIL_TOWN,
+        .mapSecId = MAPSEC_HAMMERSOCK,
         .index = 0,
         .tilemap = gPokenavCityMap_Fallarbor_0,
     },
     {
-        .mapSecId = MAPSEC_TORCHWOOD_CITY,
+        .mapSecId = MAPSEC_HAMMERSOCK,
         .index = 0,
         .tilemap = gPokenavCityMap_Verdanturf_0,
     },

@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE102",
   "name": "Route102",
   "layout": "LAYOUT_ROUTE102",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_102",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -26,6 +27,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
       "x": 18,
       "y": 11,
@@ -39,6 +41,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 33,
       "y": 14,
@@ -48,10 +51,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route102_EventScript_Rick",
+      "script": "Route102_EventScript_Calvin",
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
       "x": 25,
       "y": 15,
@@ -65,6 +69,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 8,
       "y": 7,
@@ -78,6 +83,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
       "x": 37,
       "y": 4,
@@ -91,6 +97,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 11,
       "y": 15,
@@ -104,6 +111,7 @@
       "flag": "FLAG_ITEM_ROUTE_102_POTION"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 24,
       "y": 2,
@@ -117,6 +125,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 25,
       "y": 2,
@@ -130,6 +139,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 19,
       "y": 4,
@@ -143,12 +153,8 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
+  "warp_events": [],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

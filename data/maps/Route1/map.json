@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -21,7 +22,8 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_YOUNGSTER",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 9,
       "y": 24,
       "elevation": 0,
@@ -34,7 +36,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_LASS",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LASS_FRLG",
       "x": 7,
       "y": 8,
       "elevation": 0,
@@ -47,6 +50,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_1",
       "x": 12,
       "y": 20,
@@ -60,6 +64,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 0,
       "y": 21,
@@ -70,9 +75,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route1_EventScript_Potion",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE1_POTION"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
       "x": 2,
       "y": 5,
@@ -83,9 +89,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route1_EventScript_Pokeball",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE1_POKE_BALL"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2",
       "x": 2,
       "y": 12,
@@ -108,9 +115,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

@@ -2,7 +2,7 @@
   "id": "MAP_POKEMON_FAN_CLUB",
   "name": "PokemonFanClub",
   "layout": "LAYOUT_POKEMON_FAN_CLUB",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_HAMMERSOCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

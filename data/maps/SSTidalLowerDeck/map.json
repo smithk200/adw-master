@@ -2,7 +2,7 @@
   "id": "MAP_SS_TIDAL_LOWER_DECK",
   "name": "SSTidalLowerDeck",
   "layout": "LAYOUT_SS_TIDAL_LOWER_DECK",
-  "music": "MUS_SAILING",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_DYNAMIC",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -58,7 +58,7 @@
       "y": 2,
       "elevation": 0,
       "item": "ITEM_LEFTOVERS",
-      "flag": "FLAG_HIDDEN_ITEM_SS_TIDAL_LOWER_DECK_LEFTOVERS"
+      "flag": "FLAG_GARBAGEFLAG"
     }
   ]
 }

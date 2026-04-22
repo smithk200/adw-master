@@ -8,6 +8,8 @@ CheekyWakaHotel_OnFrame::
 CheekyWakaHotel_OnLoad::
 	end
 
+@Matt Walsh is only supposed to appear after you defeat Joe Biden in Washington City.
+
 CheekyWakaHotel_EventScript_CheckMattWalshFlag::
 	goto_if_unset FLAG_DEFEATED_MATT_WALSH_ROUTE_8, CheekyWakaHotel_EventScript_ClearMattWalshFlag
 	end
@@ -49,3 +51,9 @@ CheekyWakaHotel_Text_WeAreBookedLetMeHeal:
 
 CheekyWakaHotel_Text_ComeAgainSoon:
 	.string "Come again soon!$"
+
+Debug_MattWalshFlagSet:
+	.string "Matt Walsh flag set.$"
+
+Debug_MattWalshFlagClear:
+	.string "Matt Walsh flag cleared.$"

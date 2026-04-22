@@ -276,7 +276,6 @@
 #define SE_PIKE_CURTAIN_CLOSE       267 // SE_CURTAIN
 #define SE_PIKE_CURTAIN_OPEN        268 // SE_CURTAIN1
 #define SE_SUDOWOODO_SHAKE          269 // SE_USSOKI
-#define END_SE                      SE_SUDOWOODO_SHAKE
 
 // Music
 #define START_MUS                   350
@@ -312,7 +311,7 @@
 #define MUS_ENCOUNTER_GIRL          379 // MUS_SYOUJOEYE
 #define MUS_ENCOUNTER_MALE          380 // MUS_BOYEYE
 #define MUS_CONTRA                  381 // MUS_CONTRA            // ADW. Contra by Moon Hooch
-#define MUS_BATTLEROCK              382 // MUS_MACHI_S3         // Battlerock Galaxy
+#define MUS_BATTLEROCK              382 // MUS_MACHI_S3         // ADW. Battlerock Galaxy
 #define MUS_BIRCH_LAB               383 // MUS_ODAMAKI
 #define MUS_B_TOWER_RS              384 // MUS_B_TOWER          // Used in Battle Tents, Trainer Hill and Battle Frontier's lounges and Exchange Service Corner.
 #define MUS_ENCOUNTER_SWIMMER       385 // MUS_SWIMEYE
@@ -435,8 +434,8 @@
 #define MUS_RG_POKE_MANSION         501 // MUS_RG_POKEYASHI
 #define MUS_RG_CREDITS              502 // MUS_RG_ENDING
 #define MUS_RG_ROUTE1               503 // MUS_RG_LOAD01
-#define MUS_RG_ROUTE24              504 // MUS_RG_OPENING
-#define MUS_HONEYHIVE               505 // Honeyhive Galaxy
+#define MUS_HONEYHIVE               504 // ADW
+#define MUS_RG_ROUTE3               505 // MUS_RG_LOAD02
 #define MUS_RG_ROUTE11              506 // MUS_RG_LOAD03
 #define MUS_RG_VICTORY_ROAD         507 // MUS_RG_CHAMP_R
 #define MUS_RG_VS_GYM_LEADER        508 // MUS_RG_VS_GYM
@@ -548,7 +547,7 @@
 #define MUS_VS_FRY                  610
 #define MUS_STICK_FIGURES           611
 #define MUS_LUNCHEON_KINGDOM        612
-#define END_MUS                     MUS_LUNCHEON_KINGDOM
+#define MUS_HEAVY_LIGHT             613
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 

@@ -4,7 +4,9 @@ Common_EventScript_PkmnCenterNurse::
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, CountPlayerTrainerStars
 	goto_if_eq VAR_RESULT, 4, EventScript_PkmnCenterNurse_GoldCard
-	goto EventScript_PkmnCenterNurse_HealPkmn
+	msgbox gText_WouldYouLikeToRestYourPkmn, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_PkmnCenterNurse_HealPkmn
+	goto_if_eq VAR_RESULT, NO, EventScript_PkmnCenterNurse_Goodbye
 	end
 
 EventScript_PkmnCenterNurse_Goodbye::
@@ -18,7 +20,8 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	call_if_eq VAR_0x8004, 1, EventScript_PkmnCenterNurse_IllTakeYourPkmn2
 	waitmessage
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
-	goto EventScript_PkmnCenterNurse_ReturnPkmn
+	goto_if_unset FLAG_POKERUS_EXPLAINED, EventScript_PkmnCenterNurse_CheckPokerus
+	goto EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom
 	end
 
 EventScript_PkmnCenterNurse_IllTakeYourPkmn::
@@ -34,10 +37,16 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Turn
 	waitmovement 0
 	dofieldeffect FLDEFF_POKECENTER_HEAL
+.if OW_UNION_DISABLE_CHECK == FALSE && OW_FLAG_MOVE_UNION_ROOM_CHECK != 0
+	setflag OW_FLAG_MOVE_UNION_ROOM_CHECK
+	call CableClub_OnResume
+	clearflag OW_FLAG_MOVE_UNION_ROOM_CHECK
+.endif
 	waitfieldeffect FLDEFF_POKECENTER_HEAL
 	applymovement VAR_0x800B, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	special HealPlayerParty
+	callnative UpdateFollowingPokemon
 	return
 
 EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::
@@ -57,9 +66,7 @@ EventScript_PkmnCenterNurse_ReturnPkmn::
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message gText_WeHopeToSeeYouAgain
-	closemessage
-	goto EventScript_PkmnCenterNurse_PlayerTurn
-	end
+	return
 
 EventScript_PkmnCenterNurse_ReturnPkmn2::
 	message gText_ThankYouForWaiting
@@ -67,9 +74,7 @@ EventScript_PkmnCenterNurse_ReturnPkmn2::
 	applymovement VAR_0x800B, Movement_PkmnCenterNurse_Bow
 	waitmovement 0
 	message gText_WeHopeToSeeYouAgain2
-	goto EventScript_PkmnCenterNurse_PlayerTurn
-	closemessage
-	end
+	return
 
 EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom::
 	goto_if_set FLAG_NURSE_UNION_ROOM_REMINDER, EventScript_PkmnCenterNurse_ReturnPkmn
@@ -126,9 +131,3 @@ Movement_PkmnCenterNurse_Bow:
 Movement_PkmnCenterNurse_Turn:
 	walk_in_place_faster_left
 	step_end
-
-EventScript_PkmnCenterNurse_PlayerTurn::
-   applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceDown
-   waitmovement 0
-   release
-   end

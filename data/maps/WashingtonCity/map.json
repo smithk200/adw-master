@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -31,6 +32,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FRY",
       "x": 30,
       "y": 36,
@@ -44,6 +46,7 @@
       "flag": "FLAG_HIDE_FRY_WASHINGTON_CITY"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 43,
       "y": 62,
@@ -57,6 +60,7 @@
       "flag": "FLAG_TREE_WASHINGTON_CUT_2"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 66,
       "y": 60,
@@ -70,6 +74,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 67,
       "y": 60,
@@ -83,6 +88,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 42,
       "y": 62,

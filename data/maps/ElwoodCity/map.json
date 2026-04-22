@@ -2,7 +2,7 @@
   "id": "MAP_ELWOOD_CITY",
   "name": "ElwoodCity",
   "layout": "LAYOUT_ELWOOD_CITY",
-  "music": "MUS_ELWOOD_CITY",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ELWOOD_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -26,6 +27,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 41,
       "y": 22,
@@ -39,6 +41,7 @@
       "flag": "FLAG_TREE_1_ELWOOD_CITY_CUT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 41,
       "y": 21,
@@ -52,6 +55,7 @@
       "flag": "FLAG_TREE_2_ELWOOD_CITY_CUT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 23,
       "y": 8,
@@ -65,7 +69,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_BATTLEGIRL",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
       "x": 14,
       "y": 15,
       "elevation": 0,
@@ -78,7 +83,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_WOMAN2",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_FRLG",
       "x": 16,
       "y": 4,
       "elevation": 0,
@@ -91,7 +97,8 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_BALDINGMAN",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
       "x": 37,
       "y": 27,
       "elevation": 0,
@@ -141,9 +148,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

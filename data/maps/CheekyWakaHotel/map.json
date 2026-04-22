@@ -2,7 +2,7 @@
   "id": "MAP_CHEEKY_WAKA_HOTEL",
   "name": "CheekyWakaHotel",
   "layout": "LAYOUT_CHEEKY_WAKA_HOTEL",
-  "music": "MUS_BEACH_BOWL",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_8",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -11,11 +11,13 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_CABLECLUBRECEPTIONIST",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CABLE_CLUB_RECEPTIONIST",
       "x": 9,
       "y": 2,
       "elevation": 0,
@@ -100,7 +102,5 @@
       "script": "CheekyWakaHotel_Trigger_ClearMattWalshFlag"
     }
   ],
-  "bg_events": [
-
-  ]
+  "bg_events": []
 }

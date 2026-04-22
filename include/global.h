@@ -5,6 +5,9 @@
 #include <limits.h>
 #include "config/general.h" // we need to define config before gba headers as print stuff needs the functions nulled before defines.
 #include "gba/gba.h"
+#include "assertf.h"
+#include "gametypes.h"
+#include "siirtc.h"
 #include "fpmath.h"
 #include "metaprogram.h"
 #include "constants/global.h"
@@ -12,14 +15,16 @@
 #include "constants/vars.h"
 #include "constants/species.h"
 #include "constants/pokedex.h"
+#include "constants/apricorn_tree.h"
 #include "constants/berry.h"
 #include "constants/maps.h"
 #include "constants/pokemon.h"
 #include "constants/easy_chat.h"
 #include "constants/trainer_hill.h"
+#include "constants/trainer_tower.h"
 #include "constants/items.h"
+#include "constants/moves.h"
 #include "config/save.h"
-#include "config/follower_npc.h"
 
 // Prevent cross-jump optimization.
 #define BLOCK_CROSS_JUMP asm("");
@@ -28,11 +33,16 @@
 #define asm_unified(x) asm(".syntax unified\n" x "\n.syntax divided")
 #define NAKED __attribute__((naked))
 
+#if MODERN
+#define asm __asm__
+#endif
+
 /// IDE support
 #if defined(__APPLE__) || defined(__CYGWIN__) || defined(__INTELLISENSE__)
 // We define these when using certain IDEs to fool preproc
 #define _(x)        {x}
 #define __(x)       {x}
+#define COMPOUND_STRING(x) 0
 #define INCBIN(...) {0}
 #define INCBIN_U8   INCBIN
 #define INCBIN_U16  INCBIN
@@ -79,6 +89,11 @@
 // intended, and a%n for powers of 2 isn't always optimized to use &.
 #define MOD(a, n) (((n) & ((n)-1)) ? ((a) % (n)) : ((a) & ((n)-1)))
 
+// Increments 'a' by 1, wrapping back to 0 when it reaches 'n'. If 'n' is a power of two,
+// the wrap is implemented using a bit mask: (a + 1) & (n - 1), which is slightly faster.
+// This is intended to be used when 'n' is known at compile time.
+#define INCREMENT_OR_WRAP(a, n) ((IS_POW_OF_TWO(n)) ? (((a) + 1) & ((n) - 1)) : (((a) + 1) >= (n) ? 0 : ((a) + 1)))
+
 // Extracts the upper 16 bits of a 32-bit number
 #define HIHALF(n) (((n) & 0xFFFF0000) >> 16)
 
@@ -103,6 +118,9 @@
 #define T2_READ_32(ptr) ((ptr)[0] + ((ptr)[1] << 8) + ((ptr)[2] << 16) + ((ptr)[3] << 24))
 #define T2_READ_PTR(ptr) (void *) T2_READ_32(ptr)
 
+#define PACK(data, shift, mask)   ( ((data) << (shift)) & (mask) )
+#define UNPACK(data, shift, mask) ( ((data) & (mask)) >> (shift) )
+
 // Macros for checking the joypad
 #define TEST_BUTTON(field, button) ((field) & (button))
 #define JOY_NEW(button) TEST_BUTTON(gMain.newKeys,  button)
@@ -114,7 +132,7 @@
 ({                           \
     s16 v = (val);           \
     float f = (float)v;      \
-    if(v < 0) f += 65536.0f; \
+    if (v < 0) f += 65536.0f;\
     f;                       \
 })
 
@@ -126,11 +144,15 @@
 #define NUM_FLAG_BYTES ROUND_BITS_TO_BYTES(FLAGS_COUNT)
 #define NUM_TRENDY_SAYING_BYTES ROUND_BITS_TO_BYTES(NUM_TRENDY_SAYINGS)
 
+#define NUM_APRICORN_TREE_BYTES ROUND_BITS_TO_BYTES(APRICORN_TREE_COUNT)
+
 // This produces an error at compile-time if expr is zero.
 // It looks like file.c:line: size of array `id' is negative
 #define STATIC_ASSERT(expr, id) typedef char id[(expr) ? 1 : -1];
 
 #define FEATURE_FLAG_ASSERT(flag, id) STATIC_ASSERT(flag > TEMP_FLAGS_END || flag == 0, id)
+
+#define READ_OTID_FROM_SAVE T1_READ_32(gSaveBlock2Ptr->playerTrainerId)
 
 // NOTE: This uses hardware timers 2 and 3; this will not work during active link connections or with the eReader
 static inline void CycleCountStart()
@@ -211,9 +233,9 @@ struct NPCFollower
 {
     u8 inProgress:1;
     u8 warpEnd:1;
-    u8 createSurfBlob:3;
+    u8 createSurfBlob:2;
     u8 comeOutDoorStairs:2;
-    u8 forcedMovement:1;
+    u8 forcedMovement:2;
     u8 objId;
     u8 currentSprite;
     u8 delayedState;
@@ -232,7 +254,7 @@ struct NPCFollower
 struct SaveBlock3
 {
 #if OW_USE_FAKE_RTC
-    struct Time fakeRTC;
+    struct SiiRtcInfo fakeRTC;
 #endif
 #if FNPC_ENABLE_NPC_FOLLOWERS
     struct NPCFollower NPCfollower;
@@ -244,6 +266,9 @@ struct SaveBlock3
     u8 dexNavSearchLevels[NUM_SPECIES];
 #endif
     u8 dexNavChain;
+#if APRICORN_TREE_COUNT > 0
+    u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
+#endif
 }; /* max size 1624 bytes */
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
@@ -289,7 +314,7 @@ struct BerryPickingResults
 
 struct PyramidBag
 {
-    u16 itemId[FRONTIER_LVL_MODE_COUNT][PYRAMID_BAG_ITEMS_COUNT];
+    enum Item itemId[FRONTIER_LVL_MODE_COUNT][PYRAMID_BAG_ITEMS_COUNT];
 #if MAX_PYRAMID_BAG_ITEM_CAPACITY > 255
     u16 quantity[FRONTIER_LVL_MODE_COUNT][PYRAMID_BAG_ITEMS_COUNT];
 #else
@@ -306,9 +331,9 @@ struct BerryCrush
 
 struct ApprenticeMon
 {
-    u16 species;
-    u16 moves[MAX_MON_MOVES];
-    u16 item;
+    enum Species species;
+    enum Move moves[MAX_MON_MOVES];
+    enum Item item;
 };
 
 // This is for past players Apprentices or Apprentices received via Record Mix.
@@ -331,9 +356,9 @@ struct Apprentice
 
 struct BattleTowerPokemon
 {
-    u16 species;
-    u16 heldItem;
-    u16 moves[MAX_MON_MOVES];
+    enum Species species;
+    enum Item heldItem;
+    enum Move moves[MAX_MON_MOVES];
     u8 level;
     u8 ppBonuses;
     u8 hpEV;
@@ -374,8 +399,8 @@ struct EmeraldBattleTowerRecord
 
 struct BattleTowerInterview
 {
-    u16 playerSpecies;
-    u16 opponentSpecies;
+    enum Species playerSpecies;
+    enum Species opponentSpecies;
     u8 opponentName[PLAYER_NAME_LENGTH + 1];
     u8 opponentMonNickname[VANILLA_POKEMON_NAME_LENGTH + 1];
     u8 opponentLanguage;
@@ -398,7 +423,7 @@ struct BattleTowerEReaderTrainer
 // For displaying party information on the player's Battle Dome tourney page
 struct DomeMonData
 {
-    u16 moves[MAX_MON_MOVES];
+    enum Move moves[MAX_MON_MOVES];
     u8 evs[NUM_STATS];
     u8 nature;
     //u8 padding;
@@ -519,7 +544,7 @@ struct ApprenticeQuestion
     u8 moveSlot:2;
     u8 suggestedChange:2; // TRUE if told to use held item or second move, FALSE if told to use no item or first move
     //u8 padding;
-    u16 data; // used both as an itemId and a moveId
+    u16 data; // used both as an itemId and a move
 };
 
 struct PlayersApprentice
@@ -561,6 +586,7 @@ struct SaveBlock2
 {
     /*0x00*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
     /*0x08*/ u8 playerGender; // MALE, FEMALE
+    /*0x00*/ u8 rivalName[PLAYER_NAME_LENGTH + 1];
     /*0x09*/ u8 specialSaveWarpFlags;
     /*0x0A*/ u8 playerTrainerId[TRAINER_ID_LENGTH];
     /*0x0E*/ u16 playTimeHours;
@@ -574,8 +600,6 @@ struct SaveBlock2
              u16 optionsBattleStyle:1; // OPTIONS_BATTLE_STYLE_[SHIFT/SET]
              u16 optionsBattleSceneOff:1; // whether battle animations are disabled
              u16 regionMapZoom:1; // whether the map is zoomed in
-             u16 optionsEXPShare:1;
-             u16 optionsAutoHMs:1;
              //u16 padding1:4;
              //u16 padding2;
     /*0x18*/ struct Pokedex pokedex;
@@ -587,7 +611,6 @@ struct SaveBlock2
     /*0xB0*/ struct PlayersApprentice playerApprentice;
     /*0xDC*/ struct Apprentice apprentices[APPRENTICE_COUNT];
     /*0x1EC*/ struct BerryCrush berryCrush;
-     /*0xF2C*/ u8 rivalName[PLAYER_NAME_LENGTH + 1];
 #if FREE_POKEMON_JUMP == FALSE
     /*0x1FC*/ struct PokemonJumpRecords pokeJump;
 #endif //FREE_POKEMON_JUMP
@@ -602,12 +625,14 @@ struct SaveBlock2
 
 extern struct SaveBlock2 *gSaveBlock2Ptr;
 
+extern u8 UpdateSpritePaletteWithTime(u8);
+
 struct SecretBaseParty
 {
     u32 personality[PARTY_SIZE];
-    u16 moves[PARTY_SIZE * MAX_MON_MOVES];
-    u16 species[PARTY_SIZE];
-    u16 heldItems[PARTY_SIZE];
+    enum Move moves[PARTY_SIZE * MAX_MON_MOVES];
+    enum Species species[PARTY_SIZE];
+    enum Item heldItems[PARTY_SIZE];
     u8 levels[PARTY_SIZE];
     u8 EVs[PARTY_SIZE];
 };
@@ -648,7 +673,7 @@ struct WarpData
 
 struct ItemSlot
 {
-    u16 itemId;
+    enum Item itemId;
     u16 quantity;
 };
 
@@ -667,7 +692,7 @@ struct Roamer
 {
     /*0x00*/ u32 ivs;
     /*0x04*/ u32 personality;
-    /*0x08*/ u16 species;
+    /*0x08*/ enum Species species;
     /*0x0A*/ u16 hp;
     /*0x0C*/ u8 level;
     /*0x0D*/ u8 statusA;
@@ -678,7 +703,8 @@ struct Roamer
     /*0x12*/ u8 tough;
     /*0x13*/ bool8 active;
     /*0x14*/ u8 statusB; // Stores frostbite
-    /*0x14*/ u8 filler[0x7];
+    /*0x15*/ bool8 shiny;
+    /*0x16*/ u8 filler[0x6];
 };
 
 struct RamScriptData
@@ -686,7 +712,7 @@ struct RamScriptData
     u8 magic;
     u8 mapGroup;
     u8 mapNum;
-    u8 objectId;
+    u8 localId;
     u8 script[995];
     //u8 padding;
 };
@@ -799,7 +825,7 @@ struct RecordMixingGiftData
 {
     u8 unk0;
     u8 quantity;
-    u16 itemId;
+    enum Item itemId;
     u8 filler4[8];
 };
 
@@ -813,7 +839,7 @@ struct ContestWinner
 {
     u32 personality;
     u32 trainerId;
-    u16 species;
+    enum Species species;
     u8 contestCategory;
     u8 monName[VANILLA_POKEMON_NAME_LENGTH + 1];
     u8 trainerName[PLAYER_NAME_LENGTH + 1];
@@ -827,8 +853,8 @@ struct Mail
     /*0x00*/ u16 words[MAIL_WORDS_COUNT];
     /*0x12*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
     /*0x1A*/ u8 trainerId[TRAINER_ID_LENGTH];
-    /*0x1E*/ u16 species;
-    /*0x20*/ u16 itemId;
+    /*0x1E*/ enum Species species;
+    /*0x20*/ enum Item itemId;
 };
 
 struct DaycareMail
@@ -879,7 +905,7 @@ struct LilycoveLadyFavor
     /*0x004*/ u8 playerName[PLAYER_NAME_LENGTH + 1];
     /*0x00C*/ u8 favorId;
     /*0x00D*/ //u8 padding1;
-    /*0x00E*/ u16 itemId;
+    /*0x00E*/ enum Item itemId;
     /*0x010*/ u16 bestItem;
     /*0x012*/ u8 language;
     /*0x013*/ //u8 padding2;
@@ -938,6 +964,20 @@ struct TrainerHillSave
                //u16 padding:8;
 };
 
+struct TrainerTower
+{
+    u32 timer;
+    u32 bestTime;
+    u8 floorsCleared;
+    u8 unk9;
+    bool8 receivedPrize:1;
+    bool8 checkedFinalTime:1;
+    bool8 spokeToOwner:1;
+    bool8 hasLost:1;
+    bool8 unkA_4:1;
+    bool8 validated:1;
+};
+
 struct WonderNewsMetadata
 {
     u8 newsType:2;
@@ -959,7 +999,7 @@ struct WonderNews
 struct WonderCard
 {
     u16 flagId; // Event flag (sReceivedGiftFlags) + WONDER_CARD_FLAG_OFFSET
-    u16 iconSpecies;
+    enum Species iconSpecies;
     u32 idNumber;
     u8 type:2; // CARD_TYPE_*
     u8 bgType:4;
@@ -978,7 +1018,7 @@ struct WonderCardMetadata
     u16 battlesWon;
     u16 battlesLost;
     u16 numTrades;
-    u16 iconSpecies;
+    enum Species iconSpecies;
     u16 stampData[2][MAX_STAMP_CARD_STAMPS]; // First element is STAMP_SPECIES, second is STAMP_ID
 };
 
@@ -1041,6 +1081,15 @@ struct ExternalEventFlags
 
 } __attribute__((packed));/*size = 0x15*/
 
+struct Bag
+{
+    struct ItemSlot items[BAG_ITEMS_COUNT];
+    struct ItemSlot keyItems[BAG_KEYITEMS_COUNT];
+    struct ItemSlot pokeBalls[BAG_POKEBALLS_COUNT];
+    struct ItemSlot TMsHMs[BAG_TMHM_COUNT];
+    struct ItemSlot berries[BAG_BERRIES_COUNT];
+};
+
 struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
@@ -1063,11 +1112,8 @@ struct SaveBlock1
     /*0x494*/ u16 coins;
     /*0x496*/ u16 registeredItem; // registered for use with SELECT button
     /*0x498*/ struct ItemSlot pcItems[PC_ITEMS_COUNT];
-    /*0x560*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
-    /*0x5D8*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
-    /*0x650*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
-    /*0x690*/ struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
-    /*0x790*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
+    /*0x560 -> 0x848 is bag storage*/
+    /*0x560*/ struct Bag bag;
     /*0x848*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
 #if FREE_EXTRA_SEEN_FLAGS_SAVEBLOCK1 == FALSE
     /*0x988*/ u8 filler1[0x34]; // Previously Dex Flags, feel free to remove.
@@ -1099,7 +1145,7 @@ struct SaveBlock1
     /*0x27CC*/ TVShow tvShows[TV_SHOWS_COUNT];
     /*0x27CA*/ //u8 padding4[2];
     /*0x2B50*/ PokeNews pokeNews[POKE_NEWS_COUNT];
-    /*0x2B90*/ u16 outbreakPokemonSpecies;
+    /*0x2B90*/ enum Species outbreakPokemonSpecies;
     /*0x2B92*/ u8 outbreakLocationMapNum;
     /*0x2B93*/ u8 outbreakLocationMapGroup;
     /*0x2B94*/ u8 outbreakPokemonLevel;
@@ -1124,7 +1170,8 @@ struct SaveBlock1
 #if FREE_LINK_BATTLE_RECORDS == FALSE
     /*0x3150*/ struct LinkBattleRecords linkBattleRecords;
 #endif //FREE_LINK_BATTLE_RECORDS
-    /*0x31A8*/ u8 giftRibbons[GIFT_RIBBONS_COUNT];
+    /*0x31A8*/ u8 giftRibbons[NUM_GIFT_RIBBONS];
+               u8 padding[4];
     /*0x31B3*/ struct ExternalEventData externalEventData;
     /*0x31C7*/ struct ExternalEventFlags externalEventFlags;
     /*0x31DC*/ struct Roamer roamer[ROAMER_COUNT];
@@ -1152,10 +1199,18 @@ struct SaveBlock1
     /*0x3???*/ struct TrainerHillSave trainerHill;
 #endif //FREE_TRAINER_HILL
     /*0x3???*/ struct WaldaPhrase waldaPhrase;
+#if FREE_TRAINER_TOWER == FALSE && IS_FRLG
+    u32 towerChallengeId;
+    struct TrainerTower trainerTower[NUM_TOWER_CHALLENGE_TYPES];
+#endif //FREE_TRAINER_TOWER
+#if IS_FRLG
+    u8 rivalName[PLAYER_NAME_LENGTH + 1];
+    struct DaycareMon route5DayCareMon;
+#endif
     // sizeof: 0x3???
 };
 
-extern struct SaveBlock1* gSaveBlock1Ptr;
+extern struct SaveBlock1 *gSaveBlock1Ptr;
 
 struct MapPosition
 {
@@ -1163,5 +1218,11 @@ struct MapPosition
     s16 y;
     s8 elevation;
 };
+
+#if TESTING
+extern bool32 gLoadFail;
+extern bool32 gCountAllocs;
+extern s32 gSpriteAllocs;
+#endif // TESTING
 
 #endif // GUARD_GLOBAL_H

@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE117",
   "name": "Route117",
   "layout": "LAYOUT_ROUTE117",
-  "music": "MUS_VS_BARRY",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_117",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -52,6 +52,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_DAYCARE_MAN",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 47,
       "y": 4,
@@ -373,9 +374,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
@@ -407,7 +406,7 @@
       "y": 18,
       "elevation": 3,
       "item": "ITEM_REPEL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_117_REPEL"
+      "flag": "FLAG_GARBAGEFLAG"
     }
   ]
 }

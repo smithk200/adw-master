@@ -220,7 +220,7 @@ MtPompousB2F_MapScript_AbortionTriggerRight::
 	applymovement LOCALID_ASS_GRUNT, MtPompousB2F_Movement_AssGruntExitRight
 	waitmovement 0
 	setflag FLAG_MT_POMPOUS_HIDE_GRUNTS
-	setflag FLAG_HIDE_OTHER_GRUNTS_MT_POMPOUS
+	setflag FLAG_GARBAGEFLAG
 	removeobject 4
 	removeobject 5
 	release

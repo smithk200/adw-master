@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE123",
   "name": "Route123",
   "layout": "LAYOUT_ROUTE123",
-  "music": "MUS_SLTS",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_123",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -782,6 +782,14 @@
       "script": "Route123_EventScript_RouteSign"
     },
     {
+      "type": "hidden_item",
+      "x": 75,
+      "y": 1,
+      "elevation": 3,
+      "item": "ITEM_SUPER_REPEL",
+      "flag": "FLAG_GARBAGEFLAG"
+    },
+    {
       "type": "sign",
       "x": 20,
       "y": 7,
@@ -802,7 +810,7 @@
       "y": 1,
       "elevation": 3,
       "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_REVIVE"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -810,7 +818,7 @@
       "y": 15,
       "elevation": 3,
       "item": "ITEM_HYPER_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_HYPER_POTION"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -818,7 +826,7 @@
       "y": 15,
       "elevation": 3,
       "item": "ITEM_PP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_PP_UP"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -826,7 +834,7 @@
       "y": 18,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY"
+      "flag": "FLAG_GARBAGEFLAG"
     }
   ]
 }

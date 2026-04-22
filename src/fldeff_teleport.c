@@ -2,11 +2,11 @@
 #include "field_effect.h"
 #include "field_player_avatar.h"
 #include "fldeff.h"
+#include "follower_npc.h"
 #include "party_menu.h"
 #include "overworld.h"
 #include "task.h"
 #include "constants/field_effects.h"
-#include "follower_npc.h"
 
 static void FieldCallback_Teleport(void);
 static void StartTeleportFieldEffect(void);

@@ -1,4 +1,9 @@
-	.align 2
+	.equiv MUSIC_PLAYER_BGM,0
+	.equiv MUSIC_PLAYER_SE1,1
+	.equiv MUSIC_PLAYER_SE2,2
+	.equiv MUSIC_PLAYER_SE3,3
+
+		.align 2
 
 gSongTable::
 	song mus_dummy, 0, 0
@@ -614,6 +619,7 @@ gSongTable::
 	song vs_fry, 0, 0
 	song stick_figures, 0, 0
 	song luncheon_kingdom, 0, 0
+	song heavy_light, 0, 0
 
 	.align 2
 dummy_song_header:

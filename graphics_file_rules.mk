@@ -68,10 +68,10 @@ $(TILESETGFXDIR)/secondary/shop/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 502 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/pokemon_center/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 384 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 478 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/cave/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 256 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 425 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/pokemon_school/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 278 -Wnum_tiles
@@ -146,7 +146,7 @@ $(TILESETGFXDIR)/secondary/lilycove_museum/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 431 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/lab/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 112 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 500 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/underwater/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 500 -Wnum_tiles
@@ -206,13 +206,13 @@ $(TILESETGFXDIR)/secondary/mossdeep_game_corner/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 95 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/island_harbor/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 176 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 503 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/trainer_hill/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 374 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/navel_rock/tiles.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 288 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 420 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/battle_frontier_ranking_hall/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 136 -Wnum_tiles
@@ -275,6 +275,9 @@ $(FONTGFXDIR)/frlg_female.fwjpnfont: $(FONTGFXDIR)/japanese_frlg_female.png
 
 ### Miscellaneous ###
 
+$(MISCGFXDIR)/emoticons.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 2 -mheight 2
+
 $(TITLESCREENGFXDIR)/pokemon_logo.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@ -num_colors 224
 
@@ -289,6 +292,9 @@ graphics/pokenav/region_map/map.8bpp: %.8bpp: %.png
 
 $(MISCGFXDIR)/japanese_hof.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 29 -Wnum_tiles
+
+$(MISCGFXDIR)/mirage_tower.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -num_tiles 73 -Wnum_tiles
 
 $(BATINTGFXDIR)/textbox.gbapal: $(BATINTGFXDIR)/textbox_0.gbapal \
                                 $(BATINTGFXDIR)/textbox_1.gbapal
@@ -336,6 +342,9 @@ $(UNUSEDGFXDIR)/color_frames.4bpp: %.4bpp: %.png
 
 $(BATINTGFXDIR)/unused_window2bar.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 5 -Wnum_tiles
+
+$(BATINTGFXDIR)/ability_pop_up.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
 
 $(JPCONTESTGFXDIR)/composite_1.4bpp: $(JPCONTESTGFXDIR)/frame_1.4bpp \
                                      $(JPCONTESTGFXDIR)/floor.4bpp \
@@ -399,7 +408,7 @@ $(RAYQUAZAGFXDIR)/scene_2/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 313 -Wnum_tiles
 
 $(RAYQUAZAGFXDIR)/scene_3/rayquaza.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 124 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 128 -Wnum_tiles
 
 $(RAYQUAZAGFXDIR)/scene_4/streaks.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 19 -Wnum_tiles

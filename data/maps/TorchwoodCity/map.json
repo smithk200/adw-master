@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -21,6 +22,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 28,
       "y": 23,
@@ -34,6 +36,7 @@
       "flag": "FLAG_TREE_TORCHWOOD_CUT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PIKACHU",
       "x": 14,
       "y": 7,
@@ -47,6 +50,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TARDIS",
       "x": 27,
       "y": 42,
@@ -83,10 +87,6 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

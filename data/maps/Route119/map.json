@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE119",
   "name": "Route119",
   "layout": "LAYOUT_ROUTE119",
-  "music": "MUS_ROUTE119",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_119",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -221,6 +221,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE119_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 25,
       "y": 32,
@@ -245,6 +246,71 @@
       "trainer_sight_or_berry_tree_id": "ITEM_SUPER_REPEL",
       "script": "Common_EventScript_FindItem",
       "flag": "FLAG_ITEM_ROUTE_119_SUPER_REPEL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 96,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ZINC",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_119_ZINC"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 29,
+      "y": 53,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_119_ELIXIR_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 25,
+      "y": 76,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_LEAF_STONE",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_119_LEAF_STONE"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 8,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_RARE_CANDY",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_119_RARE_CANDY"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 33,
+      "y": 117,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_HYPER_POTION",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_119_HYPER_POTION_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -273,6 +339,7 @@
       "flag": "FLAG_HIDE_ROUTE_119_TEAM_AQUA"
     },
     {
+      "local_id": "LOCALID_ROUTE119_RIVAL_ON_BIKE",
       "graphics_id": "OBJ_EVENT_GFX_VAR_3",
       "x": 17,
       "y": 33,
@@ -481,6 +548,33 @@
       "flag": "0"
     },
     {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 19,
+      "y": 5,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_NUGGET",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_119_NUGGET"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 24,
+      "y": 42,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "ITEM_ELIXIR",
+      "script": "Common_EventScript_FindItem",
+      "flag": "FLAG_ITEM_ROUTE_119_ELIXIR_2"
+    },
+    {
+      "local_id": "LOCALID_ROUTE119_SCOTT",
       "graphics_id": "OBJ_EVENT_GFX_SCOTT",
       "x": 28,
       "y": 25,
@@ -751,6 +845,22 @@
       "secret_base_id": "SECRET_BASE_BLUE_CAVE4_3"
     },
     {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 82,
+      "elevation": 3,
+      "item": "ITEM_CALCIUM",
+      "flag": "FLAG_GARBAGEFLAG"
+    },
+    {
+      "type": "hidden_item",
+      "x": 38,
+      "y": 63,
+      "elevation": 3,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_GARBAGEFLAG"
+    },
+    {
       "type": "secret_base",
       "x": 26,
       "y": 81,
@@ -791,7 +901,7 @@
       "y": 120,
       "elevation": 3,
       "item": "ITEM_FULL_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_FULL_HEAL"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -799,7 +909,7 @@
       "y": 29,
       "elevation": 3,
       "item": "ITEM_MAX_ETHER",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_119_MAX_ETHER"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "sign",

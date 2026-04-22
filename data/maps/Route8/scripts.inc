@@ -1,4 +1,4 @@
-.equ LOCALID_MATT_WALSH, 5
+
 
 Route8_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route8_EventScript_OnFrame
@@ -11,6 +11,7 @@ Route8_EventScript_OnFrame::
 Route8_EventScript_MattWalshEncounter::
 	goto_if_set FLAG_HIDE_MATT_WALSH_ROUTE_8, Route1Hammersock_Connection_PhilipJFryIsNotThere
 	goto_if_set FLAG_DEFEATED_MATT_WALSH_ROUTE_8, Route1Hammersock_Connection_PhilipJFryIsNotThere
+	addobject LOCALID_MATT_WALSH_ROUTE_8
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
@@ -27,10 +28,10 @@ Route8_EventScript_MattWalshEncounter::
 	goto_if_unset FLAG_BADGE03_GET, Route8_EventScript_MattWalshNeedDonnasBadge
 	msgbox Route8_TextMattWalshPartingSpeech, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_MATT_WALSH, Route8_Movement_MattWalshLeaves
+	applymovement LOCALID_MATT_WALSH_ROUTE_8, Route8_Movement_MattWalshLeaves
 	waitmovement 0
 	setflag FLAG_HIDE_MATT_WALSH_ROUTE_8
-	removeobject LOCALID_MATT_WALSH
+	removeobject LOCALID_MATT_WALSH_ROUTE_8
 	end
 
 Route8_EventScript_MattWalshNeedDonnasBadge::
@@ -38,10 +39,10 @@ Route8_EventScript_MattWalshNeedDonnasBadge::
 	closemessage
 	msgbox Route8_TextMattWalshPartingSpeech, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_MATT_WALSH, Route8_Movement_MattWalshLeaves
+	applymovement LOCALID_MATT_WALSH_ROUTE_8, Route8_Movement_MattWalshLeaves
 	waitmovement 0
 	setflag FLAG_HIDE_MATT_WALSH_ROUTE_8
-	removeobject LOCALID_MATT_WALSH
+	removeobject LOCALID_MATT_WALSH_ROUTE_8
 	end
 
 Route8_EventScript_Felix::

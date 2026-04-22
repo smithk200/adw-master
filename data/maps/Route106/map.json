@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE106",
   "name": "Route106",
   "layout": "LAYOUT_ROUTE106",
-  "music": "MUS_ROUTE104",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_ROUTE_106",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -100,9 +100,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "hidden_item",
@@ -110,7 +108,7 @@
       "y": 11,
       "elevation": 3,
       "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_POKE_BALL"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -118,7 +116,7 @@
       "y": 12,
       "elevation": 0,
       "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_STARDUST"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "hidden_item",
@@ -126,7 +124,7 @@
       "y": 15,
       "elevation": 3,
       "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_HEART_SCALE"
+      "flag": "FLAG_GARBAGEFLAG"
     },
     {
       "type": "sign",

@@ -2,7 +2,7 @@
   "id": "MAP_MT_POMPOUS_B1F",
   "name": "MtPompousB1F",
   "layout": "LAYOUT_MT_POMPOUS_B1F",
-  "music": "MUS_DUMMY",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_MT_POMPOUS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -11,11 +11,10 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
-  "object_events": [
-
-  ],
+  "connections": null,
+  "object_events": [],
   "warp_events": [
     {
       "x": 4,
@@ -74,10 +73,6 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

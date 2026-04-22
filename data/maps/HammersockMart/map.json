@@ -2,7 +2,7 @@
   "id": "MAP_HAMMERSOCK_MART",
   "name": "HammersockMart",
   "layout": "LAYOUT_HAMMERSOCK_MART",
-  "music": "MUS_POKE_MART",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_HAMMERSOCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -11,11 +11,13 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_FR_CLERK",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CLERK",
       "x": 2,
       "y": 3,
       "elevation": 0,
@@ -28,6 +30,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 6,
       "y": 3,
@@ -41,6 +44,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 9,
       "y": 4,
@@ -63,10 +67,6 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

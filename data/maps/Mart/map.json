@@ -2,7 +2,7 @@
   "id": "MAP_MART",
   "name": "Mart",
   "layout": "LAYOUT_MART",
-  "music": "MUS_POKE_MART",
+  "music": "MUS_HEAVY_LIGHT",
   "region_map_section": "MAPSEC_HAMMERSOCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
