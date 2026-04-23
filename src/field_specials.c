@@ -18,6 +18,7 @@
 #include "field_screen_effect.h"
 #include "field_specials.h"
 #include "field_weather.h"
+#include "fieldmap.h"
 #include "graphics.h"
 #include "international_string_util.h"
 #include "item.h"
@@ -1026,8 +1027,7 @@ static bool32 IsBuildingPCTile(u32 tileId)
 
 static bool32 IsBuildingPCTileFrlg(u32 tileId)
 {
-    if (IS_FRLG)
-        return gMapHeader.mapLayout->primaryTileset == &gTileset_BuildingFrlg && (tileId == METATILE_BuildingFrlg_PCOn || tileId == METATILE_BuildingFrlg_PCOff);
+    return gMapHeader.mapLayout->primaryTileset == &gTileset_BuildingFrlg && (tileId == METATILE_BuildingFrlg_PCOn || tileId == METATILE_BuildingFrlg_PCOff);
 
     return FALSE;
 }
@@ -1140,11 +1140,18 @@ static void PCTurnOnEffect(struct Task *task)
 static void PCTurnOnEffect_SetMetatile(s16 isScreenOn, s8 dx, s8 dy)
 {
     u16 metatileId = 0;
+    gMapHeader.mapLayout = GetMapLayout(gMapHeader.mapLayoutId);
     if (isScreenOn)
     {
         // Screen is on, set it off
         if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-            metatileId = IS_FRLG ? METATILE_BuildingFrlg_PCOff : METATILE_Building_PC_Off;
+        {
+            if (IsHoennTileset(gMapHeader.mapLayout->primaryTileset))
+                metatileId = METATILE_Building_PC_Off;
+            else
+                metatileId = METATILE_BuildingFrlg_PCOff;
+                DebugPrintf("Reached PC Turn On Effect");
+        }
         else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
             metatileId = METATILE_BrendansMaysHouse_BrendanPC_Off;
         else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)
@@ -1156,7 +1163,13 @@ static void PCTurnOnEffect_SetMetatile(s16 isScreenOn, s8 dx, s8 dy)
     {
         // Screen is off, set it on
         if (gSpecialVar_0x8004 == PC_LOCATION_OTHER)
-            metatileId = IS_FRLG ? METATILE_BuildingFrlg_PCOn : METATILE_Building_PC_On;
+        {
+            if (IsHoennTileset(gMapHeader.mapLayout->primaryTileset))
+                metatileId = METATILE_Building_PC_On;
+            else
+                metatileId = METATILE_BuildingFrlg_PCOn;
+        }
+            
         else if (gSpecialVar_0x8004 == PC_LOCATION_BRENDANS_HOUSE)
             metatileId = METATILE_BrendansMaysHouse_BrendanPC_On;
         else if (gSpecialVar_0x8004 == PC_LOCATION_MAYS_HOUSE)

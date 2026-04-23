@@ -2,7 +2,7 @@
   "id": "MAP_STONEVEIL_POWER_PLANT_1F",
   "name": "StoneveilPowerPlant_1F",
   "layout": "LAYOUT_STONEVEIL_POWER_PLANT_1F",
-  "music": "MUS_HEAVY_LIGHT",
+  "music": "MUS_STONEVEIL",
   "region_map_section": "MAPSEC_STONEVEIL_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -11,10 +11,12 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": null,
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M",
       "x": 11,
       "y": 15,
@@ -28,6 +30,7 @@
       "flag": "FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MARS",
       "x": 21,
       "y": 16,
@@ -41,6 +44,7 @@
       "flag": "FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CYRUS",
       "x": -4,
       "y": -4,
@@ -54,6 +58,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_F",
       "x": 5,
       "y": 11,
@@ -67,6 +72,7 @@
       "flag": "FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 1,
       "y": 4,
@@ -80,6 +86,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 25,
       "y": 5,
@@ -93,6 +100,7 @@
       "flag": "FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_F",
       "x": 25,
       "y": 11,
@@ -106,6 +114,7 @@
       "flag": "FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GALACTIC_GRUNT_M",
       "x": 15,
       "y": 4,
@@ -126,12 +135,15 @@
       "elevation": 0,
       "dest_map": "MAP_STONEVEIL_POWER_PLANT",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_STONEVEIL_POWER_PLANT_1F",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-
-  ],
-  "bg_events": [
-
-  ]
+  "coord_events": [],
+  "bg_events": []
 }

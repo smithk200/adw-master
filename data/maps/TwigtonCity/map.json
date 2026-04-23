@@ -219,6 +219,13 @@
       "elevation": 0,
       "dest_map": "MAP_TWIGTON_CITY_OLD_LADYS_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_TWIGTON_CITY_PLAYERS_HOUSE1F",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -239,6 +246,15 @@
       "var": "VAR_TWIGTON_CITY_MAP_STATE",
       "var_value": "0",
       "script": "TwigtonCity_TriggerWhatAreYouDoing_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "TwigtonCity_EventScriptMomsHouse_DoNotEnter"
     }
   ],
   "bg_events": [
@@ -257,14 +273,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "TwigtonCity_EventScriptNedsHouse"
-    },
-    {
-      "type": "sign",
-      "x": 23,
-      "y": 16,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "TwigtonCity_EventScriptMomsHouse_DoNotEnter"
     }
   ]
 }

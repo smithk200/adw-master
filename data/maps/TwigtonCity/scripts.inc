@@ -2,6 +2,8 @@ TwigtonCity_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, TwigtonCity_OnLoad
 	.byte 0
 	
+Common_EventScript_End::
+	end
 
 TwigtonCity_OnLoad::
 	setflag FLAG_HIDE_TWIG_IN_HIS_CITY
@@ -33,8 +35,12 @@ TwigtonCity_EventScriptSmellsLikeTeenSpirit::
 
 TwigtonCity_EventScriptMomsHouse_DoNotEnter::
 	lock
-	faceplayer
+	goto_if_set FLAG_BADGE07_GET, Common_EventScript_End
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
 	msgbox TwigtonCity_TextMomsHouse_DoNotEnter, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
 	release
 	end
 

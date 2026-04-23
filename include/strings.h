@@ -2160,6 +2160,10 @@ extern const u8 gText_OakThisIsListOfPokemon[];
 extern const u8 gText_Boy[];
 extern const u8 gText_Girl[];
 
-
+extern const u8 gText_SmallDot[];
+extern const u8 gText_LargeDot[];
+extern const u8 gText_PageNav[];
+extern const u8 gText_EXPShare[];
+extern const u8 gText_AutoHMs[];
 
 #endif // GUARD_STRINGS_H

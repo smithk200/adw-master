@@ -22,10 +22,10 @@
 
 // Battle gimmick specific Forms.
 #define P_MEGA_EVOLUTIONS                TRUE
-#define P_PRIMAL_REVERSIONS              TRUE // Groudon and Kyogre only.
+#define P_PRIMAL_REVERSIONS              FALSE // Groudon and Kyogre only.
 #define P_ULTRA_BURST_FORMS              TRUE // Ultra Necrozma only.
 #define P_GIGANTAMAX_FORMS               TRUE
-#define P_TERA_FORMS                     TRUE
+#define P_TERA_FORMS                     FALSE
 
 #define P_GEN_9_MEGA_EVOLUTIONS          P_MEGA_EVOLUTIONS // Mega Evolutions introduced in Z-A and its DLC
 
@@ -40,7 +40,7 @@
 #define P_PALDEAN_FORMS                  P_REGIONAL_FORMS
 
 // Big groups of forms that aren't always desired when choosing families.
-#define P_PIKACHU_EXTRA_FORMS            TRUE
+#define P_PIKACHU_EXTRA_FORMS            FALSE
 #define P_COSPLAY_PIKACHU_FORMS          P_PIKACHU_EXTRA_FORMS
 #define P_CAP_PIKACHU_FORMS              P_PIKACHU_EXTRA_FORMS
 
@@ -540,7 +540,7 @@
 #define P_FAMILY_TANDEMAUS               P_GEN_9_POKEMON
 #define P_FAMILY_FIDOUGH                 P_GEN_9_POKEMON
 #define P_FAMILY_SMOLIV                  P_GEN_9_POKEMON
-#define P_FAMILY_SQUAWKABILLY            P_GEN_9_POKEMON
+#define P_FAMILY_SQUAWKABILLY            FALSE
 #define P_FAMILY_NACLI                   P_GEN_9_POKEMON
 #define P_FAMILY_CHARCADET               P_GEN_9_POKEMON
 #define P_FAMILY_TADBULB                 P_GEN_9_POKEMON
@@ -551,7 +551,7 @@
 #define P_FAMILY_TOEDSCOOL               P_GEN_9_POKEMON
 #define P_FAMILY_KLAWF                   P_GEN_9_POKEMON
 #define P_FAMILY_CAPSAKID                P_GEN_9_POKEMON
-#define P_FAMILY_RELLOR                  P_GEN_9_POKEMON
+#define P_FAMILY_RELLOR                  FALSE
 #define P_FAMILY_FLITTLE                 P_GEN_9_POKEMON
 #define P_FAMILY_TINKATINK               P_GEN_9_POKEMON
 #define P_FAMILY_WIGLETT                 P_GEN_9_POKEMON
@@ -567,42 +567,42 @@
 #define P_FAMILY_VELUZA                  P_GEN_9_POKEMON
 #define P_FAMILY_DONDOZO                 P_GEN_9_POKEMON
 #define P_FAMILY_TATSUGIRI               P_GEN_9_POKEMON
-#define P_FAMILY_GREAT_TUSK              P_GEN_9_POKEMON
-#define P_FAMILY_SCREAM_TAIL             P_GEN_9_POKEMON
-#define P_FAMILY_BRUTE_BONNET            P_GEN_9_POKEMON
-#define P_FAMILY_FLUTTER_MANE            P_GEN_9_POKEMON
-#define P_FAMILY_SLITHER_WING            P_GEN_9_POKEMON
-#define P_FAMILY_SANDY_SHOCKS            P_GEN_9_POKEMON
-#define P_FAMILY_IRON_TREADS             P_GEN_9_POKEMON
-#define P_FAMILY_IRON_BUNDLE             P_GEN_9_POKEMON
-#define P_FAMILY_IRON_HANDS              P_GEN_9_POKEMON
-#define P_FAMILY_IRON_JUGULIS            P_GEN_9_POKEMON
-#define P_FAMILY_IRON_MOTH               P_GEN_9_POKEMON
-#define P_FAMILY_IRON_THORNS             P_GEN_9_POKEMON
+#define P_FAMILY_GREAT_TUSK              FALSE
+#define P_FAMILY_SCREAM_TAIL             FALSE
+#define P_FAMILY_BRUTE_BONNET            FALSE
+#define P_FAMILY_FLUTTER_MANE            FALSE
+#define P_FAMILY_SLITHER_WING            FALSE
+#define P_FAMILY_SANDY_SHOCKS            FALSE
+#define P_FAMILY_IRON_TREADS             FALSE
+#define P_FAMILY_IRON_BUNDLE             FALSE
+#define P_FAMILY_IRON_HANDS              FALSE
+#define P_FAMILY_IRON_JUGULIS            FALSE
+#define P_FAMILY_IRON_MOTH               FALSE
+#define P_FAMILY_IRON_THORNS             FALSE
 #define P_FAMILY_FRIGIBAX                P_GEN_9_POKEMON
-#define P_FAMILY_GIMMIGHOUL              P_GEN_9_POKEMON
-#define P_FAMILY_WO_CHIEN                P_GEN_9_POKEMON
-#define P_FAMILY_CHIEN_PAO               P_GEN_9_POKEMON
-#define P_FAMILY_TING_LU                 P_GEN_9_POKEMON
-#define P_FAMILY_CHI_YU                  P_GEN_9_POKEMON
-#define P_FAMILY_ROARING_MOON            P_GEN_9_POKEMON
-#define P_FAMILY_IRON_VALIANT            P_GEN_9_POKEMON
-#define P_FAMILY_KORAIDON                P_GEN_9_POKEMON
-#define P_FAMILY_MIRAIDON                P_GEN_9_POKEMON
-#define P_FAMILY_WALKING_WAKE            P_GEN_9_POKEMON
-#define P_FAMILY_IRON_LEAVES             P_GEN_9_POKEMON
-#define P_FAMILY_POLTCHAGEIST            P_GEN_9_POKEMON
-#define P_FAMILY_SINISTCHA               P_GEN_9_POKEMON
-#define P_FAMILY_OKIDOGI                 P_GEN_9_POKEMON
-#define P_FAMILY_MUNKIDORI               P_GEN_9_POKEMON
-#define P_FAMILY_FEZANDIPITI             P_GEN_9_POKEMON
-#define P_FAMILY_OGERPON                 P_GEN_9_POKEMON
-#define P_FAMILY_GOUGING_FIRE            P_GEN_9_POKEMON
-#define P_FAMILY_RAGING_BOLT             P_GEN_9_POKEMON
-#define P_FAMILY_IRON_BOULDER            P_GEN_9_POKEMON
-#define P_FAMILY_IRON_CROWN              P_GEN_9_POKEMON
-#define P_FAMILY_TERAPAGOS               P_GEN_9_POKEMON
-#define P_FAMILY_PECHARUNT               P_GEN_9_POKEMON
+#define P_FAMILY_GIMMIGHOUL              FALSE
+#define P_FAMILY_WO_CHIEN                FALSE
+#define P_FAMILY_CHIEN_PAO               FALSE
+#define P_FAMILY_TING_LU                 FALSE
+#define P_FAMILY_CHI_YU                  FALSE
+#define P_FAMILY_ROARING_MOON            FALSE
+#define P_FAMILY_IRON_VALIANT            FALSE
+#define P_FAMILY_KORAIDON                FALSE
+#define P_FAMILY_MIRAIDON                FALSE
+#define P_FAMILY_WALKING_WAKE            FALSE
+#define P_FAMILY_IRON_LEAVES             FALSE
+#define P_FAMILY_POLTCHAGEIST            FALSE
+#define P_FAMILY_SINISTCHA               FALSE
+#define P_FAMILY_OKIDOGI                 FALSE
+#define P_FAMILY_MUNKIDORI               FALSE
+#define P_FAMILY_FEZANDIPITI             FALSE
+#define P_FAMILY_OGERPON                 FALSE
+#define P_FAMILY_GOUGING_FIRE            FALSE
+#define P_FAMILY_RAGING_BOLT             FALSE
+#define P_FAMILY_IRON_BOULDER            FALSE
+#define P_FAMILY_IRON_CROWN              FALSE
+#define P_FAMILY_TERAPAGOS               FALSE
+#define P_FAMILY_PECHARUNT               FALSE
 
 
 //ADW and Clover mons are in the same group, ig

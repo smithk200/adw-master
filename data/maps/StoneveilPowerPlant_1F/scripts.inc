@@ -27,6 +27,12 @@ StoneveilPowerPlant_1F_EventScript_Commander_Mars::
 	fadescreen FADE_TO_BLACK
 	delay 30
 	setflag FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT
+	removeobject 1
+	removeobject 2
+	removeobject 4
+	removeobject 7
+	removeobject 8
+	warp MAP_STONEVEIL_POWER_PLANT_1F, 21, 17
 	fadescreen FADE_FROM_BLACK
 	end
 

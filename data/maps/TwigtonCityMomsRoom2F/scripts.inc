@@ -11,7 +11,8 @@ TwigtonCity_MomsRoom2F_EventScriptWorried2::
 	release
 	end
 	
-TwigtonCity_MomsRoom2F_EventScriptWorried3::
+TwigtonCity_MomsRoom2F_EventScriptWorried3:: @this will be the computer that unlocks the secret tunnel beneath Twigton City
+	goto_if_set FLAG_BADGE07_GET, TwigtonCity_MomsRoom2F_EventScriptUnlockSecretBase
 	msgbox TwigtonCityPlayersHouse2F_TextWorried3, MSGBOX_AUTOCLOSE
 	release
 	end
@@ -50,6 +51,31 @@ TwigtonCity_MomsRoom2F_EventScriptMomsJournal::
 	msgbox TwigtonCity_MomsRoom2F_TextMomsJournal, MSGBOX_AUTOCLOSE
 	release
 	end
+
+TwigtonCity_MomsRoom2F_EventScriptUnlockSecretBase::
+	lock
+	faceplayer
+	goto_if_unset FLAG_DISCOVERED_SECRET_BASE, TwigtonCity_MomsRoom2F_EventScriptDiscoveredSecretBase
+	msgbox TwigtonCity_MomsRoom2F_Text_AskToWarp, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq TwigtonCity_MomsRoom2F_Text_DidNotWarp
+	warp MAP_TWIGTON_CITY_TEAM_JUMBOS_BASE_1F, 28, 3
+	release
+	end
+
+TwigtonCity_MomsRoom2F_EventScriptDiscoveredSecretBase:: @first time when the player discovers the secret base
+	msgbox TwigtonCity_MomsRoom2F_Text_DiscoveredSecretBase, MSGBOX_YESNO
+	setflag FLAG_DISCOVERED_SECRET_BASE
+	compare VAR_RESULT, 0
+	goto_if_eq TwigtonCity_MomsRoom2F_Event_Script_DidNotWarp
+	warp MAP_TWIGTON_CITY_TEAM_JUMBOS_BASE_1F, 28, 3
+	release
+	end
+
+TwigtonCity_MomsRoom2F_Event_Script_DidNotWarp::
+	msgbox TwigtonCity_MomsRoom2F_Text_DidNotWarp, MSGBOX_AUTOCLOSE
+	release
+	end 
 
 TwigtonCityPlayersHouse2F_TextWorried1:
     .string "A browser page is open.\p"
@@ -99,8 +125,8 @@ TwigtonCityPlayersHouse2F_TextWorried6:
 
 TwigtonCityPlayersHouse2F_TextWorried7:
     .string "A book is on the floor.\p"
-	.string "It is titled “Can A Smart\n"
-	.string "Person Believe In God?”.$"
+	.string "It is titled “Can A Smart Person\n"
+	.string "Believe In God?”.$"
 	
 
 TwigtonCityPlayersHouse2F_TextWorried8:
@@ -132,6 +158,21 @@ TwigtonCity_MomsRoom2F_TextMomsJournal:
 	.string "I have done everything I could, LORD.\p"
 	.string "Please, LORD, I need the strength to be\n"
 	.string "a better mom.\p"
-	.string "And, LORD...\p"
+	.string "And, LORD…\p"
 	.string "Please let my son turn to You and\n"
 	.string "see how holy and good You are.$"
+
+TwigtonCity_MomsRoom2F_Text_DiscoveredSecretBase:
+	.string "You insert the flash drive.\p"
+	.string "It contains the passcode to teleport\n"
+	.string "you to your mom's secret base.\p"
+	.string "Do you want to teleport to the\n"
+	.string "Secret Base?$"
+
+TwigtonCity_MomsRoom2F_Text_AskToWarp:
+	.string "Do you want to teleport to the\n"
+	.string "Secret Base?$"
+
+TwigtonCity_MomsRoom2F_Text_DidNotWarp:
+	.string "{PLAYER} did not teleport to the \n"
+	.string "secret base.$"

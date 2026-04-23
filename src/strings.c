@@ -1178,3 +1178,7 @@ const u8 gText_Volcanobadge[] = _("Volcanobadge");
 const u8 gText_Earthbadge[] = _("Earthbadge");
 const u8 gText_OakImportantToGetToKnowPokemonThroughly[] = _("OAK: It's important to get to know\nyour Pokémon thoroughly.\p");
 const u8 gText_OakThisIsListOfPokemon[] = _("This is a list of your Pokémon,\n{PLAYER}.\pOpen this to check the skills\nand moves of your Pokémon.\pYou also choose Pokémon here if\nyou want to use an item on one.{PAUSE_UNTIL_PRESS}");
+const u8 gText_Option[] = _("Option");
+const u8 gText_SmallDot[] = _("·");
+const u8 gText_LargeDot[] = _("{EMOJI_CIRCLE}");
+const u8 gText_PageNav[] = _("{L_BUTTON}{R_BUTTON} Page");

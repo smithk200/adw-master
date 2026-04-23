@@ -89,9 +89,9 @@
 #define FLAG_HIDE_GRUNTS_STONEVEIL_POWER_PLANT    0x43
 #define FLAG_HIDE_OTHER_GRUNTS_MT_POMPOUS    0x44
 #define FLAG_RECIEVED_STARTER_POKEMON    0x45
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
+#define FLAG_DISCOVERED_SECRET_BASE    0x46
+#define FLAG_CYRUS_GIVES_SPEECH    0x47
+#define FLAG_CYRUS_FOLLOWER    0x48
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag
@@ -468,8 +468,8 @@
 #define FLAG_REGISTERED_DRAKE                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DRAKE)
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
-#define FLAG_UNUSED_0x1AA                    0x1AA // Unused Flag
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
+#define FLAG_EXP_SHARE                      0x1AA
+#define FLAG_DEFEATED_YOUR_MOM_TWIGTON      0x1AB
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD

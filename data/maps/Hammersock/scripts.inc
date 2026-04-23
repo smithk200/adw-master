@@ -20,7 +20,7 @@ Hammersock_Event_Script_CitySign::
 
 Hammersock_Event_Script_Gym_Sign::
 	lock
-	goto_if_set FLAG_BADGE07_GET, Hammersock_Event_Script_Gym_Sign_Raihan
+	goto_if_set FLAG_DEFEATED_YOUR_MOM_TWIGTON, Hammersock_Event_Script_Gym_Sign_Raihan
 	msgbox Hammersock_Text_Gym_Sign, MSGBOX_DEFAULT
 	release
 	end
@@ -32,6 +32,7 @@ Hammersock_EventScript_TryUnlockGym::
 	goto_if_unset FLAG_BADGE05_GET, EventScript_Return
 	goto_if_unset FLAG_BADGE06_GET, EventScript_Return
 	goto_if_unset FLAG_BADGE07_GET, EventScript_Return
+	goto_if_unset FLAG_DEFEATED_YOUR_MOM_TWIGTON, EventScript_Return
 	setvar VAR_HAMMERSOCK_GYM_DOOR, 1
 	return
 

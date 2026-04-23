@@ -22,7 +22,7 @@ gText_Birch_MainSpeech::
 	.string "Some people keep them as pets,\n"
 	.string "but most people battle with them.\p"
 	.string "I imagine you'll be battling as well.\p"
-	.string "As for me...\p"
+	.string "As for me…\p"
 	.string "I place bets on them and make a shit\n"
 	.string "ton of money in the casinos!\p"
 	.string "I know everything about Pokémon!\p"

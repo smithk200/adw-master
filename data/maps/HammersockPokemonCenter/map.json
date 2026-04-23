@@ -2,7 +2,7 @@
   "id": "MAP_HAMMERSOCK_POKEMON_CENTER",
   "name": "HammersockPokemonCenter",
   "layout": "LAYOUT_POKEMON_CENTER_1F_FRLG",
-  "music": "MUS_HEAVY_LIGHT",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_HAMMERSOCK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -726,8 +726,8 @@
       "name": "PokemonCenter_1F_Layout",
       "width": 14,
       "height": 9,
-      "border_width": 0,
-      "border_height": 0,
+      "border_width": 2,
+      "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PokemonCenter_1F/border.bin",
@@ -1026,8 +1026,8 @@
       "name": "SlateportCity_OceanicMuseum_1F_Layout",
       "width": 20,
       "height": 9,
-      "border_width": 0,
-      "border_height": 0,
+      "border_width": 2,
+      "border_height": 2,
       "primary_tileset": "gTileset_BuildingFrlg",
       "secondary_tileset": "gTileset_OceanicMuseum",
       "border_filepath": "data/layouts/SlateportCity_OceanicMuseum_1F/border.bin",
@@ -10068,6 +10068,18 @@
       "secondary_tileset": "gTileset_CeruleanCity",
       "border_filepath": "data/layouts/Route3Part2/border.bin",
       "blockdata_filepath": "data/layouts/Route3Part2/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWIGTON_CITY_TEAM_JUMBOS_BASE_1F",
+      "name": "Twigton_City_TeamJumbosBase_1f_Layout",
+      "width": 30,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_SilphCo",
+      "border_filepath": "data/layouts/Twigton_City_TeamJumbosBase_1f/border.bin",
+      "blockdata_filepath": "data/layouts/Twigton_City_TeamJumbosBase_1f/map.bin"
     }
   ]
 }
