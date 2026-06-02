@@ -134,7 +134,6 @@ static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
 
-#if IS_FRLG
 
 static const u8 sDoorAnimTiles_GeneralFrlg[] = INCBIN_U8("graphics/door_anims/general_frlg.4bpp");
 static const u8 sDoorAnimTiles_SlidingSingle[] = INCBIN_U8("graphics/door_anims/sliding_single.4bpp");
@@ -168,8 +167,6 @@ static const u8 sDoorAnimTiles_Sevii67[] = INCBIN_U8("graphics/door_anims/sevii_
 static const u8 sDoorAnimTiles_Teleporter[] = INCBIN_U8("graphics/door_anims/teleporter.4bpp");
 static const u8 sDoorAnimTiles_TrainerTowerLobbyElevator[] = INCBIN_U8("graphics/door_anims/trainer_tower_lobby_elevator.4bpp");
 static const u8 sDoorAnimTiles_TrainerTowerRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_tower_roof_elevator.4bpp");
-
-#endif // IS_FRLG
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
 {
@@ -291,7 +288,6 @@ static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
 
-#if IS_FRLG
 
 static const u8 sDoorAnimPalettes_GeneralFrlg[] = {2, 2, 2, 2, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_SlidingSingle[] = {3, 3, 3, 3, 3, 3, 3, 3};
@@ -326,11 +322,9 @@ static const u8 sDoorAnimPalettes_Teleporter[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_TrainerTowerLobbyElevator[] = {8, 8, 2, 2, 2, 2, 2, 2};
 static const u8 sDoorAnimPalettes_TrainerTowerRoofElevator[] = {11, 11, 2, 2, 2, 2, 2, 2};
 
-#endif // IS_FRLG
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
-#if !IS_FRLG
     {METATILE_General_Door,                                 &gTileset_General, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_General, sDoorAnimPalettes_General},
     {METATILE_General_Door_PokeCenter,                      &gTileset_General, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_PokeCenter, sDoorAnimPalettes_PokeCenter},
     {METATILE_General_Door_Gym,                             &gTileset_General, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_Gym, sDoorAnimPalettes_Gym},
@@ -386,7 +380,6 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_BattleTent_Door,                              &gTileset_BattleTent, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BattleTentInterior, sDoorAnimPalettes_BattleTentInterior},
     {METATILE_TrainerHill_Door_Elevator_Lobby,              &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillLobbyElevator, sDoorAnimPalettes_TrainerHillLobbyElevator},
     {METATILE_TrainerHill_Door_Elevator_Roof,               &gTileset_TrainerHill, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_TrainerHillRoofElevator, sDoorAnimPalettes_TrainerHillRoofElevator},
-#else
     {METATILE_GeneralFrlg_Door,                             &gTileset_General_Frlg, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_GeneralFrlg, sDoorAnimPalettes_GeneralFrlg},
     {METATILE_GeneralFrlg_SlidingSingleDoor,                &gTileset_General_Frlg, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SlidingSingle, sDoorAnimPalettes_SlidingSingle},
     {METATILE_GeneralFrlg_SlidingDoubleDoor,                &gTileset_General_Frlg, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_SlidingDouble, sDoorAnimPalettes_SlidingDouble},
@@ -423,7 +416,6 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
     {METATILE_SeaCottage_Teleporter_Door,                   &gTileset_SeaCottage, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_Teleporter, sDoorAnimPalettes_Teleporter},
     {METATILE_TrainerTower_LobbyElevatorDoor,               &gTileset_TrainerTower, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_TrainerTowerLobbyElevator, sDoorAnimPalettes_TrainerTowerLobbyElevator},
     {METATILE_TrainerTower_RoofElevatorDoor,                &gTileset_TrainerTower, DOOR_SOUND_SLIDING, 2, sDoorAnimTiles_TrainerTowerRoofElevator, sDoorAnimPalettes_TrainerTowerRoofElevator},
-#endif // !IS_FRLG
     {},
 };
 
@@ -435,7 +427,7 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 
 static void CopyDoorTilesToVram(const struct DoorGraphics *gfx, const struct DoorAnimFrame *frame)
 {
-    if (gfx->size == 2 && !gMapHeader.mapLayout->isFrlg)
+    if (gfx->size == 2 && !!(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)))
         CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2)), 16 * TILE_SIZE_4BPP);
     else
         CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)), 8 * TILE_SIZE_4BPP);
@@ -479,7 +471,7 @@ static void DrawCurrentDoorAnimFrameFrlg(const struct DoorGraphics *gfx, int x, 
 
 static void DrawCurrentDoorAnimFrame(const struct DoorGraphics *gfx, u32 x, u32 y, const u8 *paletteNums)
 {
-    if (gMapHeader.mapLayout->isFrlg)
+    if (!(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)))
     {
         DrawCurrentDoorAnimFrameFrlg(gfx, x, y, paletteNums);
         return;
@@ -530,7 +522,7 @@ static void DrawClosedDoorTilesFrlg(const struct DoorGraphics *gfx, int x, int y
 
 static void DrawClosedDoorTiles(const struct DoorGraphics *gfx, u32 x, u32 y)
 {
-    if (gMapHeader.mapLayout->isFrlg)
+    if (!(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)))
     {
         DrawClosedDoorTilesFrlg(gfx, x, y);
         return;
@@ -651,7 +643,7 @@ static void DrawClosedDoor(const struct DoorGraphics *gfx, u32 x, u32 y)
 
 static void DrawOpenedDoor(const struct DoorGraphics *gfx, u32 x, u32 y)
 {
-    const struct DoorAnimFrame *doorAnimFrames = gMapHeader.mapLayout->isFrlg ? sDoorAnimFrames_OpenSmallFrlg : sDoorOpenAnimFrames;
+    const struct DoorAnimFrame *doorAnimFrames = !(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)) ? sDoorAnimFrames_OpenSmallFrlg : sDoorOpenAnimFrames;
     gfx = GetDoorGraphics(gfx, MapGridGetMetatileIdAt(x, y));
     if (gfx != NULL)
         DrawDoor(gfx, GetLastDoorFrame(doorAnimFrames, doorAnimFrames), x, y);
@@ -667,9 +659,9 @@ static s8 StartDoorOpenAnimation(const struct DoorGraphics *gfx, u32 x, u32 y)
     else
     {
         if (gfx->size == 2)
-            return StartDoorAnimationTask(gfx, gMapHeader.mapLayout->isFrlg ? sDoorAnimFrames_OpenLargeFrlg : sBigDoorOpenAnimFrames, x, y);
+            return StartDoorAnimationTask(gfx, !(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)) ? sDoorAnimFrames_OpenLargeFrlg : sBigDoorOpenAnimFrames, x, y);
         else
-            return StartDoorAnimationTask(gfx, gMapHeader.mapLayout->isFrlg ? sDoorAnimFrames_OpenSmallFrlg : sDoorOpenAnimFrames, x, y);
+            return StartDoorAnimationTask(gfx, !(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)) ? sDoorAnimFrames_OpenSmallFrlg : sDoorOpenAnimFrames, x, y);
     }
 }
 
@@ -678,10 +670,10 @@ static s8 StartDoorCloseAnimation(const struct DoorGraphics *gfx, u32 x, u32 y)
     gfx = GetDoorGraphics(gfx, MapGridGetMetatileIdAt(x, y));
     if (gfx == NULL)
         return -1;
-    else if (gfx->size != 1 && gMapHeader.mapLayout->isFrlg)
+    else if (gfx->size != 1 && !(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)))
         return StartDoorAnimationTask(gfx, sDoorAnimFrames_CloseLargeFrlg, x, y);
     else
-        return StartDoorAnimationTask(gfx, gMapHeader.mapLayout->isFrlg ? sDoorAnimFrames_CloseSmallFrlg : sDoorCloseAnimFrames, x, y);
+        return StartDoorAnimationTask(gfx, !(IsHoennTileset(gMapHeader.mapLayout->primaryTileset)) ? sDoorAnimFrames_CloseSmallFrlg : sDoorCloseAnimFrames, x, y);
 }
 
 static s8 GetDoorSoundType(const struct DoorGraphics *gfx, u32 x, u32 y)

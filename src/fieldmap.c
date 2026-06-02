@@ -505,7 +505,11 @@ u8 MapGridGetCollisionAt(int x, int y)
 
 u32 GetNumTilesInPrimary(struct MapLayout const *mapLayout)
 {
-    return mapLayout->isFrlg ? NUM_TILES_IN_PRIMARY_FRLG : NUM_TILES_IN_PRIMARY;
+    //return mapLayout->isFrlg ? NUM_TILES_IN_PRIMARY_FRLG : NUM_TILES_IN_PRIMARY;
+    if (IsHoennTileset(mapLayout->primaryTileset))
+        return NUM_TILES_IN_PRIMARY;
+    else
+        return NUM_TILES_IN_PRIMARY_FRLG;
 }
 
 u32 GetNumMetatilesInPrimary(struct MapLayout const *mapLayout)

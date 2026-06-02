@@ -1,46 +1,48 @@
 {
   "id": "MAP_TWIGTON_CITY_TEAM_JUMBOS_BASE_1F",
-  "name": "Twigton_City_TeamJumbosBase_1f",
+  "name": "Twigton_City_TeamJumbosBase_1F",
   "layout": "LAYOUT_TWIGTON_CITY_TEAM_JUMBOS_BASE_1F",
-  "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_ABANDONED_SHIP",
+  "music": "MUS_HEAVY_LIGHT",
+  "region_map_section": "MAPSEC_TWIGTON_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
-  "map_type": "MAP_TYPE_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": false,
-  "show_map_name": true,
+  "show_map_name": false,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCAL_ID_YOUR_MOM_TWIGTON_BASE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MOM",
-      "x": 17,
-      "y": 4,
+      "x": 9,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "0x0",
       "flag": "0"
     },
     {
+      "local_id": "LOCAL_ID_BEN_SHAPIRO_TWIGTON_BASE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PROF_TWIG",
-      "x": 18,
-      "y": 4,
+      "x": 10,
+      "y": 19,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "0x0",
       "flag": "0"
     },
     {
@@ -57,6 +59,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_CYRUS_FOLLOWER"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_JUMBO_GRUNT_M",
+      "x": 20,
+      "y": 7,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_JumboGrunt_1",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -65,6 +81,20 @@
       "y": 3,
       "elevation": 0,
       "dest_map": "MAP_TWIGTON_CITY_MOMS_ROOM2F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 21,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_TWIGTON_CITY_TEAM_JUMBOS_BASE_1F",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 1,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_TWIGTON_CITY_TEAM_JUMBOS_BASE_1F",
       "dest_warp_id": "1"
     }
   ],
@@ -76,7 +106,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_Cyrus_Trigger_Top"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_Cyrus_Trigger_Top"
     },
     {
       "type": "trigger",
@@ -85,7 +115,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_Cyrus_Trigger_Mid"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_Cyrus_Trigger_Mid"
     },
     {
       "type": "trigger",
@@ -94,7 +124,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_Cyrus_Trigger_Bottom"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_Cyrus_Trigger_Bottom"
     },
     {
       "type": "trigger",
@@ -103,7 +133,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_DontLeaveCyrus"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_DontLeaveCyrus"
     },
     {
       "type": "trigger",
@@ -112,7 +142,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_DontLeaveCyrus"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_DontLeaveCyrus"
     },
     {
       "type": "trigger",
@@ -121,7 +151,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_DontLeaveCyrus"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_DontLeaveCyrus"
     },
     {
       "type": "trigger",
@@ -130,7 +160,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_TalkToCyrusFirst"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_TalkToCyrusFirst"
     },
     {
       "type": "trigger",
@@ -139,7 +169,25 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Twigton_City_TeamJumbosBase_1f_EventScript_TalkToCyrusFirst"
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_TalkToCyrusFirst"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_YourMomBattleScene_TriggerLeft"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Twigton_City_TeamJumbosBase_1F_EventScript_YourMomBattleScene_TriggerRight"
     }
   ],
   "bg_events": []

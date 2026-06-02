@@ -2,7 +2,7 @@
   "id": "MAP_ELWOOD_CITY_TRADERS_HOUSE",
   "name": "ElwoodCityTradersHouse",
   "layout": "LAYOUT_ELWOOD_CITY_TRADERS_HOUSE",
-  "music": "MUS_HEAVY_LIGHT",
+  "music": "MUS_ELWOOD_CITY",
   "region_map_section": "MAPSEC_ELWOOD_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -339,7 +339,7 @@ Debug_Follower_NPC_Test_Message:
 	.string "This is a Follower NPC test.$"
 
 Debug_EventScript_Steven_Multi::
-	call MossdeepCity_SpaceCenter_2F_EventScript_ChoosePartyForMultiBattle
+	call Twigton_City_TeamJumbosBase_1F_EventScript_DoCyrusMultiBattle
 	release
 	end
 

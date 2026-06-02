@@ -2,7 +2,13 @@ EventScript_StartTrainerApproach::
 	selectapproachingtrainer
 	lockfortrainer
 EventScript_TrainerApproach::
+	goto_if_set FLAG_DONT_FADE_MAP_MUSIC_UPON_BATTLE, EventScript_TrainerApproachNoMusic
 	special PlayTrainerEncounterMusic
+	special DoTrainerApproach
+	waitstate
+	goto EventScript_ShowTrainerIntroMsg
+
+EventScript_TrainerApproachNoMusic::
 	special DoTrainerApproach
 	waitstate
 	goto EventScript_ShowTrainerIntroMsg
@@ -17,6 +23,10 @@ EventScript_TryDoNormalTrainerBattle::
 	specialvar VAR_RESULT, GetTrainerFlag
 	goto_if_ne VAR_RESULT, FALSE, EventScript_NoNormalTrainerBattle
 	special PlayTrainerEncounterMusic
+	special SetTrainerFacingDirection
+	goto EventScript_ShowTrainerIntroMsg
+
+EventScript_TryDoNormalTrainerBattle_NoMusic::
 	special SetTrainerFacingDirection
 	goto EventScript_ShowTrainerIntroMsg
 

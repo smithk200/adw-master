@@ -297,6 +297,9 @@
 #define METATILE_General_YellowCaveIndent      0x1A8
 #define METATILE_General_YellowCaveOpen        0x1A9
 
+// gTileset_General_Frlg
+#define METATILE_General_Frlg_METATILE_GeneralFrlg_SlidingSingleDoor  0x062
+
 // gTileset_GenericBuilding
 #define METATILE_GenericBuilding_TableEdge               0x2F1
 #define METATILE_GenericBuilding_TrickHouse_Door_Closed  0x21B

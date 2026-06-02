@@ -15828,6 +15828,59 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+    [ITEM_TWIGS_FOOD] =
+    {
+        .name = ITEM_NAME("Twig's Food"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Prof. Twig's food\n"
+            "that he asked you\n"
+            "to DoorDash for him."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_TwigsFood,
+        .iconPalette = gItemIconPalette_TwigsFood,
+    },
+    [ITEM_MOON_HOOCH] =
+    {
+        .name = ITEM_NAME("Moon Hooch"),
+        .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .description = sEvolutionStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 30,
+        .iconPic = gItemIcon_MoonHooch,
+        .iconPalette = gItemIconPalette_MoonHooch,
+    },
+    [ITEM_GALARIAN_STONE] =
+    {
+        .name = ITEM_NAME("Galarian Stone"),
+        .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .description = sEvolutionStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 30,
+        .iconPic = gItemIcon_GalarianStone,
+        .iconPalette = gItemIconPalette_GalarianStone,
+    },
+    [ITEM_PALDEAN_STONE] =
+    {
+        .name = ITEM_NAME("Paldean Stone"),
+        .price = (I_PRICE >= GEN_7) ? 3000 : 2100,
+        .description = sEvolutionStoneDesc,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .flingPower = 30,
+        .iconPic = gItemIcon_PaldeanStone,
+        .iconPalette = gItemIconPalette_PaldeanStone,
+    },
 };
 
 #undef ITEM_NAME

@@ -432,7 +432,7 @@
 #define P_FAMILY_YUNGOOS                 P_GEN_7_POKEMON
 #define P_FAMILY_GRUBBIN                 P_GEN_7_POKEMON
 #define P_FAMILY_CRABRAWLER              P_GEN_7_POKEMON
-#define P_FAMILY_ORICORIO                P_GEN_7_POKEMON
+#define P_FAMILY_ORICORIO                FALSE
 #define P_FAMILY_CUTIEFLY                P_GEN_7_POKEMON
 #define P_FAMILY_ROCKRUFF                P_GEN_7_POKEMON
 #define P_FAMILY_WISHIWASHI              P_GEN_7_POKEMON

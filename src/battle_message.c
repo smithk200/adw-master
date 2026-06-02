@@ -166,6 +166,9 @@ static const u8 sText_Trainer1SentOutPkmnGalacticBoss[] = _("Galactic {B_TRAINER
 static const u8 sText_Trainer1WithdrewPkmnGalactic[] = _("Team Galactic Grunt withdrew {B_BUFF1}!");
 static const u8 sText_Trainer1WithdrewPkmnGalacticBoss[] = _("Galactic {B_TRAINER1_NAME_WITH_CLASS} withdrew {B_BUFF1}!");
 
+static const u8 sText_LinkPartnerSentOutPkmn1GoPkmnGalacticBoss[] = _("Galactic {B_LINK_PARTNER_NAME} sent out {B_LINK_PLAYER_MON1_NAME}! Go! {B_LINK_PLAYER_MON2_NAME}!");
+static const u8 sText_LinkPartnerSentOutPkmn2GoPkmnGalacticBoss[] = _("Galactic {B_LINK_PARTNER_NAME} sent out {B_LINK_PLAYER_MON2_NAME}! Go! {B_LINK_PLAYER_MON1_NAME}!");
+
 const u8 *const gStatNamesTable[NUM_BATTLE_STATS] =
 {
     [STAT_HP]      = sText_HP,
@@ -2550,9 +2553,20 @@ void BufferStringBattle(enum StringID stringID, enum BattlerId battler)
                 else if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
                 {
                     if (BattlerIsPlayer(battler))
-                        stringPtr = sText_LinkPartnerSentOutPkmn2GoPkmn;
+                    {
+                        if (BATTLE_PARTNER(battler) == PARTNER_CYRUS) //team galactic takes up too many characters for some reason
+                            stringPtr = sText_LinkPartnerSentOutPkmn2GoPkmnGalacticBoss;
+                        else
+                            stringPtr = sText_LinkPartnerSentOutPkmn2GoPkmn;
+                    }
+                        
                     else
-                        stringPtr = sText_LinkPartnerSentOutPkmn1GoPkmn;
+                    {
+                        if (BATTLE_PARTNER(battler) == PARTNER_CYRUS) //team galactic takes up too many characters for some reason
+                            stringPtr = sText_LinkPartnerSentOutPkmn1GoPkmnGalacticBoss;
+                        else
+                            stringPtr = sText_LinkPartnerSentOutPkmn1GoPkmn;
+                    }
                 }
                 else
                 {

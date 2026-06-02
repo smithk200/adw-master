@@ -3441,4 +3441,14 @@ extern const u16 gBattleIcons_Pal2[];
 extern const u32 gGhostFrontPic[];
 extern const u16 gGhostPalette[];
 
+extern const u32 gItemIcon_TwigsFood[];
+extern const u16 gItemIconPalette_TwigsFood[];
+
+extern const u32 gItemIcon_MoonHooch[];
+extern const u16 gItemIconPalette_MoonHooch[];
+extern const u32 gItemIcon_GalarianStone[];
+extern const u16 gItemIconPalette_GalarianStone[];
+extern const u32 gItemIcon_PaldeanStone[];
+extern const u16 gItemIconPalette_PaldeanStone[];
+
 #endif //GUARD_GRAPHICS_H

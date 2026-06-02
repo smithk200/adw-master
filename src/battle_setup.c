@@ -201,12 +201,23 @@ static void Task_BattleStart(u8 taskId)
     }
 }
 
+/*
+        if (FlagSet(FLAG_DONT_FADE_MAP_MUSIC_UPON_BATTLE))
+        {
+            PlayNewMapMusic(songId);
+            DebugPrintf("Don't clear map music flag is set");
+        }
+        else
+            */
+
 static void CreateBattleStartTask(enum BattleTransition transition, u16 song)
 {
     u8 taskId = CreateTask(Task_BattleStart, 1);
 
     gTasks[taskId].tTransition = transition;
-    PlayMapChosenOrBattleBGM(song);
+    if (FlagGet(FLAG_DONT_FADE_MAP_MUSIC_UPON_BATTLE) != TRUE)
+        PlayMapChosenOrBattleBGM(song);
+     
 }
 
 static void Task_BattleStart_Debug(u8 taskId)
@@ -1580,7 +1591,8 @@ void PlayTrainerEncounterMusic(void)
         default:
             music = MUS_ENCOUNTER_SUSPICIOUS;
         }
-        PlayNewMapMusic(music);
+        if (FLAG_DONT_FADE_MAP_MUSIC_UPON_BATTLE != TRUE)
+            PlayNewMapMusic(music);
     }
 }
 

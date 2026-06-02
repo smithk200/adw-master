@@ -33,6 +33,7 @@
 #include "constants/songs.h"
 #include "data/tutor_moves.h"
 
+
 // The different versions of hearts are selected using animation
 // commands.
 enum {

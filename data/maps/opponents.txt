@@ -50,7 +50,7 @@
 #define TRAINER_ASS_GRUNT_MT_POMPOUS_2       43
 #define TRAINER_DUSTY                        44 //ADW Trainer!
 #define TRAINER_CHIP                         45 //ADW Trainer!
-#define TRAINER_FOSTER                       46
+#define TRAINER_JUMBO_BASE_GRUNT_1                       46
 #define TRAINER_DUSTY_2                      47
 #define TRAINER_DUSTY_3                      48
 #define TRAINER_DUSTY_4                      49
